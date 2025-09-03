@@ -1,0 +1,111 @@
+\hypertarget{classbustub_1_1TopNCheckExecutor}{}\doxysection{bustub\+::Top\+NCheck\+Executor Class Reference}
+\label{classbustub_1_1TopNCheckExecutor}\index{bustub::TopNCheckExecutor@{bustub::TopNCheckExecutor}}
+
+
+{\ttfamily \#include $<$topn\+\_\+check\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Top\+NCheck\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classbustub_1_1TopNCheckExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Top\+NCheck\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classbustub_1_1TopNCheckExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TopNCheckExecutor_a1cf4fc36ae285f67f3fc71076705b53d}{Top\+NCheck\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1TopNPlanNode}{Top\+NPlan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor, \mbox{\hyperlink{classbustub_1_1TopNExecutor}{Top\+NExecutor}} $\ast$topn\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TopNCheckExecutor_ad9bd7a7479d9845eb3045303671325f0}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNCheckExecutor_a96789914401ec4595232d71b3119d9af}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNCheckExecutor_a6a985aa7b0d1a2505ea5a29d02af6112}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1TopNCheckExecutor}{Top\+NCheck\+Executor}} checks the number of items in TopN executor container 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TopNCheckExecutor_a1cf4fc36ae285f67f3fc71076705b53d}\label{classbustub_1_1TopNCheckExecutor_a1cf4fc36ae285f67f3fc71076705b53d}} 
+\index{bustub::TopNCheckExecutor@{bustub::TopNCheckExecutor}!TopNCheckExecutor@{TopNCheckExecutor}}
+\index{TopNCheckExecutor@{TopNCheckExecutor}!bustub::TopNCheckExecutor@{bustub::TopNCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{TopNCheckExecutor()}{TopNCheckExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Top\+NCheck\+Executor\+::\+Top\+NCheck\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1TopNPlanNode}{Top\+NPlan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor,  }\item[{\mbox{\hyperlink{classbustub_1_1TopNExecutor}{Top\+NExecutor}} $\ast$}]{topn\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1TopNCheckExecutor}{Top\+NCheck\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The TopN plan to be executed \\
+\hline
+{\em child\+\_\+executor} & The TopN child executor \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TopNCheckExecutor_a6a985aa7b0d1a2505ea5a29d02af6112}\label{classbustub_1_1TopNCheckExecutor_a6a985aa7b0d1a2505ea5a29d02af6112}} 
+\index{bustub::TopNCheckExecutor@{bustub::TopNCheckExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::TopNCheckExecutor@{bustub::TopNCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NCheck\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the child executor 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1TopNCheckExecutor_ad9bd7a7479d9845eb3045303671325f0}\label{classbustub_1_1TopNCheckExecutor_ad9bd7a7479d9845eb3045303671325f0}} 
+\index{bustub::TopNCheckExecutor@{bustub::TopNCheckExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::TopNCheckExecutor@{bustub::TopNCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Top\+NCheck\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the Top\+NCheck 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1TopNCheckExecutor_a96789914401ec4595232d71b3119d9af}\label{classbustub_1_1TopNCheckExecutor_a96789914401ec4595232d71b3119d9af}} 
+\index{bustub::TopNCheckExecutor@{bustub::TopNCheckExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::TopNCheckExecutor@{bustub::TopNCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NCheck\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the child executor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the child executor \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the child executor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/topn\+\_\+check\+\_\+executor.\+h\item 
+src/execution/topn\+\_\+check\+\_\+executor.\+cpp\end{DoxyCompactItemize}

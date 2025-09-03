@@ -1,0 +1,109 @@
+\hypertarget{classbustub_1_1ValuesExecutor}{}\doxysection{bustub\+::Values\+Executor Class Reference}
+\label{classbustub_1_1ValuesExecutor}\index{bustub::ValuesExecutor@{bustub::ValuesExecutor}}
+
+
+{\ttfamily \#include $<$values\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Values\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1ValuesExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Values\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1ValuesExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ValuesExecutor_a3c6f28213492d9ef890eb2b73b26910a}{Values\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1ValuesPlanNode}{Values\+Plan\+Node}} $\ast$plan)
+\item 
+void \mbox{\hyperlink{classbustub_1_1ValuesExecutor_ac4c6c0c67dd24f2c7685ac3fb55b2c67}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ValuesExecutor_ab59e338f66c258a8ad0fd6ada746e1d1}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ValuesExecutor_a626e99b673d4a35bef68173092964362}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1ValuesExecutor}{Values\+Executor}} executor produces rows of values. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ValuesExecutor_a3c6f28213492d9ef890eb2b73b26910a}\label{classbustub_1_1ValuesExecutor_a3c6f28213492d9ef890eb2b73b26910a}} 
+\index{bustub::ValuesExecutor@{bustub::ValuesExecutor}!ValuesExecutor@{ValuesExecutor}}
+\index{ValuesExecutor@{ValuesExecutor}!bustub::ValuesExecutor@{bustub::ValuesExecutor}}
+\doxysubsubsection{\texorpdfstring{ValuesExecutor()}{ValuesExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Values\+Executor\+::\+Values\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1ValuesPlanNode}{Values\+Plan\+Node}} $\ast$}]{plan }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1ValuesExecutor}{Values\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The values plan to be executed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ValuesExecutor_a626e99b673d4a35bef68173092964362}\label{classbustub_1_1ValuesExecutor_a626e99b673d4a35bef68173092964362}} 
+\index{bustub::ValuesExecutor@{bustub::ValuesExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::ValuesExecutor@{bustub::ValuesExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Values\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the values 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1ValuesExecutor_ac4c6c0c67dd24f2c7685ac3fb55b2c67}\label{classbustub_1_1ValuesExecutor_ac4c6c0c67dd24f2c7685ac3fb55b2c67}} 
+\index{bustub::ValuesExecutor@{bustub::ValuesExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::ValuesExecutor@{bustub::ValuesExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Values\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the values 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1ValuesExecutor_ab59e338f66c258a8ad0fd6ada746e1d1}\label{classbustub_1_1ValuesExecutor_ab59e338f66c258a8ad0fd6ada746e1d1}} 
+\index{bustub::ValuesExecutor@{bustub::ValuesExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::ValuesExecutor@{bustub::ValuesExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Values\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the values. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the values \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the values, not used by values executor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/values\+\_\+executor.\+h\item 
+src/execution/values\+\_\+executor.\+cpp\end{DoxyCompactItemize}

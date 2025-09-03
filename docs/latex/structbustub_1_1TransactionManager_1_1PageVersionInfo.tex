@@ -1,0 +1,29 @@
+\hypertarget{structbustub_1_1TransactionManager_1_1PageVersionInfo}{}\doxysection{bustub\+::Transaction\+Manager\+::Page\+Version\+Info Struct Reference}
+\label{structbustub_1_1TransactionManager_1_1PageVersionInfo}\index{bustub::TransactionManager::PageVersionInfo@{bustub::TransactionManager::PageVersionInfo}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{structbustub_1_1TransactionManager_1_1PageVersionInfo_a981761cec3e5cbce201160bd01b74f6e}{mutex\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ slot\+\_\+offset\+\_\+t, \mbox{\hyperlink{structbustub_1_1UndoLink}{Undo\+Link}} $>$ \mbox{\hyperlink{structbustub_1_1TransactionManager_1_1PageVersionInfo_aef7531f58f1d3ab2a380c0776497090d}{prev\+\_\+link\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structbustub_1_1TransactionManager_1_1PageVersionInfo_a981761cec3e5cbce201160bd01b74f6e}\label{structbustub_1_1TransactionManager_1_1PageVersionInfo_a981761cec3e5cbce201160bd01b74f6e}} 
+\index{bustub::TransactionManager::PageVersionInfo@{bustub::TransactionManager::PageVersionInfo}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!bustub::TransactionManager::PageVersionInfo@{bustub::TransactionManager::PageVersionInfo}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex bustub\+::\+Transaction\+Manager\+::\+Page\+Version\+Info\+::mutex\+\_\+}
+
+protects the map \mbox{\Hypertarget{structbustub_1_1TransactionManager_1_1PageVersionInfo_aef7531f58f1d3ab2a380c0776497090d}\label{structbustub_1_1TransactionManager_1_1PageVersionInfo_aef7531f58f1d3ab2a380c0776497090d}} 
+\index{bustub::TransactionManager::PageVersionInfo@{bustub::TransactionManager::PageVersionInfo}!prev\_link\_@{prev\_link\_}}
+\index{prev\_link\_@{prev\_link\_}!bustub::TransactionManager::PageVersionInfo@{bustub::TransactionManager::PageVersionInfo}}
+\doxysubsubsection{\texorpdfstring{prev\_link\_}{prev\_link\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$slot\+\_\+offset\+\_\+t, \mbox{\hyperlink{structbustub_1_1UndoLink}{Undo\+Link}}$>$ bustub\+::\+Transaction\+Manager\+::\+Page\+Version\+Info\+::prev\+\_\+link\+\_\+}
+
+Stores previous version info for all slots. Note\+: DO NOT use {\ttfamily \mbox{[}x\mbox{]}} to access it because it will create new elements even if it does not exist. Use {\ttfamily find} instead. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/transaction\+\_\+manager.\+h\end{DoxyCompactItemize}

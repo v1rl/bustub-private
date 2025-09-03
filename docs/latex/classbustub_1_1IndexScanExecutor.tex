@@ -1,0 +1,112 @@
+\hypertarget{classbustub_1_1IndexScanExecutor}{}\doxysection{bustub\+::Index\+Scan\+Executor Class Reference}
+\label{classbustub_1_1IndexScanExecutor}\index{bustub::IndexScanExecutor@{bustub::IndexScanExecutor}}
+
+
+{\ttfamily \#include $<$index\+\_\+scan\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Index\+Scan\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classbustub_1_1IndexScanExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Index\+Scan\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classbustub_1_1IndexScanExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1IndexScanExecutor_ad9e6f658c1636dc64d3e8d180e99a911}{Index\+Scan\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode}{Index\+Scan\+Plan\+Node}} $\ast$plan)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_a080a5f07a36ffbb46dcf0d93c27fe8c7}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\item 
+void \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_a286511d06856e7f38b2dc62794004a5f}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_a5278c5a2a6e25b9bacb85a80862c05e3}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1IndexScanExecutor}{Index\+Scan\+Executor}} executes an index scan over a table. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexScanExecutor_ad9e6f658c1636dc64d3e8d180e99a911}\label{classbustub_1_1IndexScanExecutor_ad9e6f658c1636dc64d3e8d180e99a911}} 
+\index{bustub::IndexScanExecutor@{bustub::IndexScanExecutor}!IndexScanExecutor@{IndexScanExecutor}}
+\index{IndexScanExecutor@{IndexScanExecutor}!bustub::IndexScanExecutor@{bustub::IndexScanExecutor}}
+\doxysubsubsection{\texorpdfstring{IndexScanExecutor()}{IndexScanExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Index\+Scan\+Executor\+::\+Index\+Scan\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode}{Index\+Scan\+Plan\+Node}} $\ast$}]{plan }\end{DoxyParamCaption})}
+
+Creates a new index scan executor. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & the executor context \\
+\hline
+{\em plan} & the index scan plan to be executed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexScanExecutor_a080a5f07a36ffbb46dcf0d93c27fe8c7}\label{classbustub_1_1IndexScanExecutor_a080a5f07a36ffbb46dcf0d93c27fe8c7}} 
+\index{bustub::IndexScanExecutor@{bustub::IndexScanExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::IndexScanExecutor@{bustub::IndexScanExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Scan\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The schema of the tuples that this executor produces 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1IndexScanExecutor_a286511d06856e7f38b2dc62794004a5f}\label{classbustub_1_1IndexScanExecutor_a286511d06856e7f38b2dc62794004a5f}} 
+\index{bustub::IndexScanExecutor@{bustub::IndexScanExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::IndexScanExecutor@{bustub::IndexScanExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Index\+Scan\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the executor. \begin{DoxyWarning}{Warning}
+This function must be called before \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_a5278c5a2a6e25b9bacb85a80862c05e3}{Next()}} is called! 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1IndexScanExecutor_a5278c5a2a6e25b9bacb85a80862c05e3}\label{classbustub_1_1IndexScanExecutor_a5278c5a2a6e25b9bacb85a80862c05e3}} 
+\index{bustub::IndexScanExecutor@{bustub::IndexScanExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::IndexScanExecutor@{bustub::IndexScanExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Scan\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$  bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from this executor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by this executor \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by this executor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/index\+\_\+scan\+\_\+executor.\+h\item 
+src/execution/index\+\_\+scan\+\_\+executor.\+cpp\end{DoxyCompactItemize}

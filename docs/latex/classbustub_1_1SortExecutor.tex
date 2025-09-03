@@ -1,0 +1,109 @@
+\hypertarget{classbustub_1_1SortExecutor}{}\doxysection{bustub\+::Sort\+Executor Class Reference}
+\label{classbustub_1_1SortExecutor}\index{bustub::SortExecutor@{bustub::SortExecutor}}
+
+
+{\ttfamily \#include $<$sort\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Sort\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1SortExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Sort\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1SortExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1SortExecutor_a428faee14a42f9d88ac925d8c8518fa2}{Sort\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1SortPlanNode}{Sort\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1SortExecutor_aa41b54ff324f778f3007ba984c83ace6}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SortExecutor_a25e4466bbee829a5dd9a872e7b33cfb1}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SortExecutor_a196ccd7b43004c406d1231bc4c0e1657}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1SortExecutor}{Sort\+Executor}} executor executes a sort. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1SortExecutor_a428faee14a42f9d88ac925d8c8518fa2}\label{classbustub_1_1SortExecutor_a428faee14a42f9d88ac925d8c8518fa2}} 
+\index{bustub::SortExecutor@{bustub::SortExecutor}!SortExecutor@{SortExecutor}}
+\index{SortExecutor@{SortExecutor}!bustub::SortExecutor@{bustub::SortExecutor}}
+\doxysubsubsection{\texorpdfstring{SortExecutor()}{SortExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Sort\+Executor\+::\+Sort\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1SortPlanNode}{Sort\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1SortExecutor}{Sort\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The sort plan to be executed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1SortExecutor_a196ccd7b43004c406d1231bc4c0e1657}\label{classbustub_1_1SortExecutor_a196ccd7b43004c406d1231bc4c0e1657}} 
+\index{bustub::SortExecutor@{bustub::SortExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::SortExecutor@{bustub::SortExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Sort\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the sort 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1SortExecutor_aa41b54ff324f778f3007ba984c83ace6}\label{classbustub_1_1SortExecutor_aa41b54ff324f778f3007ba984c83ace6}} 
+\index{bustub::SortExecutor@{bustub::SortExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::SortExecutor@{bustub::SortExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Sort\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the sort 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1SortExecutor_a25e4466bbee829a5dd9a872e7b33cfb1}\label{classbustub_1_1SortExecutor_a25e4466bbee829a5dd9a872e7b33cfb1}} 
+\index{bustub::SortExecutor@{bustub::SortExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::SortExecutor@{bustub::SortExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Sort\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the sort. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the sort \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/sort\+\_\+executor.\+h\item 
+src/execution/sort\+\_\+executor.\+cpp\end{DoxyCompactItemize}

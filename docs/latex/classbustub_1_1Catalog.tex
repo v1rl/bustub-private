@@ -1,0 +1,218 @@
+\hypertarget{classbustub_1_1Catalog}{}\doxysection{bustub\+::Catalog Class Reference}
+\label{classbustub_1_1Catalog}\index{bustub::Catalog@{bustub::Catalog}}
+
+
+{\ttfamily \#include $<$catalog.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Catalog_aa4b4a6e0e658107a40ad43e8f2835eca}{Catalog}} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$bpm, \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$lock\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Catalog_a7679a15e979543008df1475cfbd07838}{Create\+Table}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, const std\+::string \&table\+\_\+name, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema, bool create\+\_\+table\+\_\+heap=true) -\/$>$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Catalog_a05364b351923255e319c005d97a08c94}{Get\+Table}} (const std\+::string \&table\+\_\+name) const -\/$>$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Catalog_a1994276d6d5f318180c5a203423b11e9}{Get\+Table}} (\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} table\+\_\+oid) const -\/$>$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}} $>$
+\item 
+{\footnotesize template$<$class Key\+Type , class Value\+Type , class Key\+Comparator $>$ }\\auto \mbox{\hyperlink{classbustub_1_1Catalog_a5217a108c63c0a2671caf36cecc5b62b}{Create\+Index}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, const std\+::string \&index\+\_\+name, const std\+::string \&table\+\_\+name, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&key\+\_\+schema, const std\+::vector$<$ uint32\+\_\+t $>$ \&key\+\_\+attrs, std\+::size\+\_\+t keysize, \mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ Key\+Type $>$ hash\+\_\+function, bool is\+\_\+primary\+\_\+key=false, Index\+Type index\+\_\+type=Index\+Type\+::\+BPlus\+Tree\+Index) -\/$>$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Catalog_a5490ccafffcb0db71f39b8830349f8e3}{Get\+Index}} (const std\+::string \&index\+\_\+name, const std\+::string \&table\+\_\+name) -\/$>$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Catalog_a6d925391cd445b229cb083ac75bb588c}{Get\+Index}} (const std\+::string \&index\+\_\+name, const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} table\+\_\+oid) -\/$>$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Catalog_a11d74e75052efe7cf8181d8e0eac496f}{Get\+Index}} (index\+\_\+oid\+\_\+t index\+\_\+oid) -\/$>$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Catalog_a633e2fe8bb1a27c370a3b6913903c8ae}{Get\+Table\+Indexes}} (const std\+::string \&table\+\_\+name) const -\/$>$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}} $>$$>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Catalog_a371f766f237dc1726cdf0488910b6f91}\label{classbustub_1_1Catalog_a371f766f237dc1726cdf0488910b6f91}} 
+auto {\bfseries Get\+Table\+Names} () -\/$>$ std\+::vector$<$ std\+::string $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}} $>$ \mbox{\hyperlink{classbustub_1_1Catalog_aa34854ae1c9846700fc628607a200296}{NULL\+\_\+\+TABLE\+\_\+\+INFO}} \{nullptr\}
+\item 
+static const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}} $>$ \mbox{\hyperlink{classbustub_1_1Catalog_a0f7eb1a080cbfa2b18935f7aa8f9f2bd}{NULL\+\_\+\+INDEX\+\_\+\+INFO}} \{nullptr\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1Catalog}{Catalog}} is a non-\/persistent catalog that is designed for use by executors within the DBMS execution engine. It handles table creation, table lookup, index creation, and index lookup. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Catalog_aa4b4a6e0e658107a40ad43e8f2835eca}\label{classbustub_1_1Catalog_aa4b4a6e0e658107a40ad43e8f2835eca}} 
+\index{bustub::Catalog@{bustub::Catalog}!Catalog@{Catalog}}
+\index{Catalog@{Catalog}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{Catalog()}{Catalog()}}
+{\footnotesize\ttfamily bustub\+::\+Catalog\+::\+Catalog (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{bpm,  }\item[{\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$}]{lock\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1Catalog}{Catalog}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em bpm} & The buffer pool manager backing tables created by this catalog \\
+\hline
+{\em lock\+\_\+manager} & The lock manager in use by the system \\
+\hline
+{\em log\+\_\+manager} & The log manager in use by the system \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Catalog_a5217a108c63c0a2671caf36cecc5b62b}\label{classbustub_1_1Catalog_a5217a108c63c0a2671caf36cecc5b62b}} 
+\index{bustub::Catalog@{bustub::Catalog}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}}
+{\footnotesize\ttfamily template$<$class Key\+Type , class Value\+Type , class Key\+Comparator $>$ \\
+auto bustub\+::\+Catalog\+::\+Create\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{const std\+::string \&}]{index\+\_\+name,  }\item[{const std\+::string \&}]{table\+\_\+name,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{key\+\_\+schema,  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{key\+\_\+attrs,  }\item[{std\+::size\+\_\+t}]{keysize,  }\item[{\mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ Key\+Type $>$}]{hash\+\_\+function,  }\item[{bool}]{is\+\_\+primary\+\_\+key = {\ttfamily false},  }\item[{Index\+Type}]{index\+\_\+type = {\ttfamily IndexType\+:\+:BPlusTreeIndex} }\end{DoxyParamCaption}) -\/$>$ std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}}$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new index, populate existing data of the table and return its metadata. 
+\begin{DoxyParams}{Parameters}
+{\em txn} & The transaction in which the table is being created \\
+\hline
+{\em index\+\_\+name} & The name of the new index \\
+\hline
+{\em table\+\_\+name} & The name of the table \\
+\hline
+{\em schema} & The schema of the table \\
+\hline
+{\em key\+\_\+schema} & The schema of the key \\
+\hline
+{\em key\+\_\+attrs} & Key attributes \\
+\hline
+{\em keysize} & Size of the key \\
+\hline
+{\em hash\+\_\+function} & The hash function for the index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the metadata of the new table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Catalog_a7679a15e979543008df1475cfbd07838}\label{classbustub_1_1Catalog_a7679a15e979543008df1475cfbd07838}} 
+\index{bustub::Catalog@{bustub::Catalog}!CreateTable@{CreateTable}}
+\index{CreateTable@{CreateTable}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{CreateTable()}{CreateTable()}}
+{\footnotesize\ttfamily auto bustub\+::\+Catalog\+::\+Create\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{const std\+::string \&}]{table\+\_\+name,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema,  }\item[{bool}]{create\+\_\+table\+\_\+heap = {\ttfamily true} }\end{DoxyParamCaption}) -\/$>$ std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}}$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new table and return its metadata. 
+\begin{DoxyParams}{Parameters}
+{\em txn} & The transaction in which the table is being created \\
+\hline
+{\em table\+\_\+name} & The name of the new table, note that all tables beginning with {\ttfamily \+\_\+\+\_\+} are reserved for the system. \\
+\hline
+{\em schema} & The schema of the new table \\
+\hline
+{\em create\+\_\+table\+\_\+heap} & whether to create a table heap for the new table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the metadata for the table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Catalog_a5490ccafffcb0db71f39b8830349f8e3}\label{classbustub_1_1Catalog_a5490ccafffcb0db71f39b8830349f8e3}} 
+\index{bustub::Catalog@{bustub::Catalog}!GetIndex@{GetIndex}}
+\index{GetIndex@{GetIndex}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{GetIndex()}{GetIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily auto bustub\+::\+Catalog\+::\+Get\+Index (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{index\+\_\+name,  }\item[{const std\+::string \&}]{table\+\_\+name }\end{DoxyParamCaption}) -\/$>$ std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}}$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the index {\ttfamily index\+\_\+name} for table {\ttfamily table\+\_\+name}. 
+\begin{DoxyParams}{Parameters}
+{\em index\+\_\+name} & The name of the index for which to query \\
+\hline
+{\em table\+\_\+name} & The name of the table on which to perform query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A (non-\/owning) pointer to the metadata for the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Catalog_a6d925391cd445b229cb083ac75bb588c}\label{classbustub_1_1Catalog_a6d925391cd445b229cb083ac75bb588c}} 
+\index{bustub::Catalog@{bustub::Catalog}!GetIndex@{GetIndex}}
+\index{GetIndex@{GetIndex}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{GetIndex()}{GetIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily auto bustub\+::\+Catalog\+::\+Get\+Index (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{index\+\_\+name,  }\item[{const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{table\+\_\+oid }\end{DoxyParamCaption}) -\/$>$ std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}}$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the index {\ttfamily index\+\_\+name} for table identified by {\ttfamily table\+\_\+oid}. 
+\begin{DoxyParams}{Parameters}
+{\em index\+\_\+name} & The name of the index for which to query \\
+\hline
+{\em table\+\_\+oid} & The OID of the table on which to perform query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A (non-\/owning) pointer to the metadata for the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Catalog_a11d74e75052efe7cf8181d8e0eac496f}\label{classbustub_1_1Catalog_a11d74e75052efe7cf8181d8e0eac496f}} 
+\index{bustub::Catalog@{bustub::Catalog}!GetIndex@{GetIndex}}
+\index{GetIndex@{GetIndex}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{GetIndex()}{GetIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily auto bustub\+::\+Catalog\+::\+Get\+Index (\begin{DoxyParamCaption}\item[{index\+\_\+oid\+\_\+t}]{index\+\_\+oid }\end{DoxyParamCaption}) -\/$>$ std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}}$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the index identifier by index OID. 
+\begin{DoxyParams}{Parameters}
+{\em index\+\_\+oid} & The OID of the index for which to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A (non-\/owning) pointer to the metadata for the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Catalog_a05364b351923255e319c005d97a08c94}\label{classbustub_1_1Catalog_a05364b351923255e319c005d97a08c94}} 
+\index{bustub::Catalog@{bustub::Catalog}!GetTable@{GetTable}}
+\index{GetTable@{GetTable}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{GetTable()}{GetTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto bustub\+::\+Catalog\+::\+Get\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table\+\_\+name }\end{DoxyParamCaption}) const -\/$>$ std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}}$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+Query table metadata by name. 
+\begin{DoxyParams}{Parameters}
+{\em table\+\_\+name} & The name of the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A (non-\/owning) pointer to the metadata for the table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Catalog_a1994276d6d5f318180c5a203423b11e9}\label{classbustub_1_1Catalog_a1994276d6d5f318180c5a203423b11e9}} 
+\index{bustub::Catalog@{bustub::Catalog}!GetTable@{GetTable}}
+\index{GetTable@{GetTable}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{GetTable()}{GetTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto bustub\+::\+Catalog\+::\+Get\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{table\+\_\+oid }\end{DoxyParamCaption}) const -\/$>$ std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}}$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+Query table metadata by OID 
+\begin{DoxyParams}{Parameters}
+{\em table\+\_\+oid} & The OID of the table to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the metadata for the table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Catalog_a633e2fe8bb1a27c370a3b6913903c8ae}\label{classbustub_1_1Catalog_a633e2fe8bb1a27c370a3b6913903c8ae}} 
+\index{bustub::Catalog@{bustub::Catalog}!GetTableIndexes@{GetTableIndexes}}
+\index{GetTableIndexes@{GetTableIndexes}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{GetTableIndexes()}{GetTableIndexes()}}
+{\footnotesize\ttfamily auto bustub\+::\+Catalog\+::\+Get\+Table\+Indexes (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table\+\_\+name }\end{DoxyParamCaption}) const -\/$>$ std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}}$>$$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+Get all of the indexes for the table identified by {\ttfamily table\+\_\+name}. 
+\begin{DoxyParams}{Parameters}
+{\em table\+\_\+name} & The name of the table for which indexes should be retrieved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of std\+::shared\+\_\+ptr$<$\+Index\+Info$>$ for each index on the given table, empty vector in the event that the table exists but no indexes have been created for it 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1Catalog_a0f7eb1a080cbfa2b18935f7aa8f9f2bd}\label{classbustub_1_1Catalog_a0f7eb1a080cbfa2b18935f7aa8f9f2bd}} 
+\index{bustub::Catalog@{bustub::Catalog}!NULL\_INDEX\_INFO@{NULL\_INDEX\_INFO}}
+\index{NULL\_INDEX\_INFO@{NULL\_INDEX\_INFO}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{NULL\_INDEX\_INFO}{NULL\_INDEX\_INFO}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}}$>$ bustub\+::\+Catalog\+::\+NULL\+\_\+\+INDEX\+\_\+\+INFO \{nullptr\}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Indicates that an operation returning a {\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}}$>$} failed \mbox{\Hypertarget{classbustub_1_1Catalog_aa34854ae1c9846700fc628607a200296}\label{classbustub_1_1Catalog_aa34854ae1c9846700fc628607a200296}} 
+\index{bustub::Catalog@{bustub::Catalog}!NULL\_TABLE\_INFO@{NULL\_TABLE\_INFO}}
+\index{NULL\_TABLE\_INFO@{NULL\_TABLE\_INFO}!bustub::Catalog@{bustub::Catalog}}
+\doxysubsubsection{\texorpdfstring{NULL\_TABLE\_INFO}{NULL\_TABLE\_INFO}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}}$>$ bustub\+::\+Catalog\+::\+NULL\+\_\+\+TABLE\+\_\+\+INFO \{nullptr\}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Indicates that an operation returning a {\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}}$>$} failed 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/catalog/catalog.\+h\end{DoxyCompactItemize}

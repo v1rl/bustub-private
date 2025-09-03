@@ -1,0 +1,81 @@
+\hypertarget{classbustub_1_1BoundJoinRef}{}\doxysection{bustub\+::Bound\+Join\+Ref Class Reference}
+\label{classbustub_1_1BoundJoinRef}\index{bustub::BoundJoinRef@{bustub::BoundJoinRef}}
+
+
+{\ttfamily \#include $<$bound\+\_\+join\+\_\+ref.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Join\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classbustub_1_1BoundJoinRef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Join\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classbustub_1_1BoundJoinRef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundJoinRef_a18f43020ca03548a11baac9b51b3d011}\label{classbustub_1_1BoundJoinRef_a18f43020ca03548a11baac9b51b3d011}} 
+{\bfseries Bound\+Join\+Ref} (\mbox{\hyperlink{namespacebustub_a1036e27c4d5644ae629bd2e5e703208a}{Join\+Type}} join\+\_\+type, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ left, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ right, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ condition)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundJoinRef_aa3c449a93a447584147bef34e32b2006}\label{classbustub_1_1BoundJoinRef_aa3c449a93a447584147bef34e32b2006}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebustub_a1036e27c4d5644ae629bd2e5e703208a}{Join\+Type}} \mbox{\hyperlink{classbustub_1_1BoundJoinRef_a2375362dadc8bc780d42acd8739fbb81}{join\+\_\+type\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ \mbox{\hyperlink{classbustub_1_1BoundJoinRef_a1402e89ccb5ecdf4be77839dd5d0ef7a}{left\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ \mbox{\hyperlink{classbustub_1_1BoundJoinRef_a941c043f58ce41a246ff192263dd9017}{right\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1BoundJoinRef_a009d2de1cf95ced3cfa1b14ee55e0a7b}{condition\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A join. e.\+g., {\ttfamily SELECT $\ast$ FROM x INNER JOIN y ON ...}, where {\ttfamily x INNER JOIN y ON ...} is {\ttfamily \mbox{\hyperlink{classbustub_1_1BoundJoinRef}{Bound\+Join\+Ref}}}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundJoinRef_a009d2de1cf95ced3cfa1b14ee55e0a7b}\label{classbustub_1_1BoundJoinRef_a009d2de1cf95ced3cfa1b14ee55e0a7b}} 
+\index{bustub::BoundJoinRef@{bustub::BoundJoinRef}!condition\_@{condition\_}}
+\index{condition\_@{condition\_}!bustub::BoundJoinRef@{bustub::BoundJoinRef}}
+\doxysubsubsection{\texorpdfstring{condition\_}{condition\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ bustub\+::\+Bound\+Join\+Ref\+::condition\+\_\+}
+
+Join condition. \mbox{\Hypertarget{classbustub_1_1BoundJoinRef_a2375362dadc8bc780d42acd8739fbb81}\label{classbustub_1_1BoundJoinRef_a2375362dadc8bc780d42acd8739fbb81}} 
+\index{bustub::BoundJoinRef@{bustub::BoundJoinRef}!join\_type\_@{join\_type\_}}
+\index{join\_type\_@{join\_type\_}!bustub::BoundJoinRef@{bustub::BoundJoinRef}}
+\doxysubsubsection{\texorpdfstring{join\_type\_}{join\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a1036e27c4d5644ae629bd2e5e703208a}{Join\+Type}} bustub\+::\+Bound\+Join\+Ref\+::join\+\_\+type\+\_\+}
+
+\mbox{\hyperlink{classbustub_1_1Type}{Type}} of join. \mbox{\Hypertarget{classbustub_1_1BoundJoinRef_a1402e89ccb5ecdf4be77839dd5d0ef7a}\label{classbustub_1_1BoundJoinRef_a1402e89ccb5ecdf4be77839dd5d0ef7a}} 
+\index{bustub::BoundJoinRef@{bustub::BoundJoinRef}!left\_@{left\_}}
+\index{left\_@{left\_}!bustub::BoundJoinRef@{bustub::BoundJoinRef}}
+\doxysubsubsection{\texorpdfstring{left\_}{left\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}}$>$ bustub\+::\+Bound\+Join\+Ref\+::left\+\_\+}
+
+The left side of the join. \mbox{\Hypertarget{classbustub_1_1BoundJoinRef_a941c043f58ce41a246ff192263dd9017}\label{classbustub_1_1BoundJoinRef_a941c043f58ce41a246ff192263dd9017}} 
+\index{bustub::BoundJoinRef@{bustub::BoundJoinRef}!right\_@{right\_}}
+\index{right\_@{right\_}!bustub::BoundJoinRef@{bustub::BoundJoinRef}}
+\doxysubsubsection{\texorpdfstring{right\_}{right\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}}$>$ bustub\+::\+Bound\+Join\+Ref\+::right\+\_\+}
+
+The right side of the join. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/table\+\_\+ref/bound\+\_\+join\+\_\+ref.\+h\end{DoxyCompactItemize}

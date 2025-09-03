@@ -1,0 +1,178 @@
+\hypertarget{classbustub_1_1AbstractPlanNode}{}\doxysection{bustub\+::Abstract\+Plan\+Node Class Reference}
+\label{classbustub_1_1AbstractPlanNode}\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+
+
+{\ttfamily \#include $<$abstract\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Abstract\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classbustub_1_1AbstractPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a1b6aa4666151cce66649517f51052733}{Abstract\+Plan\+Node}} (Schema\+Ref output\+\_\+schema, std\+::vector$<$ Abstract\+Plan\+Node\+Ref $>$ children)
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a336250e94ce6a76115d8dea2e9be8ba8}{$\sim$\+Abstract\+Plan\+Node}} ()=default
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_aa9cd965458e800c0242f3817a292d258}{Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a7d96d4434acb6bf335e08fc47eda5072}{Get\+Child\+At}} (uint32\+\_\+t child\+\_\+idx) const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_ad2c3dd9b5718a2097bd37c9856a8441d}{Get\+Children}} () const -\/$>$ const std\+::vector$<$ Abstract\+Plan\+Node\+Ref $>$ \&
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}=0
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_af28eccd32fc387a23e0752fe4280e17f}{To\+String}} (bool with\+\_\+schema=true) const -\/$>$ std\+::string
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_acd740db4fe3bb6329d3ad199fee6a88a}{Clone\+With\+Children}} (std\+::vector$<$ Abstract\+Plan\+Node\+Ref $>$ children) const -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $>$=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Schema\+Ref \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_af482ac981f85862235fad88872491ff5}{output\+\_\+schema\+\_\+}}
+\item 
+std\+::vector$<$ Abstract\+Plan\+Node\+Ref $>$ \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_adf3904a4ead8ab951be01232501d70a0}{children\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a66485410b63fd7f677a49b7226c4b4ed}{Children\+To\+String}} (int indent, bool with\+\_\+schema=true) const -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} represents all the possible types of plan nodes in our system. Plan nodes are modeled as trees, so each plan node can have a variable number of children. Per the Volcano model, the plan node receives the tuples of its children. The ordering of the children may matter. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_a1b6aa4666151cce66649517f51052733}\label{classbustub_1_1AbstractPlanNode_a1b6aa4666151cce66649517f51052733}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!AbstractPlanNode@{AbstractPlanNode}}
+\index{AbstractPlanNode@{AbstractPlanNode}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{AbstractPlanNode()}{AbstractPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Abstract\+Plan\+Node\+::\+Abstract\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output\+\_\+schema,  }\item[{std\+::vector$<$ Abstract\+Plan\+Node\+Ref $>$}]{children }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} with the specified output schema and children. 
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+schema} & The schema for the output of this plan node \\
+\hline
+{\em children} & The children of this plan node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_a336250e94ce6a76115d8dea2e9be8ba8}\label{classbustub_1_1AbstractPlanNode_a336250e94ce6a76115d8dea2e9be8ba8}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!````~AbstractPlanNode@{$\sim$AbstractPlanNode}}
+\index{````~AbstractPlanNode@{$\sim$AbstractPlanNode}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbstractPlanNode()}{~AbstractPlanNode()}}
+{\footnotesize\ttfamily virtual bustub\+::\+Abstract\+Plan\+Node\+::$\sim$\+Abstract\+Plan\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Virtual destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_a66485410b63fd7f677a49b7226c4b4ed}\label{classbustub_1_1AbstractPlanNode_a66485410b63fd7f677a49b7226c4b4ed}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!ChildrenToString@{ChildrenToString}}
+\index{ChildrenToString@{ChildrenToString}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{ChildrenToString()}{ChildrenToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Abstract\+Plan\+Node\+::\+Children\+To\+String (\begin{DoxyParamCaption}\item[{int}]{indent,  }\item[{bool}]{with\+\_\+schema = {\ttfamily true} }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node\textquotesingle{}s children 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_acd740db4fe3bb6329d3ad199fee6a88a}\label{classbustub_1_1AbstractPlanNode_acd740db4fe3bb6329d3ad199fee6a88a}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!CloneWithChildren@{CloneWithChildren}}
+\index{CloneWithChildren@{CloneWithChildren}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{CloneWithChildren()}{CloneWithChildren()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Plan\+Node\+::\+Clone\+With\+Children (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Abstract\+Plan\+Node\+Ref $>$}]{children }\end{DoxyParamCaption}) const -\/$>$  std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $>$\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the cloned plan node with new children 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_a7d96d4434acb6bf335e08fc47eda5072}\label{classbustub_1_1AbstractPlanNode_a7d96d4434acb6bf335e08fc47eda5072}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!GetChildAt@{GetChildAt}}
+\index{GetChildAt@{GetChildAt}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildAt()}{GetChildAt()}}
+{\footnotesize\ttfamily auto bustub\+::\+Abstract\+Plan\+Node\+::\+Get\+Child\+At (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{child\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the child of this plan node at index child\+\_\+idx 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_ad2c3dd9b5718a2097bd37c9856a8441d}\label{classbustub_1_1AbstractPlanNode_ad2c3dd9b5718a2097bd37c9856a8441d}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!GetChildren@{GetChildren}}
+\index{GetChildren@{GetChildren}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildren()}{GetChildren()}}
+{\footnotesize\ttfamily auto bustub\+::\+Abstract\+Plan\+Node\+::\+Get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::vector$<$Abstract\+Plan\+Node\+Ref$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the children of this plan node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}\label{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type of this plan node 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode_a7a9cf533e6012dc9b7380e6c679bb1a9}{bustub\+::\+Window\+Function\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1ValuesPlanNode_af1bce73b0f8e51ae0ff941b418479204}{bustub\+::\+Values\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1UpdatePlanNode_a8a64c45966b37a97aebbc60caecd6d0c}{bustub\+::\+Update\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1TopNPlanNode_ab8de5a41285e2bffcbcdcbf5662a1d21}{bustub\+::\+Top\+NPlan\+Node}}, \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode_aed8cb9a204bc23e688e489fba8b31ac9}{bustub\+::\+Top\+NPer\+Group\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1SortPlanNode_a9cf3d2c021292fb2e4df6b852d6ed743}{bustub\+::\+Sort\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode_a5f7bb66cd0f1d9fabe85b3b9db32a5b0}{bustub\+::\+Seq\+Scan\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode_a1cdf0a99d39c142be2ea2a703126b67a}{bustub\+::\+Projection\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_a25fbea9dfa4eacd49acd9345e2da40f4}{bustub\+::\+Nested\+Loop\+Join\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1NestedIndexJoinPlanNode_a795bd1d6a1ac4477bb28073ee8b43892}{bustub\+::\+Nested\+Index\+Join\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1MockScanPlanNode_a6f4d0dfcc4511731209860c926c4b723}{bustub\+::\+Mock\+Scan\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1LimitPlanNode_a343229c6e214cfa85db345b22868a24c}{bustub\+::\+Limit\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1InsertPlanNode_a1e55c5b23bb823ae20269df873443635}{bustub\+::\+Insert\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a01036d84412fb1a7a3cf01dac1318ac7}{bustub\+::\+Index\+Scan\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode_a7670a4ae00dc065887957776cffdb804}{bustub\+::\+Hash\+Join\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1FilterPlanNode_af36810cb3f9fb0e5bc72762841b34af1}{bustub\+::\+Filter\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1DeletePlanNode_a16570b0d4d08ece40d14351861d06ba3}{bustub\+::\+Delete\+Plan\+Node}}, and \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a7293d1c279f0152b065d7d478a73c989}{bustub\+::\+Aggregation\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_aa9cd965458e800c0242f3817a292d258}\label{classbustub_1_1AbstractPlanNode_aa9cd965458e800c0242f3817a292d258}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!OutputSchema@{OutputSchema}}
+\index{OutputSchema@{OutputSchema}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{OutputSchema()}{OutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Abstract\+Plan\+Node\+::\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the schema for the output of this plan node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}\label{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode_a1843f8008ae3a0881fcbd974009e2980}{bustub\+::\+Window\+Function\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1ValuesPlanNode_af0248bc536d004de92b59085c41f7b62}{bustub\+::\+Values\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1UpdatePlanNode_a8897f137e6856193937d9a6068d1a307}{bustub\+::\+Update\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1TopNPlanNode_ab5c5df51fd02bf8cf4e3d80288aeb0aa}{bustub\+::\+Top\+NPlan\+Node}}, \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode_a40800c0e2a88d11f5b74650532c00d8d}{bustub\+::\+Top\+NPer\+Group\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1SortPlanNode_a048222f5f3e6c26642bdc07bf5c9a92c}{bustub\+::\+Sort\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode_a61d72c54babedd44b54813551a4eedcd}{bustub\+::\+Seq\+Scan\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode_a5b6e4ade6a4b5b4f23c1a94a415dfa9c}{bustub\+::\+Projection\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_a00af9f1e84fd290ce5a7153cb238ddac}{bustub\+::\+Nested\+Loop\+Join\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1NestedIndexJoinPlanNode_a839841b199069c80042c07e47f3dba8b}{bustub\+::\+Nested\+Index\+Join\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1MockScanPlanNode_acef1bb0f1254a9ed5c8a7254d4ec37fc}{bustub\+::\+Mock\+Scan\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1LimitPlanNode_a5347be68c4409db1c68b7950c268df30}{bustub\+::\+Limit\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1InsertPlanNode_a5bbabdc27199c2a9e7dbf8906ff2c608}{bustub\+::\+Insert\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a1311b643aee43ab0a95aa7263df68733}{bustub\+::\+Index\+Scan\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode_a87fcb23ca3969d1a2f57f46794e9e992}{bustub\+::\+Hash\+Join\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1FilterPlanNode_a6bd58842d2ad31764c3d30890cee112c}{bustub\+::\+Filter\+Plan\+Node}}, \mbox{\hyperlink{classbustub_1_1DeletePlanNode_a5ed745e091b3e28e5ff65b48dd99c4b1}{bustub\+::\+Delete\+Plan\+Node}}, and \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a7d6ed58abcac53baeda891243576ee7e}{bustub\+::\+Aggregation\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_af28eccd32fc387a23e0752fe4280e17f}\label{classbustub_1_1AbstractPlanNode_af28eccd32fc387a23e0752fe4280e17f}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Abstract\+Plan\+Node\+::\+To\+String (\begin{DoxyParamCaption}\item[{bool}]{with\+\_\+schema = {\ttfamily true} }\end{DoxyParamCaption}) const -\/$>$ std\+::string \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node and its children 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_adf3904a4ead8ab951be01232501d70a0}\label{classbustub_1_1AbstractPlanNode_adf3904a4ead8ab951be01232501d70a0}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!children\_@{children\_}}
+\index{children\_@{children\_}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{children\_}{children\_}}
+{\footnotesize\ttfamily std\+::vector$<$Abstract\+Plan\+Node\+Ref$>$ bustub\+::\+Abstract\+Plan\+Node\+::children\+\_\+}
+
+The children of this plan node. \mbox{\Hypertarget{classbustub_1_1AbstractPlanNode_af482ac981f85862235fad88872491ff5}\label{classbustub_1_1AbstractPlanNode_af482ac981f85862235fad88872491ff5}} 
+\index{bustub::AbstractPlanNode@{bustub::AbstractPlanNode}!output\_schema\_@{output\_schema\_}}
+\index{output\_schema\_@{output\_schema\_}!bustub::AbstractPlanNode@{bustub::AbstractPlanNode}}
+\doxysubsubsection{\texorpdfstring{output\_schema\_}{output\_schema\_}}
+{\footnotesize\ttfamily Schema\+Ref bustub\+::\+Abstract\+Plan\+Node\+::output\+\_\+schema\+\_\+}
+
+The schema for the output of this plan node. In the volcano model, every plan node will spit out tuples, and this tells you what schema this plan node\textquotesingle{}s tuples will have. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/abstract\+\_\+plan.\+h\item 
+src/execution/fmt\+\_\+impl.\+cpp\end{DoxyCompactItemize}

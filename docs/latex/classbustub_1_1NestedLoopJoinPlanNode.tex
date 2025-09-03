@@ -1,0 +1,169 @@
+\hypertarget{classbustub_1_1NestedLoopJoinPlanNode}{}\doxysection{bustub\+::Nested\+Loop\+Join\+Plan\+Node Class Reference}
+\label{classbustub_1_1NestedLoopJoinPlanNode}\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+
+
+{\ttfamily \#include $<$nested\+\_\+loop\+\_\+join\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Nested\+Loop\+Join\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classbustub_1_1NestedLoopJoinPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Nested\+Loop\+Join\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classbustub_1_1NestedLoopJoinPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_abf4ed37fcc7df6da0aeb4f675a03b944}{Nested\+Loop\+Join\+Plan\+Node}} (Schema\+Ref output\+\_\+schema, Abstract\+Plan\+Node\+Ref left, Abstract\+Plan\+Node\+Ref right, Abstract\+Expression\+Ref predicate, \mbox{\hyperlink{namespacebustub_a1036e27c4d5644ae629bd2e5e703208a}{Join\+Type}} join\+\_\+type)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_a25fbea9dfa4eacd49acd9345e2da40f4}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_a8fbc5bc3b98b7fe36841df7d39c20128}{Predicate}} () const -\/$>$ const Abstract\+Expression\+Ref \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_a266473b341b96969fc5824ed0b1323e0}{Get\+Join\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_a1036e27c4d5644ae629bd2e5e703208a}{Join\+Type}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_a73abddf907fd9c8482ddbfedc21e436e}{Get\+Left\+Plan}} () const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+auto \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_ae3b9097b8c5f76feb9b1f8083f67bcc5}{Get\+Right\+Plan}} () const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_a0b3c95d19adc9ea940ecf6e146ee22db}\label{classbustub_1_1NestedLoopJoinPlanNode_a0b3c95d19adc9ea940ecf6e146ee22db}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode}{Nested\+Loop\+Join\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_a1e604ce1ba45165725cb1758143eb02c}\label{classbustub_1_1NestedLoopJoinPlanNode_a1e604ce1ba45165725cb1758143eb02c}} 
+static auto {\bfseries Infer\+Join\+Schema} (const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} \&left, const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} \&right) -\/$>$ \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Abstract\+Expression\+Ref \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_a13aeee6605b707c07ce8d442992b4f32}{predicate\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacebustub_a1036e27c4d5644ae629bd2e5e703208a}{Join\+Type}} \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_a3f81eb4ba0b0452908500f2b1e04e2a0}{join\+\_\+type\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode_a00af9f1e84fd290ce5a7153cb238ddac}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode}{Nested\+Loop\+Join\+Plan\+Node}} joins tuples from two child plan nodes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_abf4ed37fcc7df6da0aeb4f675a03b944}\label{classbustub_1_1NestedLoopJoinPlanNode_abf4ed37fcc7df6da0aeb4f675a03b944}} 
+\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}!NestedLoopJoinPlanNode@{NestedLoopJoinPlanNode}}
+\index{NestedLoopJoinPlanNode@{NestedLoopJoinPlanNode}!bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{NestedLoopJoinPlanNode()}{NestedLoopJoinPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Nested\+Loop\+Join\+Plan\+Node\+::\+Nested\+Loop\+Join\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output\+\_\+schema,  }\item[{Abstract\+Plan\+Node\+Ref}]{left,  }\item[{Abstract\+Plan\+Node\+Ref}]{right,  }\item[{Abstract\+Expression\+Ref}]{predicate,  }\item[{\mbox{\hyperlink{namespacebustub_a1036e27c4d5644ae629bd2e5e703208a}{Join\+Type}}}]{join\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode}{Nested\+Loop\+Join\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em output} & The output format of this nested loop join node \\
+\hline
+{\em children} & Two sequential scan children plans \\
+\hline
+{\em predicate} & The predicate to join with, the tuples are joined if predicate(tuple) = true. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_a266473b341b96969fc5824ed0b1323e0}\label{classbustub_1_1NestedLoopJoinPlanNode_a266473b341b96969fc5824ed0b1323e0}} 
+\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}!GetJoinType@{GetJoinType}}
+\index{GetJoinType@{GetJoinType}!bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetJoinType()}{GetJoinType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Nested\+Loop\+Join\+Plan\+Node\+::\+Get\+Join\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_a1036e27c4d5644ae629bd2e5e703208a}{Join\+Type}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The join type used in the nested loop join 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_a73abddf907fd9c8482ddbfedc21e436e}\label{classbustub_1_1NestedLoopJoinPlanNode_a73abddf907fd9c8482ddbfedc21e436e}} 
+\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}!GetLeftPlan@{GetLeftPlan}}
+\index{GetLeftPlan@{GetLeftPlan}!bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetLeftPlan()}{GetLeftPlan()}}
+{\footnotesize\ttfamily auto bustub\+::\+Nested\+Loop\+Join\+Plan\+Node\+::\+Get\+Left\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The left plan node of the nested loop join, by convention it should be the smaller table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_ae3b9097b8c5f76feb9b1f8083f67bcc5}\label{classbustub_1_1NestedLoopJoinPlanNode_ae3b9097b8c5f76feb9b1f8083f67bcc5}} 
+\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}!GetRightPlan@{GetRightPlan}}
+\index{GetRightPlan@{GetRightPlan}!bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetRightPlan()}{GetRightPlan()}}
+{\footnotesize\ttfamily auto bustub\+::\+Nested\+Loop\+Join\+Plan\+Node\+::\+Get\+Right\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The right plan node of the nested loop join 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_a25fbea9dfa4eacd49acd9345e2da40f4}\label{classbustub_1_1NestedLoopJoinPlanNode_a25fbea9dfa4eacd49acd9345e2da40f4}} 
+\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Nested\+Loop\+Join\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_a00af9f1e84fd290ce5a7153cb238ddac}\label{classbustub_1_1NestedLoopJoinPlanNode_a00af9f1e84fd290ce5a7153cb238ddac}} 
+\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Nested\+Loop\+Join\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_a8fbc5bc3b98b7fe36841df7d39c20128}\label{classbustub_1_1NestedLoopJoinPlanNode_a8fbc5bc3b98b7fe36841df7d39c20128}} 
+\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}!Predicate@{Predicate}}
+\index{Predicate@{Predicate}!bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{Predicate()}{Predicate()}}
+{\footnotesize\ttfamily auto bustub\+::\+Nested\+Loop\+Join\+Plan\+Node\+::\+Predicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const Abstract\+Expression\+Ref \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The predicate to be used in the nested loop join 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_a3f81eb4ba0b0452908500f2b1e04e2a0}\label{classbustub_1_1NestedLoopJoinPlanNode_a3f81eb4ba0b0452908500f2b1e04e2a0}} 
+\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}!join\_type\_@{join\_type\_}}
+\index{join\_type\_@{join\_type\_}!bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{join\_type\_}{join\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a1036e27c4d5644ae629bd2e5e703208a}{Join\+Type}} bustub\+::\+Nested\+Loop\+Join\+Plan\+Node\+::join\+\_\+type\+\_\+}
+
+The join type \mbox{\Hypertarget{classbustub_1_1NestedLoopJoinPlanNode_a13aeee6605b707c07ce8d442992b4f32}\label{classbustub_1_1NestedLoopJoinPlanNode_a13aeee6605b707c07ce8d442992b4f32}} 
+\index{bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}!predicate\_@{predicate\_}}
+\index{predicate\_@{predicate\_}!bustub::NestedLoopJoinPlanNode@{bustub::NestedLoopJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{predicate\_}{predicate\_}}
+{\footnotesize\ttfamily Abstract\+Expression\+Ref bustub\+::\+Nested\+Loop\+Join\+Plan\+Node\+::predicate\+\_\+}
+
+The join predicate 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/nested\+\_\+loop\+\_\+join\+\_\+plan.\+h\item 
+src/execution/plan\+\_\+node.\+cpp\end{DoxyCompactItemize}

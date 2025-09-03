@@ -1,0 +1,97 @@
+\hypertarget{classbustub_1_1ExtendibleHTableHeaderPage}{}\doxysection{bustub\+::Extendible\+HTable\+Header\+Page Class Reference}
+\label{classbustub_1_1ExtendibleHTableHeaderPage}\index{bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableHeaderPage_aa8ae5911d7ae34ce0ca43a36685c513d}\label{classbustub_1_1ExtendibleHTableHeaderPage_aa8ae5911d7ae34ce0ca43a36685c513d}} 
+{\bfseries DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+MOVE} (\mbox{\hyperlink{classbustub_1_1ExtendibleHTableHeaderPage}{Extendible\+HTable\+Header\+Page}})
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableHeaderPage_afeaf4fdc0d929ab4e6e309ed657e0343}{Init}} (uint32\+\_\+t max\+\_\+depth=HTABLE\+\_\+\+HEADER\+\_\+\+MAX\+\_\+\+DEPTH)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableHeaderPage_ab6a6374a8fdcd75b1265fb0bf67cbb25}{Hash\+To\+Directory\+Index}} (uint32\+\_\+t hash) const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableHeaderPage_a073dd029c826290b53de487b01f60489}{Get\+Directory\+Page\+Id}} (uint32\+\_\+t directory\+\_\+idx) const -\/$>$ page\+\_\+id\+\_\+t
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableHeaderPage_ac2c466d832aadd8958265000602c299c}{Set\+Directory\+Page\+Id}} (uint32\+\_\+t directory\+\_\+idx, page\+\_\+id\+\_\+t directory\+\_\+page\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Set the directory page id at an index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableHeaderPage_aa5d99c23ecc7943f86ae2c29d8255ccb}\label{classbustub_1_1ExtendibleHTableHeaderPage_aa5d99c23ecc7943f86ae2c29d8255ccb}} 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableHeaderPage_aa5d99c23ecc7943f86ae2c29d8255ccb}{Max\+Size}} () const -\/$>$ uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em Get the maximum number of directory page ids the header page could handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableHeaderPage_a44fdc3ebf47377c23e46153bfb0fc544}{Print\+Header}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableHeaderPage_a073dd029c826290b53de487b01f60489}\label{classbustub_1_1ExtendibleHTableHeaderPage_a073dd029c826290b53de487b01f60489}} 
+\index{bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}!GetDirectoryPageId@{GetDirectoryPageId}}
+\index{GetDirectoryPageId@{GetDirectoryPageId}!bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{GetDirectoryPageId()}{GetDirectoryPageId()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Header\+Page\+::\+Get\+Directory\+Page\+Id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{directory\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ page\+\_\+id\+\_\+t}
+
+Get the directory page id at an index
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\+\_\+idx} & index in the directory page id array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+directory page\+\_\+id at index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableHeaderPage_ab6a6374a8fdcd75b1265fb0bf67cbb25}\label{classbustub_1_1ExtendibleHTableHeaderPage_ab6a6374a8fdcd75b1265fb0bf67cbb25}} 
+\index{bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}!HashToDirectoryIndex@{HashToDirectoryIndex}}
+\index{HashToDirectoryIndex@{HashToDirectoryIndex}!bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{HashToDirectoryIndex()}{HashToDirectoryIndex()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Header\+Page\+::\+Hash\+To\+Directory\+Index (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{hash }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t}
+
+Get the directory index that the key is hashed to
+
+
+\begin{DoxyParams}{Parameters}
+{\em hash} & the hash of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+directory index the key is hashed to 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableHeaderPage_afeaf4fdc0d929ab4e6e309ed657e0343}\label{classbustub_1_1ExtendibleHTableHeaderPage_afeaf4fdc0d929ab4e6e309ed657e0343}} 
+\index{bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}!Init@{Init}}
+\index{Init@{Init}!bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Header\+Page\+::\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+\_\+depth = {\ttfamily HTABLE\+\_\+HEADER\+\_\+MAX\+\_\+DEPTH} }\end{DoxyParamCaption})}
+
+After creating a new header page from buffer pool, must call initialize method to set default values 
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+depth} & Max depth in the header page \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableHeaderPage_a44fdc3ebf47377c23e46153bfb0fc544}\label{classbustub_1_1ExtendibleHTableHeaderPage_a44fdc3ebf47377c23e46153bfb0fc544}} 
+\index{bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}!PrintHeader@{PrintHeader}}
+\index{PrintHeader@{PrintHeader}!bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{PrintHeader()}{PrintHeader()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Header\+Page\+::\+Print\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Prints the header\textquotesingle{}s occupancy information \mbox{\Hypertarget{classbustub_1_1ExtendibleHTableHeaderPage_ac2c466d832aadd8958265000602c299c}\label{classbustub_1_1ExtendibleHTableHeaderPage_ac2c466d832aadd8958265000602c299c}} 
+\index{bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}!SetDirectoryPageId@{SetDirectoryPageId}}
+\index{SetDirectoryPageId@{SetDirectoryPageId}!bustub::ExtendibleHTableHeaderPage@{bustub::ExtendibleHTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{SetDirectoryPageId()}{SetDirectoryPageId()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Header\+Page\+::\+Set\+Directory\+Page\+Id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{directory\+\_\+idx,  }\item[{page\+\_\+id\+\_\+t}]{directory\+\_\+page\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Set the directory page id at an index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\+\_\+idx} & index in the directory page id array \\
+\hline
+{\em directory\+\_\+page\+\_\+id} & page id of the directory \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/extendible\+\_\+htable\+\_\+header\+\_\+page.\+h\item 
+src/storage/page/extendible\+\_\+htable\+\_\+header\+\_\+page.\+cpp\item 
+src/storage/page/extendible\+\_\+htable\+\_\+page\+\_\+utils.\+cpp\end{DoxyCompactItemize}

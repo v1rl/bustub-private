@@ -1,0 +1,63 @@
+\hypertarget{classbustub_1_1RID}{}\doxysection{bustub\+::RID Class Reference}
+\label{classbustub_1_1RID}\index{bustub::RID@{bustub::RID}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1RID_a29fbe3a56cef33f801c68d284d53ea8a}{RID}} ()=default
+\item 
+\mbox{\hyperlink{classbustub_1_1RID_a3d225968869088d169a1031c3420f1e0}{RID}} (page\+\_\+id\+\_\+t page\+\_\+id, uint32\+\_\+t slot\+\_\+num)
+\item 
+\mbox{\Hypertarget{classbustub_1_1RID_a4f106a41491a0db93732ef48085f069d}\label{classbustub_1_1RID_a4f106a41491a0db93732ef48085f069d}} 
+{\bfseries RID} (int64\+\_\+t rid)
+\item 
+\mbox{\Hypertarget{classbustub_1_1RID_a8ae61953857b8e7eeeaa4c42fea4bcd3}\label{classbustub_1_1RID_a8ae61953857b8e7eeeaa4c42fea4bcd3}} 
+auto {\bfseries Get} () const -\/$>$ int64\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1RID_a2dd9cb0b53e17b078ac1e4ea9204a04d}\label{classbustub_1_1RID_a2dd9cb0b53e17b078ac1e4ea9204a04d}} 
+auto {\bfseries Get\+Page\+Id} () const -\/$>$ page\+\_\+id\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1RID_acdfc977b834b4d67c107fcd9aaf26883}\label{classbustub_1_1RID_acdfc977b834b4d67c107fcd9aaf26883}} 
+auto {\bfseries Get\+Slot\+Num} () const -\/$>$ uint32\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1RID_af0c4a7160277b101ba0c8769ec4415db}\label{classbustub_1_1RID_af0c4a7160277b101ba0c8769ec4415db}} 
+void {\bfseries Set} (page\+\_\+id\+\_\+t page\+\_\+id, uint32\+\_\+t slot\+\_\+num)
+\item 
+\mbox{\Hypertarget{classbustub_1_1RID_ae1547db51924068f07afc3bb8f286e7f}\label{classbustub_1_1RID_ae1547db51924068f07afc3bb8f286e7f}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string
+\item 
+\mbox{\Hypertarget{classbustub_1_1RID_afffb24d78afb4540baaac7c6f1f0f337}\label{classbustub_1_1RID_afffb24d78afb4540baaac7c6f1f0f337}} 
+auto {\bfseries operator==} (const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&other) const -\/$>$ bool
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1RID_a1c6c5a80ec4fd0002fb154d758fe9819}\label{classbustub_1_1RID_a1c6c5a80ec4fd0002fb154d758fe9819}} 
+auto {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&rid) -\/$>$ std\+::ostream \&
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1RID_a29fbe3a56cef33f801c68d284d53ea8a}\label{classbustub_1_1RID_a29fbe3a56cef33f801c68d284d53ea8a}} 
+\index{bustub::RID@{bustub::RID}!RID@{RID}}
+\index{RID@{RID}!bustub::RID@{bustub::RID}}
+\doxysubsubsection{\texorpdfstring{RID()}{RID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+RID\+::\+RID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+The default constructor creates an invalid RID! \mbox{\Hypertarget{classbustub_1_1RID_a3d225968869088d169a1031c3420f1e0}\label{classbustub_1_1RID_a3d225968869088d169a1031c3420f1e0}} 
+\index{bustub::RID@{bustub::RID}!RID@{RID}}
+\index{RID@{RID}!bustub::RID@{bustub::RID}}
+\doxysubsubsection{\texorpdfstring{RID()}{RID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+RID\+::\+RID (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id,  }\item[{uint32\+\_\+t}]{slot\+\_\+num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new Record Identifier for the given page identifier and slot number. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & page identifier \\
+\hline
+{\em slot\+\_\+num} & slot number \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/common/rid.\+h\end{DoxyCompactItemize}

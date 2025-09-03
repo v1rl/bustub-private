@@ -1,0 +1,82 @@
+\hypertarget{classbustub_1_1STLUnorderedIndex}{}\doxysection{bustub\+::STLUnordered\+Index$<$ KT, VT, Cmp $>$ Class Template Reference}
+\label{classbustub_1_1STLUnorderedIndex}\index{bustub::STLUnorderedIndex$<$ KT, VT, Cmp $>$@{bustub::STLUnorderedIndex$<$ KT, VT, Cmp $>$}}
+
+
+Inheritance diagram for bustub\+::STLUnordered\+Index$<$ KT, VT, Cmp $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classbustub_1_1STLUnorderedIndex__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::STLUnordered\+Index$<$ KT, VT, Cmp $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1STLUnorderedIndex__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1STLUnorderedIndex_a52988eefd828424f2c0fccc4236d9b8d}\label{classbustub_1_1STLUnorderedIndex_a52988eefd828424f2c0fccc4236d9b8d}} 
+{\bfseries STLUnordered\+Index} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1IndexMetadata}{Index\+Metadata}} $>$ \&\&metadata, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager, const \mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ KT $>$ \&hash\+\_\+fn)
+\item 
+\mbox{\Hypertarget{classbustub_1_1STLUnorderedIndex_a5cd7c094bdc5e3a1b70ac859c4d665e3}\label{classbustub_1_1STLUnorderedIndex_a5cd7c094bdc5e3a1b70ac859c4d665e3}} 
+auto {\bfseries Insert\+Entry} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, VT rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction) -\/$>$ bool override
+\item 
+\mbox{\Hypertarget{classbustub_1_1STLUnorderedIndex_a7a04f4ac2605aab80297dc9c72f7144a}\label{classbustub_1_1STLUnorderedIndex_a7a04f4ac2605aab80297dc9c72f7144a}} 
+void {\bfseries Delete\+Entry} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, VT rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1STLUnorderedIndex_a7f563775154845561394ffbfe37a20e8}{Scan\+Key}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} $>$ $\ast$result, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1STLUnorderedIndex_a02eacfd1fb140b1b1103b057b0576559}\label{classbustub_1_1STLUnorderedIndex_a02eacfd1fb140b1b1103b057b0576559}} 
+std\+::mutex {\bfseries lock\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1STLUnorderedIndex_a9312c4f246c62592e0a551f95d24ed31}\label{classbustub_1_1STLUnorderedIndex_a9312c4f246c62592e0a551f95d24ed31}} 
+\mbox{\hyperlink{classbustub_1_1StlComparatorWrapper}{Stl\+Comparator\+Wrapper}}$<$ KT, Cmp $>$ {\bfseries comparator\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1STLUnorderedIndex_a126da112d997a0c23b0329fe47f05662}\label{classbustub_1_1STLUnorderedIndex_a126da112d997a0c23b0329fe47f05662}} 
+\mbox{\hyperlink{classbustub_1_1StlHasherWrapper}{Stl\+Hasher\+Wrapper}}$<$ KT $>$ {\bfseries hash\+\_\+fn\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1STLUnorderedIndex_a8982fbd9b9228c1976b06609869bc169}\label{classbustub_1_1STLUnorderedIndex_a8982fbd9b9228c1976b06609869bc169}} 
+\mbox{\hyperlink{classbustub_1_1StlEqualWrapper}{Stl\+Equal\+Wrapper}}$<$ KT, Cmp $>$ {\bfseries eq\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1STLUnorderedIndex_a480ec3fe230d1ef9ee39051d0ca1b81f}\label{classbustub_1_1STLUnorderedIndex_a480ec3fe230d1ef9ee39051d0ca1b81f}} 
+std\+::unordered\+\_\+map$<$ KT, VT, \mbox{\hyperlink{classbustub_1_1StlHasherWrapper}{Stl\+Hasher\+Wrapper}}$<$ KT $>$, \mbox{\hyperlink{classbustub_1_1StlEqualWrapper}{Stl\+Equal\+Wrapper}}$<$ KT, Cmp $>$ $>$ {\bfseries data\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1STLUnorderedIndex_a7f563775154845561394ffbfe37a20e8}\label{classbustub_1_1STLUnorderedIndex_a7f563775154845561394ffbfe37a20e8}} 
+\index{bustub::STLUnorderedIndex$<$ KT, VT, Cmp $>$@{bustub::STLUnorderedIndex$<$ KT, VT, Cmp $>$}!ScanKey@{ScanKey}}
+\index{ScanKey@{ScanKey}!bustub::STLUnorderedIndex$<$ KT, VT, Cmp $>$@{bustub::STLUnorderedIndex$<$ KT, VT, Cmp $>$}}
+\doxysubsubsection{\texorpdfstring{ScanKey()}{ScanKey()}}
+{\footnotesize\ttfamily template$<$typename KT , typename VT , typename Cmp $>$ \\
+void \mbox{\hyperlink{classbustub_1_1STLUnorderedIndex}{bustub\+::\+STLUnordered\+Index}}$<$ KT, VT, Cmp $>$\+::Scan\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} $>$ $\ast$}]{result,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Search the index for the provided key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em result} & The collection of RIDs that is populated with results of the search \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Index_ac1956eb188c14fe560025ba940cdb302}{bustub\+::\+Index}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/stl\+\_\+unordered.\+h\end{DoxyCompactItemize}

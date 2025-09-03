@@ -1,0 +1,67 @@
+\hypertarget{classbustub_1_1HyperLogLog}{}\doxysection{bustub\+::Hyper\+Log\+Log$<$ Key\+Type $>$ Class Template Reference}
+\label{classbustub_1_1HyperLogLog}\index{bustub::HyperLogLog$<$ KeyType $>$@{bustub::HyperLogLog$<$ KeyType $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1HyperLogLog_a4eef299dd0c7996c9d06f43679ab0354}\label{classbustub_1_1HyperLogLog_a4eef299dd0c7996c9d06f43679ab0354}} 
+\mbox{\hyperlink{classbustub_1_1HyperLogLog_a4eef299dd0c7996c9d06f43679ab0354}{Hyper\+Log\+Log}} ()=delete
+\begin{DoxyCompactList}\small\item\em Disable default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1HyperLogLog_a6cd442e9fc1bf24175c09653797bbbed}\label{classbustub_1_1HyperLogLog_a6cd442e9fc1bf24175c09653797bbbed}} 
+\mbox{\hyperlink{classbustub_1_1HyperLogLog_a6cd442e9fc1bf24175c09653797bbbed}{Hyper\+Log\+Log}} (int16\+\_\+t n\+\_\+bits)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLog_ae4b93de2cba3d241ea92b38b40cc8639}{Get\+Cardinality}} ()
+\begin{DoxyCompactList}\small\item\em Getter value for cardinality. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLog_a9f5085d55bef7d0e1a9f792127ab36cc}{Add\+Elem}} (Key\+Type val) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Adds a value into the \mbox{\hyperlink{classbustub_1_1HyperLogLog}{Hyper\+Log\+Log}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLog_a3dec1f6af23c65625f30800db37a4a3e}{Compute\+Cardinality}} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Function that computes cardinality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1HyperLogLog_a9f5085d55bef7d0e1a9f792127ab36cc}\label{classbustub_1_1HyperLogLog_a9f5085d55bef7d0e1a9f792127ab36cc}} 
+\index{bustub::HyperLogLog$<$ KeyType $>$@{bustub::HyperLogLog$<$ KeyType $>$}!AddElem@{AddElem}}
+\index{AddElem@{AddElem}!bustub::HyperLogLog$<$ KeyType $>$@{bustub::HyperLogLog$<$ KeyType $>$}}
+\doxysubsubsection{\texorpdfstring{AddElem()}{AddElem()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLog}{bustub\+::\+Hyper\+Log\+Log}}$<$ Key\+Type $>$\+::Add\+Elem (\begin{DoxyParamCaption}\item[{Key\+Type}]{val }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Adds a value into the \mbox{\hyperlink{classbustub_1_1HyperLogLog}{Hyper\+Log\+Log}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & -\/ value that\textquotesingle{}s added into hyperloglog \\
+\hline
+\end{DoxyParams}
+@\+TODO(student) Implement this function!\mbox{\Hypertarget{classbustub_1_1HyperLogLog_a3dec1f6af23c65625f30800db37a4a3e}\label{classbustub_1_1HyperLogLog_a3dec1f6af23c65625f30800db37a4a3e}} 
+\index{bustub::HyperLogLog$<$ KeyType $>$@{bustub::HyperLogLog$<$ KeyType $>$}!ComputeCardinality@{ComputeCardinality}}
+\index{ComputeCardinality@{ComputeCardinality}!bustub::HyperLogLog$<$ KeyType $>$@{bustub::HyperLogLog$<$ KeyType $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeCardinality()}{ComputeCardinality()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLog}{bustub\+::\+Hyper\+Log\+Log}}$<$ Key\+Type $>$\+::Compute\+Cardinality}
+
+
+
+Function that computes cardinality. 
+
+@\+TODO(student) Implement this function!\mbox{\Hypertarget{classbustub_1_1HyperLogLog_ae4b93de2cba3d241ea92b38b40cc8639}\label{classbustub_1_1HyperLogLog_ae4b93de2cba3d241ea92b38b40cc8639}} 
+\index{bustub::HyperLogLog$<$ KeyType $>$@{bustub::HyperLogLog$<$ KeyType $>$}!GetCardinality@{GetCardinality}}
+\index{GetCardinality@{GetCardinality}!bustub::HyperLogLog$<$ KeyType $>$@{bustub::HyperLogLog$<$ KeyType $>$}}
+\doxysubsubsection{\texorpdfstring{GetCardinality()}{GetCardinality()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLog}{bustub\+::\+Hyper\+Log\+Log}}$<$ Key\+Type $>$\+::Get\+Cardinality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter value for cardinality. 
+
+\begin{DoxyReturn}{Returns}
+cardinality value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/hyperloglog.\+h\item 
+src/primer/hyperloglog.\+cpp\end{DoxyCompactItemize}

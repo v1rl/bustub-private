@@ -1,0 +1,87 @@
+\hypertarget{structbustub_1_1TableInfo}{}\doxysection{bustub\+::Table\+Info Struct Reference}
+\label{structbustub_1_1TableInfo}\index{bustub::TableInfo@{bustub::TableInfo}}
+
+
+{\ttfamily \#include $<$catalog.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Table\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{structbustub_1_1TableInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structbustub_1_1TableInfo_adb524bc384304efa173717b863094ab2}{Table\+Info}} (\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} schema, std\+::string name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $>$ \&\&table, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} oid)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \mbox{\hyperlink{structbustub_1_1TableInfo_a5188214fbf6261d6715b041e0225183f}{schema\+\_\+}}
+\item 
+const std\+::string \mbox{\hyperlink{structbustub_1_1TableInfo_af48624677d8c6a4e29799b349483ab9d}{name\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $>$ \mbox{\hyperlink{structbustub_1_1TableInfo_aedc7851873b8f7c6afe7b59fca3496f5}{table\+\_\+}}
+\item 
+const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \mbox{\hyperlink{structbustub_1_1TableInfo_a66ac974d5d4aaa82fe12bda2eb3ccca8}{oid\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}} class maintains metadata about a table. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structbustub_1_1TableInfo_adb524bc384304efa173717b863094ab2}\label{structbustub_1_1TableInfo_adb524bc384304efa173717b863094ab2}} 
+\index{bustub::TableInfo@{bustub::TableInfo}!TableInfo@{TableInfo}}
+\index{TableInfo@{TableInfo}!bustub::TableInfo@{bustub::TableInfo}}
+\doxysubsubsection{\texorpdfstring{TableInfo()}{TableInfo()}}
+{\footnotesize\ttfamily bustub\+::\+Table\+Info\+::\+Table\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Schema}{Schema}}}]{schema,  }\item[{std\+::string}]{name,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $>$ \&\&}]{table,  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{oid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{structbustub_1_1TableInfo}{Table\+Info}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em schema} & The table schema \\
+\hline
+{\em name} & The table name \\
+\hline
+{\em table} & An owning pointer to the table heap \\
+\hline
+{\em oid} & The unique OID for the table \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structbustub_1_1TableInfo_af48624677d8c6a4e29799b349483ab9d}\label{structbustub_1_1TableInfo_af48624677d8c6a4e29799b349483ab9d}} 
+\index{bustub::TableInfo@{bustub::TableInfo}!name\_@{name\_}}
+\index{name\_@{name\_}!bustub::TableInfo@{bustub::TableInfo}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily const std\+::string bustub\+::\+Table\+Info\+::name\+\_\+}
+
+The table name \mbox{\Hypertarget{structbustub_1_1TableInfo_a66ac974d5d4aaa82fe12bda2eb3ccca8}\label{structbustub_1_1TableInfo_a66ac974d5d4aaa82fe12bda2eb3ccca8}} 
+\index{bustub::TableInfo@{bustub::TableInfo}!oid\_@{oid\_}}
+\index{oid\_@{oid\_}!bustub::TableInfo@{bustub::TableInfo}}
+\doxysubsubsection{\texorpdfstring{oid\_}{oid\_}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} bustub\+::\+Table\+Info\+::oid\+\_\+}
+
+The table OID \mbox{\Hypertarget{structbustub_1_1TableInfo_a5188214fbf6261d6715b041e0225183f}\label{structbustub_1_1TableInfo_a5188214fbf6261d6715b041e0225183f}} 
+\index{bustub::TableInfo@{bustub::TableInfo}!schema\_@{schema\_}}
+\index{schema\_@{schema\_}!bustub::TableInfo@{bustub::TableInfo}}
+\doxysubsubsection{\texorpdfstring{schema\_}{schema\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} bustub\+::\+Table\+Info\+::schema\+\_\+}
+
+The table schema \mbox{\Hypertarget{structbustub_1_1TableInfo_aedc7851873b8f7c6afe7b59fca3496f5}\label{structbustub_1_1TableInfo_aedc7851873b8f7c6afe7b59fca3496f5}} 
+\index{bustub::TableInfo@{bustub::TableInfo}!table\_@{table\_}}
+\index{table\_@{table\_}!bustub::TableInfo@{bustub::TableInfo}}
+\doxysubsubsection{\texorpdfstring{table\_}{table\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}}$>$ bustub\+::\+Table\+Info\+::table\+\_\+}
+
+An owning pointer to the table heap 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/catalog/catalog.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{structbustub_1_1SkipList_1_1SkipNode}{}\doxysection{bustub\+::Skip\+List$<$ K, Compare, Max\+Height, Seed $>$\+::Skip\+Node Struct Reference}
+\label{structbustub_1_1SkipList_1_1SkipNode}\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode}}
+
+
+{\ttfamily \#include $<$skiplist.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode_ade5ad8c11f0b04cb603470fed6206907}{Skip\+Node}} (size\+\_\+t height, K key=K\{\})
+\begin{DoxyCompactList}\small\item\em Constructs a skip list node with height number of links and given key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structbustub_1_1SkipList_1_1SkipNode_ad548a5a2dcb04fd0d044c5a83235771d}\label{structbustub_1_1SkipList_1_1SkipNode_ad548a5a2dcb04fd0d044c5a83235771d}} 
+auto \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode_ad548a5a2dcb04fd0d044c5a83235771d}{Height}} () const -\/$>$ size\+\_\+t
+\begin{DoxyCompactList}\small\item\em Gets the current node height. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode_abae67f09d5ca51c3bfad93d6e79d466d}{Next}} (size\+\_\+t level) const -\/$>$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode}{Skip\+Node}} $>$
+\begin{DoxyCompactList}\small\item\em Gets the next node by following the link at {\ttfamily level}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode_a458d59e24c626211868afa5159df15e5}{Set\+Next}} (size\+\_\+t level, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode}{Skip\+Node}} $>$ \&node)
+\begin{DoxyCompactList}\small\item\em Set the {\ttfamily node} to be linked at {\ttfamily level}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structbustub_1_1SkipList_1_1SkipNode_afb53358c6273b38bad4b40b2dd8832d6}\label{structbustub_1_1SkipList_1_1SkipNode_afb53358c6273b38bad4b40b2dd8832d6}} 
+auto \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode_afb53358c6273b38bad4b40b2dd8832d6}{Key}} () const -\/$>$ const K \&
+\begin{DoxyCompactList}\small\item\em Returns a reference to the key stored in the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode}{Skip\+Node}} $>$ $>$ \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode_a9dc4d74f0e3426d830b24dbfeeff116a}{links\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A list of forward links. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structbustub_1_1SkipList_1_1SkipNode_a282ac413aa8c536e7de3791b75aa1cdf}\label{structbustub_1_1SkipList_1_1SkipNode_a282ac413aa8c536e7de3791b75aa1cdf}} 
+K {\bfseries key\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename Compare = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$\newline
+struct bustub\+::\+Skip\+List$<$ K, Compare, Max\+Height, Seed $>$\+::\+Skip\+Node}
+
+Node type for {\ttfamily \mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structbustub_1_1SkipList_1_1SkipNode_ade5ad8c11f0b04cb603470fed6206907}\label{structbustub_1_1SkipList_1_1SkipNode_ade5ad8c11f0b04cb603470fed6206907}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode}!SkipNode@{SkipNode}}
+\index{SkipNode@{SkipNode}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode}}
+\doxysubsubsection{\texorpdfstring{SkipNode()}{SkipNode()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+\mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::Skip\+Node\+::\+Skip\+Node (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{height,  }\item[{K}]{key = {\ttfamily K\{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a skip list node with height number of links and given key. 
+
+This constructor is used both for creating regular nodes (with key) and the header node (without key).
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & The number of links the node will have \\
+\hline
+{\em key} & The key to store in the node (default empty for header) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structbustub_1_1SkipList_1_1SkipNode_abae67f09d5ca51c3bfad93d6e79d466d}\label{structbustub_1_1SkipList_1_1SkipNode_abae67f09d5ca51c3bfad93d6e79d466d}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode}!Next@{Next}}
+\index{Next@{Next}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+SKIPLIST\+\_\+\+TEMPLATE\+\_\+\+ARGUMENTS auto \mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::Skip\+Node\+::\+Next (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{level }\end{DoxyParamCaption}) const -\/$>$ std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode}{Skip\+Node}}$>$}
+
+
+
+Gets the next node by following the link at {\ttfamily level}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & index to the link. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Skip\+Node$>$ the next node, or {\ttfamily nullptr} if such node does not exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structbustub_1_1SkipList_1_1SkipNode_a458d59e24c626211868afa5159df15e5}\label{structbustub_1_1SkipList_1_1SkipNode_a458d59e24c626211868afa5159df15e5}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode}!SetNext@{SetNext}}
+\index{SetNext@{SetNext}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode}}
+\doxysubsubsection{\texorpdfstring{SetNext()}{SetNext()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+SKIPLIST\+\_\+\+TEMPLATE\+\_\+\+ARGUMENTS void \mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::Skip\+Node\+::\+Set\+Next (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{level,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode}{Skip\+Node}} $>$ \&}]{node }\end{DoxyParamCaption})}
+
+
+
+Set the {\ttfamily node} to be linked at {\ttfamily level}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & index to the link. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structbustub_1_1SkipList_1_1SkipNode_a9dc4d74f0e3426d830b24dbfeeff116a}\label{structbustub_1_1SkipList_1_1SkipNode_a9dc4d74f0e3426d830b24dbfeeff116a}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode}!links\_@{links\_}}
+\index{links\_@{links\_}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$::SkipNode}}
+\doxysubsubsection{\texorpdfstring{links\_}{links\_}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode}{Skip\+Node}}$>$ $>$ \mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::Skip\+Node\+::links\+\_\+}
+
+
+
+A list of forward links. 
+
+Note\+: {\ttfamily links\+\_\+\mbox{[}0\mbox{]}} is the lowest level link, and {\ttfamily links\+\_\+\mbox{[}links\+\_\+.\+size()-\/1\mbox{]}} is the highest level link.
+
+We use {\ttfamily std\+::shared\+\_\+ptr} to manage the memory of the next node. This is because the next node can be shared by multiple links. We also use {\ttfamily std\+::vector} instead of a flexible array member for simplicity instead of performance. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/skiplist.\+h\item 
+src/primer/skiplist.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,107 @@
+\hypertarget{classbustub_1_1InsertExecutor}{}\doxysection{bustub\+::Insert\+Executor Class Reference}
+\label{classbustub_1_1InsertExecutor}\index{bustub::InsertExecutor@{bustub::InsertExecutor}}
+
+
+{\ttfamily \#include $<$insert\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Insert\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1InsertExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Insert\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1InsertExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1InsertExecutor_ad4f0fd49939e24442ec26142ad7ff6a3}{Insert\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1InsertPlanNode}{Insert\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1InsertExecutor_a61e8a5d3523537775914475ed527f6ca}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1InsertExecutor_a567dcc780a75adc892916122bec6759c}{Next}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1InsertExecutor_ae169cdfae48bbbf3f6fc621d8f9b2f88}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1InsertExecutor}{Insert\+Executor}} executes an insert on a table. Inserted values are always pulled from a child executor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1InsertExecutor_ad4f0fd49939e24442ec26142ad7ff6a3}\label{classbustub_1_1InsertExecutor_ad4f0fd49939e24442ec26142ad7ff6a3}} 
+\index{bustub::InsertExecutor@{bustub::InsertExecutor}!InsertExecutor@{InsertExecutor}}
+\index{InsertExecutor@{InsertExecutor}!bustub::InsertExecutor@{bustub::InsertExecutor}}
+\doxysubsubsection{\texorpdfstring{InsertExecutor()}{InsertExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Insert\+Executor\+::\+Insert\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1InsertPlanNode}{Insert\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1InsertExecutor}{Insert\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The insert plan to be executed \\
+\hline
+{\em child\+\_\+executor} & The child executor from which inserted tuples are pulled \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1InsertExecutor_ae169cdfae48bbbf3f6fc621d8f9b2f88}\label{classbustub_1_1InsertExecutor_ae169cdfae48bbbf3f6fc621d8f9b2f88}} 
+\index{bustub::InsertExecutor@{bustub::InsertExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::InsertExecutor@{bustub::InsertExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Insert\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the insert 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1InsertExecutor_a61e8a5d3523537775914475ed527f6ca}\label{classbustub_1_1InsertExecutor_a61e8a5d3523537775914475ed527f6ca}} 
+\index{bustub::InsertExecutor@{bustub::InsertExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::InsertExecutor@{bustub::InsertExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Insert\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the insert 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1InsertExecutor_a567dcc780a75adc892916122bec6759c}\label{classbustub_1_1InsertExecutor_a567dcc780a75adc892916122bec6759c}} 
+\index{bustub::InsertExecutor@{bustub::InsertExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::InsertExecutor@{bustub::InsertExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Insert\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}}
+
+Yield the number of rows inserted into the table. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The integer tuple indicating the number of rows inserted into the table \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the insert (ignore, not used) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples
+\end{DoxyReturn}
+NOTE\+: \mbox{\hyperlink{classbustub_1_1InsertExecutor_a567dcc780a75adc892916122bec6759c}{Insert\+Executor\+::\+Next()}} does not use the {\ttfamily rid} out-\/parameter. NOTE\+: \mbox{\hyperlink{classbustub_1_1InsertExecutor_a567dcc780a75adc892916122bec6759c}{Insert\+Executor\+::\+Next()}} returns true with number of inserted rows produced only once. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/insert\+\_\+executor.\+h\item 
+src/execution/insert\+\_\+executor.\+cpp\end{DoxyCompactItemize}

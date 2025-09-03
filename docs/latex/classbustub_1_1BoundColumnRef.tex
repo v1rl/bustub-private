@@ -1,0 +1,66 @@
+\hypertarget{classbustub_1_1BoundColumnRef}{}\doxysection{bustub\+::Bound\+Column\+Ref Class Reference}
+\label{classbustub_1_1BoundColumnRef}\index{bustub::BoundColumnRef@{bustub::BoundColumnRef}}
+
+
+{\ttfamily \#include $<$bound\+\_\+column\+\_\+ref.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Column\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundColumnRef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Column\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundColumnRef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundColumnRef_a4dc9a231145140699890d30d32cc5a47}\label{classbustub_1_1BoundColumnRef_a4dc9a231145140699890d30d32cc5a47}} 
+{\bfseries Bound\+Column\+Ref} (std\+::vector$<$ std\+::string $>$ col\+\_\+name)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundColumnRef_a622a193664b8560dae80e3e55a14fe04}\label{classbustub_1_1BoundColumnRef_a622a193664b8560dae80e3e55a14fe04}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundColumnRef_a692cd9b735fc48d0fd7d51befb01397e}\label{classbustub_1_1BoundColumnRef_a692cd9b735fc48d0fd7d51befb01397e}} 
+auto {\bfseries Has\+Aggregation} () const -\/$>$ bool override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundColumnRef_a61c0c7c7fc96bf5e755d54520eb7e5c2}\label{classbustub_1_1BoundColumnRef_a61c0c7c7fc96bf5e755d54520eb7e5c2}} 
+static auto {\bfseries Prepend} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundColumnRef}{Bound\+Column\+Ref}} $>$ self, std\+::string prefix) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundColumnRef}{Bound\+Column\+Ref}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classbustub_1_1BoundColumnRef_ab84d52ee63ed86cf763bf0140ef9d653}{col\+\_\+name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A bound column reference, e.\+g., {\ttfamily y.\+x} in the SELECT list. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundColumnRef_ab84d52ee63ed86cf763bf0140ef9d653}\label{classbustub_1_1BoundColumnRef_ab84d52ee63ed86cf763bf0140ef9d653}} 
+\index{bustub::BoundColumnRef@{bustub::BoundColumnRef}!col\_name\_@{col\_name\_}}
+\index{col\_name\_@{col\_name\_}!bustub::BoundColumnRef@{bustub::BoundColumnRef}}
+\doxysubsubsection{\texorpdfstring{col\_name\_}{col\_name\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ bustub\+::\+Bound\+Column\+Ref\+::col\+\_\+name\+\_\+}
+
+The name of the column. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/expressions/bound\+\_\+column\+\_\+ref.\+h\end{DoxyCompactItemize}

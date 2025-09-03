@@ -1,0 +1,76 @@
+\hypertarget{classbustub_1_1DiskHashTable}{}\doxysection{bustub\+::Disk\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ Class Template Reference}
+\label{classbustub_1_1DiskHashTable}\index{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1DiskHashTable_a770f574af3392f12c815b2f38c50facd}{Insert}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const Key\+Type \&key, const Value\+Type \&value) -\/$>$ bool=0
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1DiskHashTable_a371a7d808f727e974913b900fcbfdc4e}{Remove}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const Key\+Type \&key, const Value\+Type \&value) -\/$>$ bool=0
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1DiskHashTable_a6edbe410232de4e7b3b1cfbb1117f58f}{Get\+Value}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const Key\+Type \&key, std\+::vector$<$ Value\+Type $>$ $\ast$result) -\/$>$ bool=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1DiskHashTable_a6edbe410232de4e7b3b1cfbb1117f58f}\label{classbustub_1_1DiskHashTable_a6edbe410232de4e7b3b1cfbb1117f58f}} 
+\index{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+virtual auto \mbox{\hyperlink{classbustub_1_1DiskHashTable}{bustub\+::\+Disk\+Hash\+Table}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const Key\+Type \&}]{key,  }\item[{std\+::vector$<$ Value\+Type $>$ $\ast$}]{result }\end{DoxyParamCaption}) -\/$>$  bool\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Performs a point query on the hash table. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em transaction} & the current transaction \\
+\hline
+ & {\em key} & the key to look up \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & the value(s) associated with a given key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value(s) associated with the given key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1DiskHashTable_a770f574af3392f12c815b2f38c50facd}\label{classbustub_1_1DiskHashTable_a770f574af3392f12c815b2f38c50facd}} 
+\index{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+virtual auto \mbox{\hyperlink{classbustub_1_1DiskHashTable}{bustub\+::\+Disk\+Hash\+Table}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const Key\+Type \&}]{key,  }\item[{const Value\+Type \&}]{value }\end{DoxyParamCaption}) -\/$>$  bool\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Inserts a key-\/value pair into the hash table. 
+\begin{DoxyParams}{Parameters}
+{\em transaction} & the current transaction \\
+\hline
+{\em key} & the key to create \\
+\hline
+{\em value} & the value to be associated with the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if insert succeeded, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1DiskHashTable_a371a7d808f727e974913b900fcbfdc4e}\label{classbustub_1_1DiskHashTable_a371a7d808f727e974913b900fcbfdc4e}} 
+\index{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::DiskHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+virtual auto \mbox{\hyperlink{classbustub_1_1DiskHashTable}{bustub\+::\+Disk\+Hash\+Table}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const Key\+Type \&}]{key,  }\item[{const Value\+Type \&}]{value }\end{DoxyParamCaption}) -\/$>$  bool\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Deletes the associated value for the given key. 
+\begin{DoxyParams}{Parameters}
+{\em transaction} & the current transaction \\
+\hline
+{\em key} & the key to delete \\
+\hline
+{\em value} & the value to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if remove succeeded, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/container/disk/hash/disk\+\_\+hash\+\_\+table.\+h\end{DoxyCompactItemize}

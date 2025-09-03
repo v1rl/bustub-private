@@ -1,0 +1,109 @@
+\hypertarget{classbustub_1_1DiskManagerUnlimitedMemory}{}\doxysection{bustub\+::Disk\+Manager\+Unlimited\+Memory Class Reference}
+\label{classbustub_1_1DiskManagerUnlimitedMemory}\index{bustub::DiskManagerUnlimitedMemory@{bustub::DiskManagerUnlimitedMemory}}
+
+
+{\ttfamily \#include $<$disk\+\_\+manager\+\_\+memory.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Disk\+Manager\+Unlimited\+Memory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classbustub_1_1DiskManagerUnlimitedMemory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Disk\+Manager\+Unlimited\+Memory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classbustub_1_1DiskManagerUnlimitedMemory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManagerUnlimitedMemory_a49178f13725196cb4f57a259ba5ce4ed}{Write\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id, const char $\ast$page\+\_\+data) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManagerUnlimitedMemory_ac602ac7692498661e601297178533c40}{Read\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id, char $\ast$page\+\_\+data) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManagerUnlimitedMemory_ac887376dcb6968bb87edf6c4d5ca565a}{Delete\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id) override
+\item 
+\mbox{\Hypertarget{classbustub_1_1DiskManagerUnlimitedMemory_a31d5042abeabd1eb82b4f09f5e5fc382}\label{classbustub_1_1DiskManagerUnlimitedMemory_a31d5042abeabd1eb82b4f09f5e5fc382}} 
+void {\bfseries Process\+Latency} (page\+\_\+id\+\_\+t page\+\_\+id)
+\item 
+\mbox{\Hypertarget{classbustub_1_1DiskManagerUnlimitedMemory_aa3d69bf1f10da4d2384c47086966b2b3}\label{classbustub_1_1DiskManagerUnlimitedMemory_aa3d69bf1f10da4d2384c47086966b2b3}} 
+void {\bfseries Post\+Process\+Latency} (page\+\_\+id\+\_\+t page\+\_\+id)
+\item 
+\mbox{\Hypertarget{classbustub_1_1DiskManagerUnlimitedMemory_a17dfb815a0dd0d229361834ef8bded18}\label{classbustub_1_1DiskManagerUnlimitedMemory_a17dfb815a0dd0d229361834ef8bded18}} 
+void {\bfseries Enable\+Latency\+Simulator} (bool enabled)
+\item 
+\mbox{\Hypertarget{classbustub_1_1DiskManagerUnlimitedMemory_a52ac39a17a415d83fec9c10b91d37793}\label{classbustub_1_1DiskManagerUnlimitedMemory_a52ac39a17a415d83fec9c10b91d37793}} 
+auto {\bfseries Get\+Last\+Read\+Thread\+And\+Clear} () -\/$>$ std\+::optional$<$ std\+::thread\+::id $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1DiskManagerMemory}{Disk\+Manager\+Memory}} replicates the utility of \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} on memory. It is primarily used for data structure performance testing. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1DiskManagerUnlimitedMemory_ac887376dcb6968bb87edf6c4d5ca565a}\label{classbustub_1_1DiskManagerUnlimitedMemory_ac887376dcb6968bb87edf6c4d5ca565a}} 
+\index{bustub::DiskManagerUnlimitedMemory@{bustub::DiskManagerUnlimitedMemory}!DeletePage@{DeletePage}}
+\index{DeletePage@{DeletePage}!bustub::DiskManagerUnlimitedMemory@{bustub::DiskManagerUnlimitedMemory}}
+\doxysubsubsection{\texorpdfstring{DeletePage()}{DeletePage()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+Unlimited\+Memory\+::\+Delete\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Delete a page from the database file. Reclaim the disk space. Since we are using memory, this is a no-\/op. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of the page \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1DiskManager_afab57a1953d5ebff26fed78fe22a2fa7}{bustub\+::\+Disk\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1DiskManagerUnlimitedMemory_ac602ac7692498661e601297178533c40}\label{classbustub_1_1DiskManagerUnlimitedMemory_ac602ac7692498661e601297178533c40}} 
+\index{bustub::DiskManagerUnlimitedMemory@{bustub::DiskManagerUnlimitedMemory}!ReadPage@{ReadPage}}
+\index{ReadPage@{ReadPage}!bustub::DiskManagerUnlimitedMemory@{bustub::DiskManagerUnlimitedMemory}}
+\doxysubsubsection{\texorpdfstring{ReadPage()}{ReadPage()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+Unlimited\+Memory\+::\+Read\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id,  }\item[{char $\ast$}]{page\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Read a page from the database file. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em page\+\_\+id} & id of the page \\
+\hline
+\mbox{\texttt{ out}}  & {\em page\+\_\+data} & output buffer \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1DiskManager_aa6cc12345be1e07c2fdb70c50af5e2d8}{bustub\+::\+Disk\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1DiskManagerUnlimitedMemory_a49178f13725196cb4f57a259ba5ce4ed}\label{classbustub_1_1DiskManagerUnlimitedMemory_a49178f13725196cb4f57a259ba5ce4ed}} 
+\index{bustub::DiskManagerUnlimitedMemory@{bustub::DiskManagerUnlimitedMemory}!WritePage@{WritePage}}
+\index{WritePage@{WritePage}!bustub::DiskManagerUnlimitedMemory@{bustub::DiskManagerUnlimitedMemory}}
+\doxysubsubsection{\texorpdfstring{WritePage()}{WritePage()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+Unlimited\+Memory\+::\+Write\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id,  }\item[{const char $\ast$}]{page\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Write a page to the database file. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of the page \\
+\hline
+{\em page\+\_\+data} & raw page data \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1DiskManager_ae89df7f59076403589c78c52482c4ceb}{bustub\+::\+Disk\+Manager}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/disk/disk\+\_\+manager\+\_\+memory.\+h\item 
+src/storage/disk/disk\+\_\+manager\+\_\+memory.\+cpp\end{DoxyCompactItemize}

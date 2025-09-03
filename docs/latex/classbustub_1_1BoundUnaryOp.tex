@@ -1,0 +1,68 @@
+\hypertarget{classbustub_1_1BoundUnaryOp}{}\doxysection{bustub\+::Bound\+Unary\+Op Class Reference}
+\label{classbustub_1_1BoundUnaryOp}\index{bustub::BoundUnaryOp@{bustub::BoundUnaryOp}}
+
+
+{\ttfamily \#include $<$bound\+\_\+unary\+\_\+op.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Unary\+Op\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundUnaryOp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Unary\+Op\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundUnaryOp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundUnaryOp_ac6d64c9d5fdc75efbf0226d3cf4906bc}\label{classbustub_1_1BoundUnaryOp_ac6d64c9d5fdc75efbf0226d3cf4906bc}} 
+{\bfseries Bound\+Unary\+Op} (std\+::string op\+\_\+name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ arg)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundUnaryOp_adc74ddc866f881e65ce2c0af707ebe6d}\label{classbustub_1_1BoundUnaryOp_adc74ddc866f881e65ce2c0af707ebe6d}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundUnaryOp_ad7b257961f10628cc6f4010fe6e09abc}\label{classbustub_1_1BoundUnaryOp_ad7b257961f10628cc6f4010fe6e09abc}} 
+auto {\bfseries Has\+Aggregation} () const -\/$>$ bool override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundUnaryOp_ade8f8476e9682d2aac05dc41836f371c}{op\+\_\+name\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1BoundUnaryOp_a4cb4940c9e6214f829e1bb14e5ccf164}{arg\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A bound unary operation, e.\+g., {\ttfamily -\/x}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundUnaryOp_a4cb4940c9e6214f829e1bb14e5ccf164}\label{classbustub_1_1BoundUnaryOp_a4cb4940c9e6214f829e1bb14e5ccf164}} 
+\index{bustub::BoundUnaryOp@{bustub::BoundUnaryOp}!arg\_@{arg\_}}
+\index{arg\_@{arg\_}!bustub::BoundUnaryOp@{bustub::BoundUnaryOp}}
+\doxysubsubsection{\texorpdfstring{arg\_}{arg\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ bustub\+::\+Bound\+Unary\+Op\+::arg\+\_\+}
+
+Argument of the op. \mbox{\Hypertarget{classbustub_1_1BoundUnaryOp_ade8f8476e9682d2aac05dc41836f371c}\label{classbustub_1_1BoundUnaryOp_ade8f8476e9682d2aac05dc41836f371c}} 
+\index{bustub::BoundUnaryOp@{bustub::BoundUnaryOp}!op\_name\_@{op\_name\_}}
+\index{op\_name\_@{op\_name\_}!bustub::BoundUnaryOp@{bustub::BoundUnaryOp}}
+\doxysubsubsection{\texorpdfstring{op\_name\_}{op\_name\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+Unary\+Op\+::op\+\_\+name\+\_\+}
+
+Operator name. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/expressions/bound\+\_\+unary\+\_\+op.\+h\end{DoxyCompactItemize}

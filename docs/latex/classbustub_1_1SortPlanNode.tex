@@ -1,0 +1,125 @@
+\hypertarget{classbustub_1_1SortPlanNode}{}\doxysection{bustub\+::Sort\+Plan\+Node Class Reference}
+\label{classbustub_1_1SortPlanNode}\index{bustub::SortPlanNode@{bustub::SortPlanNode}}
+
+
+{\ttfamily \#include $<$sort\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Sort\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1SortPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Sort\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1SortPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1SortPlanNode_ac96e317acfee6e62bed0f1fa87ce7619}{Sort\+Plan\+Node}} (Schema\+Ref output, Abstract\+Plan\+Node\+Ref child, std\+::vector$<$ Order\+By $>$ order\+\_\+bys)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SortPlanNode_a9cf3d2c021292fb2e4df6b852d6ed743}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SortPlanNode_a53568ce0950d98e81bda25e20b98dde2}{Get\+Child\+Plan}} () const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SortPlanNode_a79b6393b2952c7f89f042ee079fc0c16}{Get\+Order\+By}} () const -\/$>$ const std\+::vector$<$ Order\+By $>$ \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1SortPlanNode_ab42973ff0963b773946163252176543f}\label{classbustub_1_1SortPlanNode_ab42973ff0963b773946163252176543f}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1SortPlanNode}{Sort\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1SortPlanNode_a89ab0105e960827c77ef1d367878df46}\label{classbustub_1_1SortPlanNode_a89ab0105e960827c77ef1d367878df46}} 
+std\+::vector$<$ Order\+By $>$ {\bfseries order\+\_\+bys\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SortPlanNode_a048222f5f3e6c26642bdc07bf5c9a92c}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1SortPlanNode}{Sort\+Plan\+Node}} represents a sort operation. It will sort the input with the given predicate. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1SortPlanNode_ac96e317acfee6e62bed0f1fa87ce7619}\label{classbustub_1_1SortPlanNode_ac96e317acfee6e62bed0f1fa87ce7619}} 
+\index{bustub::SortPlanNode@{bustub::SortPlanNode}!SortPlanNode@{SortPlanNode}}
+\index{SortPlanNode@{SortPlanNode}!bustub::SortPlanNode@{bustub::SortPlanNode}}
+\doxysubsubsection{\texorpdfstring{SortPlanNode()}{SortPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Sort\+Plan\+Node\+::\+Sort\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{Abstract\+Plan\+Node\+Ref}]{child,  }\item[{std\+::vector$<$ Order\+By $>$}]{order\+\_\+bys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1SortPlanNode}{Sort\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em output} & The output schema of this sort plan node \\
+\hline
+{\em child} & The child plan node \\
+\hline
+{\em order\+\_\+bys} & The sort expressions and their order by types. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1SortPlanNode_a53568ce0950d98e81bda25e20b98dde2}\label{classbustub_1_1SortPlanNode_a53568ce0950d98e81bda25e20b98dde2}} 
+\index{bustub::SortPlanNode@{bustub::SortPlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::SortPlanNode@{bustub::SortPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily auto bustub\+::\+Sort\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The child plan node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SortPlanNode_a79b6393b2952c7f89f042ee079fc0c16}\label{classbustub_1_1SortPlanNode_a79b6393b2952c7f89f042ee079fc0c16}} 
+\index{bustub::SortPlanNode@{bustub::SortPlanNode}!GetOrderBy@{GetOrderBy}}
+\index{GetOrderBy@{GetOrderBy}!bustub::SortPlanNode@{bustub::SortPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetOrderBy()}{GetOrderBy()}}
+{\footnotesize\ttfamily auto bustub\+::\+Sort\+Plan\+Node\+::\+Get\+Order\+By (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::vector$<$Order\+By$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Get sort by expressions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SortPlanNode_a9cf3d2c021292fb2e4df6b852d6ed743}\label{classbustub_1_1SortPlanNode_a9cf3d2c021292fb2e4df6b852d6ed743}} 
+\index{bustub::SortPlanNode@{bustub::SortPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::SortPlanNode@{bustub::SortPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Sort\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1SortPlanNode_a048222f5f3e6c26642bdc07bf5c9a92c}\label{classbustub_1_1SortPlanNode_a048222f5f3e6c26642bdc07bf5c9a92c}} 
+\index{bustub::SortPlanNode@{bustub::SortPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::SortPlanNode@{bustub::SortPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Sort\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/sort\+\_\+plan.\+h\item 
+src/execution/fmt\+\_\+impl.\+cpp\end{DoxyCompactItemize}

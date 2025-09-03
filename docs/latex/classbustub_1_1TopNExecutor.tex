@@ -1,0 +1,128 @@
+\hypertarget{classbustub_1_1TopNExecutor}{}\doxysection{bustub\+::Top\+NExecutor Class Reference}
+\label{classbustub_1_1TopNExecutor}\index{bustub::TopNExecutor@{bustub::TopNExecutor}}
+
+
+{\ttfamily \#include $<$topn\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Top\+NExecutor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1TopNExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Top\+NExecutor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1TopNExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TopNExecutor_adc6a65b9b8e227a2eb56fedb38233c2e}{Top\+NExecutor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1TopNPlanNode}{Top\+NPlan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TopNExecutor_a52830dccb676a42e3551b921f7f77b9c}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNExecutor_abe02a4666bddc8cb7469ce5e3866c920}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNExecutor_a3799e17fd3f24a9caa7a6502f7a0e0c5}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\item 
+void \mbox{\hyperlink{classbustub_1_1TopNExecutor_a53b809f10fdc1ad53400ad3e4cb850a9}{Set\+Child\+Executor}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNExecutor_a54185197136efc35193aaec59979a4c7}{Get\+Num\+In\+Heap}} () -\/$>$ size\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1TopNExecutor}{Top\+NExecutor}} executor executes a topn. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TopNExecutor_adc6a65b9b8e227a2eb56fedb38233c2e}\label{classbustub_1_1TopNExecutor_adc6a65b9b8e227a2eb56fedb38233c2e}} 
+\index{bustub::TopNExecutor@{bustub::TopNExecutor}!TopNExecutor@{TopNExecutor}}
+\index{TopNExecutor@{TopNExecutor}!bustub::TopNExecutor@{bustub::TopNExecutor}}
+\doxysubsubsection{\texorpdfstring{TopNExecutor()}{TopNExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Top\+NExecutor\+::\+Top\+NExecutor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1TopNPlanNode}{Top\+NPlan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1TopNExecutor}{Top\+NExecutor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The TopN plan to be executed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TopNExecutor_a54185197136efc35193aaec59979a4c7}\label{classbustub_1_1TopNExecutor_a54185197136efc35193aaec59979a4c7}} 
+\index{bustub::TopNExecutor@{bustub::TopNExecutor}!GetNumInHeap@{GetNumInHeap}}
+\index{GetNumInHeap@{GetNumInHeap}!bustub::TopNExecutor@{bustub::TopNExecutor}}
+\doxysubsubsection{\texorpdfstring{GetNumInHeap()}{GetNumInHeap()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NExecutor\+::\+Get\+Num\+In\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ size\+\_\+t}
+
+\begin{DoxyReturn}{Returns}
+The size of top\+\_\+entries\+\_\+ container, which will be called on each child\+\_\+executor-\/$>$\mbox{\hyperlink{classbustub_1_1TopNExecutor_abe02a4666bddc8cb7469ce5e3866c920}{Next()}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TopNExecutor_a3799e17fd3f24a9caa7a6502f7a0e0c5}\label{classbustub_1_1TopNExecutor_a3799e17fd3f24a9caa7a6502f7a0e0c5}} 
+\index{bustub::TopNExecutor@{bustub::TopNExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::TopNExecutor@{bustub::TopNExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NExecutor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the TopN 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1TopNExecutor_a52830dccb676a42e3551b921f7f77b9c}\label{classbustub_1_1TopNExecutor_a52830dccb676a42e3551b921f7f77b9c}} 
+\index{bustub::TopNExecutor@{bustub::TopNExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::TopNExecutor@{bustub::TopNExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Top\+NExecutor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the TopN 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1TopNExecutor_abe02a4666bddc8cb7469ce5e3866c920}\label{classbustub_1_1TopNExecutor_abe02a4666bddc8cb7469ce5e3866c920}} 
+\index{bustub::TopNExecutor@{bustub::TopNExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::TopNExecutor@{bustub::TopNExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NExecutor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the TopN. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the TopN \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the TopN \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1TopNExecutor_a53b809f10fdc1ad53400ad3e4cb850a9}\label{classbustub_1_1TopNExecutor_a53b809f10fdc1ad53400ad3e4cb850a9}} 
+\index{bustub::TopNExecutor@{bustub::TopNExecutor}!SetChildExecutor@{SetChildExecutor}}
+\index{SetChildExecutor@{SetChildExecutor}!bustub::TopNExecutor@{bustub::TopNExecutor}}
+\doxysubsubsection{\texorpdfstring{SetChildExecutor()}{SetChildExecutor()}}
+{\footnotesize\ttfamily void bustub\+::\+Top\+NExecutor\+::\+Set\+Child\+Executor (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets new child executor (for testing only) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/topn\+\_\+executor.\+h\item 
+src/execution/topn\+\_\+executor.\+cpp\end{DoxyCompactItemize}

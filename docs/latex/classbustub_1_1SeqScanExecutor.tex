@@ -1,0 +1,109 @@
+\hypertarget{classbustub_1_1SeqScanExecutor}{}\doxysection{bustub\+::Seq\+Scan\+Executor Class Reference}
+\label{classbustub_1_1SeqScanExecutor}\index{bustub::SeqScanExecutor@{bustub::SeqScanExecutor}}
+
+
+{\ttfamily \#include $<$seq\+\_\+scan\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Seq\+Scan\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classbustub_1_1SeqScanExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Seq\+Scan\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classbustub_1_1SeqScanExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1SeqScanExecutor_a4d386aa4aa4a4140253ea19738f04562}{Seq\+Scan\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode}{Seq\+Scan\+Plan\+Node}} $\ast$plan)
+\item 
+void \mbox{\hyperlink{classbustub_1_1SeqScanExecutor_ac24b874b7d6679bfe5bcf7b32700c468}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SeqScanExecutor_a67b92efa9796c9b985596bf428bab139}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SeqScanExecutor_a359f6289f36c01d8452426ae32b080a2}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1SeqScanExecutor}{Seq\+Scan\+Executor}} executor executes a sequential table scan. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1SeqScanExecutor_a4d386aa4aa4a4140253ea19738f04562}\label{classbustub_1_1SeqScanExecutor_a4d386aa4aa4a4140253ea19738f04562}} 
+\index{bustub::SeqScanExecutor@{bustub::SeqScanExecutor}!SeqScanExecutor@{SeqScanExecutor}}
+\index{SeqScanExecutor@{SeqScanExecutor}!bustub::SeqScanExecutor@{bustub::SeqScanExecutor}}
+\doxysubsubsection{\texorpdfstring{SeqScanExecutor()}{SeqScanExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Seq\+Scan\+Executor\+::\+Seq\+Scan\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode}{Seq\+Scan\+Plan\+Node}} $\ast$}]{plan }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1SeqScanExecutor}{Seq\+Scan\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The sequential scan plan to be executed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1SeqScanExecutor_a359f6289f36c01d8452426ae32b080a2}\label{classbustub_1_1SeqScanExecutor_a359f6289f36c01d8452426ae32b080a2}} 
+\index{bustub::SeqScanExecutor@{bustub::SeqScanExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::SeqScanExecutor@{bustub::SeqScanExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Seq\+Scan\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the sequential scan 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1SeqScanExecutor_ac24b874b7d6679bfe5bcf7b32700c468}\label{classbustub_1_1SeqScanExecutor_ac24b874b7d6679bfe5bcf7b32700c468}} 
+\index{bustub::SeqScanExecutor@{bustub::SeqScanExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::SeqScanExecutor@{bustub::SeqScanExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Seq\+Scan\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the sequential scan 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1SeqScanExecutor_a67b92efa9796c9b985596bf428bab139}\label{classbustub_1_1SeqScanExecutor_a67b92efa9796c9b985596bf428bab139}} 
+\index{bustub::SeqScanExecutor@{bustub::SeqScanExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::SeqScanExecutor@{bustub::SeqScanExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Seq\+Scan\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the sequential scan. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the scan \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the scan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/seq\+\_\+scan\+\_\+executor.\+h\item 
+src/execution/seq\+\_\+scan\+\_\+executor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\hypertarget{classbustub_1_1LRUReplacer}{}\doxysection{bustub\+::LRUReplacer Class Reference}
+\label{classbustub_1_1LRUReplacer}\index{bustub::LRUReplacer@{bustub::LRUReplacer}}
+
+
+{\ttfamily \#include $<$lru\+\_\+replacer.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::LRUReplacer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classbustub_1_1LRUReplacer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::LRUReplacer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classbustub_1_1LRUReplacer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LRUReplacer_abcc09dd9051794dc295e61d60b52599b}{LRUReplacer}} (size\+\_\+t num\+\_\+pages)
+\item 
+\mbox{\hyperlink{classbustub_1_1LRUReplacer_ad87fe8c6f336c8d39203b5c021170857}{$\sim$\+LRUReplacer}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LRUReplacer_ad0cb74ba0debfd52182e856fa5a1cc41}{Victim}} (frame\+\_\+id\+\_\+t $\ast$frame\+\_\+id) -\/$>$ bool override
+\item 
+void \mbox{\hyperlink{classbustub_1_1LRUReplacer_aadd029af7df0d9e3a7e34db50809cb7a}{Pin}} (frame\+\_\+id\+\_\+t frame\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1LRUReplacer_abc7c5e45551d242c08ac82ea3519d0bc}{Unpin}} (frame\+\_\+id\+\_\+t frame\+\_\+id) override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LRUReplacer_a7aee3ccc39ea75babaf561f73a18330b}{Size}} () -\/$>$ size\+\_\+t override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1LRUReplacer}{LRUReplacer}} implements the Least Recently Used replacement policy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LRUReplacer_abcc09dd9051794dc295e61d60b52599b}\label{classbustub_1_1LRUReplacer_abcc09dd9051794dc295e61d60b52599b}} 
+\index{bustub::LRUReplacer@{bustub::LRUReplacer}!LRUReplacer@{LRUReplacer}}
+\index{LRUReplacer@{LRUReplacer}!bustub::LRUReplacer@{bustub::LRUReplacer}}
+\doxysubsubsection{\texorpdfstring{LRUReplacer()}{LRUReplacer()}}
+{\footnotesize\ttfamily bustub\+::\+LRUReplacer\+::\+LRUReplacer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num\+\_\+pages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Create a new \mbox{\hyperlink{classbustub_1_1LRUReplacer}{LRUReplacer}}. 
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+pages} & the maximum number of pages the \mbox{\hyperlink{classbustub_1_1LRUReplacer}{LRUReplacer}} will be required to store \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1LRUReplacer_ad87fe8c6f336c8d39203b5c021170857}\label{classbustub_1_1LRUReplacer_ad87fe8c6f336c8d39203b5c021170857}} 
+\index{bustub::LRUReplacer@{bustub::LRUReplacer}!````~LRUReplacer@{$\sim$LRUReplacer}}
+\index{````~LRUReplacer@{$\sim$LRUReplacer}!bustub::LRUReplacer@{bustub::LRUReplacer}}
+\doxysubsubsection{\texorpdfstring{$\sim$LRUReplacer()}{~LRUReplacer()}}
+{\footnotesize\ttfamily bustub\+::\+LRUReplacer\+::$\sim$\+LRUReplacer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destroys the \mbox{\hyperlink{classbustub_1_1LRUReplacer}{LRUReplacer}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LRUReplacer_aadd029af7df0d9e3a7e34db50809cb7a}\label{classbustub_1_1LRUReplacer_aadd029af7df0d9e3a7e34db50809cb7a}} 
+\index{bustub::LRUReplacer@{bustub::LRUReplacer}!Pin@{Pin}}
+\index{Pin@{Pin}!bustub::LRUReplacer@{bustub::LRUReplacer}}
+\doxysubsubsection{\texorpdfstring{Pin()}{Pin()}}
+{\footnotesize\ttfamily void bustub\+::\+LRUReplacer\+::\+Pin (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t}]{frame\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Pins a frame, indicating that it should not be victimized until it is unpinned. 
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+id} & the id of the frame to pin \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Replacer_ac152854b5b80f90a6c914ad9859f1504}{bustub\+::\+Replacer}}.
+
+\mbox{\Hypertarget{classbustub_1_1LRUReplacer_a7aee3ccc39ea75babaf561f73a18330b}\label{classbustub_1_1LRUReplacer_a7aee3ccc39ea75babaf561f73a18330b}} 
+\index{bustub::LRUReplacer@{bustub::LRUReplacer}!Size@{Size}}
+\index{Size@{Size}!bustub::LRUReplacer@{bustub::LRUReplacer}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily auto bustub\+::\+LRUReplacer\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$  size\+\_\+t\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the number of elements in the replacer that can be victimized 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Replacer_ad7be7527d1687821f8812e999ed08c6c}{bustub\+::\+Replacer}}.
+
+\mbox{\Hypertarget{classbustub_1_1LRUReplacer_abc7c5e45551d242c08ac82ea3519d0bc}\label{classbustub_1_1LRUReplacer_abc7c5e45551d242c08ac82ea3519d0bc}} 
+\index{bustub::LRUReplacer@{bustub::LRUReplacer}!Unpin@{Unpin}}
+\index{Unpin@{Unpin}!bustub::LRUReplacer@{bustub::LRUReplacer}}
+\doxysubsubsection{\texorpdfstring{Unpin()}{Unpin()}}
+{\footnotesize\ttfamily void bustub\+::\+LRUReplacer\+::\+Unpin (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t}]{frame\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Unpins a frame, indicating that it can now be victimized. 
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+id} & the id of the frame to unpin \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Replacer_afdd9f2f50f45ac89e3b5460bb81ce4cd}{bustub\+::\+Replacer}}.
+
+\mbox{\Hypertarget{classbustub_1_1LRUReplacer_ad0cb74ba0debfd52182e856fa5a1cc41}\label{classbustub_1_1LRUReplacer_ad0cb74ba0debfd52182e856fa5a1cc41}} 
+\index{bustub::LRUReplacer@{bustub::LRUReplacer}!Victim@{Victim}}
+\index{Victim@{Victim}!bustub::LRUReplacer@{bustub::LRUReplacer}}
+\doxysubsubsection{\texorpdfstring{Victim()}{Victim()}}
+{\footnotesize\ttfamily auto bustub\+::\+LRUReplacer\+::\+Victim (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t $\ast$}]{frame\+\_\+id }\end{DoxyParamCaption}) -\/$>$  bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Remove the victim frame as defined by the replacement policy. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em frame\+\_\+id} & id of frame that was removed, nullptr if no victim was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a victim frame was found, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Replacer_a9b94be99bdb7b9aa4fcbd37b29b50b7e}{bustub\+::\+Replacer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/buffer/lru\+\_\+replacer.\+h\item 
+src/buffer/lru\+\_\+replacer.\+cpp\end{DoxyCompactItemize}

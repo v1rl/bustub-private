@@ -1,0 +1,132 @@
+\hypertarget{classbustub_1_1FilterPlanNode}{}\doxysection{bustub\+::Filter\+Plan\+Node Class Reference}
+\label{classbustub_1_1FilterPlanNode}\index{bustub::FilterPlanNode@{bustub::FilterPlanNode}}
+
+
+{\ttfamily \#include $<$filter\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Filter\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1FilterPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Filter\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1FilterPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1FilterPlanNode_a4d314e4753a1031e3d8170f5d9f5d2c2}{Filter\+Plan\+Node}} (Schema\+Ref output, Abstract\+Expression\+Ref predicate, Abstract\+Plan\+Node\+Ref child)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1FilterPlanNode_af36810cb3f9fb0e5bc72762841b34af1}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1FilterPlanNode_a6fa9ff64b800aebfb1a5b5a4de292f2d}{Get\+Predicate}} () const -\/$>$ const Abstract\+Expression\+Ref \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1FilterPlanNode_a21a0e6d4ff504545a4b05de6f2618cd4}{Get\+Child\+Plan}} () const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+\mbox{\Hypertarget{classbustub_1_1FilterPlanNode_ae67100b45d93232dccfc9aa76e69a4e7}\label{classbustub_1_1FilterPlanNode_ae67100b45d93232dccfc9aa76e69a4e7}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1FilterPlanNode}{Filter\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Abstract\+Expression\+Ref \mbox{\hyperlink{classbustub_1_1FilterPlanNode_af465ad8491f35c3a87260b536223c21c}{predicate\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1FilterPlanNode_a6bd58842d2ad31764c3d30890cee112c}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1FilterPlanNode}{Filter\+Plan\+Node}} represents a filter operation. It retains any tuple that satisfies the predicate in the child. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1FilterPlanNode_a4d314e4753a1031e3d8170f5d9f5d2c2}\label{classbustub_1_1FilterPlanNode_a4d314e4753a1031e3d8170f5d9f5d2c2}} 
+\index{bustub::FilterPlanNode@{bustub::FilterPlanNode}!FilterPlanNode@{FilterPlanNode}}
+\index{FilterPlanNode@{FilterPlanNode}!bustub::FilterPlanNode@{bustub::FilterPlanNode}}
+\doxysubsubsection{\texorpdfstring{FilterPlanNode()}{FilterPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Filter\+Plan\+Node\+::\+Filter\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{Abstract\+Expression\+Ref}]{predicate,  }\item[{Abstract\+Plan\+Node\+Ref}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1FilterPlanNode}{Filter\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em output} & The output schema of this filter plan node \\
+\hline
+{\em predicate} & The predicate applied during the scan operation \\
+\hline
+{\em child} & The child plan node \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1FilterPlanNode_a21a0e6d4ff504545a4b05de6f2618cd4}\label{classbustub_1_1FilterPlanNode_a21a0e6d4ff504545a4b05de6f2618cd4}} 
+\index{bustub::FilterPlanNode@{bustub::FilterPlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::FilterPlanNode@{bustub::FilterPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily auto bustub\+::\+Filter\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The child plan node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1FilterPlanNode_a6fa9ff64b800aebfb1a5b5a4de292f2d}\label{classbustub_1_1FilterPlanNode_a6fa9ff64b800aebfb1a5b5a4de292f2d}} 
+\index{bustub::FilterPlanNode@{bustub::FilterPlanNode}!GetPredicate@{GetPredicate}}
+\index{GetPredicate@{GetPredicate}!bustub::FilterPlanNode@{bustub::FilterPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetPredicate()}{GetPredicate()}}
+{\footnotesize\ttfamily auto bustub\+::\+Filter\+Plan\+Node\+::\+Get\+Predicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const Abstract\+Expression\+Ref \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The predicate to test tuples against; tuples should only be returned if they evaluate to true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1FilterPlanNode_af36810cb3f9fb0e5bc72762841b34af1}\label{classbustub_1_1FilterPlanNode_af36810cb3f9fb0e5bc72762841b34af1}} 
+\index{bustub::FilterPlanNode@{bustub::FilterPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::FilterPlanNode@{bustub::FilterPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Filter\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1FilterPlanNode_a6bd58842d2ad31764c3d30890cee112c}\label{classbustub_1_1FilterPlanNode_a6bd58842d2ad31764c3d30890cee112c}} 
+\index{bustub::FilterPlanNode@{bustub::FilterPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::FilterPlanNode@{bustub::FilterPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Filter\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1FilterPlanNode_af465ad8491f35c3a87260b536223c21c}\label{classbustub_1_1FilterPlanNode_af465ad8491f35c3a87260b536223c21c}} 
+\index{bustub::FilterPlanNode@{bustub::FilterPlanNode}!predicate\_@{predicate\_}}
+\index{predicate\_@{predicate\_}!bustub::FilterPlanNode@{bustub::FilterPlanNode}}
+\doxysubsubsection{\texorpdfstring{predicate\_}{predicate\_}}
+{\footnotesize\ttfamily Abstract\+Expression\+Ref bustub\+::\+Filter\+Plan\+Node\+::predicate\+\_\+}
+
+The predicate that all returned tuples must satisfy 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/filter\+\_\+plan.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,135 @@
+\hypertarget{classbustub_1_1ProjectionPlanNode}{}\doxysection{bustub\+::Projection\+Plan\+Node Class Reference}
+\label{classbustub_1_1ProjectionPlanNode}\index{bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}}
+
+
+{\ttfamily \#include $<$projection\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Projection\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classbustub_1_1ProjectionPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Projection\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classbustub_1_1ProjectionPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ProjectionPlanNode_a86093255d80e5db7a24a77edb3aa0d8d}{Projection\+Plan\+Node}} (Schema\+Ref output, std\+::vector$<$ Abstract\+Expression\+Ref $>$ expressions, Abstract\+Plan\+Node\+Ref child)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode_a1cdf0a99d39c142be2ea2a703126b67a}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode_afb2725b2778abc1529a6e12d1fcd0f3d}{Get\+Child\+Plan}} () const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode_adcdb6ac9b441335ac606e43bee72ef6e}{Get\+Expressions}} () const -\/$>$ const std\+::vector$<$ Abstract\+Expression\+Ref $>$ \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1ProjectionPlanNode_a9bada9fcf22a82adacdb47278147272b}\label{classbustub_1_1ProjectionPlanNode_a9bada9fcf22a82adacdb47278147272b}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1ProjectionPlanNode}{Projection\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ProjectionPlanNode_ab0d6858aa8018adedfdf15f7bc7cec1e}\label{classbustub_1_1ProjectionPlanNode_ab0d6858aa8018adedfdf15f7bc7cec1e}} 
+static auto {\bfseries Infer\+Projection\+Schema} (const std\+::vector$<$ Abstract\+Expression\+Ref $>$ \&expressions) -\/$>$ \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ProjectionPlanNode_a128c8bdcec8e9b37a03c3581811d6ffe}\label{classbustub_1_1ProjectionPlanNode_a128c8bdcec8e9b37a03c3581811d6ffe}} 
+static auto {\bfseries Rename\+Schema} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema, const std\+::vector$<$ std\+::string $>$ \&col\+\_\+names) -\/$>$ \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ProjectionPlanNode_a050e7c8395fd4a1ee1be4dc02f53893f}\label{classbustub_1_1ProjectionPlanNode_a050e7c8395fd4a1ee1be4dc02f53893f}} 
+std\+::vector$<$ Abstract\+Expression\+Ref $>$ {\bfseries expressions\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode_a5b6e4ade6a4b5b4f23c1a94a415dfa9c}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode}{Projection\+Plan\+Node}} represents a project operation. It computes expressions based on the input. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ProjectionPlanNode_a86093255d80e5db7a24a77edb3aa0d8d}\label{classbustub_1_1ProjectionPlanNode_a86093255d80e5db7a24a77edb3aa0d8d}} 
+\index{bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}!ProjectionPlanNode@{ProjectionPlanNode}}
+\index{ProjectionPlanNode@{ProjectionPlanNode}!bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}}
+\doxysubsubsection{\texorpdfstring{ProjectionPlanNode()}{ProjectionPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Projection\+Plan\+Node\+::\+Projection\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{std\+::vector$<$ Abstract\+Expression\+Ref $>$}]{expressions,  }\item[{Abstract\+Plan\+Node\+Ref}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode}{Projection\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em output} & The output schema of this projection node \\
+\hline
+{\em expressions} & The expression to evaluate \\
+\hline
+{\em child} & The child plan node \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ProjectionPlanNode_afb2725b2778abc1529a6e12d1fcd0f3d}\label{classbustub_1_1ProjectionPlanNode_afb2725b2778abc1529a6e12d1fcd0f3d}} 
+\index{bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily auto bustub\+::\+Projection\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The child plan node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ProjectionPlanNode_adcdb6ac9b441335ac606e43bee72ef6e}\label{classbustub_1_1ProjectionPlanNode_adcdb6ac9b441335ac606e43bee72ef6e}} 
+\index{bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}!GetExpressions@{GetExpressions}}
+\index{GetExpressions@{GetExpressions}!bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetExpressions()}{GetExpressions()}}
+{\footnotesize\ttfamily auto bustub\+::\+Projection\+Plan\+Node\+::\+Get\+Expressions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::vector$<$Abstract\+Expression\+Ref$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Projection expressions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ProjectionPlanNode_a1cdf0a99d39c142be2ea2a703126b67a}\label{classbustub_1_1ProjectionPlanNode_a1cdf0a99d39c142be2ea2a703126b67a}} 
+\index{bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Projection\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1ProjectionPlanNode_a5b6e4ade6a4b5b4f23c1a94a415dfa9c}\label{classbustub_1_1ProjectionPlanNode_a5b6e4ade6a4b5b4f23c1a94a415dfa9c}} 
+\index{bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::ProjectionPlanNode@{bustub::ProjectionPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Projection\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/projection\+\_\+plan.\+h\item 
+src/execution/fmt\+\_\+impl.\+cpp\item 
+src/execution/plan\+\_\+node.\+cpp\end{DoxyCompactItemize}

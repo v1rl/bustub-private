@@ -1,0 +1,104 @@
+\hypertarget{classbustub_1_1MockScanPlanNode}{}\doxysection{bustub\+::Mock\+Scan\+Plan\+Node Class Reference}
+\label{classbustub_1_1MockScanPlanNode}\index{bustub::MockScanPlanNode@{bustub::MockScanPlanNode}}
+
+
+{\ttfamily \#include $<$mock\+\_\+scan\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Mock\+Scan\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classbustub_1_1MockScanPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Mock\+Scan\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classbustub_1_1MockScanPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1MockScanPlanNode_a6facccd361b1d820f2b62714715159a7}{Mock\+Scan\+Plan\+Node}} (Schema\+Ref output, std\+::string table)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MockScanPlanNode_a6f4d0dfcc4511731209860c926c4b723}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MockScanPlanNode_a13fa532b845866bc3ef4624a2e96cf6c}{Get\+Table}} () const -\/$>$ const std\+::string \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1MockScanPlanNode_acd219859d6518b4b27ab4a40b02f7810}\label{classbustub_1_1MockScanPlanNode_acd219859d6518b4b27ab4a40b02f7810}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1MockScanPlanNode}{Mock\+Scan\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MockScanPlanNode_acef1bb0f1254a9ed5c8a7254d4ec37fc}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1MockScanPlanNode}{Mock\+Scan\+Plan\+Node}} represents a \char`\"{}dummy\char`\"{} sequential scan over a table, without requiring the table to exist. NOTE\+: This class is used solely for testing. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1MockScanPlanNode_a6facccd361b1d820f2b62714715159a7}\label{classbustub_1_1MockScanPlanNode_a6facccd361b1d820f2b62714715159a7}} 
+\index{bustub::MockScanPlanNode@{bustub::MockScanPlanNode}!MockScanPlanNode@{MockScanPlanNode}}
+\index{MockScanPlanNode@{MockScanPlanNode}!bustub::MockScanPlanNode@{bustub::MockScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{MockScanPlanNode()}{MockScanPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Mock\+Scan\+Plan\+Node\+::\+Mock\+Scan\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{std\+::string}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1MockScanPlanNode}{Mock\+Scan\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em output} & The output schema of this mock scan plan node \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1MockScanPlanNode_a13fa532b845866bc3ef4624a2e96cf6c}\label{classbustub_1_1MockScanPlanNode_a13fa532b845866bc3ef4624a2e96cf6c}} 
+\index{bustub::MockScanPlanNode@{bustub::MockScanPlanNode}!GetTable@{GetTable}}
+\index{GetTable@{GetTable}!bustub::MockScanPlanNode@{bustub::MockScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetTable()}{GetTable()}}
+{\footnotesize\ttfamily auto bustub\+::\+Mock\+Scan\+Plan\+Node\+::\+Get\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::string \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The table name of this mock scan node, used to determine the generated content. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1MockScanPlanNode_a6f4d0dfcc4511731209860c926c4b723}\label{classbustub_1_1MockScanPlanNode_a6f4d0dfcc4511731209860c926c4b723}} 
+\index{bustub::MockScanPlanNode@{bustub::MockScanPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::MockScanPlanNode@{bustub::MockScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Mock\+Scan\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1MockScanPlanNode_acef1bb0f1254a9ed5c8a7254d4ec37fc}\label{classbustub_1_1MockScanPlanNode_acef1bb0f1254a9ed5c8a7254d4ec37fc}} 
+\index{bustub::MockScanPlanNode@{bustub::MockScanPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::MockScanPlanNode@{bustub::MockScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Mock\+Scan\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/mock\+\_\+scan\+\_\+plan.\+h\end{DoxyCompactItemize}

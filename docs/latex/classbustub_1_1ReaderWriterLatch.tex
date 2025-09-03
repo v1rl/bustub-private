@@ -1,0 +1,52 @@
+\hypertarget{classbustub_1_1ReaderWriterLatch}{}\doxysection{bustub\+::Reader\+Writer\+Latch Class Reference}
+\label{classbustub_1_1ReaderWriterLatch}\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+
+
+{\ttfamily \#include $<$rwlatch.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_ac448ed1f4f6761130587f1d2c656aae1}{WLock}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_a7fb327d2cdb564f15385c185d78db90a}{WUnlock}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_a70e2c9d8e4c30cb2a5f1880044f42d7c}{RLock}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_a5d1151994e4ab33467d761340fa2c1e4}{RUnlock}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reader-\/\+Writer latch backed by std\+::mutex. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_a70e2c9d8e4c30cb2a5f1880044f42d7c}\label{classbustub_1_1ReaderWriterLatch_a70e2c9d8e4c30cb2a5f1880044f42d7c}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!RLock@{RLock}}
+\index{RLock@{RLock}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{RLock()}{RLock()}}
+{\footnotesize\ttfamily void bustub\+::\+Reader\+Writer\+Latch\+::\+RLock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Acquire a read latch. \mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_a5d1151994e4ab33467d761340fa2c1e4}\label{classbustub_1_1ReaderWriterLatch_a5d1151994e4ab33467d761340fa2c1e4}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!RUnlock@{RUnlock}}
+\index{RUnlock@{RUnlock}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{RUnlock()}{RUnlock()}}
+{\footnotesize\ttfamily void bustub\+::\+Reader\+Writer\+Latch\+::\+RUnlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Release a read latch. \mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_ac448ed1f4f6761130587f1d2c656aae1}\label{classbustub_1_1ReaderWriterLatch_ac448ed1f4f6761130587f1d2c656aae1}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!WLock@{WLock}}
+\index{WLock@{WLock}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{WLock()}{WLock()}}
+{\footnotesize\ttfamily void bustub\+::\+Reader\+Writer\+Latch\+::\+WLock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Acquire a write latch. \mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_a7fb327d2cdb564f15385c185d78db90a}\label{classbustub_1_1ReaderWriterLatch_a7fb327d2cdb564f15385c185d78db90a}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!WUnlock@{WUnlock}}
+\index{WUnlock@{WUnlock}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{WUnlock()}{WUnlock()}}
+{\footnotesize\ttfamily void bustub\+::\+Reader\+Writer\+Latch\+::\+WUnlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Release a write latch. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/common/rwlatch.\+h\end{DoxyCompactItemize}

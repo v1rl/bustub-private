@@ -1,0 +1,36 @@
+\hypertarget{classbustub_1_1AbstractPool}{}\doxysection{bustub\+::Abstract\+Pool Class Reference}
+\label{classbustub_1_1AbstractPool}\index{bustub::AbstractPool@{bustub::AbstractPool}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractPool_a6e58bf97018b3942fd3feba0857fa0ee}{Allocate}} (size\+\_\+t size) -\/$>$ void $\ast$=0
+\begin{DoxyCompactList}\small\item\em Allocate a contiguous block of memory of the given size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1AbstractPool_acd20c45bdb3cb4dbf2c5f9058e50cfe1}\label{classbustub_1_1AbstractPool_acd20c45bdb3cb4dbf2c5f9058e50cfe1}} 
+virtual void \mbox{\hyperlink{classbustub_1_1AbstractPool_acd20c45bdb3cb4dbf2c5f9058e50cfe1}{Free}} (void $\ast$ptr)=0
+\begin{DoxyCompactList}\small\item\em Returns the provided chunk of memory back into the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractPool_a6e58bf97018b3942fd3feba0857fa0ee}\label{classbustub_1_1AbstractPool_a6e58bf97018b3942fd3feba0857fa0ee}} 
+\index{bustub::AbstractPool@{bustub::AbstractPool}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!bustub::AbstractPool@{bustub::AbstractPool}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Pool\+::\+Allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption}) -\/$>$  void $\ast$\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Allocate a contiguous block of memory of the given size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size (in bytes) of memory to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/null pointer if allocation is successful. A null pointer if allocation fails.
+\end{DoxyReturn}
+TODO\+: Provide good error codes for failure cases 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/type/abstract\+\_\+pool.\+h\end{DoxyCompactItemize}

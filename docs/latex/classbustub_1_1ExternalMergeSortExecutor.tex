@@ -1,0 +1,102 @@
+\hypertarget{classbustub_1_1ExternalMergeSortExecutor}{}\doxysection{bustub\+::External\+Merge\+Sort\+Executor$<$ K $>$ Class Template Reference}
+\label{classbustub_1_1ExternalMergeSortExecutor}\index{bustub::ExternalMergeSortExecutor$<$ K $>$@{bustub::ExternalMergeSortExecutor$<$ K $>$}}
+
+
+{\ttfamily \#include $<$external\+\_\+merge\+\_\+sort\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::External\+Merge\+Sort\+Executor$<$ K $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classbustub_1_1ExternalMergeSortExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::External\+Merge\+Sort\+Executor$<$ K $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classbustub_1_1ExternalMergeSortExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ExternalMergeSortExecutor_aa863be78a75e386815ab3aae900eb8ec}\label{classbustub_1_1ExternalMergeSortExecutor_aa863be78a75e386815ab3aae900eb8ec}} 
+{\bfseries External\+Merge\+Sort\+Executor} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1SortPlanNode}{Sort\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor_a92c865d00c094342ccdca0abce538f41}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor_a77f2d0d08f36d57511f7e2f3d3a8c051}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor_a314986cfaa690278b9430770b1e443d5}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t K$>$\newline
+class bustub\+::\+External\+Merge\+Sort\+Executor$<$ K $>$}
+
+\mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor}{External\+Merge\+Sort\+Executor}} executes an external merge sort.
+
+In Spring 2025, only 2-\/way external merge sort is required. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ExternalMergeSortExecutor_a314986cfaa690278b9430770b1e443d5}\label{classbustub_1_1ExternalMergeSortExecutor_a314986cfaa690278b9430770b1e443d5}} 
+\index{bustub::ExternalMergeSortExecutor$<$ K $>$@{bustub::ExternalMergeSortExecutor$<$ K $>$}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::ExternalMergeSortExecutor$<$ K $>$@{bustub::ExternalMergeSortExecutor$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t K$>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor}{bustub\+::\+External\+Merge\+Sort\+Executor}}$<$ K $>$\+::Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the external merge sort 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1ExternalMergeSortExecutor_a92c865d00c094342ccdca0abce538f41}\label{classbustub_1_1ExternalMergeSortExecutor_a92c865d00c094342ccdca0abce538f41}} 
+\index{bustub::ExternalMergeSortExecutor$<$ K $>$@{bustub::ExternalMergeSortExecutor$<$ K $>$}!Init@{Init}}
+\index{Init@{Init}!bustub::ExternalMergeSortExecutor$<$ K $>$@{bustub::ExternalMergeSortExecutor$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t K$>$ \\
+void \mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor}{bustub\+::\+External\+Merge\+Sort\+Executor}}$<$ K $>$\+::Init\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the external merge sort 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1ExternalMergeSortExecutor_a77f2d0d08f36d57511f7e2f3d3a8c051}\label{classbustub_1_1ExternalMergeSortExecutor_a77f2d0d08f36d57511f7e2f3d3a8c051}} 
+\index{bustub::ExternalMergeSortExecutor$<$ K $>$@{bustub::ExternalMergeSortExecutor$<$ K $>$}!Next@{Next}}
+\index{Next@{Next}!bustub::ExternalMergeSortExecutor$<$ K $>$@{bustub::ExternalMergeSortExecutor$<$ K $>$}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t K$>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor}{bustub\+::\+External\+Merge\+Sort\+Executor}}$<$ K $>$\+::Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the external merge sort. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the external merge sort. \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the external merge sort. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/external\+\_\+merge\+\_\+sort\+\_\+executor.\+h\item 
+src/execution/external\+\_\+merge\+\_\+sort\+\_\+executor.\+cpp\end{DoxyCompactItemize}

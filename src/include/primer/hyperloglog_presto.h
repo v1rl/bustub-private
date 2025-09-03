@@ -86,12 +86,16 @@ class HyperLogLogPresto {
   std::vector<std::bitset<DENSE_BUCKET_SIZE>> dense_bucket_;
 
   /** @brief Structure holding overflow buckets. */
+  // 存溢出的值
   std::unordered_map<uint16_t, std::bitset<OVERFLOW_BUCKET_SIZE>> overflow_bucket_;
 
   /** @brief Storing cardinality value */
+  std::mutex mtx_;
   uint64_t cardinality_;
 
   // TODO(student) - can add more data structures as required
+  bool valid_ = true;
+  int16_t n_leading_bits_;
 };
 
 }  // namespace bustub

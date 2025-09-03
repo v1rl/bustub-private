@@ -1,0 +1,121 @@
+\hypertarget{classbustub_1_1TablePage}{}\doxysection{bustub\+::Table\+Page Class Reference}
+\label{classbustub_1_1TablePage}\index{bustub::TablePage@{bustub::TablePage}}
+
+
+{\ttfamily \#include $<$table\+\_\+page.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbustub_1_1TablePage_ac010b4a48135d340e2b23ddce27f76f9}{Init}} ()
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TablePage_af27c455113bee275e1dc185ceb9d0459}{Get\+Num\+Tuples}} () const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TablePage_a92785ef4f240ca9573a6f9a4e0b5cdf4}{Get\+Next\+Page\+Id}} () const -\/$>$ page\+\_\+id\+\_\+t
+\item 
+void \mbox{\hyperlink{classbustub_1_1TablePage_ae76444e2eb46f9030af404be81b72075}{Set\+Next\+Page\+Id}} (page\+\_\+id\+\_\+t next\+\_\+page\+\_\+id)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TablePage_a2bb642400ce8acf73348abd986162c56}{Get\+Next\+Tuple\+Offset}} (const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple) const -\/$>$ std\+::optional$<$ uint16\+\_\+t $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TablePage_a1a02ad13356caadff4f45386ba770deb}{Insert\+Tuple}} (const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple) -\/$>$ std\+::optional$<$ uint16\+\_\+t $>$
+\item 
+void \mbox{\hyperlink{classbustub_1_1TablePage_a3e8dbff9e8a24be444352d540163f220}{Update\+Tuple\+Meta}} (const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&rid)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TablePage_ad7b96bb62841a3f4e5445289f6424ac0}{Get\+Tuple}} (const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&rid) const -\/$>$ std\+::pair$<$ \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}, \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TablePage_aa7d593f2131484c4d86d0adb910a401a}{Get\+Tuple\+Meta}} (const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&rid) const -\/$>$ \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}
+\item 
+void \mbox{\hyperlink{classbustub_1_1TablePage_ac0533723243708cf0a10778c82c17877}{Update\+Tuple\+In\+Place\+Unsafe}} (const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{classbustub_1_1TablePage_autotoc_md50}{}\doxysubsubsection{Slotted page format\+:}\label{classbustub_1_1TablePage_autotoc_md50}
+\hypertarget{classbustub_1_1TablePage_autotoc_md51}{}\doxysubsubsection{$\vert$ HEADER $\vert$ ... FREE SPACE ... $\vert$ ... INSERTED TUPLES ... $\vert$}\label{classbustub_1_1TablePage_autotoc_md51}
+$^\wedge$ free space pointer\hypertarget{classbustub_1_1TablePage_autotoc_md52}{}\doxysubsubsection{Header format (size in bytes)\+:}\label{classbustub_1_1TablePage_autotoc_md52}
+\hypertarget{classbustub_1_1TablePage_autotoc_md53}{}\doxysubsubsection{$\vert$ Next\+Page\+Id (4)$\vert$ Num\+Tuples(2) $\vert$ Num\+Deleted\+Tuples(2) $\vert$}\label{classbustub_1_1TablePage_autotoc_md53}
+\DoxyHorRuler{0}
+ \hypertarget{classbustub_1_1TablePage_autotoc_md54}{}\doxysubsubsection{$\vert$ Tuple\+\_\+1 offset+size (4) $\vert$ Tuple\+\_\+2 offset+size (4) $\vert$ ... $\vert$}\label{classbustub_1_1TablePage_autotoc_md54}
+\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} format\+: $\vert$ meta $\vert$ data $\vert$ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TablePage_a92785ef4f240ca9573a6f9a4e0b5cdf4}\label{classbustub_1_1TablePage_a92785ef4f240ca9573a6f9a4e0b5cdf4}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetNextPageId@{GetNextPageId}}
+\index{GetNextPageId@{GetNextPageId}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetNextPageId()}{GetNextPageId()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Page\+::\+Get\+Next\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ page\+\_\+id\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the page ID of the next table page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_a2bb642400ce8acf73348abd986162c56}\label{classbustub_1_1TablePage_a2bb642400ce8acf73348abd986162c56}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetNextTupleOffset@{GetNextTupleOffset}}
+\index{GetNextTupleOffset@{GetNextTupleOffset}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetNextTupleOffset()}{GetNextTupleOffset()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Page\+::\+Get\+Next\+Tuple\+Offset (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&}]{meta,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple }\end{DoxyParamCaption}) const -\/$>$ std\+::optional$<$uint16\+\_\+t$>$}
+
+Get the next offset to insert, return nullopt if this tuple cannot fit in this page \mbox{\Hypertarget{classbustub_1_1TablePage_af27c455113bee275e1dc185ceb9d0459}\label{classbustub_1_1TablePage_af27c455113bee275e1dc185ceb9d0459}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetNumTuples@{GetNumTuples}}
+\index{GetNumTuples@{GetNumTuples}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetNumTuples()}{GetNumTuples()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Page\+::\+Get\+Num\+Tuples (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+number of tuples in this page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_ad7b96bb62841a3f4e5445289f6424ac0}\label{classbustub_1_1TablePage_ad7b96bb62841a3f4e5445289f6424ac0}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetTuple@{GetTuple}}
+\index{GetTuple@{GetTuple}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetTuple()}{GetTuple()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Page\+::\+Get\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&}]{rid }\end{DoxyParamCaption}) const -\/$>$ std\+::pair$<$\mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}, \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}$>$}
+
+Read a tuple from a table. \mbox{\Hypertarget{classbustub_1_1TablePage_aa7d593f2131484c4d86d0adb910a401a}\label{classbustub_1_1TablePage_aa7d593f2131484c4d86d0adb910a401a}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetTupleMeta@{GetTupleMeta}}
+\index{GetTupleMeta@{GetTupleMeta}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetTupleMeta()}{GetTupleMeta()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Page\+::\+Get\+Tuple\+Meta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&}]{rid }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}}
+
+Read a tuple meta from a table. \mbox{\Hypertarget{classbustub_1_1TablePage_ac010b4a48135d340e2b23ddce27f76f9}\label{classbustub_1_1TablePage_ac010b4a48135d340e2b23ddce27f76f9}} 
+\index{bustub::TablePage@{bustub::TablePage}!Init@{Init}}
+\index{Init@{Init}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Page\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize the \mbox{\hyperlink{classbustub_1_1TablePage}{Table\+Page}} header. \mbox{\Hypertarget{classbustub_1_1TablePage_a1a02ad13356caadff4f45386ba770deb}\label{classbustub_1_1TablePage_a1a02ad13356caadff4f45386ba770deb}} 
+\index{bustub::TablePage@{bustub::TablePage}!InsertTuple@{InsertTuple}}
+\index{InsertTuple@{InsertTuple}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{InsertTuple()}{InsertTuple()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Page\+::\+Insert\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&}]{meta,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple }\end{DoxyParamCaption}) -\/$>$ std\+::optional$<$uint16\+\_\+t$>$}
+
+Insert a tuple into the table. 
+\begin{DoxyParams}{Parameters}
+{\em tuple} & tuple to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the insert is successful (i.\+e. there is enough space) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_ae76444e2eb46f9030af404be81b72075}\label{classbustub_1_1TablePage_ae76444e2eb46f9030af404be81b72075}} 
+\index{bustub::TablePage@{bustub::TablePage}!SetNextPageId@{SetNextPageId}}
+\index{SetNextPageId@{SetNextPageId}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{SetNextPageId()}{SetNextPageId()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Page\+::\+Set\+Next\+Page\+Id (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{next\+\_\+page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the page id of the next page in the table. \mbox{\Hypertarget{classbustub_1_1TablePage_ac0533723243708cf0a10778c82c17877}\label{classbustub_1_1TablePage_ac0533723243708cf0a10778c82c17877}} 
+\index{bustub::TablePage@{bustub::TablePage}!UpdateTupleInPlaceUnsafe@{UpdateTupleInPlaceUnsafe}}
+\index{UpdateTupleInPlaceUnsafe@{UpdateTupleInPlaceUnsafe}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{UpdateTupleInPlaceUnsafe()}{UpdateTupleInPlaceUnsafe()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Page\+::\+Update\+Tuple\+In\+Place\+Unsafe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&}]{meta,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid }\end{DoxyParamCaption})}
+
+Update a tuple in place. \mbox{\Hypertarget{classbustub_1_1TablePage_a3e8dbff9e8a24be444352d540163f220}\label{classbustub_1_1TablePage_a3e8dbff9e8a24be444352d540163f220}} 
+\index{bustub::TablePage@{bustub::TablePage}!UpdateTupleMeta@{UpdateTupleMeta}}
+\index{UpdateTupleMeta@{UpdateTupleMeta}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{UpdateTupleMeta()}{UpdateTupleMeta()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Page\+::\+Update\+Tuple\+Meta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&}]{meta,  }\item[{const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&}]{rid }\end{DoxyParamCaption})}
+
+Update a tuple. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/table\+\_\+page.\+h\item 
+src/storage/page/table\+\_\+page.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,142 @@
+\hypertarget{classbustub_1_1SeqScanPlanNode}{}\doxysection{bustub\+::Seq\+Scan\+Plan\+Node Class Reference}
+\label{classbustub_1_1SeqScanPlanNode}\index{bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}}
+
+
+{\ttfamily \#include $<$seq\+\_\+scan\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Seq\+Scan\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1SeqScanPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Seq\+Scan\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1SeqScanPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1SeqScanPlanNode_a09459785072e6fee0d03484ce7367f72}{Seq\+Scan\+Plan\+Node}} (Schema\+Ref output, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} table\+\_\+oid, std\+::string table\+\_\+name, Abstract\+Expression\+Ref filter\+\_\+predicate=nullptr)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode_a5f7bb66cd0f1d9fabe85b3b9db32a5b0}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode_a69df9afa94100873939bb70c988e63cf}{Get\+Table\+Oid}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1SeqScanPlanNode_a1e55f538e5ec7236f83385c21871ccec}\label{classbustub_1_1SeqScanPlanNode_a1e55f538e5ec7236f83385c21871ccec}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1SeqScanPlanNode}{Seq\+Scan\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1SeqScanPlanNode_a12226c5e0317045f820f840a1b78325e}\label{classbustub_1_1SeqScanPlanNode_a12226c5e0317045f820f840a1b78325e}} 
+static auto {\bfseries Infer\+Scan\+Schema} (const \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef}{Bound\+Base\+Table\+Ref}} \&table\+\_\+ref) -\/$>$ \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode_ab11b9e98546b103f1148f7b82bc8848f}{table\+\_\+oid\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode_ad841680751bee59c1a84dd7fcbff5f0e}{table\+\_\+name\+\_\+}}
+\item 
+Abstract\+Expression\+Ref \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode_acce730a6ef78f53dfb89aecfdd10b7b7}{filter\+\_\+predicate\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode_a61d72c54babedd44b54813551a4eedcd}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode}{Seq\+Scan\+Plan\+Node}} represents a sequential table scan operation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1SeqScanPlanNode_a09459785072e6fee0d03484ce7367f72}\label{classbustub_1_1SeqScanPlanNode_a09459785072e6fee0d03484ce7367f72}} 
+\index{bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}!SeqScanPlanNode@{SeqScanPlanNode}}
+\index{SeqScanPlanNode@{SeqScanPlanNode}!bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{SeqScanPlanNode()}{SeqScanPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Seq\+Scan\+Plan\+Node\+::\+Seq\+Scan\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{table\+\_\+oid,  }\item[{std\+::string}]{table\+\_\+name,  }\item[{Abstract\+Expression\+Ref}]{filter\+\_\+predicate = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1SeqScanPlanNode}{Seq\+Scan\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em output} & The output schema of this sequential scan plan node \\
+\hline
+{\em table\+\_\+oid} & The identifier of table to be scanned \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1SeqScanPlanNode_a69df9afa94100873939bb70c988e63cf}\label{classbustub_1_1SeqScanPlanNode_a69df9afa94100873939bb70c988e63cf}} 
+\index{bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}!GetTableOid@{GetTableOid}}
+\index{GetTableOid@{GetTableOid}!bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetTableOid()}{GetTableOid()}}
+{\footnotesize\ttfamily auto bustub\+::\+Seq\+Scan\+Plan\+Node\+::\+Get\+Table\+Oid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The identifier of the table that should be scanned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SeqScanPlanNode_a5f7bb66cd0f1d9fabe85b3b9db32a5b0}\label{classbustub_1_1SeqScanPlanNode_a5f7bb66cd0f1d9fabe85b3b9db32a5b0}} 
+\index{bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Seq\+Scan\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1SeqScanPlanNode_a61d72c54babedd44b54813551a4eedcd}\label{classbustub_1_1SeqScanPlanNode_a61d72c54babedd44b54813551a4eedcd}} 
+\index{bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Seq\+Scan\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1SeqScanPlanNode_acce730a6ef78f53dfb89aecfdd10b7b7}\label{classbustub_1_1SeqScanPlanNode_acce730a6ef78f53dfb89aecfdd10b7b7}} 
+\index{bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}!filter\_predicate\_@{filter\_predicate\_}}
+\index{filter\_predicate\_@{filter\_predicate\_}!bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{filter\_predicate\_}{filter\_predicate\_}}
+{\footnotesize\ttfamily Abstract\+Expression\+Ref bustub\+::\+Seq\+Scan\+Plan\+Node\+::filter\+\_\+predicate\+\_\+}
+
+The predicate to filter in seqscan. For Fall 2023, We\textquotesingle{}ll enable the Merge\+Filter\+Scan rule, so we can further support index point lookup \mbox{\Hypertarget{classbustub_1_1SeqScanPlanNode_ad841680751bee59c1a84dd7fcbff5f0e}\label{classbustub_1_1SeqScanPlanNode_ad841680751bee59c1a84dd7fcbff5f0e}} 
+\index{bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}!table\_name\_@{table\_name\_}}
+\index{table\_name\_@{table\_name\_}!bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{table\_name\_}{table\_name\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Seq\+Scan\+Plan\+Node\+::table\+\_\+name\+\_\+}
+
+The table name \mbox{\Hypertarget{classbustub_1_1SeqScanPlanNode_ab11b9e98546b103f1148f7b82bc8848f}\label{classbustub_1_1SeqScanPlanNode_ab11b9e98546b103f1148f7b82bc8848f}} 
+\index{bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}!table\_oid\_@{table\_oid\_}}
+\index{table\_oid\_@{table\_oid\_}!bustub::SeqScanPlanNode@{bustub::SeqScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{table\_oid\_}{table\_oid\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} bustub\+::\+Seq\+Scan\+Plan\+Node\+::table\+\_\+oid\+\_\+}
+
+The table whose tuples should be scanned 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/seq\+\_\+scan\+\_\+plan.\+h\item 
+src/execution/plan\+\_\+node.\+cpp\end{DoxyCompactItemize}

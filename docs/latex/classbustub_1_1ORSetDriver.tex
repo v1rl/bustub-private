@@ -1,0 +1,68 @@
+\hypertarget{classbustub_1_1ORSetDriver}{}\doxysection{bustub\+::ORSet\+Driver$<$ T $>$ Class Template Reference}
+\label{classbustub_1_1ORSetDriver}\index{bustub::ORSetDriver$<$ T $>$@{bustub::ORSetDriver$<$ T $>$}}
+
+
+A driver class for managing ORSets.  
+
+
+
+
+{\ttfamily \#include $<$orset\+\_\+driver.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ORSetDriver_a6012bfb4ecb79e713b92cc8b1da55d3e}\label{classbustub_1_1ORSetDriver_a6012bfb4ecb79e713b92cc8b1da55d3e}} 
+{\bfseries ORSet\+Driver} (size\+\_\+t num\+\_\+orset\+\_\+node)
+\item 
+\mbox{\Hypertarget{classbustub_1_1ORSetDriver_ac473e46f8f825660ebfa2f44b68e97f8}\label{classbustub_1_1ORSetDriver_ac473e46f8f825660ebfa2f44b68e97f8}} 
+auto \mbox{\hyperlink{classbustub_1_1ORSetDriver_ac473e46f8f825660ebfa2f44b68e97f8}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1ORSetNode}{ORSet\+Node}}$<$ T $>$$>$ \&
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classbustub_1_1ORSetNode}{ORSet\+Node}} at index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ORSetDriver_a529deb75e1c0a1a6c19a60b293f21186}\label{classbustub_1_1ORSetDriver_a529deb75e1c0a1a6c19a60b293f21186}} 
+auto {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t index) const -\/$>$ const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1ORSetNode}{ORSet\+Node}}$<$ T $>$$>$ \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ORSetDriver_a7252609125bb0e22e2b03b1466c3f003}{At}} (size\+\_\+t index) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1ORSetNode}{ORSet\+Node}}$<$ T $>$$>$ \&
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}} node at index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ORSetDriver_a3bc1fc23d7292bbc87f931d3309ad4ce}\label{classbustub_1_1ORSetDriver_a3bc1fc23d7292bbc87f931d3309ad4ce}} 
+void \mbox{\hyperlink{classbustub_1_1ORSetDriver_a3bc1fc23d7292bbc87f931d3309ad4ce}{Sync}} ()
+\begin{DoxyCompactList}\small\item\em Saves changes in all nodes and then load all the changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ORSetDriver_aec858c34575a0ff6e92970cc02d84177}\label{classbustub_1_1ORSetDriver_aec858c34575a0ff6e92970cc02d84177}} 
+class {\bfseries ORSet\+Node$<$ T $>$}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class bustub\+::\+ORSet\+Driver$<$ T $>$}
+
+A driver class for managing ORSets. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ORSetDriver_a7252609125bb0e22e2b03b1466c3f003}\label{classbustub_1_1ORSetDriver_a7252609125bb0e22e2b03b1466c3f003}} 
+\index{bustub::ORSetDriver$<$ T $>$@{bustub::ORSetDriver$<$ T $>$}!At@{At}}
+\index{At@{At}!bustub::ORSetDriver$<$ T $>$@{bustub::ORSetDriver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{At()}{At()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ORSetDriver}{bustub\+::\+ORSet\+Driver}}$<$ T $>$\+::At (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) -\/$>$ std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1ORSetNode}{ORSet\+Node}}$<$T$>$$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}} node at index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}} node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}} node associated with the index. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/orset\+\_\+driver.\+h\item 
+src/primer/orset\+\_\+driver.\+cpp\end{DoxyCompactItemize}

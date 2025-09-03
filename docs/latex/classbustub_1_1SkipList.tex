@@ -1,0 +1,189 @@
+\hypertarget{classbustub_1_1SkipList}{}\doxysection{bustub\+::Skip\+List$<$ K, Compare, Max\+Height, Seed $>$ Class Template Reference}
+\label{classbustub_1_1SkipList}\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}}
+
+
+A probablistic data structure that implements the ordered set abstract data type.  
+
+
+
+
+{\ttfamily \#include $<$skiplist.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode}{Skip\+Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1SkipList_a71189180f33f82b115eaa7955454206a}\label{classbustub_1_1SkipList_a71189180f33f82b115eaa7955454206a}} 
+\mbox{\hyperlink{classbustub_1_1SkipList_a71189180f33f82b115eaa7955454206a}{Skip\+List}} (const Compare \&compare=Compare\{\})
+\begin{DoxyCompactList}\small\item\em Constructs an empty skip list with an optional custom comparison function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbustub_1_1SkipList_a3b46717029e2d9c0e991429ab66baff9}{$\sim$\+Skip\+List}} ()
+\begin{DoxyCompactList}\small\item\em Destructs the skip list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbustub_1_1SkipList_a3339feb0b5d0bd0af7d35f24a15b0fc6}{Skip\+List}} (const \mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}} \&)=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1SkipList_a93568ad9c79cb73f0e19f01aa2c76ff1}\label{classbustub_1_1SkipList_a93568ad9c79cb73f0e19f01aa2c76ff1}} 
+auto {\bfseries operator=} (const \mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}} \&) -\/$>$ \mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}} \&=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1SkipList_aab75dce87ae017f4e4e0de37e05736c7}\label{classbustub_1_1SkipList_aab75dce87ae017f4e4e0de37e05736c7}} 
+{\bfseries Skip\+List} (\mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1SkipList_ae8de01deb5d73fdfaf0fe88d018a98c6}\label{classbustub_1_1SkipList_ae8de01deb5d73fdfaf0fe88d018a98c6}} 
+auto {\bfseries operator=} (\mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}} \&\&) -\/$>$ \mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}} \&=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1SkipList_ac0037d53f5cd08023893a2a05753ec2a}\label{classbustub_1_1SkipList_ac0037d53f5cd08023893a2a05753ec2a}} 
+auto \mbox{\hyperlink{classbustub_1_1SkipList_ac0037d53f5cd08023893a2a05753ec2a}{Empty}} () -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Checks whether the container is empty. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1SkipList_aa5b0167546ef1404a9bdba350676db2c}\label{classbustub_1_1SkipList_aa5b0167546ef1404a9bdba350676db2c}} 
+auto \mbox{\hyperlink{classbustub_1_1SkipList_aa5b0167546ef1404a9bdba350676db2c}{Size}} () -\/$>$ size\+\_\+t
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the skip list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1SkipList_ad51c3aeb249d07e360dfec2f8fe1097d}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Removes all elements from the skip list. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1SkipList_afebc2f0a7cacebd90f0865d839a9bfd3}{Insert}} (const K \&key) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Inserts a key into the skip list. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1SkipList_a193d50efb496ff2fb2b5cf8101c79fbc}{Erase}} (const K \&key) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Erases the key from the skip list. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1SkipList_aa9c08c13a30a37ca8611a07ad92591a9}{Contains}} (const K \&key) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Checks whether a key exists in the skip list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1SkipList_a898c3d9ac8c44a7db53e5718a78dccd9}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the skip list for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1SkipList_a5ea8cfd81cb6f5ec717320afc5f96015}\label{classbustub_1_1SkipList_a5ea8cfd81cb6f5ec717320afc5f96015}} 
+auto {\bfseries Header} () -\/$>$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structbustub_1_1SkipList_1_1SkipNode}{Skip\+Node}} $>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename Compare = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$\newline
+class bustub\+::\+Skip\+List$<$ K, Compare, Max\+Height, Seed $>$}
+
+A probablistic data structure that implements the ordered set abstract data type. 
+
+The skip list is implemented as a linked list of nodes. Each node has a list of forward links. The number of forward links is determined by a geometric distribution. The skip list maintains a header node that is always at the maximum height of the skip list. The skip list is always sorted by the key using the comparison function provided.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em K} & the type of key. \\
+\hline
+{\em Compare} & the comparison function for the key. \\
+\hline
+{\em Max\+Height} & the maximum height of the skip list. \\
+\hline
+{\em Seed} & the seed for the random number generator. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1SkipList_a3b46717029e2d9c0e991429ab66baff9}\label{classbustub_1_1SkipList_a3b46717029e2d9c0e991429ab66baff9}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}!````~SkipList@{$\sim$SkipList}}
+\index{````~SkipList@{$\sim$SkipList}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SkipList()}{~SkipList()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+\mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::$\sim$\mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructs the skip list. 
+
+See {\ttfamily Drop()} for how we avoid blowing up the stack. \mbox{\Hypertarget{classbustub_1_1SkipList_a3339feb0b5d0bd0af7d35f24a15b0fc6}\label{classbustub_1_1SkipList_a3339feb0b5d0bd0af7d35f24a15b0fc6}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}!SkipList@{SkipList}}
+\index{SkipList@{SkipList}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}}
+\doxysubsubsection{\texorpdfstring{SkipList()}{SkipList()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+\mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::\mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1SkipList}{Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+We disable both copy \& move operators/constructors as the skip list contains a mutex that cannot be safely moved/copied while other threads may be using it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1SkipList_ad51c3aeb249d07e360dfec2f8fe1097d}\label{classbustub_1_1SkipList_ad51c3aeb249d07e360dfec2f8fe1097d}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}!Clear@{Clear}}
+\index{Clear@{Clear}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+SKIPLIST\+\_\+\+TEMPLATE\+\_\+\+ARGUMENTS void \mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes all elements from the skip list. 
+
+Note\+: You might want to use the provided {\ttfamily Drop} helper function. \mbox{\Hypertarget{classbustub_1_1SkipList_aa9c08c13a30a37ca8611a07ad92591a9}\label{classbustub_1_1SkipList_aa9c08c13a30a37ca8611a07ad92591a9}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}!Contains@{Contains}}
+\index{Contains@{Contains}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+SKIPLIST\+\_\+\+TEMPLATE\+\_\+\+ARGUMENTS auto \mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::Contains (\begin{DoxyParamCaption}\item[{const K \&}]{key }\end{DoxyParamCaption}) -\/$>$ bool}
+
+
+
+Checks whether a key exists in the skip list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & key to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the element exists, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SkipList_a193d50efb496ff2fb2b5cf8101c79fbc}\label{classbustub_1_1SkipList_a193d50efb496ff2fb2b5cf8101c79fbc}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}!Erase@{Erase}}
+\index{Erase@{Erase}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}}
+\doxysubsubsection{\texorpdfstring{Erase()}{Erase()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+SKIPLIST\+\_\+\+TEMPLATE\+\_\+\+ARGUMENTS auto \mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::Erase (\begin{DoxyParamCaption}\item[{const K \&}]{key }\end{DoxyParamCaption}) -\/$>$ bool}
+
+
+
+Erases the key from the skip list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & key to erase. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the element got erased, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SkipList_afebc2f0a7cacebd90f0865d839a9bfd3}\label{classbustub_1_1SkipList_afebc2f0a7cacebd90f0865d839a9bfd3}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+SKIPLIST\+\_\+\+TEMPLATE\+\_\+\+ARGUMENTS auto \mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::Insert (\begin{DoxyParamCaption}\item[{const K \&}]{key }\end{DoxyParamCaption}) -\/$>$ bool}
+
+
+
+Inserts a key into the skip list. 
+
+Note\+: {\ttfamily Insert} will not insert the key if it already exists in the skip list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & key to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the insertion is successful, false if the key already exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SkipList_a898c3d9ac8c44a7db53e5718a78dccd9}\label{classbustub_1_1SkipList_a898c3d9ac8c44a7db53e5718a78dccd9}} 
+\index{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}!Print@{Print}}
+\index{Print@{Print}!bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$@{bustub::SkipList$<$ K, Compare, MaxHeight, Seed $>$}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily template$<$typename K , typename Compare  = std\+::less$<$\+K$>$, size\+\_\+t Max\+Height = 14, uint32\+\_\+t Seed = 15445$>$ \\
+SKIPLIST\+\_\+\+TEMPLATE\+\_\+\+ARGUMENTS void \mbox{\hyperlink{classbustub_1_1SkipList}{bustub\+::\+Skip\+List}}$<$ K, Compare, Max\+Height, Seed $>$\+::Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the skip list for debugging purposes. 
+
+Note\+: You may modify the functions in any way and the output is not tested. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/skiplist.\+h\item 
+src/primer/skiplist.\+cpp\end{DoxyCompactItemize}

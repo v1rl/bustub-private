@@ -1,0 +1,170 @@
+\hypertarget{classbustub_1_1AbstractExpression}{}\doxysection{bustub\+::Abstract\+Expression Class Reference}
+\label{classbustub_1_1AbstractExpression}\index{bustub::AbstractExpression@{bustub::AbstractExpression}}
+
+
+{\ttfamily \#include $<$abstract\+\_\+expression.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Abstract\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1AbstractExpression__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1AbstractExpression_aa2a84c7bca181e3f0ead2069e5f85c8d}{Abstract\+Expression}} (std\+::vector$<$ Abstract\+Expression\+Ref $>$ children, \mbox{\hyperlink{classbustub_1_1Column}{Column}} ret\+\_\+type)
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1AbstractExpression_a39d2128291169c6fd8beaf2203aefd7e}{$\sim$\+Abstract\+Expression}} ()=default
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractExpression_a366d870041b1283ed90f66be269372a0}{Evaluate}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}}=0
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractExpression_ad9c06936d8acfb8cbb260d887c9f6e94}{Evaluate\+Join}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$left\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&left\+\_\+schema, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$right\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&right\+\_\+schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}}=0
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AbstractExpression_ace9300c6e593db82a686c5fb0d7d5019}{Get\+Child\+At}} (uint32\+\_\+t child\+\_\+idx) const -\/$>$ const Abstract\+Expression\+Ref \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AbstractExpression_ab8850ea3c5efc9f62fce252a3257664c}{Get\+Children}} () const -\/$>$ const std\+::vector$<$ Abstract\+Expression\+Ref $>$ \&
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractExpression_acd9d651689368873118db027f6255e33}{Get\+Return\+Type}} () const -\/$>$ \mbox{\hyperlink{classbustub_1_1Column}{Column}}
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractExpression_af19014e7cce7d2c94e5ddc557e0088e8}{To\+String}} () const -\/$>$ std\+::string
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractExpression_a75a238e99b0fbe8fd192f806d27b68eb}{Clone\+With\+Children}} (std\+::vector$<$ Abstract\+Expression\+Ref $>$ children) const -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $>$=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Abstract\+Expression\+Ref $>$ \mbox{\hyperlink{classbustub_1_1AbstractExpression_a01667804ea9a85a0237207af6feaa815}{children\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} is the base class of all the expressions in the system. Expressions are modeled as trees, i.\+e. every expression may have a variable number of children. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_aa2a84c7bca181e3f0ead2069e5f85c8d}\label{classbustub_1_1AbstractExpression_aa2a84c7bca181e3f0ead2069e5f85c8d}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!AbstractExpression@{AbstractExpression}}
+\index{AbstractExpression@{AbstractExpression}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{AbstractExpression()}{AbstractExpression()}}
+{\footnotesize\ttfamily bustub\+::\+Abstract\+Expression\+::\+Abstract\+Expression (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Abstract\+Expression\+Ref $>$}]{children,  }\item[{\mbox{\hyperlink{classbustub_1_1Column}{Column}}}]{ret\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} with the given children and return type. 
+\begin{DoxyParams}{Parameters}
+{\em children} & the children of this abstract expression \\
+\hline
+{\em ret\+\_\+type} & the return type of this abstract expression when it is evaluated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a39d2128291169c6fd8beaf2203aefd7e}\label{classbustub_1_1AbstractExpression_a39d2128291169c6fd8beaf2203aefd7e}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!````~AbstractExpression@{$\sim$AbstractExpression}}
+\index{````~AbstractExpression@{$\sim$AbstractExpression}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbstractExpression()}{~AbstractExpression()}}
+{\footnotesize\ttfamily virtual bustub\+::\+Abstract\+Expression\+::$\sim$\+Abstract\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Virtual destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a75a238e99b0fbe8fd192f806d27b68eb}\label{classbustub_1_1AbstractExpression_a75a238e99b0fbe8fd192f806d27b68eb}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!CloneWithChildren@{CloneWithChildren}}
+\index{CloneWithChildren@{CloneWithChildren}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{CloneWithChildren()}{CloneWithChildren()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Expression\+::\+Clone\+With\+Children (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Abstract\+Expression\+Ref $>$}]{children }\end{DoxyParamCaption}) const -\/$>$  std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $>$\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+a new expression with new children 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a366d870041b1283ed90f66be269372a0}\label{classbustub_1_1AbstractExpression_a366d870041b1283ed90f66be269372a0}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Expression\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating the tuple with the given schema 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1StringExpression_a63a231b34cde4a44a8c295cbb1e723c4}{bustub\+::\+String\+Expression}}, \mbox{\hyperlink{classbustub_1_1LogicExpression_add099f4101e66db7a5a0dcde608046c4}{bustub\+::\+Logic\+Expression}}, \mbox{\hyperlink{classbustub_1_1ConstantValueExpression_a0401f89d97322c0e01160ff5d670593e}{bustub\+::\+Constant\+Value\+Expression}}, \mbox{\hyperlink{classbustub_1_1ComparisonExpression_a9d0e87e5af443e532cfdf590d13ea8b0}{bustub\+::\+Comparison\+Expression}}, \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a8ced710754d51ddef95654462ed116b8}{bustub\+::\+Column\+Value\+Expression}}, \mbox{\hyperlink{classbustub_1_1ArrayExpression_a6da643d7185ab420f2023bdb25a52304}{bustub\+::\+Array\+Expression}}, and \mbox{\hyperlink{classbustub_1_1ArithmeticExpression_a932296cb8ed33e92520a174e08b820b6}{bustub\+::\+Arithmetic\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_ad9c06936d8acfb8cbb260d887c9f6e94}\label{classbustub_1_1AbstractExpression_ad9c06936d8acfb8cbb260d887c9f6e94}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!EvaluateJoin@{EvaluateJoin}}
+\index{EvaluateJoin@{EvaluateJoin}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateJoin()}{EvaluateJoin()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Expression\+::\+Evaluate\+Join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{left\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{left\+\_\+schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{right\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{right\+\_\+schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the value obtained by evaluating a JOIN. 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+tuple} & The left tuple \\
+\hline
+{\em left\+\_\+schema} & The left tuple\textquotesingle{}s schema \\
+\hline
+{\em right\+\_\+tuple} & The right tuple \\
+\hline
+{\em right\+\_\+schema} & The right tuple\textquotesingle{}s schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating a JOIN on the left and right 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1StringExpression_a2d59105af5f824e680790d5230b43393}{bustub\+::\+String\+Expression}}, \mbox{\hyperlink{classbustub_1_1LogicExpression_aeda6aed86873a2bd9291db140601f514}{bustub\+::\+Logic\+Expression}}, \mbox{\hyperlink{classbustub_1_1ConstantValueExpression_a298ff64b7ed7c22e8768c17fcd2e5697}{bustub\+::\+Constant\+Value\+Expression}}, \mbox{\hyperlink{classbustub_1_1ComparisonExpression_afaeb46e166b39e7e58f1ee64c8c8fcaf}{bustub\+::\+Comparison\+Expression}}, \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a651ee13c0e826481af5c70a06b501c89}{bustub\+::\+Column\+Value\+Expression}}, \mbox{\hyperlink{classbustub_1_1ArrayExpression_a2f151aa107be63cc9b013eca009996a5}{bustub\+::\+Array\+Expression}}, and \mbox{\hyperlink{classbustub_1_1ArithmeticExpression_a995e6e4a74205be107fcad6c6569692a}{bustub\+::\+Arithmetic\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_ace9300c6e593db82a686c5fb0d7d5019}\label{classbustub_1_1AbstractExpression_ace9300c6e593db82a686c5fb0d7d5019}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!GetChildAt@{GetChildAt}}
+\index{GetChildAt@{GetChildAt}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{GetChildAt()}{GetChildAt()}}
+{\footnotesize\ttfamily auto bustub\+::\+Abstract\+Expression\+::\+Get\+Child\+At (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{child\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ const Abstract\+Expression\+Ref \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the child\+\_\+idx\textquotesingle{}th child of this expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_ab8850ea3c5efc9f62fce252a3257664c}\label{classbustub_1_1AbstractExpression_ab8850ea3c5efc9f62fce252a3257664c}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!GetChildren@{GetChildren}}
+\index{GetChildren@{GetChildren}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{GetChildren()}{GetChildren()}}
+{\footnotesize\ttfamily auto bustub\+::\+Abstract\+Expression\+::\+Get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::vector$<$Abstract\+Expression\+Ref$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the children of this expression, ordering may matter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_acd9d651689368873118db027f6255e33}\label{classbustub_1_1AbstractExpression_acd9d651689368873118db027f6255e33}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!GetReturnType@{GetReturnType}}
+\index{GetReturnType@{GetReturnType}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{GetReturnType()}{GetReturnType()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Expression\+::\+Get\+Return\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Column}{Column}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type of this expression if it were to be evaluated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_af19014e7cce7d2c94e5ddc557e0088e8}\label{classbustub_1_1AbstractExpression_af19014e7cce7d2c94e5ddc557e0088e8}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Expression\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node and its children 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classbustub_1_1StringExpression_abd7846c293ee0d84c8f28679bd9309cb}{bustub\+::\+String\+Expression}}, \mbox{\hyperlink{classbustub_1_1LogicExpression_a2bbbb2ed494237d5188b7aff9f2f5ed3}{bustub\+::\+Logic\+Expression}}, \mbox{\hyperlink{classbustub_1_1ConstantValueExpression_acea38a8128fcf2cb41362675ff0a2e23}{bustub\+::\+Constant\+Value\+Expression}}, \mbox{\hyperlink{classbustub_1_1ComparisonExpression_a7895eb25181232402b9fc14083a69a83}{bustub\+::\+Comparison\+Expression}}, \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a4c60736eb6073398d1ce360879e2bddb}{bustub\+::\+Column\+Value\+Expression}}, \mbox{\hyperlink{classbustub_1_1ArrayExpression_a09194afc871b8c4a691b7a6b08003f38}{bustub\+::\+Array\+Expression}}, and \mbox{\hyperlink{classbustub_1_1ArithmeticExpression_a090d66a0d7d99b482d14e2f33ef72324}{bustub\+::\+Arithmetic\+Expression}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a01667804ea9a85a0237207af6feaa815}\label{classbustub_1_1AbstractExpression_a01667804ea9a85a0237207af6feaa815}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!children\_@{children\_}}
+\index{children\_@{children\_}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{children\_}{children\_}}
+{\footnotesize\ttfamily std\+::vector$<$Abstract\+Expression\+Ref$>$ bustub\+::\+Abstract\+Expression\+::children\+\_\+}
+
+The children of this expression. Note that the order of appearance of children may matter. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/expressions/abstract\+\_\+expression.\+h\end{DoxyCompactItemize}

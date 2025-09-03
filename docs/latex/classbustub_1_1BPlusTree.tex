@@ -1,0 +1,55 @@
+\hypertarget{classbustub_1_1BPlusTree}{}\doxysection{bustub\+::BPlus\+Tree Class Reference}
+\label{classbustub_1_1BPlusTree}\index{bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a8e3e7d7551efedbaa584ae137f268027}\label{classbustub_1_1BPlusTree_a8e3e7d7551efedbaa584ae137f268027}} 
+{\bfseries BPlus\+Tree} (std\+::string name, page\+\_\+id\+\_\+t header\+\_\+page\+\_\+id, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager, const Key\+Comparator \&comparator, int leaf\+\_\+max\+\_\+size=LEAF\+\_\+\+PAGE\+\_\+\+SLOT\+\_\+\+CNT, int internal\+\_\+max\+\_\+size=INTERNAL\+\_\+\+PAGE\+\_\+\+SLOT\+\_\+\+CNT)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a298d9aa806c90a9ddb3eacff9f9aedcc}\label{classbustub_1_1BPlusTree_a298d9aa806c90a9ddb3eacff9f9aedcc}} 
+auto {\bfseries Is\+Empty} () const -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a29490d299ca45adb3405e16af80e074d}\label{classbustub_1_1BPlusTree_a29490d299ca45adb3405e16af80e074d}} 
+auto {\bfseries Insert} (const Key\+Type \&key, const Value\+Type \&value) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a3fb3a55893ef0c16a25b006ec8fe0236}\label{classbustub_1_1BPlusTree_a3fb3a55893ef0c16a25b006ec8fe0236}} 
+void {\bfseries Remove} (const Key\+Type \&key)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a38ad5ecce6c18e4f8857b654f4b143da}\label{classbustub_1_1BPlusTree_a38ad5ecce6c18e4f8857b654f4b143da}} 
+auto {\bfseries Get\+Value} (const Key\+Type \&key, std\+::vector$<$ Value\+Type $>$ $\ast$result) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a77383b07f1019140cbc6b56976861b27}\label{classbustub_1_1BPlusTree_a77383b07f1019140cbc6b56976861b27}} 
+auto {\bfseries Get\+Root\+Page\+Id} () -\/$>$ page\+\_\+id\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a50c8f5975530bd16c748306403bb5623}\label{classbustub_1_1BPlusTree_a50c8f5975530bd16c748306403bb5623}} 
+auto {\bfseries Begin} () -\/$>$ INDEXITERATOR\+\_\+\+TYPE
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_aa4b76c620aac827d0de3385943779369}\label{classbustub_1_1BPlusTree_aa4b76c620aac827d0de3385943779369}} 
+auto {\bfseries End} () -\/$>$ INDEXITERATOR\+\_\+\+TYPE
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a0084b3b682c8797a66d4683d73141e83}\label{classbustub_1_1BPlusTree_a0084b3b682c8797a66d4683d73141e83}} 
+auto {\bfseries Begin} (const Key\+Type \&key) -\/$>$ INDEXITERATOR\+\_\+\+TYPE
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a21c9225f6334233dab4adbfdcc02e67c}\label{classbustub_1_1BPlusTree_a21c9225f6334233dab4adbfdcc02e67c}} 
+void {\bfseries Print} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$bpm)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_abe85acc21d8ae5a7bff62c8f18bcea23}\label{classbustub_1_1BPlusTree_abe85acc21d8ae5a7bff62c8f18bcea23}} 
+void {\bfseries Draw} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$bpm, const std\+::filesystem\+::path \&outf)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a537628992fff268a9ca5a84e33231616}\label{classbustub_1_1BPlusTree_a537628992fff268a9ca5a84e33231616}} 
+auto {\bfseries Draw\+BPlus\+Tree} () -\/$>$ std\+::string
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a769333eee4b5025638b539f20c77b5f7}\label{classbustub_1_1BPlusTree_a769333eee4b5025638b539f20c77b5f7}} 
+void {\bfseries Insert\+From\+File} (const std\+::filesystem\+::path \&file\+\_\+name)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_aac877e50a68ded8727656f4de8466bcd}\label{classbustub_1_1BPlusTree_aac877e50a68ded8727656f4de8466bcd}} 
+void {\bfseries Remove\+From\+File} (const std\+::filesystem\+::path \&file\+\_\+name)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a9fb1df058f1cf4b624ecd381b71844bd}\label{classbustub_1_1BPlusTree_a9fb1df058f1cf4b624ecd381b71844bd}} 
+void {\bfseries Batch\+Ops\+From\+File} (const std\+::filesystem\+::path \&file\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/b\+\_\+plus\+\_\+tree.\+h\end{DoxyCompactItemize}

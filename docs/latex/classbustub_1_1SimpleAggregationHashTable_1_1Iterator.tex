@@ -1,0 +1,86 @@
+\hypertarget{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{}\doxysection{bustub\+::Simple\+Aggregation\+Hash\+Table\+::Iterator Class Reference}
+\label{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}\index{bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}}
+
+
+{\ttfamily \#include $<$aggregation\+\_\+executor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_ae2729ce11fc78dddfc063987bddeb0e6}{Iterator}} (std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structbustub_1_1AggregateKey}{Aggregate\+Key}}, \mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} $>$\+::const\+\_\+iterator iter)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_a52947648528124aaf392377e20dfa238}{Key}} () -\/$>$ const \mbox{\hyperlink{structbustub_1_1AggregateKey}{Aggregate\+Key}} \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_a5ec696c90394e2b37c3c6432f4484bf3}{Val}} () -\/$>$ const \mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_afd635042f35f3dcbcf4be79dfee6a4c1}{operator++}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_abca55f5dcc6f75030fa5036d4dc8f307}{operator==}} (const \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} \&other) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_abc3858035d3513f886f1f1712a0ee305}{operator!=}} (const \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} \&other) -\/$>$ bool
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An iterator over the aggregation hash table 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_ae2729ce11fc78dddfc063987bddeb0e6}\label{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_ae2729ce11fc78dddfc063987bddeb0e6}} 
+\index{bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}}
+{\footnotesize\ttfamily bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structbustub_1_1AggregateKey}{Aggregate\+Key}}, \mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} $>$\+::const\+\_\+iterator}]{iter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Creates an iterator for the aggregate map. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_a52947648528124aaf392377e20dfa238}\label{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_a52947648528124aaf392377e20dfa238}} 
+\index{bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}!Key@{Key}}
+\index{Key@{Key}!bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}}
+\doxysubsubsection{\texorpdfstring{Key()}{Key()}}
+{\footnotesize\ttfamily auto bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Iterator\+::\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ const \mbox{\hyperlink{structbustub_1_1AggregateKey}{Aggregate\+Key}} \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The key of the iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_abc3858035d3513f886f1f1712a0ee305}\label{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_abc3858035d3513f886f1f1712a0ee305}} 
+\index{bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily auto bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} \&}]{other }\end{DoxyParamCaption}) -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if both iterators are different 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_afd635042f35f3dcbcf4be79dfee6a4c1}\label{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_afd635042f35f3dcbcf4be79dfee6a4c1}} 
+\index{bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily auto bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The iterator before it is incremented 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_abca55f5dcc6f75030fa5036d4dc8f307}\label{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_abca55f5dcc6f75030fa5036d4dc8f307}} 
+\index{bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily auto bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} \&}]{other }\end{DoxyParamCaption}) -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if both iterators are identical 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_a5ec696c90394e2b37c3c6432f4484bf3}\label{classbustub_1_1SimpleAggregationHashTable_1_1Iterator_a5ec696c90394e2b37c3c6432f4484bf3}} 
+\index{bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}!Val@{Val}}
+\index{Val@{Val}!bustub::SimpleAggregationHashTable::Iterator@{bustub::SimpleAggregationHashTable::Iterator}}
+\doxysubsubsection{\texorpdfstring{Val()}{Val()}}
+{\footnotesize\ttfamily auto bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Iterator\+::\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ const \mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The value of the iterator 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/aggregation\+\_\+executor.\+h\end{DoxyCompactItemize}

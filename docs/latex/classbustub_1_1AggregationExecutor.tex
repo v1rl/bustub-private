@@ -1,0 +1,119 @@
+\hypertarget{classbustub_1_1AggregationExecutor}{}\doxysection{bustub\+::Aggregation\+Executor Class Reference}
+\label{classbustub_1_1AggregationExecutor}\index{bustub::AggregationExecutor@{bustub::AggregationExecutor}}
+
+
+{\ttfamily \#include $<$aggregation\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Aggregation\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classbustub_1_1AggregationExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Aggregation\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classbustub_1_1AggregationExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1AggregationExecutor_a75b65d49f5bf2a3d10863b8793b2124c}{Aggregation\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1AggregationPlanNode}{Aggregation\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a6a78d10b7c70db1dba1965e53e9c6d2f}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a09de0f4be12d598e972ee6b51722fb3d}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a1b430873ae36666e131fa76209b25c3e}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a44becc2bd0fbd780b1d761ab96d13f69}{Get\+Child\+Executor}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $\ast$
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1AggregationExecutor}{Aggregation\+Executor}} executes an aggregation operation (e.\+g. COUNT, SUM, MIN, MAX) over the tuples produced by a child executor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1AggregationExecutor_a75b65d49f5bf2a3d10863b8793b2124c}\label{classbustub_1_1AggregationExecutor_a75b65d49f5bf2a3d10863b8793b2124c}} 
+\index{bustub::AggregationExecutor@{bustub::AggregationExecutor}!AggregationExecutor@{AggregationExecutor}}
+\index{AggregationExecutor@{AggregationExecutor}!bustub::AggregationExecutor@{bustub::AggregationExecutor}}
+\doxysubsubsection{\texorpdfstring{AggregationExecutor()}{AggregationExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Aggregation\+Executor\+::\+Aggregation\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1AggregationPlanNode}{Aggregation\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1AggregationExecutor}{Aggregation\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The insert plan to be executed \\
+\hline
+{\em child\+\_\+executor} & The child executor from which inserted tuples are pulled (may be {\ttfamily nullptr}) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1AggregationExecutor_a44becc2bd0fbd780b1d761ab96d13f69}\label{classbustub_1_1AggregationExecutor_a44becc2bd0fbd780b1d761ab96d13f69}} 
+\index{bustub::AggregationExecutor@{bustub::AggregationExecutor}!GetChildExecutor@{GetChildExecutor}}
+\index{GetChildExecutor@{GetChildExecutor}!bustub::AggregationExecutor@{bustub::AggregationExecutor}}
+\doxysubsubsection{\texorpdfstring{GetChildExecutor()}{GetChildExecutor()}}
+{\footnotesize\ttfamily auto bustub\+::\+Aggregation\+Executor\+::\+Get\+Child\+Executor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $\ast$}
+
+Do not use or remove this function, otherwise you will get zero points. \mbox{\Hypertarget{classbustub_1_1AggregationExecutor_a1b430873ae36666e131fa76209b25c3e}\label{classbustub_1_1AggregationExecutor_a1b430873ae36666e131fa76209b25c3e}} 
+\index{bustub::AggregationExecutor@{bustub::AggregationExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::AggregationExecutor@{bustub::AggregationExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Aggregation\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the aggregation 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1AggregationExecutor_a6a78d10b7c70db1dba1965e53e9c6d2f}\label{classbustub_1_1AggregationExecutor_a6a78d10b7c70db1dba1965e53e9c6d2f}} 
+\index{bustub::AggregationExecutor@{bustub::AggregationExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::AggregationExecutor@{bustub::AggregationExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Aggregation\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the aggregation 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1AggregationExecutor_a09de0f4be12d598e972ee6b51722fb3d}\label{classbustub_1_1AggregationExecutor_a09de0f4be12d598e972ee6b51722fb3d}} 
+\index{bustub::AggregationExecutor@{bustub::AggregationExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::AggregationExecutor@{bustub::AggregationExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Aggregation\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the insert. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the aggregation \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the aggregation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/aggregation\+\_\+executor.\+h\item 
+src/execution/aggregation\+\_\+executor.\+cpp\end{DoxyCompactItemize}

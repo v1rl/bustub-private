@@ -1,0 +1,61 @@
+\hypertarget{structbustub_1_1DiskRequest}{}\doxysection{bustub\+::Disk\+Request Struct Reference}
+\label{structbustub_1_1DiskRequest}\index{bustub::DiskRequest@{bustub::DiskRequest}}
+
+
+Represents a Write or Read request for the \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} to execute.  
+
+
+
+
+{\ttfamily \#include $<$disk\+\_\+scheduler.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structbustub_1_1DiskRequest_a9fb22e174238dd1e5b27572ef968c837}{is\+\_\+write\+\_\+}}
+\item 
+char $\ast$ \mbox{\hyperlink{structbustub_1_1DiskRequest_aa221f27214abae62fda8e7bf82a64230}{data\+\_\+}}
+\item 
+page\+\_\+id\+\_\+t \mbox{\hyperlink{structbustub_1_1DiskRequest_ac85b9316dd14f1ff80f7ba2880b67dd1}{page\+\_\+id\+\_\+}}
+\item 
+std\+::promise$<$ bool $>$ \mbox{\hyperlink{structbustub_1_1DiskRequest_a98d22d064012df85f19f0689a5fb9bb4}{callback\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a Write or Read request for the \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} to execute. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structbustub_1_1DiskRequest_a98d22d064012df85f19f0689a5fb9bb4}\label{structbustub_1_1DiskRequest_a98d22d064012df85f19f0689a5fb9bb4}} 
+\index{bustub::DiskRequest@{bustub::DiskRequest}!callback\_@{callback\_}}
+\index{callback\_@{callback\_}!bustub::DiskRequest@{bustub::DiskRequest}}
+\doxysubsubsection{\texorpdfstring{callback\_}{callback\_}}
+{\footnotesize\ttfamily std\+::promise$<$bool$>$ bustub\+::\+Disk\+Request\+::callback\+\_\+}
+
+Callback used to signal to the request issuer when the request has been completed. \mbox{\Hypertarget{structbustub_1_1DiskRequest_aa221f27214abae62fda8e7bf82a64230}\label{structbustub_1_1DiskRequest_aa221f27214abae62fda8e7bf82a64230}} 
+\index{bustub::DiskRequest@{bustub::DiskRequest}!data\_@{data\_}}
+\index{data\_@{data\_}!bustub::DiskRequest@{bustub::DiskRequest}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily char$\ast$ bustub\+::\+Disk\+Request\+::data\+\_\+}
+
+Pointer to the start of the memory location where a page is either\+:
+\begin{DoxyEnumerate}
+\item being read into from disk (on a read).
+\item being written out to disk (on a write). 
+\end{DoxyEnumerate}\mbox{\Hypertarget{structbustub_1_1DiskRequest_a9fb22e174238dd1e5b27572ef968c837}\label{structbustub_1_1DiskRequest_a9fb22e174238dd1e5b27572ef968c837}} 
+\index{bustub::DiskRequest@{bustub::DiskRequest}!is\_write\_@{is\_write\_}}
+\index{is\_write\_@{is\_write\_}!bustub::DiskRequest@{bustub::DiskRequest}}
+\doxysubsubsection{\texorpdfstring{is\_write\_}{is\_write\_}}
+{\footnotesize\ttfamily bool bustub\+::\+Disk\+Request\+::is\+\_\+write\+\_\+}
+
+Flag indicating whether the request is a write or a read. \mbox{\Hypertarget{structbustub_1_1DiskRequest_ac85b9316dd14f1ff80f7ba2880b67dd1}\label{structbustub_1_1DiskRequest_ac85b9316dd14f1ff80f7ba2880b67dd1}} 
+\index{bustub::DiskRequest@{bustub::DiskRequest}!page\_id\_@{page\_id\_}}
+\index{page\_id\_@{page\_id\_}!bustub::DiskRequest@{bustub::DiskRequest}}
+\doxysubsubsection{\texorpdfstring{page\_id\_}{page\_id\_}}
+{\footnotesize\ttfamily page\+\_\+id\+\_\+t bustub\+::\+Disk\+Request\+::page\+\_\+id\+\_\+}
+
+ID of the page being read from / written to disk. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/disk/disk\+\_\+scheduler.\+h\end{DoxyCompactItemize}

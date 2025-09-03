@@ -1,0 +1,113 @@
+\hypertarget{classbustub_1_1UpdateExecutor}{}\doxysection{bustub\+::Update\+Executor Class Reference}
+\label{classbustub_1_1UpdateExecutor}\index{bustub::UpdateExecutor@{bustub::UpdateExecutor}}
+
+
+{\ttfamily \#include $<$update\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Update\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1UpdateExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Update\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1UpdateExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1UpdateExecutor_aa37b5ff335082d2e943811bb3527b7d0}{Update\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1UpdatePlanNode}{Update\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1UpdateExecutor_a1657b8c95163dd8f8803bb5d4faa38e7}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1UpdateExecutor_a4ab1bea1cdd8e6db1ec213b4ec83f2bd}{Next}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1UpdateExecutor_a7228d66af32f26b2fb8704a367e6fa5e}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1UpdateExecutor_a3ef53b2abf0c3796c1369f3ecffdc718}\label{classbustub_1_1UpdateExecutor_a3ef53b2abf0c3796c1369f3ecffdc718}} 
+class {\bfseries Update\+Plan\+Node}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1UpdateExecutor}{Update\+Executor}} executes an update on a table. Updated values are always pulled from a child. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1UpdateExecutor_aa37b5ff335082d2e943811bb3527b7d0}\label{classbustub_1_1UpdateExecutor_aa37b5ff335082d2e943811bb3527b7d0}} 
+\index{bustub::UpdateExecutor@{bustub::UpdateExecutor}!UpdateExecutor@{UpdateExecutor}}
+\index{UpdateExecutor@{UpdateExecutor}!bustub::UpdateExecutor@{bustub::UpdateExecutor}}
+\doxysubsubsection{\texorpdfstring{UpdateExecutor()}{UpdateExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Update\+Executor\+::\+Update\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1UpdatePlanNode}{Update\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1UpdateExecutor}{Update\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The update plan to be executed \\
+\hline
+{\em child\+\_\+executor} & The child executor that feeds the update \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1UpdateExecutor_a7228d66af32f26b2fb8704a367e6fa5e}\label{classbustub_1_1UpdateExecutor_a7228d66af32f26b2fb8704a367e6fa5e}} 
+\index{bustub::UpdateExecutor@{bustub::UpdateExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::UpdateExecutor@{bustub::UpdateExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Update\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the update 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1UpdateExecutor_a1657b8c95163dd8f8803bb5d4faa38e7}\label{classbustub_1_1UpdateExecutor_a1657b8c95163dd8f8803bb5d4faa38e7}} 
+\index{bustub::UpdateExecutor@{bustub::UpdateExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::UpdateExecutor@{bustub::UpdateExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Update\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the update 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1UpdateExecutor_a4ab1bea1cdd8e6db1ec213b4ec83f2bd}\label{classbustub_1_1UpdateExecutor_a4ab1bea1cdd8e6db1ec213b4ec83f2bd}} 
+\index{bustub::UpdateExecutor@{bustub::UpdateExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::UpdateExecutor@{bustub::UpdateExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Update\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}}
+
+Yield the next tuple from the update. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the update \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the update (ignore this) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples
+\end{DoxyReturn}
+NOTE\+: \mbox{\hyperlink{classbustub_1_1UpdateExecutor_a4ab1bea1cdd8e6db1ec213b4ec83f2bd}{Update\+Executor\+::\+Next()}} does not use the {\ttfamily rid} out-\/parameter. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/update\+\_\+executor.\+h\item 
+src/execution/update\+\_\+executor.\+cpp\end{DoxyCompactItemize}

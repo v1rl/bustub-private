@@ -1,0 +1,116 @@
+\hypertarget{classbustub_1_1ArithmeticExpression}{}\doxysection{bustub\+::Arithmetic\+Expression Class Reference}
+\label{classbustub_1_1ArithmeticExpression}\index{bustub::ArithmeticExpression@{bustub::ArithmeticExpression}}
+
+
+{\ttfamily \#include $<$arithmetic\+\_\+expression.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Arithmetic\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classbustub_1_1ArithmeticExpression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Arithmetic\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classbustub_1_1ArithmeticExpression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ArithmeticExpression_af8a0a65095f64c798764d1f4a6820494}{Arithmetic\+Expression}} (Abstract\+Expression\+Ref left, Abstract\+Expression\+Ref right, \mbox{\hyperlink{namespacebustub_a44b858470f6abf4c40e4a9b1db4acb0c}{Arithmetic\+Type}} compute\+\_\+type)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ArithmeticExpression_a932296cb8ed33e92520a174e08b820b6}{Evaluate}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ArithmeticExpression_a995e6e4a74205be107fcad6c6569692a}{Evaluate\+Join}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$left\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&left\+\_\+schema, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$right\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&right\+\_\+schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ArithmeticExpression_a090d66a0d7d99b482d14e2f33ef72324}{To\+String}} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1ArithmeticExpression_a406ac1ec0e141b9fae5d1d6fd3254741}\label{classbustub_1_1ArithmeticExpression_a406ac1ec0e141b9fae5d1d6fd3254741}} 
+{\bfseries BUSTUB\+\_\+\+EXPR\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1ArithmeticExpression}{Arithmetic\+Expression}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ArithmeticExpression_ab16445f18b60b744fba644bdcf54f6e0}\label{classbustub_1_1ArithmeticExpression_ab16445f18b60b744fba644bdcf54f6e0}} 
+\mbox{\hyperlink{namespacebustub_a44b858470f6abf4c40e4a9b1db4acb0c}{Arithmetic\+Type}} {\bfseries compute\+\_\+type\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1ArithmeticExpression}{Arithmetic\+Expression}} represents two expressions being computed, ONLY SUPPORT INTEGER FOR NOW. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ArithmeticExpression_af8a0a65095f64c798764d1f4a6820494}\label{classbustub_1_1ArithmeticExpression_af8a0a65095f64c798764d1f4a6820494}} 
+\index{bustub::ArithmeticExpression@{bustub::ArithmeticExpression}!ArithmeticExpression@{ArithmeticExpression}}
+\index{ArithmeticExpression@{ArithmeticExpression}!bustub::ArithmeticExpression@{bustub::ArithmeticExpression}}
+\doxysubsubsection{\texorpdfstring{ArithmeticExpression()}{ArithmeticExpression()}}
+{\footnotesize\ttfamily bustub\+::\+Arithmetic\+Expression\+::\+Arithmetic\+Expression (\begin{DoxyParamCaption}\item[{Abstract\+Expression\+Ref}]{left,  }\item[{Abstract\+Expression\+Ref}]{right,  }\item[{\mbox{\hyperlink{namespacebustub_a44b858470f6abf4c40e4a9b1db4acb0c}{Arithmetic\+Type}}}]{compute\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new comparison expression representing (left comp\+\_\+type right). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ArithmeticExpression_a932296cb8ed33e92520a174e08b820b6}\label{classbustub_1_1ArithmeticExpression_a932296cb8ed33e92520a174e08b820b6}} 
+\index{bustub::ArithmeticExpression@{bustub::ArithmeticExpression}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!bustub::ArithmeticExpression@{bustub::ArithmeticExpression}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily auto bustub\+::\+Arithmetic\+Expression\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating the tuple with the given schema 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a366d870041b1283ed90f66be269372a0}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ArithmeticExpression_a995e6e4a74205be107fcad6c6569692a}\label{classbustub_1_1ArithmeticExpression_a995e6e4a74205be107fcad6c6569692a}} 
+\index{bustub::ArithmeticExpression@{bustub::ArithmeticExpression}!EvaluateJoin@{EvaluateJoin}}
+\index{EvaluateJoin@{EvaluateJoin}!bustub::ArithmeticExpression@{bustub::ArithmeticExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateJoin()}{EvaluateJoin()}}
+{\footnotesize\ttfamily auto bustub\+::\+Arithmetic\+Expression\+::\+Evaluate\+Join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{left\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{left\+\_\+schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{right\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{right\+\_\+schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the value obtained by evaluating a JOIN. 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+tuple} & The left tuple \\
+\hline
+{\em left\+\_\+schema} & The left tuple\textquotesingle{}s schema \\
+\hline
+{\em right\+\_\+tuple} & The right tuple \\
+\hline
+{\em right\+\_\+schema} & The right tuple\textquotesingle{}s schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating a JOIN on the left and right 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_ad9c06936d8acfb8cbb260d887c9f6e94}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ArithmeticExpression_a090d66a0d7d99b482d14e2f33ef72324}\label{classbustub_1_1ArithmeticExpression_a090d66a0d7d99b482d14e2f33ef72324}} 
+\index{bustub::ArithmeticExpression@{bustub::ArithmeticExpression}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::ArithmeticExpression@{bustub::ArithmeticExpression}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Arithmetic\+Expression\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the expression node and its children 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractExpression_af19014e7cce7d2c94e5ddc557e0088e8}{bustub\+::\+Abstract\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/expressions/arithmetic\+\_\+expression.\+h\end{DoxyCompactItemize}

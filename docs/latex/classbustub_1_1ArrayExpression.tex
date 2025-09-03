@@ -1,0 +1,111 @@
+\hypertarget{classbustub_1_1ArrayExpression}{}\doxysection{bustub\+::Array\+Expression Class Reference}
+\label{classbustub_1_1ArrayExpression}\index{bustub::ArrayExpression@{bustub::ArrayExpression}}
+
+
+{\ttfamily \#include $<$array\+\_\+expression.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Array\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classbustub_1_1ArrayExpression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Array\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classbustub_1_1ArrayExpression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ArrayExpression_a7882f4a92bfd9ad5bfc7d645d74502a1}{Array\+Expression}} (const std\+::vector$<$ Abstract\+Expression\+Ref $>$ \&children)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ArrayExpression_a6da643d7185ab420f2023bdb25a52304}{Evaluate}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ArrayExpression_a2f151aa107be63cc9b013eca009996a5}{Evaluate\+Join}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$left\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&left\+\_\+schema, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$right\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&right\+\_\+schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ArrayExpression_a09194afc871b8c4a691b7a6b08003f38}{To\+String}} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1ArrayExpression_ad41c8c1156a913c1f4a8b6cf9172693e}\label{classbustub_1_1ArrayExpression_ad41c8c1156a913c1f4a8b6cf9172693e}} 
+{\bfseries BUSTUB\+\_\+\+EXPR\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1ArrayExpression}{Array\+Expression}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1ArrayExpression}{Array\+Expression}} represents arrays. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ArrayExpression_a7882f4a92bfd9ad5bfc7d645d74502a1}\label{classbustub_1_1ArrayExpression_a7882f4a92bfd9ad5bfc7d645d74502a1}} 
+\index{bustub::ArrayExpression@{bustub::ArrayExpression}!ArrayExpression@{ArrayExpression}}
+\index{ArrayExpression@{ArrayExpression}!bustub::ArrayExpression@{bustub::ArrayExpression}}
+\doxysubsubsection{\texorpdfstring{ArrayExpression()}{ArrayExpression()}}
+{\footnotesize\ttfamily bustub\+::\+Array\+Expression\+::\+Array\+Expression (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Abstract\+Expression\+Ref $>$ \&}]{children }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Creates a new constant value expression wrapping the given value. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ArrayExpression_a6da643d7185ab420f2023bdb25a52304}\label{classbustub_1_1ArrayExpression_a6da643d7185ab420f2023bdb25a52304}} 
+\index{bustub::ArrayExpression@{bustub::ArrayExpression}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!bustub::ArrayExpression@{bustub::ArrayExpression}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily auto bustub\+::\+Array\+Expression\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating the tuple with the given schema 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a366d870041b1283ed90f66be269372a0}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ArrayExpression_a2f151aa107be63cc9b013eca009996a5}\label{classbustub_1_1ArrayExpression_a2f151aa107be63cc9b013eca009996a5}} 
+\index{bustub::ArrayExpression@{bustub::ArrayExpression}!EvaluateJoin@{EvaluateJoin}}
+\index{EvaluateJoin@{EvaluateJoin}!bustub::ArrayExpression@{bustub::ArrayExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateJoin()}{EvaluateJoin()}}
+{\footnotesize\ttfamily auto bustub\+::\+Array\+Expression\+::\+Evaluate\+Join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{left\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{left\+\_\+schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{right\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{right\+\_\+schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the value obtained by evaluating a JOIN. 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+tuple} & The left tuple \\
+\hline
+{\em left\+\_\+schema} & The left tuple\textquotesingle{}s schema \\
+\hline
+{\em right\+\_\+tuple} & The right tuple \\
+\hline
+{\em right\+\_\+schema} & The right tuple\textquotesingle{}s schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating a JOIN on the left and right 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_ad9c06936d8acfb8cbb260d887c9f6e94}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ArrayExpression_a09194afc871b8c4a691b7a6b08003f38}\label{classbustub_1_1ArrayExpression_a09194afc871b8c4a691b7a6b08003f38}} 
+\index{bustub::ArrayExpression@{bustub::ArrayExpression}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::ArrayExpression@{bustub::ArrayExpression}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Array\+Expression\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node and its children 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractExpression_af19014e7cce7d2c94e5ddc557e0088e8}{bustub\+::\+Abstract\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/expressions/array\+\_\+expression.\+h\end{DoxyCompactItemize}

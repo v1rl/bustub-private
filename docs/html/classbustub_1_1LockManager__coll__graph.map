@@ -1,0 +1,6 @@
+<map id="bustub::LockManager" name="bustub::LockManager">
+<area shape="rect" id="node1" title=" " alt="" coords="67,184,228,211"/>
+<area shape="rect" id="node2" href="$classbustub_1_1TransactionManager.html" title=" " alt="" coords="45,95,250,121"/>
+<area shape="rect" id="node3" href="$classbustub_1_1Catalog.html" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node4" href="$classbustub_1_1Watermark.html" title="tracks all the read timestamps." alt="" coords="154,5,301,32"/>
+</map>

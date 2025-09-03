@@ -1,0 +1,120 @@
+\hypertarget{classbustub_1_1BPlusTreeIndex}{}\doxysection{bustub\+::BPlus\+Tree\+Index Class Reference}
+\label{classbustub_1_1BPlusTreeIndex}\index{bustub::BPlusTreeIndex@{bustub::BPlusTreeIndex}}
+
+
+Inheritance diagram for bustub\+::BPlus\+Tree\+Index\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classbustub_1_1BPlusTreeIndex__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::BPlus\+Tree\+Index\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classbustub_1_1BPlusTreeIndex__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeIndex_a75e853393f84b879bb3aa811cb68ced1}\label{classbustub_1_1BPlusTreeIndex_a75e853393f84b879bb3aa811cb68ced1}} 
+{\bfseries BPlus\+Tree\+Index} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1IndexMetadata}{Index\+Metadata}} $>$ \&\&metadata, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1BPlusTreeIndex_a4dde47a5d551450fdd89baa353972cd1}{Insert\+Entry}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction) -\/$>$ bool override
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreeIndex_aab7aa8b3e3a81bad6431fc3fd6ffa062}{Delete\+Entry}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreeIndex_ac59305fd402f1a8804e74762c5f045d0}{Scan\+Key}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} $>$ $\ast$result, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction) override
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeIndex_a2904d9a1549e01aca28a743d16c1c638}\label{classbustub_1_1BPlusTreeIndex_a2904d9a1549e01aca28a743d16c1c638}} 
+auto {\bfseries Get\+Begin\+Iterator} () -\/$>$ INDEXITERATOR\+\_\+\+TYPE
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeIndex_a5b3911022cd23012a77f01e87ebe1874}\label{classbustub_1_1BPlusTreeIndex_a5b3911022cd23012a77f01e87ebe1874}} 
+auto {\bfseries Get\+Begin\+Iterator} (const Key\+Type \&key) -\/$>$ INDEXITERATOR\+\_\+\+TYPE
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeIndex_a5c9760773b58ce92bc927f4a4f4dc896}\label{classbustub_1_1BPlusTreeIndex_a5c9760773b58ce92bc927f4a4f4dc896}} 
+auto {\bfseries Get\+End\+Iterator} () -\/$>$ INDEXITERATOR\+\_\+\+TYPE
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeIndex_ac3ced93d6e7ea59fcb5cee16ab21294f}\label{classbustub_1_1BPlusTreeIndex_ac3ced93d6e7ea59fcb5cee16ab21294f}} 
+Key\+Comparator {\bfseries comparator\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeIndex_afea0bd696fe84d0fc779d00caccfa3d4}\label{classbustub_1_1BPlusTreeIndex_afea0bd696fe84d0fc779d00caccfa3d4}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BPlusTree}{BPlus\+Tree}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ $>$ {\bfseries container\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeIndex_aab7aa8b3e3a81bad6431fc3fd6ffa062}\label{classbustub_1_1BPlusTreeIndex_aab7aa8b3e3a81bad6431fc3fd6ffa062}} 
+\index{bustub::BPlusTreeIndex@{bustub::BPlusTreeIndex}!DeleteEntry@{DeleteEntry}}
+\index{DeleteEntry@{DeleteEntry}!bustub::BPlusTreeIndex@{bustub::BPlusTreeIndex}}
+\doxysubsubsection{\texorpdfstring{DeleteEntry()}{DeleteEntry()}}
+{\footnotesize\ttfamily void bustub\+::\+BPlus\+Tree\+Index\+::\+Delete\+Entry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Delete an index entry by key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em rid} & The \mbox{\hyperlink{classbustub_1_1RID}{RID}} associated with the key (unused) \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Index_a76ce812b2c134e64915329bbeedad0a8}{bustub\+::\+Index}}.
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeIndex_a4dde47a5d551450fdd89baa353972cd1}\label{classbustub_1_1BPlusTreeIndex_a4dde47a5d551450fdd89baa353972cd1}} 
+\index{bustub::BPlusTreeIndex@{bustub::BPlusTreeIndex}!InsertEntry@{InsertEntry}}
+\index{InsertEntry@{InsertEntry}!bustub::BPlusTreeIndex@{bustub::BPlusTreeIndex}}
+\doxysubsubsection{\texorpdfstring{InsertEntry()}{InsertEntry()}}
+{\footnotesize\ttfamily auto bustub\+::\+BPlus\+Tree\+Index\+::\+Insert\+Entry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption}) -\/$>$  bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Insert an entry into the index. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em rid} & The \mbox{\hyperlink{classbustub_1_1RID}{RID}} associated with the key \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether insertion is successful 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Index_a68503eb10dbe00ac29b211636152b5ee}{bustub\+::\+Index}}.
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeIndex_ac59305fd402f1a8804e74762c5f045d0}\label{classbustub_1_1BPlusTreeIndex_ac59305fd402f1a8804e74762c5f045d0}} 
+\index{bustub::BPlusTreeIndex@{bustub::BPlusTreeIndex}!ScanKey@{ScanKey}}
+\index{ScanKey@{ScanKey}!bustub::BPlusTreeIndex@{bustub::BPlusTreeIndex}}
+\doxysubsubsection{\texorpdfstring{ScanKey()}{ScanKey()}}
+{\footnotesize\ttfamily void bustub\+::\+BPlus\+Tree\+Index\+::\+Scan\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} $>$ $\ast$}]{result,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Search the index for the provided key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em result} & The collection of RIDs that is populated with results of the search \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Index_ac1956eb188c14fe560025ba940cdb302}{bustub\+::\+Index}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/b\+\_\+plus\+\_\+tree\+\_\+index.\+h\end{DoxyCompactItemize}

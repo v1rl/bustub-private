@@ -1,0 +1,20 @@
+\hypertarget{classbustub_1_1TrieStore}{}\doxysection{bustub\+::Trie\+Store Class Reference}
+\label{classbustub_1_1TrieStore}\index{bustub::TrieStore@{bustub::TrieStore}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TrieStore_a43af17ef9b8c51466a9045a850ee173e}\label{classbustub_1_1TrieStore_a43af17ef9b8c51466a9045a850ee173e}} 
+{\footnotesize template$<$class T $>$ }\\auto \mbox{\hyperlink{classbustub_1_1TrieStore_a43af17ef9b8c51466a9045a850ee173e}{Get}} (std\+::string\+\_\+view key) -\/$>$ std\+::optional$<$ \mbox{\hyperlink{classbustub_1_1ValueGuard}{Value\+Guard}}$<$ T $>$$>$
+\begin{DoxyCompactList}\small\item\em This function returns a \mbox{\hyperlink{classbustub_1_1ValueGuard}{Value\+Guard}} object that holds a reference to the value in the trie. If the key does not exist in the trie, it will return std\+::nullopt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1TrieStore_a4012b23056e53fa5533ac32a1a73169d}\label{classbustub_1_1TrieStore_a4012b23056e53fa5533ac32a1a73169d}} 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{classbustub_1_1TrieStore_a4012b23056e53fa5533ac32a1a73169d}{Put}} (std\+::string\+\_\+view key, T value)
+\begin{DoxyCompactList}\small\item\em This function will insert the key-\/value pair into the trie. If the key already exists in the trie, it will overwrite the value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1TrieStore_a09af6bc80b5d85c4564eae940bf71da1}\label{classbustub_1_1TrieStore_a09af6bc80b5d85c4564eae940bf71da1}} 
+void \mbox{\hyperlink{classbustub_1_1TrieStore_a09af6bc80b5d85c4564eae940bf71da1}{Remove}} (std\+::string\+\_\+view key)
+\begin{DoxyCompactList}\small\item\em This function will remove the key-\/value pair from the trie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/trie\+\_\+store.\+h\item 
+src/primer/trie\+\_\+store.\+cpp\end{DoxyCompactItemize}

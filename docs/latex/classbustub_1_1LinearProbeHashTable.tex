@@ -1,0 +1,38 @@
+\hypertarget{classbustub_1_1LinearProbeHashTable}{}\doxysection{bustub\+::Linear\+Probe\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ Class Template Reference}
+\label{classbustub_1_1LinearProbeHashTable}\index{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+
+
+{\ttfamily \#include $<$linear\+\_\+probe\+\_\+hash\+\_\+table.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_aa183891ec13956137e3f7e2a340626ea}\label{classbustub_1_1LinearProbeHashTable_aa183891ec13956137e3f7e2a340626ea}} 
+{\bfseries Linear\+Probe\+Hash\+Table} (const std\+::string \&name, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager, const Key\+Comparator \&comparator, size\+\_\+t num\+\_\+buckets, \mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ Key\+Type $>$ hash\+\_\+fn)
+\item 
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_a7a754d7e304f5771544e37ffb3fb6099}\label{classbustub_1_1LinearProbeHashTable_a7a754d7e304f5771544e37ffb3fb6099}} 
+auto {\bfseries Insert} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const Key\+Type \&key, const Value\+Type \&value) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_a992cc1eae0db29e4514bc4d91f3e0b29}\label{classbustub_1_1LinearProbeHashTable_a992cc1eae0db29e4514bc4d91f3e0b29}} 
+auto {\bfseries Remove} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const Key\+Type \&key, const Value\+Type \&value) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_a930e4b1868e064decef3a619568e97a2}\label{classbustub_1_1LinearProbeHashTable_a930e4b1868e064decef3a619568e97a2}} 
+auto {\bfseries Get\+Value} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const Key\+Type \&key, std\+::vector$<$ Value\+Type $>$ $\ast$result) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_a699704cfadf5270b4ce58fef8eb4bbca}\label{classbustub_1_1LinearProbeHashTable_a699704cfadf5270b4ce58fef8eb4bbca}} 
+void {\bfseries Resize} (size\+\_\+t initial\+\_\+size)
+\item 
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_aea97bb7c37a88d55932a4dfb75233f10}\label{classbustub_1_1LinearProbeHashTable_aea97bb7c37a88d55932a4dfb75233f10}} 
+auto {\bfseries Get\+Size} () -\/$>$ size\+\_\+t
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key\+Type, typename Value\+Type, typename Key\+Comparator$>$\newline
+class bustub\+::\+Linear\+Probe\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}
+
+Implementation of linear probing hash table that is backed by a buffer pool manager. Non-\/unique keys are supported. Supports insert and delete. The table dynamically grows once full. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/container/disk/hash/linear\+\_\+probe\+\_\+hash\+\_\+table.\+h\end{DoxyCompactItemize}

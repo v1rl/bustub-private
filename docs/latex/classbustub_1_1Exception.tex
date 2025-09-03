@@ -1,0 +1,89 @@
+\hypertarget{classbustub_1_1Exception}{}\doxysection{bustub\+::Exception Class Reference}
+\label{classbustub_1_1Exception}\index{bustub::Exception@{bustub::Exception}}
+
+
+Inheritance diagram for bustub\+::Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1Exception__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classbustub_1_1Exception__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Exception_ae798f05c7eebe36d86c72b1af05c0c75}{Exception}} (const std\+::string \&message, bool print=true)
+\item 
+\mbox{\hyperlink{classbustub_1_1Exception_a6f16607d9d9dc36131b7e43cc22a1a39}{Exception}} (\mbox{\hyperlink{namespacebustub_adf0139878332d20b97b4aeadbc3aafdd}{Exception\+Type}} exception\+\_\+type, const std\+::string \&message, bool print=true)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Exception_aa2bb3f78cefc15ab8026f6b748e66feb}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_adf0139878332d20b97b4aeadbc3aafdd}{Exception\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{classbustub_1_1Exception_aea8d4e0c8e9f578c6ba678fe6db36ab6}{Exception\+Type\+To\+String}} (\mbox{\hyperlink{namespacebustub_adf0139878332d20b97b4aeadbc3aafdd}{Exception\+Type}} type) -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Exception_ae798f05c7eebe36d86c72b1af05c0c75}\label{classbustub_1_1Exception_ae798f05c7eebe36d86c72b1af05c0c75}} 
+\index{bustub::Exception@{bustub::Exception}!Exception@{Exception}}
+\index{Exception@{Exception}!bustub::Exception@{bustub::Exception}}
+\doxysubsubsection{\texorpdfstring{Exception()}{Exception()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Exception\+::\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{bool}]{print = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1Exception}{Exception}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em message} & The exception message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1Exception_a6f16607d9d9dc36131b7e43cc22a1a39}\label{classbustub_1_1Exception_a6f16607d9d9dc36131b7e43cc22a1a39}} 
+\index{bustub::Exception@{bustub::Exception}!Exception@{Exception}}
+\index{Exception@{Exception}!bustub::Exception@{bustub::Exception}}
+\doxysubsubsection{\texorpdfstring{Exception()}{Exception()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Exception\+::\+Exception (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_adf0139878332d20b97b4aeadbc3aafdd}{Exception\+Type}}}]{exception\+\_\+type,  }\item[{const std\+::string \&}]{message,  }\item[{bool}]{print = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1Exception}{Exception}} instance with specified type. 
+\begin{DoxyParams}{Parameters}
+{\em exception\+\_\+type} & The exception type \\
+\hline
+{\em message} & The exception message \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Exception_aea8d4e0c8e9f578c6ba678fe6db36ab6}\label{classbustub_1_1Exception_aea8d4e0c8e9f578c6ba678fe6db36ab6}} 
+\index{bustub::Exception@{bustub::Exception}!ExceptionTypeToString@{ExceptionTypeToString}}
+\index{ExceptionTypeToString@{ExceptionTypeToString}!bustub::Exception@{bustub::Exception}}
+\doxysubsubsection{\texorpdfstring{ExceptionTypeToString()}{ExceptionTypeToString()}}
+{\footnotesize\ttfamily static auto bustub\+::\+Exception\+::\+Exception\+Type\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_adf0139878332d20b97b4aeadbc3aafdd}{Exception\+Type}}}]{type }\end{DoxyParamCaption}) -\/$>$ std\+::string \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+A human-\/readable string for the specified exception type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Exception_aa2bb3f78cefc15ab8026f6b748e66feb}\label{classbustub_1_1Exception_aa2bb3f78cefc15ab8026f6b748e66feb}} 
+\index{bustub::Exception@{bustub::Exception}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::Exception@{bustub::Exception}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Exception\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_adf0139878332d20b97b4aeadbc3aafdd}{Exception\+Type}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the exception 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/common/exception.\+h\end{DoxyCompactItemize}

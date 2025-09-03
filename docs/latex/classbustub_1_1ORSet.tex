@@ -1,0 +1,138 @@
+\hypertarget{classbustub_1_1ORSet}{}\doxysection{bustub\+::ORSet$<$ T $>$ Class Template Reference}
+\label{classbustub_1_1ORSet}\index{bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}}
+
+
+The observed remove set datatype.  
+
+
+
+
+{\ttfamily \#include $<$orset.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ORSet_a67d38d4e876a8632de5fef235974c551}{Contains}} (const T \&elem) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Checks if an element is in the set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1ORSet_ad8fedc2eb13751ecf4fae251e88462d6}{Add}} (const T \&elem, \mbox{\hyperlink{namespacebustub_ae22ee5fe54ad6d807c4504793d2c7606}{uid\+\_\+t}} uid)
+\begin{DoxyCompactList}\small\item\em Adds an element to the set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1ORSet_a6a69fc2f4ef3a42bd807b47c5b7b64d7}{Remove}} (const T \&elem)
+\begin{DoxyCompactList}\small\item\em Removes an element from the set if it exists. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1ORSet_a3cbecc58880af87e29fccc7f741bd78b}{Merge}} (const \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}$<$ T $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Merge changes from another \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1ORSet_a26027019750bfde2b2bc94731912c991}{Elements}} () const -\/$>$ std\+::vector$<$ T $>$
+\begin{DoxyCompactList}\small\item\em Gets all the elements in the set. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1ORSet_a0bbd4ab90d1c40d4da35d37be2c0ebf3}{To\+String}} () const -\/$>$ std\+::string
+\begin{DoxyCompactList}\small\item\em Gets a string representation of the set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class bustub\+::\+ORSet$<$ T $>$}
+
+The observed remove set datatype. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ORSet_ad8fedc2eb13751ecf4fae251e88462d6}\label{classbustub_1_1ORSet_ad8fedc2eb13751ecf4fae251e88462d6}} 
+\index{bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ORSet}{bustub\+::\+ORSet}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const T \&}]{elem,  }\item[{\mbox{\hyperlink{namespacebustub_ae22ee5fe54ad6d807c4504793d2c7606}{uid\+\_\+t}}}]{uid }\end{DoxyParamCaption})}
+
+
+
+Adds an element to the set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to add \\
+\hline
+{\em uid} & unique token associated with the add operation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ORSet_a67d38d4e876a8632de5fef235974c551}\label{classbustub_1_1ORSet_a67d38d4e876a8632de5fef235974c551}} 
+\index{bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}!Contains@{Contains}}
+\index{Contains@{Contains}!bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ORSet}{bustub\+::\+ORSet}}$<$ T $>$\+::Contains (\begin{DoxyParamCaption}\item[{const T \&}]{elem }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+
+
+Checks if an element is in the set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the element is in the set, and false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ORSet_a26027019750bfde2b2bc94731912c991}\label{classbustub_1_1ORSet_a26027019750bfde2b2bc94731912c991}} 
+\index{bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}!Elements@{Elements}}
+\index{Elements@{Elements}!bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Elements()}{Elements()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ORSet}{bustub\+::\+ORSet}}$<$ T $>$\+::Elements}
+
+
+
+Gets all the elements in the set. 
+
+\begin{DoxyReturn}{Returns}
+all the elements in the set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ORSet_a3cbecc58880af87e29fccc7f741bd78b}\label{classbustub_1_1ORSet_a3cbecc58880af87e29fccc7f741bd78b}} 
+\index{bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}!Merge@{Merge}}
+\index{Merge@{Merge}!bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ORSet}{bustub\+::\+ORSet}}$<$ T $>$\+::Merge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Merge changes from another \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & another \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ORSet_a6a69fc2f4ef3a42bd807b47c5b7b64d7}\label{classbustub_1_1ORSet_a6a69fc2f4ef3a42bd807b47c5b7b64d7}} 
+\index{bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ORSet}{bustub\+::\+ORSet}}$<$ T $>$\+::Remove (\begin{DoxyParamCaption}\item[{const T \&}]{elem }\end{DoxyParamCaption})}
+
+
+
+Removes an element from the set if it exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ORSet_a0bbd4ab90d1c40d4da35d37be2c0ebf3}\label{classbustub_1_1ORSet_a0bbd4ab90d1c40d4da35d37be2c0ebf3}} 
+\index{bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::ORSet$<$ T $>$@{bustub::ORSet$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ORSet}{bustub\+::\+ORSet}}$<$ T $>$\+::To\+String}
+
+
+
+Gets a string representation of the set. 
+
+\begin{DoxyReturn}{Returns}
+a string representation of the set. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/orset.\+h\item 
+src/primer/orset.\+cpp\end{DoxyCompactItemize}

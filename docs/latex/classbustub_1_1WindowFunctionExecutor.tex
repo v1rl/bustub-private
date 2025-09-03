@@ -1,0 +1,119 @@
+\hypertarget{classbustub_1_1WindowFunctionExecutor}{}\doxysection{bustub\+::Window\+Function\+Executor Class Reference}
+\label{classbustub_1_1WindowFunctionExecutor}\index{bustub::WindowFunctionExecutor@{bustub::WindowFunctionExecutor}}
+
+
+{\ttfamily \#include $<$window\+\_\+function\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Window\+Function\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classbustub_1_1WindowFunctionExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Window\+Function\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classbustub_1_1WindowFunctionExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor_a3daca279d51faa5a552fc3aa66bf14d8}{Window\+Function\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode}{Window\+Function\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor_a9e10aa19f60cdeace1a63979bb7b1d82}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor_a3809c4ee264ff6d679e535467ee8bf7e}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor_a87c80a0fb2288d0d2ce5698e00b85b04}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor}{Window\+Function\+Executor}} executor executes a window function for columns using window function.
+
+Window function is different from normal aggregation as it outputs one row for each inputing rows, and can be combined with normal selected columns. The columns in \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode}{Window\+Function\+Plan\+Node}} contains both normal selected columns and placeholder columns for window functions.
+
+For example, if we have a query like\+: SELECT 0.\+1, 0.\+2, SUM(0.\+3) OVER (PARTITION BY 0.\+2 ORDER BY 0.\+3), SUM(0.\+4) OVER (PARTITION BY 0.\+1 ORDER BY 0.\+2,0.\+3) FROM table;
+
+The \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode}{Window\+Function\+Plan\+Node}} contains following structure\+: columns\+: std\+::vector$<$\+Abstract\+Expression\+Ref$>$\{0.\+1, 0.\+2, 0.-\/1(placeholder), 0.-\/1(placeholder)\} window\+\_\+functions\+\_\+\+: \{ 3\+: \{ partition\+\_\+by\+: std\+::vector$<$\+Abstract\+Expression\+Ref$>$\{0.\+2\} order\+\_\+by\+: std\+::vector$<$\+Abstract\+Expression\+Ref$>$\{0.\+3\} functions\+: std\+::vector$<$\+Abstract\+Expression\+Ref$>$\{0.\+3\} window\+\_\+func\+\_\+type\+: Window\+Function\+Type\+::\+Sum\+Aggregate \} 4\+: \{ partition\+\_\+by\+: std\+::vector$<$\+Abstract\+Expression\+Ref$>$\{0.\+1\} order\+\_\+by\+: std\+::vector$<$\+Abstract\+Expression\+Ref$>$\{0.\+2,0.\+3\} functions\+: std\+::vector$<$\+Abstract\+Expression\+Ref$>$\{0.\+4\} window\+\_\+func\+\_\+type\+: Window\+Function\+Type\+::\+Sum\+Aggregate \} \}
+
+Your executor should use child executor and exprs in columns to produce selected columns except for window function columns, and use window\+\_\+agg\+\_\+indexes, partition\+\_\+bys, order\+\_\+bys, functionss and window\+\_\+agg\+\_\+types to generate window function columns results. Directly use placeholders for window function columns in columns is not allowed, as it contains invalid column id.
+
+Your \mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor}{Window\+Function\+Executor}} does not need to support specified window frames (eg\+: 1 preceding and 1 following). You can assume that all window frames are UNBOUNDED FOLLOWING AND CURRENT ROW when there is ORDER BY clause, and UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING when there is no ORDER BY clause. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionExecutor_a3daca279d51faa5a552fc3aa66bf14d8}\label{classbustub_1_1WindowFunctionExecutor_a3daca279d51faa5a552fc3aa66bf14d8}} 
+\index{bustub::WindowFunctionExecutor@{bustub::WindowFunctionExecutor}!WindowFunctionExecutor@{WindowFunctionExecutor}}
+\index{WindowFunctionExecutor@{WindowFunctionExecutor}!bustub::WindowFunctionExecutor@{bustub::WindowFunctionExecutor}}
+\doxysubsubsection{\texorpdfstring{WindowFunctionExecutor()}{WindowFunctionExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Window\+Function\+Executor\+::\+Window\+Function\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode}{Window\+Function\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor}{Window\+Function\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The window aggregation plan to be executed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionExecutor_a87c80a0fb2288d0d2ce5698e00b85b04}\label{classbustub_1_1WindowFunctionExecutor_a87c80a0fb2288d0d2ce5698e00b85b04}} 
+\index{bustub::WindowFunctionExecutor@{bustub::WindowFunctionExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::WindowFunctionExecutor@{bustub::WindowFunctionExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Window\+Function\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the window aggregation plan 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionExecutor_a9e10aa19f60cdeace1a63979bb7b1d82}\label{classbustub_1_1WindowFunctionExecutor_a9e10aa19f60cdeace1a63979bb7b1d82}} 
+\index{bustub::WindowFunctionExecutor@{bustub::WindowFunctionExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::WindowFunctionExecutor@{bustub::WindowFunctionExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Window\+Function\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the window aggregation 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionExecutor_a3809c4ee264ff6d679e535467ee8bf7e}\label{classbustub_1_1WindowFunctionExecutor_a3809c4ee264ff6d679e535467ee8bf7e}} 
+\index{bustub::WindowFunctionExecutor@{bustub::WindowFunctionExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::WindowFunctionExecutor@{bustub::WindowFunctionExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Window\+Function\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the window aggregation. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the window aggregation \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the window aggregation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/window\+\_\+function\+\_\+executor.\+h\item 
+src/execution/window\+\_\+function\+\_\+executor.\+cpp\end{DoxyCompactItemize}

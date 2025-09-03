@@ -1,0 +1,59 @@
+\hypertarget{classbustub_1_1BPlusTreePage}{}\doxysection{bustub\+::BPlus\+Tree\+Page Class Reference}
+\label{classbustub_1_1BPlusTreePage}\index{bustub::BPlusTreePage@{bustub::BPlusTreePage}}
+
+
+{\ttfamily \#include $<$b\+\_\+plus\+\_\+tree\+\_\+page.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::BPlus\+Tree\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1BPlusTreePage__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a5dc819c2fd81426ce7c0143a307f90ac}\label{classbustub_1_1BPlusTreePage_a5dc819c2fd81426ce7c0143a307f90ac}} 
+{\bfseries BPlus\+Tree\+Page} (const \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{BPlus\+Tree\+Page}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a6f47f7d6d7351f353468099d55330c2a}\label{classbustub_1_1BPlusTreePage_a6f47f7d6d7351f353468099d55330c2a}} 
+auto {\bfseries Is\+Leaf\+Page} () const -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_abd41e488b49c43aba310e23b54efa4d8}\label{classbustub_1_1BPlusTreePage_abd41e488b49c43aba310e23b54efa4d8}} 
+void {\bfseries Set\+Page\+Type} (Index\+Page\+Type page\+\_\+type)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_ac14c9a021e6f9c4a83dffaa81c6b41e7}\label{classbustub_1_1BPlusTreePage_ac14c9a021e6f9c4a83dffaa81c6b41e7}} 
+auto {\bfseries Get\+Size} () const -\/$>$ int
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a56166803db1e1191762a0926eb30d15e}\label{classbustub_1_1BPlusTreePage_a56166803db1e1191762a0926eb30d15e}} 
+void {\bfseries Set\+Size} (int size)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_ab19f260701a8df06405b0111748cd189}\label{classbustub_1_1BPlusTreePage_ab19f260701a8df06405b0111748cd189}} 
+void {\bfseries Change\+Size\+By} (int amount)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a95547fdcfe0b47e80324e15af4091f3f}\label{classbustub_1_1BPlusTreePage_a95547fdcfe0b47e80324e15af4091f3f}} 
+auto {\bfseries Get\+Max\+Size} () const -\/$>$ int
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_ac76f8f14d792d36de9c32ef6e1f407d0}\label{classbustub_1_1BPlusTreePage_ac76f8f14d792d36de9c32ef6e1f407d0}} 
+void {\bfseries Set\+Max\+Size} (int max\+\_\+size)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a0158785c88299536a14b9ea78bd082ac}\label{classbustub_1_1BPlusTreePage_a0158785c88299536a14b9ea78bd082ac}} 
+auto {\bfseries Get\+Min\+Size} () const -\/$>$ int
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Both internal and leaf page are inherited from this page.
+
+It actually serves as a header part for each B+ tree page and contains information shared by both leaf page and internal page.\hypertarget{classbustub_1_1BPlusTreePage_autotoc_md32}{}\doxysubsubsection{Header format (size in byte, 12 bytes in total)\+:}\label{classbustub_1_1BPlusTreePage_autotoc_md32}
+\hypertarget{classbustub_1_1BPlusTreePage_autotoc_md33}{}\doxysubsubsection{$\vert$ Page\+Type (4) $\vert$ Current\+Size (4) $\vert$ Max\+Size (4) $\vert$  ...   $\vert$}\label{classbustub_1_1BPlusTreePage_autotoc_md33}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/b\+\_\+plus\+\_\+tree\+\_\+page.\+h\item 
+src/storage/page/b\+\_\+plus\+\_\+tree\+\_\+page.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{classbustub_1_1Replacer}{}\doxysection{bustub\+::Replacer Class Reference}
+\label{classbustub_1_1Replacer}\index{bustub::Replacer@{bustub::Replacer}}
+
+
+{\ttfamily \#include $<$replacer.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Replacer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classbustub_1_1Replacer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1Replacer_a9b94be99bdb7b9aa4fcbd37b29b50b7e}{Victim}} (frame\+\_\+id\+\_\+t $\ast$frame\+\_\+id) -\/$>$ bool=0
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1Replacer_ac152854b5b80f90a6c914ad9859f1504}{Pin}} (frame\+\_\+id\+\_\+t frame\+\_\+id)=0
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1Replacer_afdd9f2f50f45ac89e3b5460bb81ce4cd}{Unpin}} (frame\+\_\+id\+\_\+t frame\+\_\+id)=0
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1Replacer_ad7be7527d1687821f8812e999ed08c6c}{Size}} () -\/$>$ size\+\_\+t=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1Replacer}{Replacer}} is an abstract class that tracks page usage. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Replacer_ac152854b5b80f90a6c914ad9859f1504}\label{classbustub_1_1Replacer_ac152854b5b80f90a6c914ad9859f1504}} 
+\index{bustub::Replacer@{bustub::Replacer}!Pin@{Pin}}
+\index{Pin@{Pin}!bustub::Replacer@{bustub::Replacer}}
+\doxysubsubsection{\texorpdfstring{Pin()}{Pin()}}
+{\footnotesize\ttfamily virtual void bustub\+::\+Replacer\+::\+Pin (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t}]{frame\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Pins a frame, indicating that it should not be victimized until it is unpinned. 
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+id} & the id of the frame to pin \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1LRUReplacer_aadd029af7df0d9e3a7e34db50809cb7a}{bustub\+::\+LRUReplacer}}, and \mbox{\hyperlink{classbustub_1_1ClockReplacer_ab8e5a929f656e9c8d0410900089a2321}{bustub\+::\+Clock\+Replacer}}.
+
+\mbox{\Hypertarget{classbustub_1_1Replacer_ad7be7527d1687821f8812e999ed08c6c}\label{classbustub_1_1Replacer_ad7be7527d1687821f8812e999ed08c6c}} 
+\index{bustub::Replacer@{bustub::Replacer}!Size@{Size}}
+\index{Size@{Size}!bustub::Replacer@{bustub::Replacer}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Replacer\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$  size\+\_\+t\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the number of elements in the replacer that can be victimized 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1LRUReplacer_a7aee3ccc39ea75babaf561f73a18330b}{bustub\+::\+LRUReplacer}}, and \mbox{\hyperlink{classbustub_1_1ClockReplacer_ac734711803e4a94abd2511ee33799cfc}{bustub\+::\+Clock\+Replacer}}.
+
+\mbox{\Hypertarget{classbustub_1_1Replacer_afdd9f2f50f45ac89e3b5460bb81ce4cd}\label{classbustub_1_1Replacer_afdd9f2f50f45ac89e3b5460bb81ce4cd}} 
+\index{bustub::Replacer@{bustub::Replacer}!Unpin@{Unpin}}
+\index{Unpin@{Unpin}!bustub::Replacer@{bustub::Replacer}}
+\doxysubsubsection{\texorpdfstring{Unpin()}{Unpin()}}
+{\footnotesize\ttfamily virtual void bustub\+::\+Replacer\+::\+Unpin (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t}]{frame\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Unpins a frame, indicating that it can now be victimized. 
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+id} & the id of the frame to unpin \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1LRUReplacer_abc7c5e45551d242c08ac82ea3519d0bc}{bustub\+::\+LRUReplacer}}, and \mbox{\hyperlink{classbustub_1_1ClockReplacer_a39bd3057946458831b46017455e790f6}{bustub\+::\+Clock\+Replacer}}.
+
+\mbox{\Hypertarget{classbustub_1_1Replacer_a9b94be99bdb7b9aa4fcbd37b29b50b7e}\label{classbustub_1_1Replacer_a9b94be99bdb7b9aa4fcbd37b29b50b7e}} 
+\index{bustub::Replacer@{bustub::Replacer}!Victim@{Victim}}
+\index{Victim@{Victim}!bustub::Replacer@{bustub::Replacer}}
+\doxysubsubsection{\texorpdfstring{Victim()}{Victim()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Replacer\+::\+Victim (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t $\ast$}]{frame\+\_\+id }\end{DoxyParamCaption}) -\/$>$  bool\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Remove the victim frame as defined by the replacement policy. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em frame\+\_\+id} & id of frame that was removed, nullptr if no victim was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a victim frame was found, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1LRUReplacer_ad0cb74ba0debfd52182e856fa5a1cc41}{bustub\+::\+LRUReplacer}}, and \mbox{\hyperlink{classbustub_1_1ClockReplacer_a5a5699558e43ab5f6786e0d68d7947d9}{bustub\+::\+Clock\+Replacer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/buffer/replacer.\+h\end{DoxyCompactItemize}

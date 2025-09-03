@@ -1,0 +1,145 @@
+\hypertarget{classbustub_1_1HashTableHeaderPage}{}\doxysection{bustub\+::Hash\+Table\+Header\+Page Class Reference}
+\label{classbustub_1_1HashTableHeaderPage}\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+
+
+{\ttfamily \#include $<$hash\+\_\+table\+\_\+header\+\_\+page.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableHeaderPage_a0588ae19164567802bd31864b8cfd989}{Get\+Size}} () const -\/$>$ size\+\_\+t
+\item 
+void \mbox{\hyperlink{classbustub_1_1HashTableHeaderPage_ad6d8ef42b6be1e1f75aa3315be957a1c}{Set\+Size}} (size\+\_\+t size)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableHeaderPage_aff0749c9ad6fd68fdf871088f450bc55}{Get\+Page\+Id}} () const -\/$>$ page\+\_\+id\+\_\+t
+\item 
+void \mbox{\hyperlink{classbustub_1_1HashTableHeaderPage_a770149f3e8506ad8f1057f9d59722509}{Set\+Page\+Id}} (page\+\_\+id\+\_\+t page\+\_\+id)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableHeaderPage_a5e5ff5c88984e9f466e45bf7007784f5}{Get\+LSN}} () const -\/$>$ lsn\+\_\+t
+\item 
+void \mbox{\hyperlink{classbustub_1_1HashTableHeaderPage_af7ce70f8f527ca9632fc05c99176bf3a}{Set\+LSN}} (lsn\+\_\+t lsn)
+\item 
+void \mbox{\hyperlink{classbustub_1_1HashTableHeaderPage_a7a4ed6a3e14b4d5a71796335dba77353}{Add\+Block\+Page\+Id}} (page\+\_\+id\+\_\+t page\+\_\+id)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableHeaderPage_a474a5acbc2bdca130b2ac4c66e58f1d7}{Get\+Block\+Page\+Id}} (size\+\_\+t index) -\/$>$ page\+\_\+id\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableHeaderPage_a149aae4aed15209c27a5b5ae88938b2d}{Num\+Blocks}} () -\/$>$ size\+\_\+t
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header \mbox{\hyperlink{classbustub_1_1Page}{Page}} for linear probing hash table.\hypertarget{classbustub_1_1HashTableHeaderPage_autotoc_md48}{}\doxysubsubsection{Header format (size in byte, 16 bytes in total)\+:}\label{classbustub_1_1HashTableHeaderPage_autotoc_md48}
+\hypertarget{classbustub_1_1HashTableHeaderPage_autotoc_md49}{}\doxysubsubsection{$\vert$ LSN (4) $\vert$ Size (4) $\vert$ Page\+Id(4) $\vert$ Next\+Block\+Index(4)}\label{classbustub_1_1HashTableHeaderPage_autotoc_md49}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1HashTableHeaderPage_a7a4ed6a3e14b4d5a71796335dba77353}\label{classbustub_1_1HashTableHeaderPage_a7a4ed6a3e14b4d5a71796335dba77353}} 
+\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}!AddBlockPageId@{AddBlockPageId}}
+\index{AddBlockPageId@{AddBlockPageId}!bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{AddBlockPageId()}{AddBlockPageId()}}
+{\footnotesize\ttfamily void bustub\+::\+Hash\+Table\+Header\+Page\+::\+Add\+Block\+Page\+Id (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id }\end{DoxyParamCaption})}
+
+Adds a block page\+\_\+id to the end of header page
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & page\+\_\+id to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1HashTableHeaderPage_a474a5acbc2bdca130b2ac4c66e58f1d7}\label{classbustub_1_1HashTableHeaderPage_a474a5acbc2bdca130b2ac4c66e58f1d7}} 
+\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}!GetBlockPageId@{GetBlockPageId}}
+\index{GetBlockPageId@{GetBlockPageId}!bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{GetBlockPageId()}{GetBlockPageId()}}
+{\footnotesize\ttfamily auto bustub\+::\+Hash\+Table\+Header\+Page\+::\+Get\+Block\+Page\+Id (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) -\/$>$ page\+\_\+id\+\_\+t}
+
+Returns the page\+\_\+id of the index-\/th block
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index of the block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the page\+\_\+id for the block. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableHeaderPage_a5e5ff5c88984e9f466e45bf7007784f5}\label{classbustub_1_1HashTableHeaderPage_a5e5ff5c88984e9f466e45bf7007784f5}} 
+\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}!GetLSN@{GetLSN}}
+\index{GetLSN@{GetLSN}!bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{GetLSN()}{GetLSN()}}
+{\footnotesize\ttfamily auto bustub\+::\+Hash\+Table\+Header\+Page\+::\+Get\+LSN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ lsn\+\_\+t}
+
+\begin{DoxyReturn}{Returns}
+the lsn of this page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableHeaderPage_aff0749c9ad6fd68fdf871088f450bc55}\label{classbustub_1_1HashTableHeaderPage_aff0749c9ad6fd68fdf871088f450bc55}} 
+\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}!GetPageId@{GetPageId}}
+\index{GetPageId@{GetPageId}!bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{GetPageId()}{GetPageId()}}
+{\footnotesize\ttfamily auto bustub\+::\+Hash\+Table\+Header\+Page\+::\+Get\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ page\+\_\+id\+\_\+t}
+
+\begin{DoxyReturn}{Returns}
+the page ID of this page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableHeaderPage_a0588ae19164567802bd31864b8cfd989}\label{classbustub_1_1HashTableHeaderPage_a0588ae19164567802bd31864b8cfd989}} 
+\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily auto bustub\+::\+Hash\+Table\+Header\+Page\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ size\+\_\+t}
+
+\begin{DoxyReturn}{Returns}
+the number of buckets in the hash table; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableHeaderPage_a149aae4aed15209c27a5b5ae88938b2d}\label{classbustub_1_1HashTableHeaderPage_a149aae4aed15209c27a5b5ae88938b2d}} 
+\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}!NumBlocks@{NumBlocks}}
+\index{NumBlocks@{NumBlocks}!bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{NumBlocks()}{NumBlocks()}}
+{\footnotesize\ttfamily auto bustub\+::\+Hash\+Table\+Header\+Page\+::\+Num\+Blocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ size\+\_\+t}
+
+\begin{DoxyReturn}{Returns}
+the number of blocks currently stored in the header page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableHeaderPage_af7ce70f8f527ca9632fc05c99176bf3a}\label{classbustub_1_1HashTableHeaderPage_af7ce70f8f527ca9632fc05c99176bf3a}} 
+\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}!SetLSN@{SetLSN}}
+\index{SetLSN@{SetLSN}!bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{SetLSN()}{SetLSN()}}
+{\footnotesize\ttfamily void bustub\+::\+Hash\+Table\+Header\+Page\+::\+Set\+LSN (\begin{DoxyParamCaption}\item[{lsn\+\_\+t}]{lsn }\end{DoxyParamCaption})}
+
+Sets the LSN of this page
+
+
+\begin{DoxyParams}{Parameters}
+{\em lsn} & the log sequence number for the lsn field to be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1HashTableHeaderPage_a770149f3e8506ad8f1057f9d59722509}\label{classbustub_1_1HashTableHeaderPage_a770149f3e8506ad8f1057f9d59722509}} 
+\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}!SetPageId@{SetPageId}}
+\index{SetPageId@{SetPageId}!bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{SetPageId()}{SetPageId()}}
+{\footnotesize\ttfamily void bustub\+::\+Hash\+Table\+Header\+Page\+::\+Set\+Page\+Id (\begin{DoxyParamCaption}\item[{bustub\+::page\+\_\+id\+\_\+t}]{page\+\_\+id }\end{DoxyParamCaption})}
+
+Sets the page ID of this page
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & the page id for the page id field to be set to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1HashTableHeaderPage_ad6d8ef42b6be1e1f75aa3315be957a1c}\label{classbustub_1_1HashTableHeaderPage_ad6d8ef42b6be1e1f75aa3315be957a1c}} 
+\index{bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}!SetSize@{SetSize}}
+\index{SetSize@{SetSize}!bustub::HashTableHeaderPage@{bustub::HashTableHeaderPage}}
+\doxysubsubsection{\texorpdfstring{SetSize()}{SetSize()}}
+{\footnotesize\ttfamily void bustub\+::\+Hash\+Table\+Header\+Page\+::\+Set\+Size (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Sets the size field of the hash table to size
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the size for the size field to be set to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/hash\+\_\+table\+\_\+header\+\_\+page.\+h\item 
+src/storage/page/hash\+\_\+table\+\_\+header\+\_\+page.\+cpp\end{DoxyCompactItemize}

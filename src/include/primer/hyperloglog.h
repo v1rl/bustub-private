@@ -69,10 +69,16 @@ class HyperLogLog {
 
   auto PositionOfLeftmostOne(const std::bitset<BITSET_CAPACITY> &bset) const -> uint64_t;
 
+  auto GetBucketValue(const std::bitset<BITSET_CAPACITY> &bset) const -> uint64_t;
+
   /** @brief Cardinality value. */
+  std::mutex mtx_;
   size_t cardinality_;
 
   /** @todo (student) can add their data structures that support HyperLogLog */
+  bool valid_ = true;
+  int16_t n_bits_;
+  std::vector<uint8_t> bucket_;
 };
 
 }  // namespace bustub

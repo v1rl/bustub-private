@@ -1,0 +1,70 @@
+\hypertarget{classbustub_1_1FrameHeader}{}\doxysection{bustub\+::Frame\+Header Class Reference}
+\label{classbustub_1_1FrameHeader}\index{bustub::FrameHeader@{bustub::FrameHeader}}
+
+
+A helper class for {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} that manages a frame of memory and related metadata.  
+
+
+
+
+{\ttfamily \#include $<$buffer\+\_\+pool\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1FrameHeader_a383e89d311ab8db3ca3e0b6b73c14655}{Frame\+Header}} (frame\+\_\+id\+\_\+t frame\+\_\+id)
+\begin{DoxyCompactList}\small\item\em The constructor for a {\ttfamily \mbox{\hyperlink{classbustub_1_1FrameHeader}{Frame\+Header}}} that initializes all fields to default values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1FrameHeader_aacdcadb3a97ed0cf5b98e4e4b88eea34}\label{classbustub_1_1FrameHeader_aacdcadb3a97ed0cf5b98e4e4b88eea34}} 
+class {\bfseries Buffer\+Pool\+Manager}
+\item 
+\mbox{\Hypertarget{classbustub_1_1FrameHeader_a11b4e8677c74e94eb4d431f14e69b9ed}\label{classbustub_1_1FrameHeader_a11b4e8677c74e94eb4d431f14e69b9ed}} 
+class {\bfseries Read\+Page\+Guard}
+\item 
+\mbox{\Hypertarget{classbustub_1_1FrameHeader_a1bdaa6e50a29a591f34aff8b62cae552}\label{classbustub_1_1FrameHeader_a1bdaa6e50a29a591f34aff8b62cae552}} 
+class {\bfseries Write\+Page\+Guard}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A helper class for {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} that manages a frame of memory and related metadata. 
+
+This class represents headers for frames of memory that the {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} stores pages of data into. Note that the actual frames of memory are not stored directly inside a {\ttfamily \mbox{\hyperlink{classbustub_1_1FrameHeader}{Frame\+Header}}}, rather the {\ttfamily \mbox{\hyperlink{classbustub_1_1FrameHeader}{Frame\+Header}}}s store pointer to the frames and are stored separately them.
+
+\DoxyHorRuler{0}
+
+
+Something that may (or may not) be of interest to you is why the field {\ttfamily data\+\_\+} is stored as a vector that is allocated on the fly instead of as a direct pointer to some pre-\/allocated chunk of memory.
+
+In a traditional production buffer pool manager, all memory that the buffer pool is intended to manage is allocated in one large contiguous array (think of a very large {\ttfamily malloc} call that allocates several gigabytes of memory up front). This large contiguous block of memory is then divided into contiguous frames. In other words, frames are defined by an offset from the base of the array in page-\/sized (4 KB) intervals.
+
+In Bus\+Tub, we instead allocate each frame on its own (via a {\ttfamily std\+::vector$<$char$>$}) in order to easily detect buffer overflow with address sanitizer. Since C++ has no notion of memory safety, it would be very easy to cast a page\textquotesingle{}s data pointer into some large data type and start overwriting other pages of data if they were all contiguous.
+
+If you would like to attempt to use more efficient data structures for your buffer pool manager, you are free to do so. However, you will likely benefit significantly from detecting buffer overflow in future projects (especially project 2). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1FrameHeader_a383e89d311ab8db3ca3e0b6b73c14655}\label{classbustub_1_1FrameHeader_a383e89d311ab8db3ca3e0b6b73c14655}} 
+\index{bustub::FrameHeader@{bustub::FrameHeader}!FrameHeader@{FrameHeader}}
+\index{FrameHeader@{FrameHeader}!bustub::FrameHeader@{bustub::FrameHeader}}
+\doxysubsubsection{\texorpdfstring{FrameHeader()}{FrameHeader()}}
+{\footnotesize\ttfamily bustub\+::\+Frame\+Header\+::\+Frame\+Header (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t}]{frame\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The constructor for a {\ttfamily \mbox{\hyperlink{classbustub_1_1FrameHeader}{Frame\+Header}}} that initializes all fields to default values. 
+
+See the documentation for {\ttfamily \mbox{\hyperlink{classbustub_1_1FrameHeader}{Frame\+Header}}} in \char`\"{}buffer/buffer\+\_\+pool\+\_\+manager.\+h\char`\"{} for more information.
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+id} & The frame ID / index of the frame we are creating a header for. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/buffer/buffer\+\_\+pool\+\_\+manager.\+h\item 
+src/buffer/buffer\+\_\+pool\+\_\+manager.\+cpp\end{DoxyCompactItemize}

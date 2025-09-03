@@ -1,0 +1,50 @@
+\hypertarget{structbustub_1_1AggregateKey}{}\doxysection{bustub\+::Aggregate\+Key Struct Reference}
+\label{structbustub_1_1AggregateKey}\index{bustub::AggregateKey@{bustub::AggregateKey}}
+
+
+{\ttfamily \#include $<$aggregation\+\_\+plan.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{structbustub_1_1AggregateKey_a31621f83a8dda158b2c35742bb88d4b2}{operator==}} (const \mbox{\hyperlink{structbustub_1_1AggregateKey}{Aggregate\+Key}} \&other) const -\/$>$ bool
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \mbox{\hyperlink{structbustub_1_1AggregateKey_af4e6381640894809865ac634bd8eb61e}{group\+\_\+bys\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structbustub_1_1AggregateKey}{Aggregate\+Key}} represents a key in an aggregation operation 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structbustub_1_1AggregateKey_a31621f83a8dda158b2c35742bb88d4b2}\label{structbustub_1_1AggregateKey_a31621f83a8dda158b2c35742bb88d4b2}} 
+\index{bustub::AggregateKey@{bustub::AggregateKey}!operator==@{operator==}}
+\index{operator==@{operator==}!bustub::AggregateKey@{bustub::AggregateKey}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily auto bustub\+::\+Aggregate\+Key\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbustub_1_1AggregateKey}{Aggregate\+Key}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+Compares two aggregate keys for equality. 
+\begin{DoxyParams}{Parameters}
+{\em other} & the other aggregate key to be compared with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if both aggregate keys have equivalent group-\/by expressions, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structbustub_1_1AggregateKey_af4e6381640894809865ac634bd8eb61e}\label{structbustub_1_1AggregateKey_af4e6381640894809865ac634bd8eb61e}} 
+\index{bustub::AggregateKey@{bustub::AggregateKey}!group\_bys\_@{group\_bys\_}}
+\index{group\_bys\_@{group\_bys\_}!bustub::AggregateKey@{bustub::AggregateKey}}
+\doxysubsubsection{\texorpdfstring{group\_bys\_}{group\_bys\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classbustub_1_1Value}{Value}}$>$ bustub\+::\+Aggregate\+Key\+::group\+\_\+bys\+\_\+}
+
+The group-\/by values 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/aggregation\+\_\+plan.\+h\end{DoxyCompactItemize}

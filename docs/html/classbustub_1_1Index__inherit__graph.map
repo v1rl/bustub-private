@@ -1,0 +1,8 @@
+<map id="bustub::Index" name="bustub::Index">
+<area shape="rect" id="node1" title=" " alt="" coords="5,151,116,177"/>
+<area shape="rect" id="node2" href="$classbustub_1_1BPlusTreeIndex.html" title=" " alt="" coords="187,5,360,32"/>
+<area shape="rect" id="node3" href="$classbustub_1_1ExtendibleHashTableIndex.html" title=" " alt="" coords="168,56,379,112"/>
+<area shape="rect" id="node4" href="$classbustub_1_1LinearProbeHashTableIndex.html" title=" " alt="" coords="164,136,383,192"/>
+<area shape="rect" id="node5" href="$classbustub_1_1STLOrderedIndex.html" title=" " alt="" coords="181,217,366,258"/>
+<area shape="rect" id="node6" href="$classbustub_1_1STLUnorderedIndex.html" title=" " alt="" coords="173,282,374,323"/>
+</map>

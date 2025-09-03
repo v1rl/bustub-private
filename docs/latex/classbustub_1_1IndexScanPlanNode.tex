@@ -1,0 +1,147 @@
+\hypertarget{classbustub_1_1IndexScanPlanNode}{}\doxysection{bustub\+::Index\+Scan\+Plan\+Node Class Reference}
+\label{classbustub_1_1IndexScanPlanNode}\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+
+
+{\ttfamily \#include $<$index\+\_\+scan\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Index\+Scan\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classbustub_1_1IndexScanPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Index\+Scan\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classbustub_1_1IndexScanPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a21ab57c879cadf14ab6bef2526f30d59}{Index\+Scan\+Plan\+Node}} (Schema\+Ref output, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} table\+\_\+oid, index\+\_\+oid\+\_\+t index\+\_\+oid, Abstract\+Expression\+Ref filter\+\_\+predicate=nullptr, std\+::vector$<$ Abstract\+Expression\+Ref $>$ pred\+\_\+keys=\{\})
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a01036d84412fb1a7a3cf01dac1318ac7}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a1c96e8c1607c94a522ee34845162be7c}{Get\+Index\+Oid}} () const -\/$>$ index\+\_\+oid\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_af7a3a32e09eebf45a6a25f51dd727631}\label{classbustub_1_1IndexScanPlanNode_af7a3a32e09eebf45a6a25f51dd727631}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1IndexScanPlanNode}{Index\+Scan\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a5fa36bde613e5d90794ba446b4819d79}{table\+\_\+oid\+\_\+}}
+\item 
+index\+\_\+oid\+\_\+t \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a0129ff7c1a20f9726ddfe969ca4623fe}{index\+\_\+oid\+\_\+}}
+\item 
+Abstract\+Expression\+Ref \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_ac62453052a50f7d38f7b439b812b47e4}{filter\+\_\+predicate\+\_\+}}
+\item 
+std\+::vector$<$ Abstract\+Expression\+Ref $>$ \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a4ec9da8750856cd0be4532dcc68717a8}{pred\+\_\+keys\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a1311b643aee43ab0a95aa7263df68733}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1IndexScanPlanNode}{Index\+Scan\+Plan\+Node}} identifies a table that should be scanned with an optional predicate. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_a21ab57c879cadf14ab6bef2526f30d59}\label{classbustub_1_1IndexScanPlanNode_a21ab57c879cadf14ab6bef2526f30d59}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!IndexScanPlanNode@{IndexScanPlanNode}}
+\index{IndexScanPlanNode@{IndexScanPlanNode}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{IndexScanPlanNode()}{IndexScanPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Index\+Scan\+Plan\+Node\+::\+Index\+Scan\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{table\+\_\+oid,  }\item[{index\+\_\+oid\+\_\+t}]{index\+\_\+oid,  }\item[{Abstract\+Expression\+Ref}]{filter\+\_\+predicate = {\ttfamily nullptr},  }\item[{std\+::vector$<$ Abstract\+Expression\+Ref $>$}]{pred\+\_\+keys = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new index scan plan node with filter predicate. 
+\begin{DoxyParams}{Parameters}
+{\em output} & The output format of this scan plan node \\
+\hline
+{\em table\+\_\+oid} & The identifier of table to be scanned \\
+\hline
+{\em filter\+\_\+predicate} & The predicate pushed down to index scan. \\
+\hline
+{\em pred\+\_\+key} & The key for point lookup \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_a1c96e8c1607c94a522ee34845162be7c}\label{classbustub_1_1IndexScanPlanNode_a1c96e8c1607c94a522ee34845162be7c}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!GetIndexOid@{GetIndexOid}}
+\index{GetIndexOid@{GetIndexOid}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetIndexOid()}{GetIndexOid()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Scan\+Plan\+Node\+::\+Get\+Index\+Oid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ index\+\_\+oid\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the identifier of the table that should be scanned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_a01036d84412fb1a7a3cf01dac1318ac7}\label{classbustub_1_1IndexScanPlanNode_a01036d84412fb1a7a3cf01dac1318ac7}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Scan\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type of this plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_a1311b643aee43ab0a95aa7263df68733}\label{classbustub_1_1IndexScanPlanNode_a1311b643aee43ab0a95aa7263df68733}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Scan\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_ac62453052a50f7d38f7b439b812b47e4}\label{classbustub_1_1IndexScanPlanNode_ac62453052a50f7d38f7b439b812b47e4}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!filter\_predicate\_@{filter\_predicate\_}}
+\index{filter\_predicate\_@{filter\_predicate\_}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{filter\_predicate\_}{filter\_predicate\_}}
+{\footnotesize\ttfamily Abstract\+Expression\+Ref bustub\+::\+Index\+Scan\+Plan\+Node\+::filter\+\_\+predicate\+\_\+}
+
+The predicate to filter in index scan. For Fall 2023, after you implemented seqscan to indexscan optimizer rule, we can use this predicate to do index point lookup \mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_a0129ff7c1a20f9726ddfe969ca4623fe}\label{classbustub_1_1IndexScanPlanNode_a0129ff7c1a20f9726ddfe969ca4623fe}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!index\_oid\_@{index\_oid\_}}
+\index{index\_oid\_@{index\_oid\_}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{index\_oid\_}{index\_oid\_}}
+{\footnotesize\ttfamily index\+\_\+oid\+\_\+t bustub\+::\+Index\+Scan\+Plan\+Node\+::index\+\_\+oid\+\_\+}
+
+The index whose tuples should be scanned. \mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_a4ec9da8750856cd0be4532dcc68717a8}\label{classbustub_1_1IndexScanPlanNode_a4ec9da8750856cd0be4532dcc68717a8}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!pred\_keys\_@{pred\_keys\_}}
+\index{pred\_keys\_@{pred\_keys\_}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{pred\_keys\_}{pred\_keys\_}}
+{\footnotesize\ttfamily std\+::vector$<$Abstract\+Expression\+Ref$>$ bustub\+::\+Index\+Scan\+Plan\+Node\+::pred\+\_\+keys\+\_\+}
+
+The constant value keys to lookup. For example when dealing \char`\"{}\+WHERE v = 1\char`\"{} we could store the constant value 1 here \mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_a5fa36bde613e5d90794ba446b4819d79}\label{classbustub_1_1IndexScanPlanNode_a5fa36bde613e5d90794ba446b4819d79}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!table\_oid\_@{table\_oid\_}}
+\index{table\_oid\_@{table\_oid\_}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{table\_oid\_}{table\_oid\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} bustub\+::\+Index\+Scan\+Plan\+Node\+::table\+\_\+oid\+\_\+}
+
+The table which the index is created on. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/index\+\_\+scan\+\_\+plan.\+h\end{DoxyCompactItemize}

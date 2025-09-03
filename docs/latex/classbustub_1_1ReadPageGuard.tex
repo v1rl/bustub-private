@@ -1,0 +1,154 @@
+\hypertarget{classbustub_1_1ReadPageGuard}{}\doxysection{bustub\+::Read\+Page\+Guard Class Reference}
+\label{classbustub_1_1ReadPageGuard}\index{bustub::ReadPageGuard@{bustub::ReadPageGuard}}
+
+
+An RAII object that grants thread-\/safe read access to a page of data.  
+
+
+
+
+{\ttfamily \#include $<$page\+\_\+guard.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ReadPageGuard_a4c0be5e02c42a19c58d02c0a863f578d}{Read\+Page\+Guard}} ()=default
+\begin{DoxyCompactList}\small\item\em The default constructor for a {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_a85fa784e752dc64aa011f2b056bd2385}\label{classbustub_1_1ReadPageGuard_a85fa784e752dc64aa011f2b056bd2385}} 
+{\bfseries Read\+Page\+Guard} (const \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} \&)=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_ad714c557b7a9f1d1fa1bddcf4ad202d8}\label{classbustub_1_1ReadPageGuard_ad714c557b7a9f1d1fa1bddcf4ad202d8}} 
+auto {\bfseries operator=} (const \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} \&) -\/$>$ \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} \&=delete
+\item 
+\mbox{\hyperlink{classbustub_1_1ReadPageGuard_ac7469839317d293bef0e8fa6b3537e18}{Read\+Page\+Guard}} (\mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} \&\&that) noexcept
+\begin{DoxyCompactList}\small\item\em The move constructor for {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1ReadPageGuard_a2b23509f98a1380562780b891d83406e}{operator=}} (\mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} \&\&that) noexcept -\/$>$ \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} \&
+\begin{DoxyCompactList}\small\item\em The move assignment operator for {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_aeeaa13d141d4a3b586940bc4ac699871}\label{classbustub_1_1ReadPageGuard_aeeaa13d141d4a3b586940bc4ac699871}} 
+auto \mbox{\hyperlink{classbustub_1_1ReadPageGuard_aeeaa13d141d4a3b586940bc4ac699871}{Get\+Page\+Id}} () const -\/$>$ page\+\_\+id\+\_\+t
+\begin{DoxyCompactList}\small\item\em Gets the page ID of the page this guard is protecting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_a4784b23b93aa1497d8397f51ef955b57}\label{classbustub_1_1ReadPageGuard_a4784b23b93aa1497d8397f51ef955b57}} 
+auto \mbox{\hyperlink{classbustub_1_1ReadPageGuard_a4784b23b93aa1497d8397f51ef955b57}{Get\+Data}} () const -\/$>$ const char $\ast$
+\begin{DoxyCompactList}\small\item\em Gets a {\ttfamily const} pointer to the page of data this guard is protecting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_a4ccafbe0678e121441889d33b7c69831}\label{classbustub_1_1ReadPageGuard_a4ccafbe0678e121441889d33b7c69831}} 
+{\footnotesize template$<$class T $>$ }\\auto {\bfseries As} () const -\/$>$ const T $\ast$
+\item 
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_a341b9e98a1cf275b89c06eed50bad8cd}\label{classbustub_1_1ReadPageGuard_a341b9e98a1cf275b89c06eed50bad8cd}} 
+auto \mbox{\hyperlink{classbustub_1_1ReadPageGuard_a341b9e98a1cf275b89c06eed50bad8cd}{Is\+Dirty}} () const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Returns whether the page is dirty (modified but not flushed to the disk). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1ReadPageGuard_aab3db86826571bcebe7a629e6dd6c459}{Flush}} ()
+\begin{DoxyCompactList}\small\item\em Flushes this page\textquotesingle{}s data safely to disk. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1ReadPageGuard_ac2895fff0ad5dcf9bbca52345e74599e}{Drop}} ()
+\begin{DoxyCompactList}\small\item\em Manually drops a valid {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}\textquotesingle{}s data. If this guard is invalid, this function does nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_a5adba3d6bd4d971f8ff6e41889fc9c82}\label{classbustub_1_1ReadPageGuard_a5adba3d6bd4d971f8ff6e41889fc9c82}} 
+\mbox{\hyperlink{classbustub_1_1ReadPageGuard_a5adba3d6bd4d971f8ff6e41889fc9c82}{$\sim$\+Read\+Page\+Guard}} ()
+\begin{DoxyCompactList}\small\item\em The destructor for {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}. This destructor simply calls {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard_ac2895fff0ad5dcf9bbca52345e74599e}{Drop()}}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_aacdcadb3a97ed0cf5b98e4e4b88eea34}\label{classbustub_1_1ReadPageGuard_aacdcadb3a97ed0cf5b98e4e4b88eea34}} 
+class \mbox{\hyperlink{classbustub_1_1ReadPageGuard_aacdcadb3a97ed0cf5b98e4e4b88eea34}{Buffer\+Pool\+Manager}}
+\begin{DoxyCompactList}\small\item\em Only the buffer pool manager is allowed to construct a valid {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}.} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An RAII object that grants thread-\/safe read access to a page of data. 
+
+The {\itshape only} way that the Bus\+Tub system should interact with the buffer pool\textquotesingle{}s page data is via page guards. Since {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}} is an RAII object, the system never has to manually lock and unlock a page\textquotesingle{}s latch.
+
+With {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}s, there can be multiple threads that share read access to a page\textquotesingle{}s data. However, the existence of any {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}} on a page implies that no thread can be mutating the page\textquotesingle{}s data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_a4c0be5e02c42a19c58d02c0a863f578d}\label{classbustub_1_1ReadPageGuard_a4c0be5e02c42a19c58d02c0a863f578d}} 
+\index{bustub::ReadPageGuard@{bustub::ReadPageGuard}!ReadPageGuard@{ReadPageGuard}}
+\index{ReadPageGuard@{ReadPageGuard}!bustub::ReadPageGuard@{bustub::ReadPageGuard}}
+\doxysubsubsection{\texorpdfstring{ReadPageGuard()}{ReadPageGuard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Read\+Page\+Guard\+::\+Read\+Page\+Guard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+The default constructor for a {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}. 
+
+Note that we do not EVER want use a guard that has only been default constructed. The only reason we even define this default constructor is to enable placing an \char`\"{}uninitialized\char`\"{} guard on the stack that we can later move assign via {\ttfamily =}.
+
+{\bfseries{Use of an uninitialized page guard is undefined behavior.}}
+
+In other words, the only way to get a valid {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}} is through the buffer pool manager. \mbox{\Hypertarget{classbustub_1_1ReadPageGuard_ac7469839317d293bef0e8fa6b3537e18}\label{classbustub_1_1ReadPageGuard_ac7469839317d293bef0e8fa6b3537e18}} 
+\index{bustub::ReadPageGuard@{bustub::ReadPageGuard}!ReadPageGuard@{ReadPageGuard}}
+\index{ReadPageGuard@{ReadPageGuard}!bustub::ReadPageGuard@{bustub::ReadPageGuard}}
+\doxysubsubsection{\texorpdfstring{ReadPageGuard()}{ReadPageGuard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Read\+Page\+Guard\+::\+Read\+Page\+Guard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} \&\&}]{that }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The move constructor for {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}. 
+
+\hypertarget{classbustub_1_1ReadPageGuard_autotoc_md57}{}\doxyparagraph{Implementation}\label{classbustub_1_1ReadPageGuard_autotoc_md57}
+If you are unfamiliar with move semantics, please familiarize yourself with learning materials online. There are many great resources (including articles, Microsoft tutorials, You\+Tube videos) that explain this in depth.
+
+Make sure you invalidate the other guard, otherwise you might run into double free problems! For both objects, you need to update {\itshape at least} 5 fields each.
+
+TODO(\+P1)\+: Add implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em that} & The other page guard. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ReadPageGuard_ac2895fff0ad5dcf9bbca52345e74599e}\label{classbustub_1_1ReadPageGuard_ac2895fff0ad5dcf9bbca52345e74599e}} 
+\index{bustub::ReadPageGuard@{bustub::ReadPageGuard}!Drop@{Drop}}
+\index{Drop@{Drop}!bustub::ReadPageGuard@{bustub::ReadPageGuard}}
+\doxysubsubsection{\texorpdfstring{Drop()}{Drop()}}
+{\footnotesize\ttfamily void bustub\+::\+Read\+Page\+Guard\+::\+Drop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Manually drops a valid {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}\textquotesingle{}s data. If this guard is invalid, this function does nothing. 
+
+\hypertarget{classbustub_1_1ReadPageGuard_autotoc_md59}{}\doxyparagraph{Implementation}\label{classbustub_1_1ReadPageGuard_autotoc_md59}
+Make sure you don\textquotesingle{}t double free! Also, think {\bfseries{very}} {\bfseries{VERY}} carefully about what resources you own and the order in which you release those resources. If you get the ordering wrong, you will very likely fail one of the later Gradescope tests. You may also want to take the buffer pool manager\textquotesingle{}s latch in a very specific scenario...
+
+TODO(\+P1)\+: Add implementation. \mbox{\Hypertarget{classbustub_1_1ReadPageGuard_aab3db86826571bcebe7a629e6dd6c459}\label{classbustub_1_1ReadPageGuard_aab3db86826571bcebe7a629e6dd6c459}} 
+\index{bustub::ReadPageGuard@{bustub::ReadPageGuard}!Flush@{Flush}}
+\index{Flush@{Flush}!bustub::ReadPageGuard@{bustub::ReadPageGuard}}
+\doxysubsubsection{\texorpdfstring{Flush()}{Flush()}}
+{\footnotesize\ttfamily void bustub\+::\+Read\+Page\+Guard\+::\+Flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Flushes this page\textquotesingle{}s data safely to disk. 
+
+TODO(\+P1)\+: Add implementation. \mbox{\Hypertarget{classbustub_1_1ReadPageGuard_a2b23509f98a1380562780b891d83406e}\label{classbustub_1_1ReadPageGuard_a2b23509f98a1380562780b891d83406e}} 
+\index{bustub::ReadPageGuard@{bustub::ReadPageGuard}!operator=@{operator=}}
+\index{operator=@{operator=}!bustub::ReadPageGuard@{bustub::ReadPageGuard}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily auto bustub\+::\+Read\+Page\+Guard\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} \&\&}]{that }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} \&\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The move assignment operator for {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}. 
+
+\hypertarget{classbustub_1_1ReadPageGuard_autotoc_md58}{}\doxyparagraph{Implementation}\label{classbustub_1_1ReadPageGuard_autotoc_md58}
+If you are unfamiliar with move semantics, please familiarize yourself with learning materials online. There are many great resources (including articles, Microsoft tutorials, You\+Tube videos) that explain this in depth.
+
+Make sure you invalidate the other guard, otherwise you might run into double free problems! For both objects, you need to update {\itshape at least} 5 fields each, and for the current object, make sure you release any resources it might be holding on to.
+
+TODO(\+P1)\+: Add implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em that} & The other page guard. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}\& The newly valid {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/page\+\_\+guard.\+h\item 
+src/storage/page/page\+\_\+guard.\+cpp\end{DoxyCompactItemize}

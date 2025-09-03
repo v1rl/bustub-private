@@ -1,0 +1,29 @@
+\hypertarget{classbustub_1_1LogRecovery}{}\doxysection{bustub\+::Log\+Recovery Class Reference}
+\label{classbustub_1_1LogRecovery}\index{bustub::LogRecovery@{bustub::LogRecovery}}
+
+
+{\ttfamily \#include $<$log\+\_\+recovery.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecovery_a83aee5c47a98ea5b21085537f3d3904e}\label{classbustub_1_1LogRecovery_a83aee5c47a98ea5b21085537f3d3904e}} 
+{\bfseries Log\+Recovery} (\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager)
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecovery_a47f36a5019308e5fadcc63a04074e8d1}\label{classbustub_1_1LogRecovery_a47f36a5019308e5fadcc63a04074e8d1}} 
+void {\bfseries Redo} ()
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecovery_ada7eb68a4804e153449cc107e9656474}\label{classbustub_1_1LogRecovery_ada7eb68a4804e153449cc107e9656474}} 
+void {\bfseries Undo} ()
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecovery_ad04d3d712a0c13d1aad7c1f4c645c9d7}\label{classbustub_1_1LogRecovery_ad04d3d712a0c13d1aad7c1f4c645c9d7}} 
+auto {\bfseries Deserialize\+Log\+Record} (const char $\ast$data, \mbox{\hyperlink{classbustub_1_1LogRecord}{Log\+Record}} $\ast$log\+\_\+record) -\/$>$ bool
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Read log file from disk, redo and undo. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/recovery/log\+\_\+recovery.\+h\end{DoxyCompactItemize}

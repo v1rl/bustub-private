@@ -1,0 +1,128 @@
+\hypertarget{classbustub_1_1Tuple}{}\doxysection{bustub\+::Tuple Class Reference}
+\label{classbustub_1_1Tuple}\index{bustub::Tuple@{bustub::Tuple}}
+
+
+{\ttfamily \#include $<$tuple.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a51066340a89c6c54fe0a795b4b3eb94c}\label{classbustub_1_1Tuple_a51066340a89c6c54fe0a795b4b3eb94c}} 
+{\bfseries Tuple} (\mbox{\hyperlink{classbustub_1_1RID}{RID}} rid)
+\item 
+\mbox{\hyperlink{classbustub_1_1Tuple_a1d8d14d8cc9c3d585d2e07718ca945c9}{Tuple}} (std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ values, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$schema)
+\item 
+\mbox{\hyperlink{classbustub_1_1Tuple_a5c07e1a4c4c4959470065bb13bbeac9d}{Tuple}} (\mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, const char $\ast$data, uint32\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a5e56963d663a844c3804ce696a1381d0}\label{classbustub_1_1Tuple_a5e56963d663a844c3804ce696a1381d0}} 
+{\bfseries Tuple} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&other)=default
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_ab1fd49c5d4aa5c37d28d758136ca84af}\label{classbustub_1_1Tuple_ab1fd49c5d4aa5c37d28d758136ca84af}} 
+{\bfseries Tuple} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&\&other) noexcept=default
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a4f6e3cf887d17d0610cfee1424be0457}\label{classbustub_1_1Tuple_a4f6e3cf887d17d0610cfee1424be0457}} 
+auto {\bfseries operator=} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&other) -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&=default
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_aab54dae8a0679775a450efdf564c94a8}\label{classbustub_1_1Tuple_aab54dae8a0679775a450efdf564c94a8}} 
+auto {\bfseries operator=} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&\&other) noexcept -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&=default
+\item 
+void \mbox{\hyperlink{classbustub_1_1Tuple_aec71e617f14f88c497213a2addd27a0d}{Serialize\+To}} (char $\ast$storage) const
+\item 
+void \mbox{\hyperlink{classbustub_1_1Tuple_a5391f53c030b6fdeadf25ce927575732}{Deserialize\+From}} (const char $\ast$storage)
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a9ae16b43233e90c8c19b76c43aca18fc}\label{classbustub_1_1Tuple_a9ae16b43233e90c8c19b76c43aca18fc}} 
+auto {\bfseries Get\+Rid} () const -\/$>$ \mbox{\hyperlink{classbustub_1_1RID}{RID}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_abbfc8d8f424792f4564b0715f39a70f8}\label{classbustub_1_1Tuple_abbfc8d8f424792f4564b0715f39a70f8}} 
+auto {\bfseries Set\+Rid} (\mbox{\hyperlink{classbustub_1_1RID}{RID}} rid)
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a22260a59ae7b049336f4d939dc06c63f}\label{classbustub_1_1Tuple_a22260a59ae7b049336f4d939dc06c63f}} 
+auto {\bfseries Get\+Data} () const -\/$>$ const char $\ast$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a15e49ccb842fc088f9cc76da570e024f}\label{classbustub_1_1Tuple_a15e49ccb842fc088f9cc76da570e024f}} 
+auto {\bfseries Get\+Length} () const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Tuple_aeb954f48517a4f7e8997e2e031992060}{Get\+Value}} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$schema, uint32\+\_\+t column\+\_\+idx) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Tuple_aa1063f1440c2288f6f1f703f19067c52}{Key\+From\+Tuple}} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&key\+\_\+schema, const std\+::vector$<$ uint32\+\_\+t $>$ \&key\+\_\+attrs) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a6d90adfda64a27632208912008287b7f}\label{classbustub_1_1Tuple_a6d90adfda64a27632208912008287b7f}} 
+auto {\bfseries Is\+Null} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$schema, uint32\+\_\+t column\+\_\+idx) const -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a6562d434388b98596ec38104359242ba}\label{classbustub_1_1Tuple_a6562d434388b98596ec38104359242ba}} 
+auto {\bfseries To\+String} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$schema) const -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_ad65beabb4876d1b3c2ed1f593ce9b903}\label{classbustub_1_1Tuple_ad65beabb4876d1b3c2ed1f593ce9b903}} 
+static auto {\bfseries Empty} () -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a3ef2a688c00556060e78eb5fb8f75232}\label{classbustub_1_1Tuple_a3ef2a688c00556060e78eb5fb8f75232}} 
+class {\bfseries Table\+Page}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a543bc6c8d9463e635a4df2cfc370281b}\label{classbustub_1_1Tuple_a543bc6c8d9463e635a4df2cfc370281b}} 
+class {\bfseries Table\+Heap}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_ab0165532e287d023758cc64c24e40fb7}\label{classbustub_1_1Tuple_ab0165532e287d023758cc64c24e40fb7}} 
+class {\bfseries Table\+Iterator}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Tuple_a58c4e6d423281e756d674e4e7d9385b9}\label{classbustub_1_1Tuple_a58c4e6d423281e756d674e4e7d9385b9}} 
+auto {\bfseries Is\+Tuple\+Content\+Equal} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&a, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{classbustub_1_1Tuple_autotoc_md55}{}\doxysubsubsection{Tuple format\+:}\label{classbustub_1_1Tuple_autotoc_md55}
+\hypertarget{classbustub_1_1Tuple_autotoc_md56}{}\doxysubsubsection{$\vert$ FIXED-\/\+SIZE or VARIED-\/\+SIZED OFFSET $\vert$ PAYLOAD OF VARIED-\/\+SIZED FIELD $\vert$}\label{classbustub_1_1Tuple_autotoc_md56}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Tuple_a1d8d14d8cc9c3d585d2e07718ca945c9}\label{classbustub_1_1Tuple_a1d8d14d8cc9c3d585d2e07718ca945c9}} 
+\index{bustub::Tuple@{bustub::Tuple}!Tuple@{Tuple}}
+\index{Tuple@{Tuple}!bustub::Tuple@{bustub::Tuple}}
+\doxysubsubsection{\texorpdfstring{Tuple()}{Tuple()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Tuple\+::\+Tuple (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$}]{values,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{schema }\end{DoxyParamCaption})}
+
+constructor for creating a new tuple based on input value \mbox{\Hypertarget{classbustub_1_1Tuple_a5c07e1a4c4c4959470065bb13bbeac9d}\label{classbustub_1_1Tuple_a5c07e1a4c4c4959470065bb13bbeac9d}} 
+\index{bustub::Tuple@{bustub::Tuple}!Tuple@{Tuple}}
+\index{Tuple@{Tuple}!bustub::Tuple@{bustub::Tuple}}
+\doxysubsubsection{\texorpdfstring{Tuple()}{Tuple()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Tuple\+::\+Tuple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid,  }\item[{const char $\ast$}]{data,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+constructor for creating a new tuple by copying fron existing bytes 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Tuple_a5391f53c030b6fdeadf25ce927575732}\label{classbustub_1_1Tuple_a5391f53c030b6fdeadf25ce927575732}} 
+\index{bustub::Tuple@{bustub::Tuple}!DeserializeFrom@{DeserializeFrom}}
+\index{DeserializeFrom@{DeserializeFrom}!bustub::Tuple@{bustub::Tuple}}
+\doxysubsubsection{\texorpdfstring{DeserializeFrom()}{DeserializeFrom()}}
+{\footnotesize\ttfamily void bustub\+::\+Tuple\+::\+Deserialize\+From (\begin{DoxyParamCaption}\item[{const char $\ast$}]{storage }\end{DoxyParamCaption})}
+
+deserialize tuple data(deep copy) \mbox{\Hypertarget{classbustub_1_1Tuple_aeb954f48517a4f7e8997e2e031992060}\label{classbustub_1_1Tuple_aeb954f48517a4f7e8997e2e031992060}} 
+\index{bustub::Tuple@{bustub::Tuple}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!bustub::Tuple@{bustub::Tuple}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily auto bustub\+::\+Tuple\+::\+Get\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{schema,  }\item[{uint32\+\_\+t}]{column\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}}}
+
+Get the value of a specified column (const) checks the schema to see how to return the \mbox{\hyperlink{classbustub_1_1Value}{Value}}. \mbox{\Hypertarget{classbustub_1_1Tuple_aa1063f1440c2288f6f1f703f19067c52}\label{classbustub_1_1Tuple_aa1063f1440c2288f6f1f703f19067c52}} 
+\index{bustub::Tuple@{bustub::Tuple}!KeyFromTuple@{KeyFromTuple}}
+\index{KeyFromTuple@{KeyFromTuple}!bustub::Tuple@{bustub::Tuple}}
+\doxysubsubsection{\texorpdfstring{KeyFromTuple()}{KeyFromTuple()}}
+{\footnotesize\ttfamily auto bustub\+::\+Tuple\+::\+Key\+From\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{key\+\_\+schema,  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{key\+\_\+attrs }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}}
+
+Generates a key tuple given schemas and attributes \mbox{\Hypertarget{classbustub_1_1Tuple_aec71e617f14f88c497213a2addd27a0d}\label{classbustub_1_1Tuple_aec71e617f14f88c497213a2addd27a0d}} 
+\index{bustub::Tuple@{bustub::Tuple}!SerializeTo@{SerializeTo}}
+\index{SerializeTo@{SerializeTo}!bustub::Tuple@{bustub::Tuple}}
+\doxysubsubsection{\texorpdfstring{SerializeTo()}{SerializeTo()}}
+{\footnotesize\ttfamily void bustub\+::\+Tuple\+::\+Serialize\+To (\begin{DoxyParamCaption}\item[{char $\ast$}]{storage }\end{DoxyParamCaption}) const}
+
+serialize tuple data 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/table/tuple.\+h\item 
+src/storage/table/tuple.\+cpp\end{DoxyCompactItemize}

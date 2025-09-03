@@ -1,0 +1,114 @@
+\hypertarget{classbustub_1_1ORSetNode}{}\doxysection{bustub\+::ORSet\+Node$<$ T $>$ Class Template Reference}
+\label{classbustub_1_1ORSetNode}\index{bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ORSetNode_a77ef637e8891cb9636c66b4957a77f95}\label{classbustub_1_1ORSetNode_a77ef637e8891cb9636c66b4957a77f95}} 
+{\bfseries ORSet\+Node} (\mbox{\hyperlink{classbustub_1_1ORSetDriver}{ORSet\+Driver}}$<$ T $>$ $\ast$driver, size\+\_\+t node\+\_\+id, size\+\_\+t n)
+\item 
+void \mbox{\hyperlink{classbustub_1_1ORSetNode_a7587e0f2deb212b8b5e08082dfcec521}{Add}} (const T \&elem)
+\begin{DoxyCompactList}\small\item\em Adds an element to the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1ORSetNode_ac97ef0c089c68b31902f4c6e760e4251}{Remove}} (const T \&elem)
+\begin{DoxyCompactList}\small\item\em Removes an element from the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1ORSetNode_a70c655948614c6f01b190f2c889e2f66}{Contains}} (const T \&elem) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Checks if an element is in the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1ORSetNode_a149cd9b20dc2058ab4e277a3fcdc8c55}{Merge}} (const \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}$<$ T $>$ to\+\_\+be\+\_\+merged)
+\begin{DoxyCompactList}\small\item\em Merges another \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}} to the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ORSetNode_a1b0ed804d488eb67b7ffa67fdb71b16f}\label{classbustub_1_1ORSetNode_a1b0ed804d488eb67b7ffa67fdb71b16f}} 
+void \mbox{\hyperlink{classbustub_1_1ORSetNode_a1b0ed804d488eb67b7ffa67fdb71b16f}{Save}} ()
+\begin{DoxyCompactList}\small\item\em Saves all local changes to the driver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1ORSetNode_a5632585e55e0e2a58536adbf98c1f377}\label{classbustub_1_1ORSetNode_a5632585e55e0e2a58536adbf98c1f377}} 
+void \mbox{\hyperlink{classbustub_1_1ORSetNode_a5632585e55e0e2a58536adbf98c1f377}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads all the remote changes to the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1ORSetNode_a2f474d1e40d897962f4c14d57232398d}{Get\+ORSet}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}$<$ T $>$
+\begin{DoxyCompactList}\small\item\em Gets a copy of the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ORSetNode_a7587e0f2deb212b8b5e08082dfcec521}\label{classbustub_1_1ORSetNode_a7587e0f2deb212b8b5e08082dfcec521}} 
+\index{bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ORSetNode}{bustub\+::\+ORSet\+Node}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const T \&}]{elem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an element to the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ORSetNode_a70c655948614c6f01b190f2c889e2f66}\label{classbustub_1_1ORSetNode_a70c655948614c6f01b190f2c889e2f66}} 
+\index{bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}!Contains@{Contains}}
+\index{Contains@{Contains}!bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ORSetNode}{bustub\+::\+ORSet\+Node}}$<$ T $>$\+::Contains (\begin{DoxyParamCaption}\item[{const T \&}]{elem }\end{DoxyParamCaption}) -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if an element is in the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the element is in the set, and false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ORSetNode_a2f474d1e40d897962f4c14d57232398d}\label{classbustub_1_1ORSetNode_a2f474d1e40d897962f4c14d57232398d}} 
+\index{bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}!GetORSet@{GetORSet}}
+\index{GetORSet@{GetORSet}!bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetORSet()}{GetORSet()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ORSetNode}{bustub\+::\+ORSet\+Node}}$<$ T $>$\+::Get\+ORSet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}$<$T$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a copy of the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. 
+
+\begin{DoxyReturn}{Returns}
+the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ORSetNode_a149cd9b20dc2058ab4e277a3fcdc8c55}\label{classbustub_1_1ORSetNode_a149cd9b20dc2058ab4e277a3fcdc8c55}} 
+\index{bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}!Merge@{Merge}}
+\index{Merge@{Merge}!bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ORSetNode}{bustub\+::\+ORSet\+Node}}$<$ T $>$\+::Merge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}$<$ T $>$}]{to\+\_\+be\+\_\+merged }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Merges another \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}} to the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+\_\+be\+\_\+merged} & the \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}} to be merged. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ORSetNode_ac97ef0c089c68b31902f4c6e760e4251}\label{classbustub_1_1ORSetNode_ac97ef0c089c68b31902f4c6e760e4251}} 
+\index{bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::ORSetNode$<$ T $>$@{bustub::ORSetNode$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ORSetNode}{bustub\+::\+ORSet\+Node}}$<$ T $>$\+::Remove (\begin{DoxyParamCaption}\item[{const T \&}]{elem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes an element from the local \mbox{\hyperlink{classbustub_1_1ORSet}{ORSet}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to remove. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/orset\+\_\+driver.\+h\item 
+src/primer/orset\+\_\+driver.\+cpp\end{DoxyCompactItemize}

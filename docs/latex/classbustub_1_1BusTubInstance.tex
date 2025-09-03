@@ -1,0 +1,113 @@
+\hypertarget{classbustub_1_1BusTubInstance}{}\doxysection{bustub\+::Bus\+Tub\+Instance Class Reference}
+\label{classbustub_1_1BusTubInstance}\index{bustub::BusTubInstance@{bustub::BusTubInstance}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a9f19f073457e478bf0849350ce3ea88e}\label{classbustub_1_1BusTubInstance_a9f19f073457e478bf0849350ce3ea88e}} 
+{\bfseries Bus\+Tub\+Instance} (const std\+::filesystem\+::path \&db\+\_\+file\+\_\+name, size\+\_\+t bpm\+\_\+size=BUFFER\+\_\+\+POOL\+\_\+\+SIZE)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_afa11529da254cf931edc91c35eb87ce7}\label{classbustub_1_1BusTubInstance_afa11529da254cf931edc91c35eb87ce7}} 
+{\bfseries Bus\+Tub\+Instance} (size\+\_\+t bpm\+\_\+size=128)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1BusTubInstance_a0b874337f12ba6e15257cc5fa906698f}{Execute\+Sql}} (const std\+::string \&sql, \mbox{\hyperlink{classbustub_1_1ResultWriter}{Result\+Writer}} \&writer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1CheckOptions}{Check\+Options}} $>$ check\+\_\+options=nullptr) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1BusTubInstance_a88fcdb20685a855c67886d95158819d5}{Execute\+Sql\+Txn}} (const std\+::string \&sql, \mbox{\hyperlink{classbustub_1_1ResultWriter}{Result\+Writer}} \&writer, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1CheckOptions}{Check\+Options}} $>$ check\+\_\+options=nullptr) -\/$>$ bool
+\item 
+void \mbox{\hyperlink{classbustub_1_1BusTubInstance_a1d60a861f3c2ac166668e68fcc60ed2e}{Enable\+Managed\+Txn}} ()
+\item 
+auto \mbox{\hyperlink{classbustub_1_1BusTubInstance_a25b02b524aa500dfa07a2d1c34717cd3}{Current\+Managed\+Txn}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$
+\item 
+void \mbox{\hyperlink{classbustub_1_1BusTubInstance_a30e819745b7c2fd6782ffeb273f1f9a5}{Generate\+Test\+Table}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1BusTubInstance_a6cb35b430bc3e3accbe0e727b7ff2111}{Generate\+Mock\+Table}} ()
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_ae4891f3b48d86759ca9170405b3c8ae1}\label{classbustub_1_1BusTubInstance_ae4891f3b48d86759ca9170405b3c8ae1}} 
+auto {\bfseries Get\+Session\+Variable} (const std\+::string \&key) -\/$>$ std\+::string
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_ad5dfb28858eec632099468d96c0c561e}\label{classbustub_1_1BusTubInstance_ad5dfb28858eec632099468d96c0c561e}} 
+auto {\bfseries Is\+Force\+Starter\+Rule} () -\/$>$ bool
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a8a4d08890654ce92a2bef05ecfe6bb68}\label{classbustub_1_1BusTubInstance_a8a4d08890654ce92a2bef05ecfe6bb68}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $>$ {\bfseries disk\+\_\+manager\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a815e58fff103021001fa4f4c7632f7a5}\label{classbustub_1_1BusTubInstance_a815e58fff103021001fa4f4c7632f7a5}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $>$ {\bfseries buffer\+\_\+pool\+\_\+manager\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a43e9e68f683902c35ff281056d5d2ad9}\label{classbustub_1_1BusTubInstance_a43e9e68f683902c35ff281056d5d2ad9}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $>$ {\bfseries lock\+\_\+manager\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a44cf0332778372e2324ab31f851f4ea8}\label{classbustub_1_1BusTubInstance_a44cf0332778372e2324ab31f851f4ea8}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1TransactionManager}{Transaction\+Manager}} $>$ {\bfseries txn\+\_\+manager\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a8217b59a5bed275144e2b5799d46c194}\label{classbustub_1_1BusTubInstance_a8217b59a5bed275144e2b5799d46c194}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $>$ {\bfseries log\+\_\+manager\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_ac87f39c40afdba5f385230e385537830}\label{classbustub_1_1BusTubInstance_ac87f39c40afdba5f385230e385537830}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1CheckpointManager}{Checkpoint\+Manager}} $>$ {\bfseries checkpoint\+\_\+manager\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a216dcd225791c9ecae86ed849b856c05}\label{classbustub_1_1BusTubInstance_a216dcd225791c9ecae86ed849b856c05}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1Catalog}{Catalog}} $>$ {\bfseries catalog\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a8dbb07835cd928f137be7e8b5599716f}\label{classbustub_1_1BusTubInstance_a8dbb07835cd928f137be7e8b5599716f}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1ExecutionEngine}{Execution\+Engine}} $>$ {\bfseries execution\+\_\+engine\+\_\+}
+\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{classbustub_1_1BusTubInstance_a284abc980dc0c97002b16935759021fd}{catalog\+\_\+lock\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a25b02b524aa500dfa07a2d1c34717cd3}\label{classbustub_1_1BusTubInstance_a25b02b524aa500dfa07a2d1c34717cd3}} 
+\index{bustub::BusTubInstance@{bustub::BusTubInstance}!CurrentManagedTxn@{CurrentManagedTxn}}
+\index{CurrentManagedTxn@{CurrentManagedTxn}!bustub::BusTubInstance@{bustub::BusTubInstance}}
+\doxysubsubsection{\texorpdfstring{CurrentManagedTxn()}{CurrentManagedTxn()}}
+{\footnotesize\ttfamily auto bustub\+::\+Bus\+Tub\+Instance\+::\+Current\+Managed\+Txn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}
+
+Get the current transaction. \mbox{\Hypertarget{classbustub_1_1BusTubInstance_a1d60a861f3c2ac166668e68fcc60ed2e}\label{classbustub_1_1BusTubInstance_a1d60a861f3c2ac166668e68fcc60ed2e}} 
+\index{bustub::BusTubInstance@{bustub::BusTubInstance}!EnableManagedTxn@{EnableManagedTxn}}
+\index{EnableManagedTxn@{EnableManagedTxn}!bustub::BusTubInstance@{bustub::BusTubInstance}}
+\doxysubsubsection{\texorpdfstring{EnableManagedTxn()}{EnableManagedTxn()}}
+{\footnotesize\ttfamily void bustub\+::\+Bus\+Tub\+Instance\+::\+Enable\+Managed\+Txn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enable managed txn mode on this Bus\+Tub instance, allowing statements like {\ttfamily BEGIN}. \mbox{\Hypertarget{classbustub_1_1BusTubInstance_a0b874337f12ba6e15257cc5fa906698f}\label{classbustub_1_1BusTubInstance_a0b874337f12ba6e15257cc5fa906698f}} 
+\index{bustub::BusTubInstance@{bustub::BusTubInstance}!ExecuteSql@{ExecuteSql}}
+\index{ExecuteSql@{ExecuteSql}!bustub::BusTubInstance@{bustub::BusTubInstance}}
+\doxysubsubsection{\texorpdfstring{ExecuteSql()}{ExecuteSql()}}
+{\footnotesize\ttfamily auto bustub\+::\+Bus\+Tub\+Instance\+::\+Execute\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql,  }\item[{\mbox{\hyperlink{classbustub_1_1ResultWriter}{Result\+Writer}} \&}]{writer,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1CheckOptions}{Check\+Options}} $>$}]{check\+\_\+options = {\ttfamily nullptr} }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Execute a SQL query in the Bus\+Tub instance. \mbox{\Hypertarget{classbustub_1_1BusTubInstance_a88fcdb20685a855c67886d95158819d5}\label{classbustub_1_1BusTubInstance_a88fcdb20685a855c67886d95158819d5}} 
+\index{bustub::BusTubInstance@{bustub::BusTubInstance}!ExecuteSqlTxn@{ExecuteSqlTxn}}
+\index{ExecuteSqlTxn@{ExecuteSqlTxn}!bustub::BusTubInstance@{bustub::BusTubInstance}}
+\doxysubsubsection{\texorpdfstring{ExecuteSqlTxn()}{ExecuteSqlTxn()}}
+{\footnotesize\ttfamily auto bustub\+::\+Bus\+Tub\+Instance\+::\+Execute\+Sql\+Txn (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql,  }\item[{\mbox{\hyperlink{classbustub_1_1ResultWriter}{Result\+Writer}} \&}]{writer,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1CheckOptions}{Check\+Options}} $>$}]{check\+\_\+options = {\ttfamily nullptr} }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Execute a SQL query in the Bus\+Tub instance with provided txn. \mbox{\Hypertarget{classbustub_1_1BusTubInstance_a6cb35b430bc3e3accbe0e727b7ff2111}\label{classbustub_1_1BusTubInstance_a6cb35b430bc3e3accbe0e727b7ff2111}} 
+\index{bustub::BusTubInstance@{bustub::BusTubInstance}!GenerateMockTable@{GenerateMockTable}}
+\index{GenerateMockTable@{GenerateMockTable}!bustub::BusTubInstance@{bustub::BusTubInstance}}
+\doxysubsubsection{\texorpdfstring{GenerateMockTable()}{GenerateMockTable()}}
+{\footnotesize\ttfamily void bustub\+::\+Bus\+Tub\+Instance\+::\+Generate\+Mock\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+FOR TEST ONLY. Generate test tables in this Bus\+Tub instance. It\textquotesingle{}s used in the shell to predefine some tables, as we don\textquotesingle{}t support create / drop table and insert for now. Should remove it in the future. \mbox{\Hypertarget{classbustub_1_1BusTubInstance_a30e819745b7c2fd6782ffeb273f1f9a5}\label{classbustub_1_1BusTubInstance_a30e819745b7c2fd6782ffeb273f1f9a5}} 
+\index{bustub::BusTubInstance@{bustub::BusTubInstance}!GenerateTestTable@{GenerateTestTable}}
+\index{GenerateTestTable@{GenerateTestTable}!bustub::BusTubInstance@{bustub::BusTubInstance}}
+\doxysubsubsection{\texorpdfstring{GenerateTestTable()}{GenerateTestTable()}}
+{\footnotesize\ttfamily void bustub\+::\+Bus\+Tub\+Instance\+::\+Generate\+Test\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+FOR TEST ONLY. Generate test tables in this Bus\+Tub instance. It\textquotesingle{}s used in the shell to predefine some tables, as we don\textquotesingle{}t support create / drop table and insert for now. Should remove it in the future. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BusTubInstance_a284abc980dc0c97002b16935759021fd}\label{classbustub_1_1BusTubInstance_a284abc980dc0c97002b16935759021fd}} 
+\index{bustub::BusTubInstance@{bustub::BusTubInstance}!catalog\_lock\_@{catalog\_lock\_}}
+\index{catalog\_lock\_@{catalog\_lock\_}!bustub::BusTubInstance@{bustub::BusTubInstance}}
+\doxysubsubsection{\texorpdfstring{catalog\_lock\_}{catalog\_lock\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex bustub\+::\+Bus\+Tub\+Instance\+::catalog\+\_\+lock\+\_\+}
+
+Coordination for catalog 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/common/bustub\+\_\+instance.\+h\item 
+src/common/bustub\+\_\+ddl.\+cpp\item 
+src/common/bustub\+\_\+instance.\+cpp\end{DoxyCompactItemize}

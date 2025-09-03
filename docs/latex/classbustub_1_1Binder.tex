@@ -1,0 +1,265 @@
+\hypertarget{classbustub_1_1Binder}{}\doxysection{bustub\+::Binder Class Reference}
+\label{classbustub_1_1Binder}\index{bustub::Binder@{bustub::Binder}}
+
+
+{\ttfamily \#include $<$binder.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Binder_1_1ContextGuard}{Context\+Guard}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_af3d1200a38f619aeabf0d7a9efbcb915}\label{classbustub_1_1Binder_af3d1200a38f619aeabf0d7a9efbcb915}} 
+{\bfseries Binder} (const \mbox{\hyperlink{classbustub_1_1Catalog}{Catalog}} \&catalog)
+\item 
+void \mbox{\hyperlink{classbustub_1_1Binder_a1d53ca8815c843fb88eb2017da7b9632}{Parse\+And\+Save}} (const std\+::string \&query)
+\item 
+void \mbox{\hyperlink{classbustub_1_1Binder_aa891f787ad1bcdcd8112117a7bcd7246}{Save\+Parse\+Tree}} (duckdb\+\_\+libpgquery\+::\+PGList $\ast$tree)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Binder_afea88f6345b052ef1cd15d9fee5e732c}{Bind\+Statement}} (duckdb\+\_\+libpgquery\+::\+PGNode $\ast$stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundStatement}{Bound\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_adeb5d0e55532a0d8ab11d5f6c1761a33}\label{classbustub_1_1Binder_adeb5d0e55532a0d8ab11d5f6c1761a33}} 
+auto {\bfseries Bind\+Explain} (duckdb\+\_\+libpgquery\+::\+PGExplain\+Stmt $\ast$stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1ExplainStatement}{Explain\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a1038d679608584911d2fe03c327dd238}\label{classbustub_1_1Binder_a1038d679608584911d2fe03c327dd238}} 
+auto {\bfseries Bind\+Create} (duckdb\+\_\+libpgquery\+::\+PGCreate\+Stmt $\ast$pg\+\_\+stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1CreateStatement}{Create\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_aba85f6f09c0f422d4d7c0521e9faf23f}\label{classbustub_1_1Binder_aba85f6f09c0f422d4d7c0521e9faf23f}} 
+auto {\bfseries Bind\+Column\+Definition} (duckdb\+\_\+libpgquery\+::\+PGColumn\+Def $\ast$cdef) -\/$>$ \mbox{\hyperlink{classbustub_1_1Column}{Column}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a500752f2c29d904aa012e368672b72f1}\label{classbustub_1_1Binder_a500752f2c29d904aa012e368672b72f1}} 
+auto {\bfseries Bind\+Select} (duckdb\+\_\+libpgquery\+::\+PGSelect\+Stmt $\ast$pg\+\_\+stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1SelectStatement}{Select\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a88f2a15cec04748cb75f2946d210070c}\label{classbustub_1_1Binder_a88f2a15cec04748cb75f2946d210070c}} 
+auto {\bfseries Bind\+Range\+Subselect} (duckdb\+\_\+libpgquery\+::\+PGRange\+Subselect $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a14dddfd4dbdf15bb9130cb5a99db4372}\label{classbustub_1_1Binder_a14dddfd4dbdf15bb9130cb5a99db4372}} 
+auto {\bfseries Bind\+Subquery} (duckdb\+\_\+libpgquery\+::\+PGSelect\+Stmt $\ast$node, const std\+::string \&alias) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundSubqueryRef}{Bound\+Subquery\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a9751a701bda6dc772176e497ad3217d1}\label{classbustub_1_1Binder_a9751a701bda6dc772176e497ad3217d1}} 
+auto {\bfseries Bind\+Select\+List} (duckdb\+\_\+libpgquery\+::\+PGList $\ast$list) -\/$>$ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_ad38066b472f1ae67ee12e981ce6b5546}\label{classbustub_1_1Binder_ad38066b472f1ae67ee12e981ce6b5546}} 
+auto {\bfseries Bind\+Where} (duckdb\+\_\+libpgquery\+::\+PGNode $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a4b81418df447c2c2232c464b12d6f894}\label{classbustub_1_1Binder_a4b81418df447c2c2232c464b12d6f894}} 
+auto {\bfseries Bind\+Group\+By} (duckdb\+\_\+libpgquery\+::\+PGList $\ast$list) -\/$>$ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a2ae39564397fadfa94937ff9c7cea9f7}\label{classbustub_1_1Binder_a2ae39564397fadfa94937ff9c7cea9f7}} 
+auto {\bfseries Bind\+Having} (duckdb\+\_\+libpgquery\+::\+PGNode $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a877524217467308c1c753328ff392fa3}\label{classbustub_1_1Binder_a877524217467308c1c753328ff392fa3}} 
+auto {\bfseries Bind\+Expression} (duckdb\+\_\+libpgquery\+::\+PGNode $\ast$node) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a5a75b8dd92a171dec90e65745bfba59f}\label{classbustub_1_1Binder_a5a75b8dd92a171dec90e65745bfba59f}} 
+auto {\bfseries Bind\+Expression\+List} (duckdb\+\_\+libpgquery\+::\+PGList $\ast$list) -\/$>$ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a5e194a95382036558ad3d52159dacecc}\label{classbustub_1_1Binder_a5e194a95382036558ad3d52159dacecc}} 
+auto {\bfseries Bind\+Constant} (duckdb\+\_\+libpgquery\+::\+PGAConst $\ast$node) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_aff2342bc778f3ac1db3d83f72b474269}\label{classbustub_1_1Binder_aff2342bc778f3ac1db3d83f72b474269}} 
+auto {\bfseries Bind\+Column\+Ref} (duckdb\+\_\+libpgquery\+::\+PGColumn\+Ref $\ast$node) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_ad47a4f3e8b306785fbaf41ec084ca1a9}\label{classbustub_1_1Binder_ad47a4f3e8b306785fbaf41ec084ca1a9}} 
+auto {\bfseries Bind\+Res\+Target} (duckdb\+\_\+libpgquery\+::\+PGRes\+Target $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_acbe7c1f45b8e1067e04ac3d3383952ca}\label{classbustub_1_1Binder_acbe7c1f45b8e1067e04ac3d3383952ca}} 
+auto {\bfseries Bind\+Star} (duckdb\+\_\+libpgquery\+::\+PGAStar $\ast$node) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_ad06e4a75d7e587859a0e0bc928025d3f}\label{classbustub_1_1Binder_ad06e4a75d7e587859a0e0bc928025d3f}} 
+auto {\bfseries Bind\+Func\+Call} (duckdb\+\_\+libpgquery\+::\+PGFunc\+Call $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a124331a4de26b79c251d02ec82833c7b}\label{classbustub_1_1Binder_a124331a4de26b79c251d02ec82833c7b}} 
+auto {\bfseries Bind\+Window\+Frame} (duckdb\+\_\+libpgquery\+::\+PGWindow\+Def $\ast$window\+\_\+spec, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundWindow}{Bound\+Window}} $>$ expr) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundWindow}{Bound\+Window}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a001042052fd18408ae03c182484cf215}\label{classbustub_1_1Binder_a001042052fd18408ae03c182484cf215}} 
+auto {\bfseries Bind\+Window\+Expression} (std\+::string func\+\_\+name, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$ children, duckdb\+\_\+libpgquery\+::\+PGWindow\+Def $\ast$node) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundWindow}{Bound\+Window}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a550705a42109d71bc719d0a2ccea47fb}\label{classbustub_1_1Binder_a550705a42109d71bc719d0a2ccea47fb}} 
+auto {\bfseries Bind\+AExpr} (duckdb\+\_\+libpgquery\+::\+PGAExpr $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_ae578c92ffd6893acfefaad01735c46c9}\label{classbustub_1_1Binder_ae578c92ffd6893acfefaad01735c46c9}} 
+auto {\bfseries Bind\+Bool\+Expr} (duckdb\+\_\+libpgquery\+::\+PGBool\+Expr $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Binder_a98a9e53f913591ce0eb0bbca1f1efd21}{Bind\+From}} (duckdb\+\_\+libpgquery\+::\+PGList $\ast$list) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_aa7fd9d13ba9395d92d1ea97473bf13ee}\label{classbustub_1_1Binder_aa7fd9d13ba9395d92d1ea97473bf13ee}} 
+auto {\bfseries Bind\+Base\+Table\+Ref} (std\+::string table\+\_\+name, std\+::optional$<$ std\+::string $>$ alias) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef}{Bound\+Base\+Table\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a1a5e9c2a770745b504d70e8c887aca7c}\label{classbustub_1_1Binder_a1a5e9c2a770745b504d70e8c887aca7c}} 
+auto {\bfseries Bind\+Range\+Var} (duckdb\+\_\+libpgquery\+::\+PGRange\+Var $\ast$table\+\_\+ref) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a95ca8beac2e0357c65c1e8c1894424f5}\label{classbustub_1_1Binder_a95ca8beac2e0357c65c1e8c1894424f5}} 
+auto {\bfseries Bind\+Table\+Ref} (duckdb\+\_\+libpgquery\+::\+PGNode $\ast$node) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_ab54e47f80aa58acf4e77373db3a9e7b7}\label{classbustub_1_1Binder_ab54e47f80aa58acf4e77373db3a9e7b7}} 
+auto {\bfseries Bind\+Join} (duckdb\+\_\+libpgquery\+::\+PGJoin\+Expr $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a36892205226ddb07b822a56e4dd1cae8}\label{classbustub_1_1Binder_a36892205226ddb07b822a56e4dd1cae8}} 
+auto {\bfseries Get\+All\+Columns} (const \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} \&scope) -\/$>$ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a7a7f6bb104909097d90f1e64e3add69f}\label{classbustub_1_1Binder_a7a7f6bb104909097d90f1e64e3add69f}} 
+auto {\bfseries Resolve\+Column} (const \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} \&scope, const std\+::vector$<$ std\+::string $>$ \&col\+\_\+name) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a4a844fb909f5bba830e5e509cd6f608e}\label{classbustub_1_1Binder_a4a844fb909f5bba830e5e509cd6f608e}} 
+auto {\bfseries Resolve\+Column\+Internal} (const \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} \&table\+\_\+ref, const std\+::vector$<$ std\+::string $>$ \&col\+\_\+name) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a47b877a51b3266ab7f6f1ae564eab43f}\label{classbustub_1_1Binder_a47b877a51b3266ab7f6f1ae564eab43f}} 
+auto {\bfseries Resolve\+Column\+Ref\+From\+Select\+List} (const std\+::vector$<$ std\+::vector$<$ std\+::string $>$$>$ \&subquery\+\_\+select\+\_\+list, const std\+::vector$<$ std\+::string $>$ \&col\+\_\+name) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundColumnRef}{Bound\+Column\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a88ec0ead43c5b5503efd094c4786f2d0}\label{classbustub_1_1Binder_a88ec0ead43c5b5503efd094c4786f2d0}} 
+auto \mbox{\hyperlink{classbustub_1_1Binder_a88ec0ead43c5b5503efd094c4786f2d0}{Resolve\+Column\+Ref\+From\+Base\+Table\+Ref}} (const \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef}{Bound\+Base\+Table\+Ref}} \&table\+\_\+ref, const std\+::vector$<$ std\+::string $>$ \&col\+\_\+name) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundColumnRef}{Bound\+Column\+Ref}} $>$
+\begin{DoxyCompactList}\small\item\em Get {\ttfamily \mbox{\hyperlink{classbustub_1_1BoundColumnRef}{Bound\+Column\+Ref}}} from the table. Returns something like {\ttfamily alias.\+column} or {\ttfamily table\+\_\+name.\+column}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a00bc799dd7a5a885c3a095c106c2f5a4}\label{classbustub_1_1Binder_a00bc799dd7a5a885c3a095c106c2f5a4}} 
+auto {\bfseries Resolve\+Column\+Ref\+From\+Subquery\+Ref} (const \mbox{\hyperlink{classbustub_1_1BoundSubqueryRef}{Bound\+Subquery\+Ref}} \&subquery\+\_\+ref, const std\+::string \&alias, const std\+::vector$<$ std\+::string $>$ \&col\+\_\+name) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundColumnRef}{Bound\+Column\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a2ad01b3b645578e6e7f78eb96787ac09}\label{classbustub_1_1Binder_a2ad01b3b645578e6e7f78eb96787ac09}} 
+auto {\bfseries Bind\+Insert} (duckdb\+\_\+libpgquery\+::\+PGInsert\+Stmt $\ast$pg\+\_\+stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1InsertStatement}{Insert\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a0f4d0f9e78241e80bcc152d70a6d297f}\label{classbustub_1_1Binder_a0f4d0f9e78241e80bcc152d70a6d297f}} 
+auto {\bfseries Bind\+Values\+List} (duckdb\+\_\+libpgquery\+::\+PGList $\ast$list) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpressionListRef}{Bound\+Expression\+List\+Ref}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a3e0f2dab0ef1571b429853c97e4f0661}\label{classbustub_1_1Binder_a3e0f2dab0ef1571b429853c97e4f0661}} 
+auto {\bfseries Bind\+Limit\+Count} (duckdb\+\_\+libpgquery\+::\+PGNode $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a2668082c37aded491c85bbcbb6b534b0}\label{classbustub_1_1Binder_a2668082c37aded491c85bbcbb6b534b0}} 
+auto {\bfseries Bind\+Limit\+Offset} (duckdb\+\_\+libpgquery\+::\+PGNode $\ast$root) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_aa74da11a9b47ea0c7180c9183dcaaff8}\label{classbustub_1_1Binder_aa74da11a9b47ea0c7180c9183dcaaff8}} 
+auto {\bfseries Bind\+Sort} (duckdb\+\_\+libpgquery\+::\+PGList $\ast$list) -\/$>$ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundOrderBy}{Bound\+Order\+By}} $>$$>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a9e4b706d6d615c5ef5457e8277b34943}\label{classbustub_1_1Binder_a9e4b706d6d615c5ef5457e8277b34943}} 
+auto {\bfseries Bind\+Index} (duckdb\+\_\+libpgquery\+::\+PGIndex\+Stmt $\ast$stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1IndexStatement}{Index\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_ab412f8917bf69193d6f3078534e8dbf4}\label{classbustub_1_1Binder_ab412f8917bf69193d6f3078534e8dbf4}} 
+auto {\bfseries Bind\+Delete} (duckdb\+\_\+libpgquery\+::\+PGDelete\+Stmt $\ast$stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1DeleteStatement}{Delete\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a6a01dac62e17ecdc7396057bf074ff4b}\label{classbustub_1_1Binder_a6a01dac62e17ecdc7396057bf074ff4b}} 
+auto {\bfseries Bind\+Update} (duckdb\+\_\+libpgquery\+::\+PGUpdate\+Stmt $\ast$stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1UpdateStatement}{Update\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a3e6d268095e7cd4d80dc50a9438a5865}\label{classbustub_1_1Binder_a3e6d268095e7cd4d80dc50a9438a5865}} 
+auto {\bfseries Bind\+CTE} (duckdb\+\_\+libpgquery\+::\+PGWith\+Clause $\ast$node) -\/$>$ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundSubqueryRef}{Bound\+Subquery\+Ref}} $>$$>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a0d823ace9aaf5bc4cde91dbe4338a767}\label{classbustub_1_1Binder_a0d823ace9aaf5bc4cde91dbe4338a767}} 
+auto {\bfseries Bind\+Variable\+Set} (duckdb\+\_\+libpgquery\+::\+PGVariable\+Set\+Stmt $\ast$stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1VariableSetStatement}{Variable\+Set\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a722484a11a3def37735416f1a6e657ea}\label{classbustub_1_1Binder_a722484a11a3def37735416f1a6e657ea}} 
+auto {\bfseries Bind\+Variable\+Show} (duckdb\+\_\+libpgquery\+::\+PGVariable\+Show\+Stmt $\ast$stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1VariableShowStatement}{Variable\+Show\+Statement}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_a22153e0832f20b8103fa3ded11b612e5}\label{classbustub_1_1Binder_a22153e0832f20b8103fa3ded11b612e5}} 
+auto {\bfseries Bind\+Transaction} (duckdb\+\_\+libpgquery\+::\+PGTransaction\+Stmt $\ast$stmt) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1TransactionStatement}{Transaction\+Statement}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Binder_ac33532ef1ef6e9f8299fdddd43fc9d03}{New\+Context}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1Binder_1_1ContextGuard}{Context\+Guard}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{classbustub_1_1Binder_a8bdbfe8c49764def88dbfcb63e1889f5}{Is\+Keyword}} (const std\+::string \&text) -\/$>$ bool
+\item 
+static auto \mbox{\hyperlink{classbustub_1_1Binder_a90e71b292a2b5e0797429ca75e0f49c2}{Keyword\+List}} () -\/$>$ std\+::vector$<$ \mbox{\hyperlink{structbustub_1_1ParserKeyword}{Parser\+Keyword}} $>$
+\item 
+static auto \mbox{\hyperlink{classbustub_1_1Binder_a07005ae74367957a6fb0a9626e6901b6}{Tokenize}} (const std\+::string \&query) -\/$>$ std\+::vector$<$ \mbox{\hyperlink{structbustub_1_1SimplifiedToken}{Simplified\+Token}} $>$
+\item 
+static auto \mbox{\hyperlink{classbustub_1_1Binder_af9e1be7e64ed40f297785b9cd04a1c60}{Node\+Tag\+To\+String}} (duckdb\+\_\+libpgquery\+::\+PGNode\+Tag type) -\/$>$ std\+::string
+\item 
+\mbox{\Hypertarget{classbustub_1_1Binder_ac42da1a76d8bdc5b9a66fc141c948d3c}\label{classbustub_1_1Binder_ac42da1a76d8bdc5b9a66fc141c948d3c}} 
+static auto {\bfseries Window\+Boundary\+To\+String} (Window\+Boundary wb) -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ duckdb\+\_\+libpgquery\+::\+PGNode $\ast$ $>$ \mbox{\hyperlink{classbustub_1_1Binder_a11856bf99cf8e38b0bf8de368e253d99}{statement\+\_\+nodes\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The binder is responsible for transforming the Postgres parse tree to a binder tree which can be recognized unambiguously by the Bus\+Tub planner. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Binder_a98a9e53f913591ce0eb0bbca1f1efd21}\label{classbustub_1_1Binder_a98a9e53f913591ce0eb0bbca1f1efd21}} 
+\index{bustub::Binder@{bustub::Binder}!BindFrom@{BindFrom}}
+\index{BindFrom@{BindFrom}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{BindFrom()}{BindFrom()}}
+{\footnotesize\ttfamily auto bustub\+::\+Binder\+::\+Bind\+From (\begin{DoxyParamCaption}\item[{duckdb\+\_\+libpgquery\+::\+PGList $\ast$}]{list }\end{DoxyParamCaption}) -\/$>$ std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}}$>$}
+
+The result bound tree will be like\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    O}
+\DoxyCodeLine{   / \(\backslash\)}
+\DoxyCodeLine{  O   3}
+\DoxyCodeLine{ / \(\backslash\)}
+\DoxyCodeLine{1   2}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classbustub_1_1Binder_afea88f6345b052ef1cd15d9fee5e732c}\label{classbustub_1_1Binder_afea88f6345b052ef1cd15d9fee5e732c}} 
+\index{bustub::Binder@{bustub::Binder}!BindStatement@{BindStatement}}
+\index{BindStatement@{BindStatement}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{BindStatement()}{BindStatement()}}
+{\footnotesize\ttfamily auto bustub\+::\+Binder\+::\+Bind\+Statement (\begin{DoxyParamCaption}\item[{duckdb\+\_\+libpgquery\+::\+PGNode $\ast$}]{stmt }\end{DoxyParamCaption}) -\/$>$ std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundStatement}{Bound\+Statement}}$>$}
+
+Transform a Postgres statement into a single SQL statement. \mbox{\Hypertarget{classbustub_1_1Binder_a8bdbfe8c49764def88dbfcb63e1889f5}\label{classbustub_1_1Binder_a8bdbfe8c49764def88dbfcb63e1889f5}} 
+\index{bustub::Binder@{bustub::Binder}!IsKeyword@{IsKeyword}}
+\index{IsKeyword@{IsKeyword}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{IsKeyword()}{IsKeyword()}}
+{\footnotesize\ttfamily auto bustub\+::\+Binder\+::\+Is\+Keyword (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [static]}}
+
+Return true if the given text matches a keyword of the parser. \mbox{\Hypertarget{classbustub_1_1Binder_a90e71b292a2b5e0797429ca75e0f49c2}\label{classbustub_1_1Binder_a90e71b292a2b5e0797429ca75e0f49c2}} 
+\index{bustub::Binder@{bustub::Binder}!KeywordList@{KeywordList}}
+\index{KeywordList@{KeywordList}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{KeywordList()}{KeywordList()}}
+{\footnotesize\ttfamily auto bustub\+::\+Binder\+::\+Keyword\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::vector$<$\mbox{\hyperlink{structbustub_1_1ParserKeyword}{Parser\+Keyword}}$>$\hspace{0.3cm}{\ttfamily [static]}}
+
+Return a list of all keywords in the parser. \mbox{\Hypertarget{classbustub_1_1Binder_ac33532ef1ef6e9f8299fdddd43fc9d03}\label{classbustub_1_1Binder_ac33532ef1ef6e9f8299fdddd43fc9d03}} 
+\index{bustub::Binder@{bustub::Binder}!NewContext@{NewContext}}
+\index{NewContext@{NewContext}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{NewContext()}{NewContext()}}
+{\footnotesize\ttfamily auto bustub\+::\+Binder\+::\+New\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1Binder_1_1ContextGuard}{Context\+Guard}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+If any function needs to modify the scope, it MUST hold the context guard, so that the context will be recovered after the function returns. Currently, it\textquotesingle{}s used in {\ttfamily Bind\+From} and {\ttfamily Bind\+Join}. \mbox{\Hypertarget{classbustub_1_1Binder_af9e1be7e64ed40f297785b9cd04a1c60}\label{classbustub_1_1Binder_af9e1be7e64ed40f297785b9cd04a1c60}} 
+\index{bustub::Binder@{bustub::Binder}!NodeTagToString@{NodeTagToString}}
+\index{NodeTagToString@{NodeTagToString}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{NodeTagToString()}{NodeTagToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Binder\+::\+Node\+Tag\+To\+String (\begin{DoxyParamCaption}\item[{duckdb\+\_\+libpgquery\+::\+PGNode\+Tag}]{type }\end{DoxyParamCaption}) -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the std\+::string representation of a Postgres node tag. \mbox{\Hypertarget{classbustub_1_1Binder_a1d53ca8815c843fb88eb2017da7b9632}\label{classbustub_1_1Binder_a1d53ca8815c843fb88eb2017da7b9632}} 
+\index{bustub::Binder@{bustub::Binder}!ParseAndSave@{ParseAndSave}}
+\index{ParseAndSave@{ParseAndSave}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{ParseAndSave()}{ParseAndSave()}}
+{\footnotesize\ttfamily void bustub\+::\+Binder\+::\+Parse\+And\+Save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{query }\end{DoxyParamCaption})}
+
+Attempts to parse a query into a series of SQL statements. The parsed statements will be stored in the {\ttfamily statements\+\_\+nodes\+\_\+} variable. \mbox{\Hypertarget{classbustub_1_1Binder_aa891f787ad1bcdcd8112117a7bcd7246}\label{classbustub_1_1Binder_aa891f787ad1bcdcd8112117a7bcd7246}} 
+\index{bustub::Binder@{bustub::Binder}!SaveParseTree@{SaveParseTree}}
+\index{SaveParseTree@{SaveParseTree}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{SaveParseTree()}{SaveParseTree()}}
+{\footnotesize\ttfamily void bustub\+::\+Binder\+::\+Save\+Parse\+Tree (\begin{DoxyParamCaption}\item[{duckdb\+\_\+libpgquery\+::\+PGList $\ast$}]{tree }\end{DoxyParamCaption})}
+
+Transform a Postgres parse tree into a std\+::vector of SQL Statements. \mbox{\Hypertarget{classbustub_1_1Binder_a07005ae74367957a6fb0a9626e6901b6}\label{classbustub_1_1Binder_a07005ae74367957a6fb0a9626e6901b6}} 
+\index{bustub::Binder@{bustub::Binder}!Tokenize@{Tokenize}}
+\index{Tokenize@{Tokenize}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{Tokenize()}{Tokenize()}}
+{\footnotesize\ttfamily auto bustub\+::\+Binder\+::\+Tokenize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{query }\end{DoxyParamCaption}) -\/$>$ std\+::vector$<$\mbox{\hyperlink{structbustub_1_1SimplifiedToken}{Simplified\+Token}}$>$\hspace{0.3cm}{\ttfamily [static]}}
+
+Tokenize a query, returning the raw tokens together with their locations. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1Binder_a11856bf99cf8e38b0bf8de368e253d99}\label{classbustub_1_1Binder_a11856bf99cf8e38b0bf8de368e253d99}} 
+\index{bustub::Binder@{bustub::Binder}!statement\_nodes\_@{statement\_nodes\_}}
+\index{statement\_nodes\_@{statement\_nodes\_}!bustub::Binder@{bustub::Binder}}
+\doxysubsubsection{\texorpdfstring{statement\_nodes\_}{statement\_nodes\_}}
+{\footnotesize\ttfamily std\+::vector$<$duckdb\+\_\+libpgquery\+::\+PGNode $\ast$$>$ bustub\+::\+Binder\+::statement\+\_\+nodes\+\_\+}
+
+Store all statement parse node 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/binder.\+h\item 
+src/binder/bind\+\_\+create.\+cpp\item 
+src/binder/bind\+\_\+insert.\+cpp\item 
+src/binder/bind\+\_\+select.\+cpp\item 
+src/binder/bind\+\_\+variable.\+cpp\item 
+src/binder/binder.\+cpp\item 
+src/binder/node\+\_\+tag\+\_\+to\+\_\+string.\+cpp\item 
+src/binder/transformer.\+cpp\end{DoxyCompactItemize}

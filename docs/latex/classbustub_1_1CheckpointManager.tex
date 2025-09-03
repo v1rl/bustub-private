@@ -1,0 +1,27 @@
+\hypertarget{classbustub_1_1CheckpointManager}{}\doxysection{bustub\+::Checkpoint\+Manager Class Reference}
+\label{classbustub_1_1CheckpointManager}\index{bustub::CheckpointManager@{bustub::CheckpointManager}}
+
+
+{\ttfamily \#include $<$checkpoint\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1CheckpointManager_a302d42345a3dfece7174dd6752ef15ac}\label{classbustub_1_1CheckpointManager_a302d42345a3dfece7174dd6752ef15ac}} 
+{\bfseries Checkpoint\+Manager} (\mbox{\hyperlink{classbustub_1_1TransactionManager}{Transaction\+Manager}} $\ast$transaction\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager)
+\item 
+\mbox{\Hypertarget{classbustub_1_1CheckpointManager_a63ce45dee27bf8c2ee6b72a7babe2be2}\label{classbustub_1_1CheckpointManager_a63ce45dee27bf8c2ee6b72a7babe2be2}} 
+void {\bfseries Begin\+Checkpoint} ()
+\item 
+\mbox{\Hypertarget{classbustub_1_1CheckpointManager_a23ebc478f843339e204229637566181d}\label{classbustub_1_1CheckpointManager_a23ebc478f843339e204229637566181d}} 
+void {\bfseries End\+Checkpoint} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1CheckpointManager}{Checkpoint\+Manager}} creates consistent checkpoints by blocking all other transactions temporarily. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/recovery/checkpoint\+\_\+manager.\+h\item 
+src/recovery/checkpoint\+\_\+manager.\+cpp\end{DoxyCompactItemize}

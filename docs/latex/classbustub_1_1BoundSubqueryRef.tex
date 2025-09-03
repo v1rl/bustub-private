@@ -1,0 +1,74 @@
+\hypertarget{classbustub_1_1BoundSubqueryRef}{}\doxysection{bustub\+::Bound\+Subquery\+Ref Class Reference}
+\label{classbustub_1_1BoundSubqueryRef}\index{bustub::BoundSubqueryRef@{bustub::BoundSubqueryRef}}
+
+
+{\ttfamily \#include $<$bound\+\_\+subquery\+\_\+ref.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Subquery\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classbustub_1_1BoundSubqueryRef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Subquery\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classbustub_1_1BoundSubqueryRef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundSubqueryRef_a15552a8d6827bba5fa4dd18f5d59f167}\label{classbustub_1_1BoundSubqueryRef_a15552a8d6827bba5fa4dd18f5d59f167}} 
+{\bfseries Bound\+Subquery\+Ref} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1SelectStatement}{Select\+Statement}} $>$ subquery, std\+::vector$<$ std\+::vector$<$ std\+::string $>$$>$ select\+\_\+list\+\_\+name, std\+::string alias)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundSubqueryRef_a960b8473949ed91465f82efbded82888}\label{classbustub_1_1BoundSubqueryRef_a960b8473949ed91465f82efbded82888}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1SelectStatement}{Select\+Statement}} $>$ \mbox{\hyperlink{classbustub_1_1BoundSubqueryRef_a7a72ef710085ccece25200eef06e12d2}{subquery\+\_\+}}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classbustub_1_1BoundSubqueryRef_a38303103d54585d47c4e83aa066c2ad0}{select\+\_\+list\+\_\+name\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundSubqueryRef_aa04a0faef4c4661118f40cea618f2309}{alias\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A subquery. e.\+g., {\ttfamily SELECT $\ast$ FROM (SELECT $\ast$ FROM t1)}, where {\ttfamily (SELECT $\ast$ FROM t1)} is {\ttfamily \mbox{\hyperlink{classbustub_1_1BoundSubqueryRef}{Bound\+Subquery\+Ref}}}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundSubqueryRef_aa04a0faef4c4661118f40cea618f2309}\label{classbustub_1_1BoundSubqueryRef_aa04a0faef4c4661118f40cea618f2309}} 
+\index{bustub::BoundSubqueryRef@{bustub::BoundSubqueryRef}!alias\_@{alias\_}}
+\index{alias\_@{alias\_}!bustub::BoundSubqueryRef@{bustub::BoundSubqueryRef}}
+\doxysubsubsection{\texorpdfstring{alias\_}{alias\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+Subquery\+Ref\+::alias\+\_\+}
+
+Alias. \mbox{\Hypertarget{classbustub_1_1BoundSubqueryRef_a38303103d54585d47c4e83aa066c2ad0}\label{classbustub_1_1BoundSubqueryRef_a38303103d54585d47c4e83aa066c2ad0}} 
+\index{bustub::BoundSubqueryRef@{bustub::BoundSubqueryRef}!select\_list\_name\_@{select\_list\_name\_}}
+\index{select\_list\_name\_@{select\_list\_name\_}!bustub::BoundSubqueryRef@{bustub::BoundSubqueryRef}}
+\doxysubsubsection{\texorpdfstring{select\_list\_name\_}{select\_list\_name\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::string$>$ $>$ bustub\+::\+Bound\+Subquery\+Ref\+::select\+\_\+list\+\_\+name\+\_\+}
+
+Name of each item in the select list. \mbox{\Hypertarget{classbustub_1_1BoundSubqueryRef_a7a72ef710085ccece25200eef06e12d2}\label{classbustub_1_1BoundSubqueryRef_a7a72ef710085ccece25200eef06e12d2}} 
+\index{bustub::BoundSubqueryRef@{bustub::BoundSubqueryRef}!subquery\_@{subquery\_}}
+\index{subquery\_@{subquery\_}!bustub::BoundSubqueryRef@{bustub::BoundSubqueryRef}}
+\doxysubsubsection{\texorpdfstring{subquery\_}{subquery\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1SelectStatement}{Select\+Statement}}$>$ bustub\+::\+Bound\+Subquery\+Ref\+::subquery\+\_\+}
+
+Subquery. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/table\+\_\+ref/bound\+\_\+subquery\+\_\+ref.\+h\item 
+src/binder/fmt\+\_\+impl.\+cpp\end{DoxyCompactItemize}

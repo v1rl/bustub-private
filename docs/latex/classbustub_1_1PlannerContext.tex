@@ -1,0 +1,67 @@
+\hypertarget{classbustub_1_1PlannerContext}{}\doxysection{bustub\+::Planner\+Context Class Reference}
+\label{classbustub_1_1PlannerContext}\index{bustub::PlannerContext@{bustub::PlannerContext}}
+
+
+{\ttfamily \#include $<$planner.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1PlannerContext_a0c71cb702181d9a700948bcf79a9391f}\label{classbustub_1_1PlannerContext_a0c71cb702181d9a700948bcf79a9391f}} 
+void {\bfseries Add\+Aggregation} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ expr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classbustub_1_1PlannerContext_a9680f0c3362b26e8de610dcd7f7d9000}{allow\+\_\+aggregation\+\_\+}} \{false\}
+\item 
+size\+\_\+t \mbox{\hyperlink{classbustub_1_1PlannerContext_a5a384d1b843598a661483d102e9a26b9}{next\+\_\+aggregation\+\_\+}} \{0\}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1PlannerContext_acab5e17dbf3e2ffd9a7b1049aa948ff9}{aggregations\+\_\+}}
+\item 
+std\+::vector$<$ Abstract\+Expression\+Ref $>$ \mbox{\hyperlink{classbustub_1_1PlannerContext_a8e573108df5af9959168ef240ad4ef49}{expr\+\_\+in\+\_\+agg\+\_\+}}
+\item 
+const CTEList $\ast$ \mbox{\hyperlink{classbustub_1_1PlannerContext_aabc35e08d4ec317c8efa133d60704ca4}{cte\+\_\+list\+\_\+}} \{nullptr\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The context for the planner. Used for planning aggregation calls. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1PlannerContext_acab5e17dbf3e2ffd9a7b1049aa948ff9}\label{classbustub_1_1PlannerContext_acab5e17dbf3e2ffd9a7b1049aa948ff9}} 
+\index{bustub::PlannerContext@{bustub::PlannerContext}!aggregations\_@{aggregations\_}}
+\index{aggregations\_@{aggregations\_}!bustub::PlannerContext@{bustub::PlannerContext}}
+\doxysubsubsection{\texorpdfstring{aggregations\_}{aggregations\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ $>$ bustub\+::\+Planner\+Context\+::aggregations\+\_\+}
+
+In the first phase of aggregation planning, we put all agg calls expressions into this vector. The expressions in this vector should be used over the output of the original filter / table scan plan node. \mbox{\Hypertarget{classbustub_1_1PlannerContext_a9680f0c3362b26e8de610dcd7f7d9000}\label{classbustub_1_1PlannerContext_a9680f0c3362b26e8de610dcd7f7d9000}} 
+\index{bustub::PlannerContext@{bustub::PlannerContext}!allow\_aggregation\_@{allow\_aggregation\_}}
+\index{allow\_aggregation\_@{allow\_aggregation\_}!bustub::PlannerContext@{bustub::PlannerContext}}
+\doxysubsubsection{\texorpdfstring{allow\_aggregation\_}{allow\_aggregation\_}}
+{\footnotesize\ttfamily bool bustub\+::\+Planner\+Context\+::allow\+\_\+aggregation\+\_\+ \{false\}}
+
+Indicates whether aggregation is allowed in this context. \mbox{\Hypertarget{classbustub_1_1PlannerContext_aabc35e08d4ec317c8efa133d60704ca4}\label{classbustub_1_1PlannerContext_aabc35e08d4ec317c8efa133d60704ca4}} 
+\index{bustub::PlannerContext@{bustub::PlannerContext}!cte\_list\_@{cte\_list\_}}
+\index{cte\_list\_@{cte\_list\_}!bustub::PlannerContext@{bustub::PlannerContext}}
+\doxysubsubsection{\texorpdfstring{cte\_list\_}{cte\_list\_}}
+{\footnotesize\ttfamily const CTEList$\ast$ bustub\+::\+Planner\+Context\+::cte\+\_\+list\+\_\+ \{nullptr\}}
+
+CTE in scope. \mbox{\Hypertarget{classbustub_1_1PlannerContext_a8e573108df5af9959168ef240ad4ef49}\label{classbustub_1_1PlannerContext_a8e573108df5af9959168ef240ad4ef49}} 
+\index{bustub::PlannerContext@{bustub::PlannerContext}!expr\_in\_agg\_@{expr\_in\_agg\_}}
+\index{expr\_in\_agg\_@{expr\_in\_agg\_}!bustub::PlannerContext@{bustub::PlannerContext}}
+\doxysubsubsection{\texorpdfstring{expr\_in\_agg\_}{expr\_in\_agg\_}}
+{\footnotesize\ttfamily std\+::vector$<$Abstract\+Expression\+Ref$>$ bustub\+::\+Planner\+Context\+::expr\+\_\+in\+\_\+agg\+\_\+}
+
+In the second phase of aggregation planning, we plan agg calls from {\ttfamily aggregations\+\_\+}, and generate an aggregation plan node. The expressions in the vector should be used over the output from the aggregation plan node. \mbox{\Hypertarget{classbustub_1_1PlannerContext_a5a384d1b843598a661483d102e9a26b9}\label{classbustub_1_1PlannerContext_a5a384d1b843598a661483d102e9a26b9}} 
+\index{bustub::PlannerContext@{bustub::PlannerContext}!next\_aggregation\_@{next\_aggregation\_}}
+\index{next\_aggregation\_@{next\_aggregation\_}!bustub::PlannerContext@{bustub::PlannerContext}}
+\doxysubsubsection{\texorpdfstring{next\_aggregation\_}{next\_aggregation\_}}
+{\footnotesize\ttfamily size\+\_\+t bustub\+::\+Planner\+Context\+::next\+\_\+aggregation\+\_\+ \{0\}}
+
+Indicates the next agg call to be processed in this context. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/planner/planner.\+h\item 
+src/planner/planner.\+cpp\end{DoxyCompactItemize}

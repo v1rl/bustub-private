@@ -1,0 +1,154 @@
+\hypertarget{classbustub_1_1TopNPerGroupPlanNode}{}\doxysection{bustub\+::Top\+NPer\+Group\+Plan\+Node Class Reference}
+\label{classbustub_1_1TopNPerGroupPlanNode}\index{bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}}
+
+
+{\ttfamily \#include $<$topn\+\_\+per\+\_\+group\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Top\+NPer\+Group\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classbustub_1_1TopNPerGroupPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Top\+NPer\+Group\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classbustub_1_1TopNPerGroupPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode_ad2a0921538697f01122d7d57faa0e4d6}{Top\+NPer\+Group\+Plan\+Node}} (Schema\+Ref output, Abstract\+Plan\+Node\+Ref child, std\+::vector$<$ Abstract\+Expression\+Ref $>$ group\+\_\+bys, std\+::vector$<$ Order\+By $>$ order\+\_\+bys, std\+::size\+\_\+t n)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode_aed8cb9a204bc23e688e489fba8b31ac9}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode_ac0722eb9583f7d1085525b9b9515fe01}{GetN}} () const -\/$>$ size\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode_a7a0e622fdfb4a2b379295884419fdef9}{Get\+Order\+By}} () const -\/$>$ const std\+::vector$<$ Order\+By $>$ \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode_a0abdfb4f7161a45a0a8d35d3200c1080}{Get\+Group\+By}} () const -\/$>$ const std\+::vector$<$ Abstract\+Expression\+Ref $>$ \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode_a3dadfc7898e9eee4eee2a95b0ec01206}{Get\+Child\+Plan}} () const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_a6e217def136a6e80b8cd01ba05354495}\label{classbustub_1_1TopNPerGroupPlanNode_a6e217def136a6e80b8cd01ba05354495}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode}{Top\+NPer\+Group\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_ac628b41df4f1cb4a6d12a5e71ba568a0}\label{classbustub_1_1TopNPerGroupPlanNode_ac628b41df4f1cb4a6d12a5e71ba568a0}} 
+std\+::vector$<$ Order\+By $>$ {\bfseries order\+\_\+bys\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_af409f030b59a7ae96806747ea6a6df9f}\label{classbustub_1_1TopNPerGroupPlanNode_af409f030b59a7ae96806747ea6a6df9f}} 
+std\+::vector$<$ Abstract\+Expression\+Ref $>$ {\bfseries group\+\_\+bys\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_a88114aacab1c06839c0687fae1f55ca0}\label{classbustub_1_1TopNPerGroupPlanNode_a88114aacab1c06839c0687fae1f55ca0}} 
+std\+::size\+\_\+t {\bfseries n\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode_a40800c0e2a88d11f5b74650532c00d8d}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode}{Top\+NPer\+Group\+Plan\+Node}} represents a top-\/n operation. It will gather the n extreme rows based on limit and order expressions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_ad2a0921538697f01122d7d57faa0e4d6}\label{classbustub_1_1TopNPerGroupPlanNode_ad2a0921538697f01122d7d57faa0e4d6}} 
+\index{bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}!TopNPerGroupPlanNode@{TopNPerGroupPlanNode}}
+\index{TopNPerGroupPlanNode@{TopNPerGroupPlanNode}!bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}}
+\doxysubsubsection{\texorpdfstring{TopNPerGroupPlanNode()}{TopNPerGroupPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Top\+NPer\+Group\+Plan\+Node\+::\+Top\+NPer\+Group\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{Abstract\+Plan\+Node\+Ref}]{child,  }\item[{std\+::vector$<$ Abstract\+Expression\+Ref $>$}]{group\+\_\+bys,  }\item[{std\+::vector$<$ Order\+By $>$}]{order\+\_\+bys,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode}{Top\+NPer\+Group\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em output} & The output schema of this Top\+NPer\+Group plan node \\
+\hline
+{\em child} & The child plan node \\
+\hline
+{\em order\+\_\+bys} & The sort expressions and their order by types. \\
+\hline
+{\em n} & Retain n elements. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_a3dadfc7898e9eee4eee2a95b0ec01206}\label{classbustub_1_1TopNPerGroupPlanNode_a3dadfc7898e9eee4eee2a95b0ec01206}} 
+\index{bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NPer\+Group\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The child plan node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_a0abdfb4f7161a45a0a8d35d3200c1080}\label{classbustub_1_1TopNPerGroupPlanNode_a0abdfb4f7161a45a0a8d35d3200c1080}} 
+\index{bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}!GetGroupBy@{GetGroupBy}}
+\index{GetGroupBy@{GetGroupBy}!bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetGroupBy()}{GetGroupBy()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NPer\+Group\+Plan\+Node\+::\+Get\+Group\+By (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::vector$<$Abstract\+Expression\+Ref$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Get group by expressions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_ac0722eb9583f7d1085525b9b9515fe01}\label{classbustub_1_1TopNPerGroupPlanNode_ac0722eb9583f7d1085525b9b9515fe01}} 
+\index{bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}!GetN@{GetN}}
+\index{GetN@{GetN}!bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetN()}{GetN()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NPer\+Group\+Plan\+Node\+::\+GetN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ size\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The N (limit) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_a7a0e622fdfb4a2b379295884419fdef9}\label{classbustub_1_1TopNPerGroupPlanNode_a7a0e622fdfb4a2b379295884419fdef9}} 
+\index{bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}!GetOrderBy@{GetOrderBy}}
+\index{GetOrderBy@{GetOrderBy}!bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetOrderBy()}{GetOrderBy()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NPer\+Group\+Plan\+Node\+::\+Get\+Order\+By (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::vector$<$Order\+By$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Get order by expressions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_aed8cb9a204bc23e688e489fba8b31ac9}\label{classbustub_1_1TopNPerGroupPlanNode_aed8cb9a204bc23e688e489fba8b31ac9}} 
+\index{bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NPer\+Group\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupPlanNode_a40800c0e2a88d11f5b74650532c00d8d}\label{classbustub_1_1TopNPerGroupPlanNode_a40800c0e2a88d11f5b74650532c00d8d}} 
+\index{bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::TopNPerGroupPlanNode@{bustub::TopNPerGroupPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NPer\+Group\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/topn\+\_\+per\+\_\+group\+\_\+plan.\+h\end{DoxyCompactItemize}

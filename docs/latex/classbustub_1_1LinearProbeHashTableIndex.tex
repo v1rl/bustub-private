@@ -1,0 +1,114 @@
+\hypertarget{classbustub_1_1LinearProbeHashTableIndex}{}\doxysection{bustub\+::Linear\+Probe\+Hash\+Table\+Index$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ Class Template Reference}
+\label{classbustub_1_1LinearProbeHashTableIndex}\index{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$}}
+
+
+Inheritance diagram for bustub\+::Linear\+Probe\+Hash\+Table\+Index$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classbustub_1_1LinearProbeHashTableIndex__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Linear\+Probe\+Hash\+Table\+Index$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classbustub_1_1LinearProbeHashTableIndex__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTableIndex_a1881433f449bd9bdbccc1e5c0fda552b}\label{classbustub_1_1LinearProbeHashTableIndex_a1881433f449bd9bdbccc1e5c0fda552b}} 
+{\bfseries Linear\+Probe\+Hash\+Table\+Index} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1IndexMetadata}{Index\+Metadata}} $>$ \&\&metadata, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager, size\+\_\+t num\+\_\+buckets, const \mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ Key\+Type $>$ \&hash\+\_\+fn)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LinearProbeHashTableIndex_a62708c691c9cd980cc4ca500ccfa98e7}{Insert\+Entry}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction) -\/$>$ bool override
+\item 
+void \mbox{\hyperlink{classbustub_1_1LinearProbeHashTableIndex_a3a2f964b6c03b6359d3fad1a68be72ab}{Delete\+Entry}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1LinearProbeHashTableIndex_a095a43725ae531fa4f537b8cbe1c53ac}{Scan\+Key}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} $>$ $\ast$result, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTableIndex_af46f4bed8b8a1636ef9d4ec97005753c}\label{classbustub_1_1LinearProbeHashTableIndex_af46f4bed8b8a1636ef9d4ec97005753c}} 
+Key\+Comparator {\bfseries comparator\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTableIndex_ad5d5f82f0f51fee263ab67a7f99815e9}\label{classbustub_1_1LinearProbeHashTableIndex_ad5d5f82f0f51fee263ab67a7f99815e9}} 
+\mbox{\hyperlink{classbustub_1_1LinearProbeHashTable}{Linear\+Probe\+Hash\+Table}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ {\bfseries container\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTableIndex_a3a2f964b6c03b6359d3fad1a68be72ab}\label{classbustub_1_1LinearProbeHashTableIndex_a3a2f964b6c03b6359d3fad1a68be72ab}} 
+\index{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$}!DeleteEntry@{DeleteEntry}}
+\index{DeleteEntry@{DeleteEntry}!bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteEntry()}{DeleteEntry()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+void \mbox{\hyperlink{classbustub_1_1LinearProbeHashTableIndex}{bustub\+::\+Linear\+Probe\+Hash\+Table\+Index}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Delete\+Entry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Delete an index entry by key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em rid} & The \mbox{\hyperlink{classbustub_1_1RID}{RID}} associated with the key (unused) \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Index_a76ce812b2c134e64915329bbeedad0a8}{bustub\+::\+Index}}.
+
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTableIndex_a62708c691c9cd980cc4ca500ccfa98e7}\label{classbustub_1_1LinearProbeHashTableIndex_a62708c691c9cd980cc4ca500ccfa98e7}} 
+\index{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$}!InsertEntry@{InsertEntry}}
+\index{InsertEntry@{InsertEntry}!bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{InsertEntry()}{InsertEntry()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1LinearProbeHashTableIndex}{bustub\+::\+Linear\+Probe\+Hash\+Table\+Index}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Insert\+Entry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption}) -\/$>$  bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Insert an entry into the index. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em rid} & The \mbox{\hyperlink{classbustub_1_1RID}{RID}} associated with the key \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether insertion is successful 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Index_a68503eb10dbe00ac29b211636152b5ee}{bustub\+::\+Index}}.
+
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTableIndex_a095a43725ae531fa4f537b8cbe1c53ac}\label{classbustub_1_1LinearProbeHashTableIndex_a095a43725ae531fa4f537b8cbe1c53ac}} 
+\index{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$}!ScanKey@{ScanKey}}
+\index{ScanKey@{ScanKey}!bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTableIndex$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{ScanKey()}{ScanKey()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+void \mbox{\hyperlink{classbustub_1_1LinearProbeHashTableIndex}{bustub\+::\+Linear\+Probe\+Hash\+Table\+Index}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Scan\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} $>$ $\ast$}]{result,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Search the index for the provided key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em result} & The collection of RIDs that is populated with results of the search \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1Index_ac1956eb188c14fe560025ba940cdb302}{bustub\+::\+Index}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/linear\+\_\+probe\+\_\+hash\+\_\+table\+\_\+index.\+h\end{DoxyCompactItemize}

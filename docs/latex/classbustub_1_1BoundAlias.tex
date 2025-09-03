@@ -1,0 +1,71 @@
+\hypertarget{classbustub_1_1BoundAlias}{}\doxysection{bustub\+::Bound\+Alias Class Reference}
+\label{classbustub_1_1BoundAlias}\index{bustub::BoundAlias@{bustub::BoundAlias}}
+
+
+{\ttfamily \#include $<$bound\+\_\+alias.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Alias\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundAlias__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Alias\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundAlias__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundAlias_aff7ad15317716dbfd59778a41eb4478d}\label{classbustub_1_1BoundAlias_aff7ad15317716dbfd59778a41eb4478d}} 
+{\bfseries Bound\+Alias} (std\+::string alias, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ child)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundAlias_a2f47d5e13a3538804f30e21ef9157c47}\label{classbustub_1_1BoundAlias_a2f47d5e13a3538804f30e21ef9157c47}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundAlias_adf39304d72314b35a069c50110e0d9bc}\label{classbustub_1_1BoundAlias_adf39304d72314b35a069c50110e0d9bc}} 
+auto {\bfseries Has\+Aggregation} () const -\/$>$ bool override
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundAlias_a61ad1de933fddd37c681817106f6fe69}\label{classbustub_1_1BoundAlias_a61ad1de933fddd37c681817106f6fe69}} 
+auto {\bfseries Has\+Window\+Function} () const -\/$>$ bool override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundAlias_a9e67cf7e5bfdb98f52254b5727bff461}{alias\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1BoundAlias_a278eae91d6a548d07c9620276cd7afdb}{child\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The alias in SELECT list, e.\+g. {\ttfamily SELECT count(x) AS y}, the {\ttfamily y} is an alias. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundAlias_a9e67cf7e5bfdb98f52254b5727bff461}\label{classbustub_1_1BoundAlias_a9e67cf7e5bfdb98f52254b5727bff461}} 
+\index{bustub::BoundAlias@{bustub::BoundAlias}!alias\_@{alias\_}}
+\index{alias\_@{alias\_}!bustub::BoundAlias@{bustub::BoundAlias}}
+\doxysubsubsection{\texorpdfstring{alias\_}{alias\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+Alias\+::alias\+\_\+}
+
+Alias name. \mbox{\Hypertarget{classbustub_1_1BoundAlias_a278eae91d6a548d07c9620276cd7afdb}\label{classbustub_1_1BoundAlias_a278eae91d6a548d07c9620276cd7afdb}} 
+\index{bustub::BoundAlias@{bustub::BoundAlias}!child\_@{child\_}}
+\index{child\_@{child\_}!bustub::BoundAlias@{bustub::BoundAlias}}
+\doxysubsubsection{\texorpdfstring{child\_}{child\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ bustub\+::\+Bound\+Alias\+::child\+\_\+}
+
+The actual expression 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/expressions/bound\+\_\+alias.\+h\end{DoxyCompactItemize}

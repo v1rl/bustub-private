@@ -1,0 +1,188 @@
+\hypertarget{classbustub_1_1TableHeap}{}\doxysection{bustub\+::Table\+Heap Class Reference}
+\label{classbustub_1_1TableHeap}\index{bustub::TableHeap@{bustub::TableHeap}}
+
+
+{\ttfamily \#include $<$table\+\_\+heap.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TableHeap_af0d6996dfc848d593e35d4f97d72cd2e}{Table\+Heap}} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$bpm)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TableHeap_a207bc8925d32bbf8404a02767da76445}{Insert\+Tuple}} (const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$lock\+\_\+mgr=nullptr, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn=nullptr, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} oid=0) -\/$>$ std\+::optional$<$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} $>$
+\item 
+void \mbox{\hyperlink{classbustub_1_1TableHeap_a4a7af3a984952d58bd7900dc8b2274ea}{Update\+Tuple\+Meta}} (const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TableHeap_a42204ffaa7db3781d049164ddcb97371}{Get\+Tuple}} (\mbox{\hyperlink{classbustub_1_1RID}{RID}} rid) -\/$>$ std\+::pair$<$ \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}, \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TableHeap_a838ebbd69fd57b92a0ead12c1726c927}{Get\+Tuple\+Meta}} (\mbox{\hyperlink{classbustub_1_1RID}{RID}} rid) -\/$>$ \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TableHeap_a8b31a99578ed61cec4be8df28806c5b8}{Make\+Iterator}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TableHeap_a09eb382e96a0d984de75a1ce8a9f15eb}{Make\+Eager\+Iterator}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TableHeap_a59eb36faae1b14b14899ff6934defba6}{Get\+First\+Page\+Id}} () const -\/$>$ page\+\_\+id\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TableHeap_a0e9e56f15eacaee8f6d5829bd2f368ef}{Update\+Tuple\+In\+Place}} (const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, std\+::function$<$ bool(const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&table, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid)$>$ \&\&check=nullptr) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a7c39f580bf2da8ecb5a3c61c38408963}\label{classbustub_1_1TableHeap_a7c39f580bf2da8ecb5a3c61c38408963}} 
+auto {\bfseries Acquire\+Table\+Page\+Read\+Lock} (\mbox{\hyperlink{classbustub_1_1RID}{RID}} rid) -\/$>$ \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableHeap_ab5842732d5a463bbf635448456932a15}\label{classbustub_1_1TableHeap_ab5842732d5a463bbf635448456932a15}} 
+auto {\bfseries Acquire\+Table\+Page\+Write\+Lock} (\mbox{\hyperlink{classbustub_1_1RID}{RID}} rid) -\/$>$ \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a17ae7cd7bf087a326ec94cf33875fe5d}\label{classbustub_1_1TableHeap_a17ae7cd7bf087a326ec94cf33875fe5d}} 
+void {\bfseries Update\+Tuple\+In\+Place\+With\+Lock\+Acquired} (const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, \mbox{\hyperlink{classbustub_1_1TablePage}{Table\+Page}} $\ast$page)
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableHeap_afa3662e6363b0bf647ca7b3cea73246e}\label{classbustub_1_1TableHeap_afa3662e6363b0bf647ca7b3cea73246e}} 
+auto {\bfseries Get\+Tuple\+With\+Lock\+Acquired} (\mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, const \mbox{\hyperlink{classbustub_1_1TablePage}{Table\+Page}} $\ast$page) -\/$>$ std\+::pair$<$ \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}, \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableHeap_ad386433b9945bf4d5ca0023fe8a6dc41}\label{classbustub_1_1TableHeap_ad386433b9945bf4d5ca0023fe8a6dc41}} 
+auto {\bfseries Get\+Tuple\+Meta\+With\+Lock\+Acquired} (\mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, const \mbox{\hyperlink{classbustub_1_1TablePage}{Table\+Page}} $\ast$page) -\/$>$ \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{classbustub_1_1TableHeap_a8df3ad804a8c5e899a1586034df895bb}{Create\+Empty\+Heap}} (bool create\+\_\+table\+\_\+heap=false) -\/$>$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableHeap_ab0165532e287d023758cc64c24e40fb7}\label{classbustub_1_1TableHeap_ab0165532e287d023758cc64c24e40fb7}} 
+class {\bfseries Table\+Iterator}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} represents a physical table on disk. This is just a doubly-\/linked list of pages. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_af0d6996dfc848d593e35d4f97d72cd2e}\label{classbustub_1_1TableHeap_af0d6996dfc848d593e35d4f97d72cd2e}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!TableHeap@{TableHeap}}
+\index{TableHeap@{TableHeap}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{TableHeap()}{TableHeap()}}
+{\footnotesize\ttfamily bustub\+::\+Table\+Heap\+::\+Table\+Heap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{bpm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Create a table heap without a transaction. (open table) 
+\begin{DoxyParams}{Parameters}
+{\em buffer\+\_\+pool\+\_\+manager} & the buffer pool manager \\
+\hline
+{\em first\+\_\+page\+\_\+id} & the id of the first page \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a8df3ad804a8c5e899a1586034df895bb}\label{classbustub_1_1TableHeap_a8df3ad804a8c5e899a1586034df895bb}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!CreateEmptyHeap@{CreateEmptyHeap}}
+\index{CreateEmptyHeap@{CreateEmptyHeap}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{CreateEmptyHeap()}{CreateEmptyHeap()}}
+{\footnotesize\ttfamily static auto bustub\+::\+Table\+Heap\+::\+Create\+Empty\+Heap (\begin{DoxyParamCaption}\item[{bool}]{create\+\_\+table\+\_\+heap = {\ttfamily false} }\end{DoxyParamCaption}) -\/$>$ std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}}$>$ \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+For binder tests \mbox{\Hypertarget{classbustub_1_1TableHeap_a59eb36faae1b14b14899ff6934defba6}\label{classbustub_1_1TableHeap_a59eb36faae1b14b14899ff6934defba6}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!GetFirstPageId@{GetFirstPageId}}
+\index{GetFirstPageId@{GetFirstPageId}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{GetFirstPageId()}{GetFirstPageId()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Heap\+::\+Get\+First\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ page\+\_\+id\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the id of the first page of this table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a42204ffaa7db3781d049164ddcb97371}\label{classbustub_1_1TableHeap_a42204ffaa7db3781d049164ddcb97371}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!GetTuple@{GetTuple}}
+\index{GetTuple@{GetTuple}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{GetTuple()}{GetTuple()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Heap\+::\+Get\+Tuple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid }\end{DoxyParamCaption}) -\/$>$ std\+::pair$<$\mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}, \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}$>$}
+
+Read a tuple from the table. 
+\begin{DoxyParams}{Parameters}
+{\em rid} & rid of the tuple to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the meta and tuple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a838ebbd69fd57b92a0ead12c1726c927}\label{classbustub_1_1TableHeap_a838ebbd69fd57b92a0ead12c1726c927}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!GetTupleMeta@{GetTupleMeta}}
+\index{GetTupleMeta@{GetTupleMeta}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{GetTupleMeta()}{GetTupleMeta()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Heap\+::\+Get\+Tuple\+Meta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}}
+
+Read a tuple meta from the table. Note\+: if you want to get tuple and meta together, use {\ttfamily Get\+Tuple} instead to ensure atomicity. 
+\begin{DoxyParams}{Parameters}
+{\em rid} & rid of the tuple to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the meta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a207bc8925d32bbf8404a02767da76445}\label{classbustub_1_1TableHeap_a207bc8925d32bbf8404a02767da76445}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!InsertTuple@{InsertTuple}}
+\index{InsertTuple@{InsertTuple}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{InsertTuple()}{InsertTuple()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Heap\+::\+Insert\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&}]{meta,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$}]{lock\+\_\+mgr = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{oid = {\ttfamily 0} }\end{DoxyParamCaption}) -\/$>$ std\+::optional$<$\mbox{\hyperlink{classbustub_1_1RID}{RID}}$>$}
+
+Insert a tuple into the table. If the tuple is too large ($>$= page\+\_\+size), return std\+::nullopt. 
+\begin{DoxyParams}{Parameters}
+{\em meta} & tuple meta \\
+\hline
+{\em tuple} & tuple to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rid of the inserted tuple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a09eb382e96a0d984de75a1ce8a9f15eb}\label{classbustub_1_1TableHeap_a09eb382e96a0d984de75a1ce8a9f15eb}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!MakeEagerIterator@{MakeEagerIterator}}
+\index{MakeEagerIterator@{MakeEagerIterator}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{MakeEagerIterator()}{MakeEagerIterator()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Heap\+::\+Make\+Eager\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}}}
+
+\begin{DoxyReturn}{Returns}
+the iterator of this table. The iterator will stop at the last tuple at the time of iterating. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a8b31a99578ed61cec4be8df28806c5b8}\label{classbustub_1_1TableHeap_a8b31a99578ed61cec4be8df28806c5b8}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!MakeIterator@{MakeIterator}}
+\index{MakeIterator@{MakeIterator}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{MakeIterator()}{MakeIterator()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Heap\+::\+Make\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}}}
+
+\begin{DoxyReturn}{Returns}
+the iterator of this table. When this iterator is created, it will record the current last tuple in the table heap, and the iterator will stop at that point, in order to avoid halloween problem. You usually will need to use this function for project 3. Given that you have already implemented your project 4 update executor as a pipeline breaker, you may use {\ttfamily Make\+Eager\+Iterator} to test whether the update executor is implemented correctly. There should be no difference between this function and {\ttfamily Make\+Eager\+Iterator} in project 4 if everything is implemented correctly. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a0e9e56f15eacaee8f6d5829bd2f368ef}\label{classbustub_1_1TableHeap_a0e9e56f15eacaee8f6d5829bd2f368ef}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!UpdateTupleInPlace@{UpdateTupleInPlace}}
+\index{UpdateTupleInPlace@{UpdateTupleInPlace}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{UpdateTupleInPlace()}{UpdateTupleInPlace()}}
+{\footnotesize\ttfamily auto bustub\+::\+Table\+Heap\+::\+Update\+Tuple\+In\+Place (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&}]{meta,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid,  }\item[{std\+::function$<$ bool(const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&meta, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&table, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid)$>$ \&\&}]{check = {\ttfamily nullptr} }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Update a tuple in place. Should NOT be used in project 3. Implement your project 3 update executor as delete and insert. You will need to use this function in project 4. 
+\begin{DoxyParams}{Parameters}
+{\em meta} & new tuple meta \\
+\hline
+{\em tuple} & new tuple \\
+\hline
+{\em rid} & the rid of the tuple to be updated \\
+\hline
+{\em check} & the check to run before actually update. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a4a7af3a984952d58bd7900dc8b2274ea}\label{classbustub_1_1TableHeap_a4a7af3a984952d58bd7900dc8b2274ea}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!UpdateTupleMeta@{UpdateTupleMeta}}
+\index{UpdateTupleMeta@{UpdateTupleMeta}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{UpdateTupleMeta()}{UpdateTupleMeta()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Heap\+::\+Update\+Tuple\+Meta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}} \&}]{meta,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid }\end{DoxyParamCaption})}
+
+Update the meta of a tuple. 
+\begin{DoxyParams}{Parameters}
+{\em meta} & new tuple meta \\
+\hline
+{\em rid} & the rid of the inserted tuple \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/table/table\+\_\+heap.\+h\item 
+src/storage/table/table\+\_\+heap.\+cpp\end{DoxyCompactItemize}

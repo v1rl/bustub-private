@@ -1,0 +1,45 @@
+\hypertarget{classbustub_1_1LockManager_1_1LockRequestQueue}{}\doxysection{bustub\+::Lock\+Manager\+::Lock\+Request\+Queue Class Reference}
+\label{classbustub_1_1LockManager_1_1LockRequestQueue}\index{bustub::LockManager::LockRequestQueue@{bustub::LockManager::LockRequestQueue}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest}{Lock\+Request}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequestQueue_abd26995eebecedeb5bb0f89286b37f4c}{request\+\_\+queue\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequestQueue_a7bba59da35fbd6a53512fc5744e9ae0d}{cv\+\_\+}}
+\item 
+txn\+\_\+id\+\_\+t \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequestQueue_a9add8b8d689b4965b947f832c21b637d}{upgrading\+\_\+}} = INVALID\+\_\+\+TXN\+\_\+\+ID
+\item 
+std\+::mutex \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequestQueue_af6ebff84b75ce8bb7b58d6eacdc8d970}{latch\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequestQueue_a7bba59da35fbd6a53512fc5744e9ae0d}\label{classbustub_1_1LockManager_1_1LockRequestQueue_a7bba59da35fbd6a53512fc5744e9ae0d}} 
+\index{bustub::LockManager::LockRequestQueue@{bustub::LockManager::LockRequestQueue}!cv\_@{cv\_}}
+\index{cv\_@{cv\_}!bustub::LockManager::LockRequestQueue@{bustub::LockManager::LockRequestQueue}}
+\doxysubsubsection{\texorpdfstring{cv\_}{cv\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+Queue\+::cv\+\_\+}
+
+For notifying blocked transactions on this rid \mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequestQueue_af6ebff84b75ce8bb7b58d6eacdc8d970}\label{classbustub_1_1LockManager_1_1LockRequestQueue_af6ebff84b75ce8bb7b58d6eacdc8d970}} 
+\index{bustub::LockManager::LockRequestQueue@{bustub::LockManager::LockRequestQueue}!latch\_@{latch\_}}
+\index{latch\_@{latch\_}!bustub::LockManager::LockRequestQueue@{bustub::LockManager::LockRequestQueue}}
+\doxysubsubsection{\texorpdfstring{latch\_}{latch\_}}
+{\footnotesize\ttfamily std\+::mutex bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+Queue\+::latch\+\_\+}
+
+coordination \mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequestQueue_abd26995eebecedeb5bb0f89286b37f4c}\label{classbustub_1_1LockManager_1_1LockRequestQueue_abd26995eebecedeb5bb0f89286b37f4c}} 
+\index{bustub::LockManager::LockRequestQueue@{bustub::LockManager::LockRequestQueue}!request\_queue\_@{request\_queue\_}}
+\index{request\_queue\_@{request\_queue\_}!bustub::LockManager::LockRequestQueue@{bustub::LockManager::LockRequestQueue}}
+\doxysubsubsection{\texorpdfstring{request\_queue\_}{request\_queue\_}}
+{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest}{Lock\+Request}}$>$ $>$ bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+Queue\+::request\+\_\+queue\+\_\+}
+
+List of lock requests for the same resource (table or row) \mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequestQueue_a9add8b8d689b4965b947f832c21b637d}\label{classbustub_1_1LockManager_1_1LockRequestQueue_a9add8b8d689b4965b947f832c21b637d}} 
+\index{bustub::LockManager::LockRequestQueue@{bustub::LockManager::LockRequestQueue}!upgrading\_@{upgrading\_}}
+\index{upgrading\_@{upgrading\_}!bustub::LockManager::LockRequestQueue@{bustub::LockManager::LockRequestQueue}}
+\doxysubsubsection{\texorpdfstring{upgrading\_}{upgrading\_}}
+{\footnotesize\ttfamily txn\+\_\+id\+\_\+t bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+Queue\+::upgrading\+\_\+ = INVALID\+\_\+\+TXN\+\_\+\+ID}
+
+txn\+\_\+id of an upgrading transaction (if any) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/lock\+\_\+manager.\+h\end{DoxyCompactItemize}

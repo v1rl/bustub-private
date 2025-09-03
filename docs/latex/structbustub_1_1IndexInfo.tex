@@ -1,0 +1,123 @@
+\hypertarget{structbustub_1_1IndexInfo}{}\doxysection{bustub\+::Index\+Info Struct Reference}
+\label{structbustub_1_1IndexInfo}\index{bustub::IndexInfo@{bustub::IndexInfo}}
+
+
+{\ttfamily \#include $<$catalog.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Index\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{structbustub_1_1IndexInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structbustub_1_1IndexInfo_af5ab57334e72e68c1364001b1717e7ab}{Index\+Info}} (\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} key\+\_\+schema, std\+::string name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1Index}{Index}} $>$ \&\&index, index\+\_\+oid\+\_\+t index\+\_\+oid, std\+::string table\+\_\+name, size\+\_\+t key\+\_\+size, bool is\+\_\+primary\+\_\+key, Index\+Type index\+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \mbox{\hyperlink{structbustub_1_1IndexInfo_aabc5117a84247be05ee2dde57b1dbec2}{key\+\_\+schema\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{structbustub_1_1IndexInfo_a68d4dd98fe1d34f97306220138b12c26}{name\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1Index}{Index}} $>$ \mbox{\hyperlink{structbustub_1_1IndexInfo_ad40a53fd447351b1c3ae2c229336f1d3}{index\+\_\+}}
+\item 
+index\+\_\+oid\+\_\+t \mbox{\hyperlink{structbustub_1_1IndexInfo_a801ec95a91bc556e0498129834bfe710}{index\+\_\+oid\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{structbustub_1_1IndexInfo_a03c487397cc5874074ac5c28af1c1992}{table\+\_\+name\+\_\+}}
+\item 
+const size\+\_\+t \mbox{\hyperlink{structbustub_1_1IndexInfo_a62e839084f6d64bfa64433e23a3f58fc}{key\+\_\+size\+\_\+}}
+\item 
+bool \mbox{\hyperlink{structbustub_1_1IndexInfo_ac31e1f9fe26c3044621f0228e5866ac3}{is\+\_\+primary\+\_\+key\+\_\+}}
+\item 
+Index\+Type \mbox{\hyperlink{structbustub_1_1IndexInfo_afc4ea361a494c90f4c47784c55f7c214}{index\+\_\+type\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}} class maintains metadata about a index. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structbustub_1_1IndexInfo_af5ab57334e72e68c1364001b1717e7ab}\label{structbustub_1_1IndexInfo_af5ab57334e72e68c1364001b1717e7ab}} 
+\index{bustub::IndexInfo@{bustub::IndexInfo}!IndexInfo@{IndexInfo}}
+\index{IndexInfo@{IndexInfo}!bustub::IndexInfo@{bustub::IndexInfo}}
+\doxysubsubsection{\texorpdfstring{IndexInfo()}{IndexInfo()}}
+{\footnotesize\ttfamily bustub\+::\+Index\+Info\+::\+Index\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Schema}{Schema}}}]{key\+\_\+schema,  }\item[{std\+::string}]{name,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1Index}{Index}} $>$ \&\&}]{index,  }\item[{index\+\_\+oid\+\_\+t}]{index\+\_\+oid,  }\item[{std\+::string}]{table\+\_\+name,  }\item[{size\+\_\+t}]{key\+\_\+size,  }\item[{bool}]{is\+\_\+primary\+\_\+key,  }\item[{Index\+Type}]{index\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{structbustub_1_1IndexInfo}{Index\+Info}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+schema} & The schema for the index key \\
+\hline
+{\em name} & The name of the index \\
+\hline
+{\em index} & An owning pointer to the index \\
+\hline
+{\em index\+\_\+oid} & The unique OID for the index \\
+\hline
+{\em table\+\_\+name} & The name of the table on which the index is created \\
+\hline
+{\em key\+\_\+size} & The size of the index key, in bytes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structbustub_1_1IndexInfo_ad40a53fd447351b1c3ae2c229336f1d3}\label{structbustub_1_1IndexInfo_ad40a53fd447351b1c3ae2c229336f1d3}} 
+\index{bustub::IndexInfo@{bustub::IndexInfo}!index\_@{index\_}}
+\index{index\_@{index\_}!bustub::IndexInfo@{bustub::IndexInfo}}
+\doxysubsubsection{\texorpdfstring{index\_}{index\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1Index}{Index}}$>$ bustub\+::\+Index\+Info\+::index\+\_\+}
+
+An owning pointer to the index \mbox{\Hypertarget{structbustub_1_1IndexInfo_a801ec95a91bc556e0498129834bfe710}\label{structbustub_1_1IndexInfo_a801ec95a91bc556e0498129834bfe710}} 
+\index{bustub::IndexInfo@{bustub::IndexInfo}!index\_oid\_@{index\_oid\_}}
+\index{index\_oid\_@{index\_oid\_}!bustub::IndexInfo@{bustub::IndexInfo}}
+\doxysubsubsection{\texorpdfstring{index\_oid\_}{index\_oid\_}}
+{\footnotesize\ttfamily index\+\_\+oid\+\_\+t bustub\+::\+Index\+Info\+::index\+\_\+oid\+\_\+}
+
+The unique OID for the index \mbox{\Hypertarget{structbustub_1_1IndexInfo_afc4ea361a494c90f4c47784c55f7c214}\label{structbustub_1_1IndexInfo_afc4ea361a494c90f4c47784c55f7c214}} 
+\index{bustub::IndexInfo@{bustub::IndexInfo}!index\_type\_@{index\_type\_}}
+\index{index\_type\_@{index\_type\_}!bustub::IndexInfo@{bustub::IndexInfo}}
+\doxysubsubsection{\texorpdfstring{index\_type\_}{index\_type\_}}
+{\footnotesize\ttfamily Index\+Type bustub\+::\+Index\+Info\+::index\+\_\+type\+\_\+}
+
+The index type \mbox{\Hypertarget{structbustub_1_1IndexInfo_ac31e1f9fe26c3044621f0228e5866ac3}\label{structbustub_1_1IndexInfo_ac31e1f9fe26c3044621f0228e5866ac3}} 
+\index{bustub::IndexInfo@{bustub::IndexInfo}!is\_primary\_key\_@{is\_primary\_key\_}}
+\index{is\_primary\_key\_@{is\_primary\_key\_}!bustub::IndexInfo@{bustub::IndexInfo}}
+\doxysubsubsection{\texorpdfstring{is\_primary\_key\_}{is\_primary\_key\_}}
+{\footnotesize\ttfamily bool bustub\+::\+Index\+Info\+::is\+\_\+primary\+\_\+key\+\_\+}
+
+Is primary key index? \mbox{\Hypertarget{structbustub_1_1IndexInfo_aabc5117a84247be05ee2dde57b1dbec2}\label{structbustub_1_1IndexInfo_aabc5117a84247be05ee2dde57b1dbec2}} 
+\index{bustub::IndexInfo@{bustub::IndexInfo}!key\_schema\_@{key\_schema\_}}
+\index{key\_schema\_@{key\_schema\_}!bustub::IndexInfo@{bustub::IndexInfo}}
+\doxysubsubsection{\texorpdfstring{key\_schema\_}{key\_schema\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} bustub\+::\+Index\+Info\+::key\+\_\+schema\+\_\+}
+
+The schema for the index key \mbox{\Hypertarget{structbustub_1_1IndexInfo_a62e839084f6d64bfa64433e23a3f58fc}\label{structbustub_1_1IndexInfo_a62e839084f6d64bfa64433e23a3f58fc}} 
+\index{bustub::IndexInfo@{bustub::IndexInfo}!key\_size\_@{key\_size\_}}
+\index{key\_size\_@{key\_size\_}!bustub::IndexInfo@{bustub::IndexInfo}}
+\doxysubsubsection{\texorpdfstring{key\_size\_}{key\_size\_}}
+{\footnotesize\ttfamily const size\+\_\+t bustub\+::\+Index\+Info\+::key\+\_\+size\+\_\+}
+
+The size of the index key, in bytes \mbox{\Hypertarget{structbustub_1_1IndexInfo_a68d4dd98fe1d34f97306220138b12c26}\label{structbustub_1_1IndexInfo_a68d4dd98fe1d34f97306220138b12c26}} 
+\index{bustub::IndexInfo@{bustub::IndexInfo}!name\_@{name\_}}
+\index{name\_@{name\_}!bustub::IndexInfo@{bustub::IndexInfo}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Index\+Info\+::name\+\_\+}
+
+The name of the index \mbox{\Hypertarget{structbustub_1_1IndexInfo_a03c487397cc5874074ac5c28af1c1992}\label{structbustub_1_1IndexInfo_a03c487397cc5874074ac5c28af1c1992}} 
+\index{bustub::IndexInfo@{bustub::IndexInfo}!table\_name\_@{table\_name\_}}
+\index{table\_name\_@{table\_name\_}!bustub::IndexInfo@{bustub::IndexInfo}}
+\doxysubsubsection{\texorpdfstring{table\_name\_}{table\_name\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Index\+Info\+::table\+\_\+name\+\_\+}
+
+The name of the table on which the index is created 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/catalog/catalog.\+h\end{DoxyCompactItemize}

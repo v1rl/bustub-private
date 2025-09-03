@@ -1,0 +1,131 @@
+\hypertarget{classbustub_1_1LimitPlanNode}{}\doxysection{bustub\+::Limit\+Plan\+Node Class Reference}
+\label{classbustub_1_1LimitPlanNode}\index{bustub::LimitPlanNode@{bustub::LimitPlanNode}}
+
+
+{\ttfamily \#include $<$limit\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Limit\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1LimitPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Limit\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1LimitPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LimitPlanNode_ad463d1c0f9800a8daa3e73d1a2a9fa53}{Limit\+Plan\+Node}} (Schema\+Ref output, Abstract\+Plan\+Node\+Ref child, std\+::size\+\_\+t limit)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LimitPlanNode_a343229c6e214cfa85db345b22868a24c}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LimitPlanNode_a0e8ee47bde09dfd406dc08e9e6512858}{Get\+Limit}} () const -\/$>$ size\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LimitPlanNode_a838b5ca41aed3c0c54ca406b8ea53a37}{Get\+Child\+Plan}} () const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+\mbox{\Hypertarget{classbustub_1_1LimitPlanNode_ac18f9f95bbeaf90a5024ba3f66c61399}\label{classbustub_1_1LimitPlanNode_ac18f9f95bbeaf90a5024ba3f66c61399}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1LimitPlanNode}{Limit\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classbustub_1_1LimitPlanNode_a705660eb390b1718c595aed04257543d}{limit\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LimitPlanNode_a5347be68c4409db1c68b7950c268df30}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Limit constraints the number of output tuples produced by its child executor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LimitPlanNode_ad463d1c0f9800a8daa3e73d1a2a9fa53}\label{classbustub_1_1LimitPlanNode_ad463d1c0f9800a8daa3e73d1a2a9fa53}} 
+\index{bustub::LimitPlanNode@{bustub::LimitPlanNode}!LimitPlanNode@{LimitPlanNode}}
+\index{LimitPlanNode@{LimitPlanNode}!bustub::LimitPlanNode@{bustub::LimitPlanNode}}
+\doxysubsubsection{\texorpdfstring{LimitPlanNode()}{LimitPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Limit\+Plan\+Node\+::\+Limit\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{Abstract\+Plan\+Node\+Ref}]{child,  }\item[{std\+::size\+\_\+t}]{limit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1LimitPlanNode}{Limit\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em child} & The child plan from which tuples are obtained \\
+\hline
+{\em limit} & The number of output tuples \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LimitPlanNode_a838b5ca41aed3c0c54ca406b8ea53a37}\label{classbustub_1_1LimitPlanNode_a838b5ca41aed3c0c54ca406b8ea53a37}} 
+\index{bustub::LimitPlanNode@{bustub::LimitPlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::LimitPlanNode@{bustub::LimitPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily auto bustub\+::\+Limit\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The child plan node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1LimitPlanNode_a0e8ee47bde09dfd406dc08e9e6512858}\label{classbustub_1_1LimitPlanNode_a0e8ee47bde09dfd406dc08e9e6512858}} 
+\index{bustub::LimitPlanNode@{bustub::LimitPlanNode}!GetLimit@{GetLimit}}
+\index{GetLimit@{GetLimit}!bustub::LimitPlanNode@{bustub::LimitPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetLimit()}{GetLimit()}}
+{\footnotesize\ttfamily auto bustub\+::\+Limit\+Plan\+Node\+::\+Get\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ size\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The limit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1LimitPlanNode_a343229c6e214cfa85db345b22868a24c}\label{classbustub_1_1LimitPlanNode_a343229c6e214cfa85db345b22868a24c}} 
+\index{bustub::LimitPlanNode@{bustub::LimitPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::LimitPlanNode@{bustub::LimitPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Limit\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1LimitPlanNode_a5347be68c4409db1c68b7950c268df30}\label{classbustub_1_1LimitPlanNode_a5347be68c4409db1c68b7950c268df30}} 
+\index{bustub::LimitPlanNode@{bustub::LimitPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::LimitPlanNode@{bustub::LimitPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Limit\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1LimitPlanNode_a705660eb390b1718c595aed04257543d}\label{classbustub_1_1LimitPlanNode_a705660eb390b1718c595aed04257543d}} 
+\index{bustub::LimitPlanNode@{bustub::LimitPlanNode}!limit\_@{limit\_}}
+\index{limit\_@{limit\_}!bustub::LimitPlanNode@{bustub::LimitPlanNode}}
+\doxysubsubsection{\texorpdfstring{limit\_}{limit\_}}
+{\footnotesize\ttfamily std\+::size\+\_\+t bustub\+::\+Limit\+Plan\+Node\+::limit\+\_\+}
+
+The limit 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/limit\+\_\+plan.\+h\item 
+src/execution/fmt\+\_\+impl.\+cpp\end{DoxyCompactItemize}

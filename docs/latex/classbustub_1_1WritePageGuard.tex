@@ -1,0 +1,160 @@
+\hypertarget{classbustub_1_1WritePageGuard}{}\doxysection{bustub\+::Write\+Page\+Guard Class Reference}
+\label{classbustub_1_1WritePageGuard}\index{bustub::WritePageGuard@{bustub::WritePageGuard}}
+
+
+An RAII object that grants thread-\/safe write access to a page of data.  
+
+
+
+
+{\ttfamily \#include $<$page\+\_\+guard.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1WritePageGuard_a885b6709f5ba4a781d33ac9323f77df2}{Write\+Page\+Guard}} ()=default
+\begin{DoxyCompactList}\small\item\em The default constructor for a {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_a294215ba7d957ad88cba33cff748142b}\label{classbustub_1_1WritePageGuard_a294215ba7d957ad88cba33cff748142b}} 
+{\bfseries Write\+Page\+Guard} (const \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} \&)=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_aae42b4952f0e7aabc24e82f2950b33c7}\label{classbustub_1_1WritePageGuard_aae42b4952f0e7aabc24e82f2950b33c7}} 
+auto {\bfseries operator=} (const \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} \&) -\/$>$ \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} \&=delete
+\item 
+\mbox{\hyperlink{classbustub_1_1WritePageGuard_a1fd42ae1ac36a9e226d30999fc880b4d}{Write\+Page\+Guard}} (\mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} \&\&that) noexcept
+\begin{DoxyCompactList}\small\item\em The move constructor for {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1WritePageGuard_a7abd9625de8eb585b52d3bec8b5def5e}{operator=}} (\mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} \&\&that) noexcept -\/$>$ \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} \&
+\begin{DoxyCompactList}\small\item\em The move assignment operator for {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_a3a2f28a33376c0554c32504d6a8a6c48}\label{classbustub_1_1WritePageGuard_a3a2f28a33376c0554c32504d6a8a6c48}} 
+auto \mbox{\hyperlink{classbustub_1_1WritePageGuard_a3a2f28a33376c0554c32504d6a8a6c48}{Get\+Page\+Id}} () const -\/$>$ page\+\_\+id\+\_\+t
+\begin{DoxyCompactList}\small\item\em Gets the page ID of the page this guard is protecting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_a2675bc0d5e2721e1c0e993c1318360e3}\label{classbustub_1_1WritePageGuard_a2675bc0d5e2721e1c0e993c1318360e3}} 
+auto \mbox{\hyperlink{classbustub_1_1WritePageGuard_a2675bc0d5e2721e1c0e993c1318360e3}{Get\+Data}} () const -\/$>$ const char $\ast$
+\begin{DoxyCompactList}\small\item\em Gets a {\ttfamily const} pointer to the page of data this guard is protecting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_a2551ed55264a28fbd831964f7022b86d}\label{classbustub_1_1WritePageGuard_a2551ed55264a28fbd831964f7022b86d}} 
+{\footnotesize template$<$class T $>$ }\\auto {\bfseries As} () const -\/$>$ const T $\ast$
+\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_abe985bbd90f484385f7670f7a1cf705d}\label{classbustub_1_1WritePageGuard_abe985bbd90f484385f7670f7a1cf705d}} 
+auto \mbox{\hyperlink{classbustub_1_1WritePageGuard_abe985bbd90f484385f7670f7a1cf705d}{Get\+Data\+Mut}} () -\/$>$ char $\ast$
+\begin{DoxyCompactList}\small\item\em Gets a mutable pointer to the page of data this guard is protecting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_acdd13b3653e8de6b4a2505fbc30e23b9}\label{classbustub_1_1WritePageGuard_acdd13b3653e8de6b4a2505fbc30e23b9}} 
+{\footnotesize template$<$class T $>$ }\\auto {\bfseries As\+Mut} () -\/$>$ T $\ast$
+\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_ae1e09fd9fc5e747426bfd6fe8fa8969f}\label{classbustub_1_1WritePageGuard_ae1e09fd9fc5e747426bfd6fe8fa8969f}} 
+auto \mbox{\hyperlink{classbustub_1_1WritePageGuard_ae1e09fd9fc5e747426bfd6fe8fa8969f}{Is\+Dirty}} () const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Returns whether the page is dirty (modified but not flushed to the disk). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1WritePageGuard_a801122a04b5f35e40d981c7b2d7f3eb3}{Flush}} ()
+\begin{DoxyCompactList}\small\item\em Flushes this page\textquotesingle{}s data safely to disk. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1WritePageGuard_a4c946b040a922f2e257a10f7c3cce827}{Drop}} ()
+\begin{DoxyCompactList}\small\item\em Manually drops a valid {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}\textquotesingle{}s data. If this guard is invalid, this function does nothing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_a037f97ee39f5e805cd41422fa3c4029f}\label{classbustub_1_1WritePageGuard_a037f97ee39f5e805cd41422fa3c4029f}} 
+\mbox{\hyperlink{classbustub_1_1WritePageGuard_a037f97ee39f5e805cd41422fa3c4029f}{$\sim$\+Write\+Page\+Guard}} ()
+\begin{DoxyCompactList}\small\item\em The destructor for {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}. This destructor simply calls {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard_a4c946b040a922f2e257a10f7c3cce827}{Drop()}}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_aacdcadb3a97ed0cf5b98e4e4b88eea34}\label{classbustub_1_1WritePageGuard_aacdcadb3a97ed0cf5b98e4e4b88eea34}} 
+class \mbox{\hyperlink{classbustub_1_1WritePageGuard_aacdcadb3a97ed0cf5b98e4e4b88eea34}{Buffer\+Pool\+Manager}}
+\begin{DoxyCompactList}\small\item\em Only the buffer pool manager is allowed to construct a valid {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}.} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An RAII object that grants thread-\/safe write access to a page of data. 
+
+The {\itshape only} way that the Bus\+Tub system should interact with the buffer pool\textquotesingle{}s page data is via page guards. Since {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} is an RAII object, the system never has to manually lock and unlock a page\textquotesingle{}s latch.
+
+With a {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}, there can be only be 1 thread that has exclusive ownership over the page\textquotesingle{}s data. This means that the owner of the {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} can mutate the page\textquotesingle{}s data as much as they want. However, the existence of a {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} implies that no other {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} or any {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}s for the same page can exist at the same time. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_a885b6709f5ba4a781d33ac9323f77df2}\label{classbustub_1_1WritePageGuard_a885b6709f5ba4a781d33ac9323f77df2}} 
+\index{bustub::WritePageGuard@{bustub::WritePageGuard}!WritePageGuard@{WritePageGuard}}
+\index{WritePageGuard@{WritePageGuard}!bustub::WritePageGuard@{bustub::WritePageGuard}}
+\doxysubsubsection{\texorpdfstring{WritePageGuard()}{WritePageGuard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Write\+Page\+Guard\+::\+Write\+Page\+Guard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+The default constructor for a {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}. 
+
+Note that we do not EVER want use a guard that has only been default constructed. The only reason we even define this default constructor is to enable placing an \char`\"{}uninitialized\char`\"{} guard on the stack that we can later move assign via {\ttfamily =}.
+
+{\bfseries{Use of an uninitialized page guard is undefined behavior.}}
+
+In other words, the only way to get a valid {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} is through the buffer pool manager. \mbox{\Hypertarget{classbustub_1_1WritePageGuard_a1fd42ae1ac36a9e226d30999fc880b4d}\label{classbustub_1_1WritePageGuard_a1fd42ae1ac36a9e226d30999fc880b4d}} 
+\index{bustub::WritePageGuard@{bustub::WritePageGuard}!WritePageGuard@{WritePageGuard}}
+\index{WritePageGuard@{WritePageGuard}!bustub::WritePageGuard@{bustub::WritePageGuard}}
+\doxysubsubsection{\texorpdfstring{WritePageGuard()}{WritePageGuard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Write\+Page\+Guard\+::\+Write\+Page\+Guard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} \&\&}]{that }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The move constructor for {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}. 
+
+\hypertarget{classbustub_1_1WritePageGuard_autotoc_md60}{}\doxyparagraph{Implementation}\label{classbustub_1_1WritePageGuard_autotoc_md60}
+If you are unfamiliar with move semantics, please familiarize yourself with learning materials online. There are many great resources (including articles, Microsoft tutorials, You\+Tube videos) that explain this in depth.
+
+Make sure you invalidate the other guard, otherwise you might run into double free problems! For both objects, you need to update {\itshape at least} 5 fields each.
+
+TODO(\+P1)\+: Add implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em that} & The other page guard. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1WritePageGuard_a4c946b040a922f2e257a10f7c3cce827}\label{classbustub_1_1WritePageGuard_a4c946b040a922f2e257a10f7c3cce827}} 
+\index{bustub::WritePageGuard@{bustub::WritePageGuard}!Drop@{Drop}}
+\index{Drop@{Drop}!bustub::WritePageGuard@{bustub::WritePageGuard}}
+\doxysubsubsection{\texorpdfstring{Drop()}{Drop()}}
+{\footnotesize\ttfamily void bustub\+::\+Write\+Page\+Guard\+::\+Drop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Manually drops a valid {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}\textquotesingle{}s data. If this guard is invalid, this function does nothing. 
+
+\hypertarget{classbustub_1_1WritePageGuard_autotoc_md62}{}\doxyparagraph{Implementation}\label{classbustub_1_1WritePageGuard_autotoc_md62}
+Make sure you don\textquotesingle{}t double free! Also, think {\bfseries{very}} {\bfseries{VERY}} carefully about what resources you own and the order in which you release those resources. If you get the ordering wrong, you will very likely fail one of the later Gradescope tests. You may also want to take the buffer pool manager\textquotesingle{}s latch in a very specific scenario...
+
+TODO(\+P1)\+: Add implementation. \mbox{\Hypertarget{classbustub_1_1WritePageGuard_a801122a04b5f35e40d981c7b2d7f3eb3}\label{classbustub_1_1WritePageGuard_a801122a04b5f35e40d981c7b2d7f3eb3}} 
+\index{bustub::WritePageGuard@{bustub::WritePageGuard}!Flush@{Flush}}
+\index{Flush@{Flush}!bustub::WritePageGuard@{bustub::WritePageGuard}}
+\doxysubsubsection{\texorpdfstring{Flush()}{Flush()}}
+{\footnotesize\ttfamily void bustub\+::\+Write\+Page\+Guard\+::\+Flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Flushes this page\textquotesingle{}s data safely to disk. 
+
+TODO(\+P1)\+: Add implementation. \mbox{\Hypertarget{classbustub_1_1WritePageGuard_a7abd9625de8eb585b52d3bec8b5def5e}\label{classbustub_1_1WritePageGuard_a7abd9625de8eb585b52d3bec8b5def5e}} 
+\index{bustub::WritePageGuard@{bustub::WritePageGuard}!operator=@{operator=}}
+\index{operator=@{operator=}!bustub::WritePageGuard@{bustub::WritePageGuard}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily auto bustub\+::\+Write\+Page\+Guard\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} \&\&}]{that }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} \&\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The move assignment operator for {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}. 
+
+\hypertarget{classbustub_1_1WritePageGuard_autotoc_md61}{}\doxyparagraph{Implementation}\label{classbustub_1_1WritePageGuard_autotoc_md61}
+If you are unfamiliar with move semantics, please familiarize yourself with learning materials online. There are many great resources (including articles, Microsoft tutorials, You\+Tube videos) that explain this in depth.
+
+Make sure you invalidate the other guard, otherwise you might run into double free problems! For both objects, you need to update {\itshape at least} 5 fields each, and for the current object, make sure you release any resources it might be holding on to.
+
+TODO(\+P1)\+: Add implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em that} & The other page guard. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}\& The newly valid {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/page\+\_\+guard.\+h\item 
+src/storage/page/page\+\_\+guard.\+cpp\end{DoxyCompactItemize}

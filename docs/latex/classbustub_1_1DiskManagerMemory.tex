@@ -1,0 +1,91 @@
+\hypertarget{classbustub_1_1DiskManagerMemory}{}\doxysection{bustub\+::Disk\+Manager\+Memory Class Reference}
+\label{classbustub_1_1DiskManagerMemory}\index{bustub::DiskManagerMemory@{bustub::DiskManagerMemory}}
+
+
+{\ttfamily \#include $<$disk\+\_\+manager\+\_\+memory.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Disk\+Manager\+Memory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classbustub_1_1DiskManagerMemory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Disk\+Manager\+Memory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classbustub_1_1DiskManagerMemory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1DiskManagerMemory_ad7663a4006d2c1123792a442f1fbb9f6}{Disk\+Manager\+Memory}} (size\+\_\+t capacity)
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManagerMemory_a8504fdeacf18e39a88107e4897003708}{Write\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id, const char $\ast$page\+\_\+data) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManagerMemory_ac7b7c26dc8c1dd3b8d4154f0f9eabc26}{Read\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id, char $\ast$page\+\_\+data) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1DiskManagerMemory}{Disk\+Manager\+Memory}} replicates the utility of \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} on memory. It is primarily used for data structure performance testing. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1DiskManagerMemory_ad7663a4006d2c1123792a442f1fbb9f6}\label{classbustub_1_1DiskManagerMemory_ad7663a4006d2c1123792a442f1fbb9f6}} 
+\index{bustub::DiskManagerMemory@{bustub::DiskManagerMemory}!DiskManagerMemory@{DiskManagerMemory}}
+\index{DiskManagerMemory@{DiskManagerMemory}!bustub::DiskManagerMemory@{bustub::DiskManagerMemory}}
+\doxysubsubsection{\texorpdfstring{DiskManagerMemory()}{DiskManagerMemory()}}
+{\footnotesize\ttfamily bustub\+::\+Disk\+Manager\+Memory\+::\+Disk\+Manager\+Memory (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor\+: used for memory based manager 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1DiskManagerMemory_ac7b7c26dc8c1dd3b8d4154f0f9eabc26}\label{classbustub_1_1DiskManagerMemory_ac7b7c26dc8c1dd3b8d4154f0f9eabc26}} 
+\index{bustub::DiskManagerMemory@{bustub::DiskManagerMemory}!ReadPage@{ReadPage}}
+\index{ReadPage@{ReadPage}!bustub::DiskManagerMemory@{bustub::DiskManagerMemory}}
+\doxysubsubsection{\texorpdfstring{ReadPage()}{ReadPage()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+Memory\+::\+Read\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id,  }\item[{char $\ast$}]{page\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Read a page from the database file. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em page\+\_\+id} & id of the page \\
+\hline
+\mbox{\texttt{ out}}  & {\em page\+\_\+data} & output buffer \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1DiskManager_aa6cc12345be1e07c2fdb70c50af5e2d8}{bustub\+::\+Disk\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1DiskManagerMemory_a8504fdeacf18e39a88107e4897003708}\label{classbustub_1_1DiskManagerMemory_a8504fdeacf18e39a88107e4897003708}} 
+\index{bustub::DiskManagerMemory@{bustub::DiskManagerMemory}!WritePage@{WritePage}}
+\index{WritePage@{WritePage}!bustub::DiskManagerMemory@{bustub::DiskManagerMemory}}
+\doxysubsubsection{\texorpdfstring{WritePage()}{WritePage()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+Memory\+::\+Write\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id,  }\item[{const char $\ast$}]{page\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Write a page to the database file. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of the page \\
+\hline
+{\em page\+\_\+data} & raw page data \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1DiskManager_ae89df7f59076403589c78c52482c4ceb}{bustub\+::\+Disk\+Manager}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/disk/disk\+\_\+manager\+\_\+memory.\+h\item 
+src/storage/disk/disk\+\_\+manager\+\_\+memory.\+cpp\end{DoxyCompactItemize}

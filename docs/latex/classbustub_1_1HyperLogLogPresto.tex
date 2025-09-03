@@ -1,0 +1,55 @@
+\hypertarget{classbustub_1_1HyperLogLogPresto}{}\doxysection{bustub\+::Hyper\+Log\+Log\+Presto$<$ Key\+Type $>$ Class Template Reference}
+\label{classbustub_1_1HyperLogLogPresto}\index{bustub::HyperLogLogPresto$<$ KeyType $>$@{bustub::HyperLogLogPresto$<$ KeyType $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1HyperLogLogPresto_aa7759fcb2ad6991d5020f92aed482a0e}\label{classbustub_1_1HyperLogLogPresto_aa7759fcb2ad6991d5020f92aed482a0e}} 
+\mbox{\hyperlink{classbustub_1_1HyperLogLogPresto_aa7759fcb2ad6991d5020f92aed482a0e}{Hyper\+Log\+Log\+Presto}} ()=delete
+\begin{DoxyCompactList}\small\item\em Disabling default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1HyperLogLogPresto_af83d73f9a1989e65fd4aa2a9ecbefcaa}\label{classbustub_1_1HyperLogLogPresto_af83d73f9a1989e65fd4aa2a9ecbefcaa}} 
+\mbox{\hyperlink{classbustub_1_1HyperLogLogPresto_af83d73f9a1989e65fd4aa2a9ecbefcaa}{Hyper\+Log\+Log\+Presto}} (int16\+\_\+t n\+\_\+leading\+\_\+bits)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1HyperLogLogPresto_aeb163193427e5c27c43eeda3a6162302}\label{classbustub_1_1HyperLogLogPresto_aeb163193427e5c27c43eeda3a6162302}} 
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLogPresto_aeb163193427e5c27c43eeda3a6162302}{Get\+Dense\+Bucket}} () const -\/$>$ std\+::vector$<$ std\+::bitset$<$ DENSE\+\_\+\+BUCKET\+\_\+\+SIZE $>$$>$
+\begin{DoxyCompactList}\small\item\em Returns the dense\+\_\+bucket\+\_\+ data structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1HyperLogLogPresto_a97754820e26b9def85f92fc6eb051541}\label{classbustub_1_1HyperLogLogPresto_a97754820e26b9def85f92fc6eb051541}} 
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLogPresto_a97754820e26b9def85f92fc6eb051541}{Get\+Overflow\+Bucketof\+Index}} (uint16\+\_\+t idx)
+\begin{DoxyCompactList}\small\item\em Returns overflow bucket of a specific given index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1HyperLogLogPresto_a05106bba5237850792898d63d7c77afd}\label{classbustub_1_1HyperLogLogPresto_a05106bba5237850792898d63d7c77afd}} 
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLogPresto_a05106bba5237850792898d63d7c77afd}{Get\+Cardinality}} () const -\/$>$ uint64\+\_\+t
+\begin{DoxyCompactList}\small\item\em Returns the cardinality of the set. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLogPresto_a3962452f68db113bb09f6dcb4db927a2}{Add\+Elem}} (Key\+Type val) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Element is added for HLL calculation. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLogPresto_ad985a3e1621661015f605df8746dadfa}{Compute\+Cardinality}} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Function to compute cardinality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1HyperLogLogPresto_a3962452f68db113bb09f6dcb4db927a2}\label{classbustub_1_1HyperLogLogPresto_a3962452f68db113bb09f6dcb4db927a2}} 
+\index{bustub::HyperLogLogPresto$<$ KeyType $>$@{bustub::HyperLogLogPresto$<$ KeyType $>$}!AddElem@{AddElem}}
+\index{AddElem@{AddElem}!bustub::HyperLogLogPresto$<$ KeyType $>$@{bustub::HyperLogLogPresto$<$ KeyType $>$}}
+\doxysubsubsection{\texorpdfstring{AddElem()}{AddElem()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLogPresto}{bustub\+::\+Hyper\+Log\+Log\+Presto}}$<$ Key\+Type $>$\+::Add\+Elem (\begin{DoxyParamCaption}\item[{Key\+Type}]{val }\end{DoxyParamCaption}) -\/$>$ void}
+
+
+
+Element is added for HLL calculation. 
+
+@\+TODO(student) Implement this function!\mbox{\Hypertarget{classbustub_1_1HyperLogLogPresto_ad985a3e1621661015f605df8746dadfa}\label{classbustub_1_1HyperLogLogPresto_ad985a3e1621661015f605df8746dadfa}} 
+\index{bustub::HyperLogLogPresto$<$ KeyType $>$@{bustub::HyperLogLogPresto$<$ KeyType $>$}!ComputeCardinality@{ComputeCardinality}}
+\index{ComputeCardinality@{ComputeCardinality}!bustub::HyperLogLogPresto$<$ KeyType $>$@{bustub::HyperLogLogPresto$<$ KeyType $>$}}
+\doxysubsubsection{\texorpdfstring{ComputeCardinality()}{ComputeCardinality()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HyperLogLogPresto}{bustub\+::\+Hyper\+Log\+Log\+Presto}}$<$ T $>$\+::Compute\+Cardinality}
+
+
+
+Function to compute cardinality. 
+
+@\+TODO(student) Implement this function!
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/hyperloglog\+\_\+presto.\+h\item 
+src/primer/hyperloglog\+\_\+presto.\+cpp\end{DoxyCompactItemize}

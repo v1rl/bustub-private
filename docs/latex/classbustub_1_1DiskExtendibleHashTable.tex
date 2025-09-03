@@ -1,0 +1,156 @@
+\hypertarget{classbustub_1_1DiskExtendibleHashTable}{}\doxysection{bustub\+::Disk\+Extendible\+Hash\+Table$<$ K, V, KC $>$ Class Template Reference}
+\label{classbustub_1_1DiskExtendibleHashTable}\index{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}}
+
+
+{\ttfamily \#include $<$disk\+\_\+extendible\+\_\+hash\+\_\+table.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable_adf3b2bf41e3bda80dc569682cb4d99b0}{Disk\+Extendible\+Hash\+Table}} (const std\+::string \&name, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$bpm, const KC \&cmp, const \mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ K $>$ \&hash\+\_\+fn, uint32\+\_\+t header\+\_\+max\+\_\+depth=HTABLE\+\_\+\+HEADER\+\_\+\+MAX\+\_\+\+DEPTH, uint32\+\_\+t directory\+\_\+max\+\_\+depth=HTABLE\+\_\+\+DIRECTORY\+\_\+\+MAX\+\_\+\+DEPTH, uint32\+\_\+t bucket\+\_\+max\+\_\+size=HTable\+Bucket\+Array\+Size(sizeof(std\+::pair$<$ K, V $>$)))
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{Disk\+Extendible\+Hash\+Table}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable_a2e6ba2452bdc0901482510106b47a5f8}{Insert}} (const K \&key, const V \&value, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction=nullptr) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable_a3515e9649a53eb98a9959187b1e1771a}{Remove}} (const K \&key, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction=nullptr) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable_a411ceb9c5acc115e82496232c245911b}{Get\+Value}} (const K \&key, std\+::vector$<$ V $>$ $\ast$result, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction=nullptr) const -\/$>$ bool
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable_acd539690cfbd53e2955b3c1b925757e7}{Verify\+Integrity}} () const
+\item 
+auto \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable_ac05258d5ecf5cbf418aae264c0e0a39e}{Get\+Header\+Page\+Id}} () const -\/$>$ page\+\_\+id\+\_\+t
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable_a1cb747f236c3bb310e28a7ba1efef13f}{Print\+HT}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename V, typename KC$>$\newline
+class bustub\+::\+Disk\+Extendible\+Hash\+Table$<$ K, V, KC $>$}
+
+Implementation of extendible hash table that is backed by a buffer pool manager. Non-\/unique keys are supported. Supports insert and delete. The table grows/shrinks dynamically as buckets become full/empty. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1DiskExtendibleHashTable_adf3b2bf41e3bda80dc569682cb4d99b0}\label{classbustub_1_1DiskExtendibleHashTable_adf3b2bf41e3bda80dc569682cb4d99b0}} 
+\index{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}!DiskExtendibleHashTable@{DiskExtendibleHashTable}}
+\index{DiskExtendibleHashTable@{DiskExtendibleHashTable}!bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}}
+\doxysubsubsection{\texorpdfstring{DiskExtendibleHashTable()}{DiskExtendibleHashTable()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+\mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{bustub\+::\+Disk\+Extendible\+Hash\+Table}}$<$ K, V, KC $>$\+::\mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{Disk\+Extendible\+Hash\+Table}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{bpm,  }\item[{const KC \&}]{cmp,  }\item[{const \mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ K $>$ \&}]{hash\+\_\+fn,  }\item[{uint32\+\_\+t}]{header\+\_\+max\+\_\+depth = {\ttfamily HTABLE\+\_\+HEADER\+\_\+MAX\+\_\+DEPTH},  }\item[{uint32\+\_\+t}]{directory\+\_\+max\+\_\+depth = {\ttfamily HTABLE\+\_\+DIRECTORY\+\_\+MAX\+\_\+DEPTH},  }\item[{uint32\+\_\+t}]{bucket\+\_\+max\+\_\+size = {\ttfamily HTableBucketArraySize(sizeof(std\+:\+:pair$<$K,~V$>$))} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates a new \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{Disk\+Extendible\+Hash\+Table}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em bpm} & buffer pool manager to be used \\
+\hline
+{\em cmp} & comparator for keys \\
+\hline
+{\em hash\+\_\+fn} & the hash function \\
+\hline
+{\em header\+\_\+max\+\_\+depth} & the max depth allowed for the header page \\
+\hline
+{\em directory\+\_\+max\+\_\+depth} & the max depth allowed for the directory page \\
+\hline
+{\em bucket\+\_\+max\+\_\+size} & the max size allowed for the bucket page array \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1DiskExtendibleHashTable_ac05258d5ecf5cbf418aae264c0e0a39e}\label{classbustub_1_1DiskExtendibleHashTable_ac05258d5ecf5cbf418aae264c0e0a39e}} 
+\index{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}!GetHeaderPageId@{GetHeaderPageId}}
+\index{GetHeaderPageId@{GetHeaderPageId}!bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}}
+\doxysubsubsection{\texorpdfstring{GetHeaderPageId()}{GetHeaderPageId()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{bustub\+::\+Disk\+Extendible\+Hash\+Table}}$<$ K, V, KC $>$\+::Get\+Header\+Page\+Id}
+
+Helper function to expose the header page id. \mbox{\Hypertarget{classbustub_1_1DiskExtendibleHashTable_a411ceb9c5acc115e82496232c245911b}\label{classbustub_1_1DiskExtendibleHashTable_a411ceb9c5acc115e82496232c245911b}} 
+\index{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{bustub\+::\+Disk\+Extendible\+Hash\+Table}}$<$ K, V, KC $>$\+::Get\+Value (\begin{DoxyParamCaption}\item[{const K \&}]{key,  }\item[{std\+::vector$<$ V $>$ $\ast$}]{result,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction = {\ttfamily nullptr} }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+TODO(\+P2)\+: Add implementation Get the value associated with a given key in the hash table.
+
+Note(fall2023)\+: This semester you will only need to support unique key-\/value pairs.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em key} & the key to look up \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & the value(s) associated with a given key \\
+\hline
+ & {\em transaction} & the current transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value(s) associated with the given key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1DiskExtendibleHashTable_a2e6ba2452bdc0901482510106b47a5f8}\label{classbustub_1_1DiskExtendibleHashTable_a2e6ba2452bdc0901482510106b47a5f8}} 
+\index{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{bustub\+::\+Disk\+Extendible\+Hash\+Table}}$<$ K, V, KC $>$\+::Insert (\begin{DoxyParamCaption}\item[{const K \&}]{key,  }\item[{const V \&}]{value,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction = {\ttfamily nullptr} }\end{DoxyParamCaption}) -\/$>$ bool}
+
+TODO(\+P2)\+: Add implementation Inserts a key-\/value pair into the hash table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to create \\
+\hline
+{\em value} & the value to be associated with the key \\
+\hline
+{\em transaction} & the current transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if insert succeeded, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1DiskExtendibleHashTable_a1cb747f236c3bb310e28a7ba1efef13f}\label{classbustub_1_1DiskExtendibleHashTable_a1cb747f236c3bb310e28a7ba1efef13f}} 
+\index{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}!PrintHT@{PrintHT}}
+\index{PrintHT@{PrintHT}!bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}}
+\doxysubsubsection{\texorpdfstring{PrintHT()}{PrintHT()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+void \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{bustub\+::\+Disk\+Extendible\+Hash\+Table}}$<$ K, V, KC $>$\+::Print\+HT}
+
+Helper function to print out the \mbox{\hyperlink{classbustub_1_1HashTable}{Hash\+Table}}. \mbox{\Hypertarget{classbustub_1_1DiskExtendibleHashTable_a3515e9649a53eb98a9959187b1e1771a}\label{classbustub_1_1DiskExtendibleHashTable_a3515e9649a53eb98a9959187b1e1771a}} 
+\index{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{bustub\+::\+Disk\+Extendible\+Hash\+Table}}$<$ K, V, KC $>$\+::Remove (\begin{DoxyParamCaption}\item[{const K \&}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction = {\ttfamily nullptr} }\end{DoxyParamCaption}) -\/$>$ bool}
+
+TODO(\+P2)\+: Add implementation Removes a key-\/value pair from the hash table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to delete \\
+\hline
+{\em value} & the value to delete \\
+\hline
+{\em transaction} & the current transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if remove succeeded, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1DiskExtendibleHashTable_acd539690cfbd53e2955b3c1b925757e7}\label{classbustub_1_1DiskExtendibleHashTable_acd539690cfbd53e2955b3c1b925757e7}} 
+\index{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}!VerifyIntegrity@{VerifyIntegrity}}
+\index{VerifyIntegrity@{VerifyIntegrity}!bustub::DiskExtendibleHashTable$<$ K, V, KC $>$@{bustub::DiskExtendibleHashTable$<$ K, V, KC $>$}}
+\doxysubsubsection{\texorpdfstring{VerifyIntegrity()}{VerifyIntegrity()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+void \mbox{\hyperlink{classbustub_1_1DiskExtendibleHashTable}{bustub\+::\+Disk\+Extendible\+Hash\+Table}}$<$ K, V, KC $>$\+::Verify\+Integrity}
+
+Helper function to verify the integrity of the extendible hash table\textquotesingle{}s directory. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/container/disk/hash/disk\+\_\+extendible\+\_\+hash\+\_\+table.\+h\item 
+src/container/disk/hash/disk\+\_\+extendible\+\_\+hash\+\_\+table.\+cpp\item 
+src/container/disk/hash/disk\+\_\+extendible\+\_\+hash\+\_\+table\+\_\+utils.\+cpp\end{DoxyCompactItemize}

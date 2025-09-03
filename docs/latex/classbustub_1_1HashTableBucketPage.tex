@@ -1,0 +1,64 @@
+\hypertarget{classbustub_1_1HashTableBucketPage}{}\doxysection{bustub\+::Hash\+Table\+Bucket\+Page$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ Class Template Reference}
+\label{classbustub_1_1HashTableBucketPage}\index{bustub::HashTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+
+
+{\ttfamily \#include $<$hash\+\_\+table\+\_\+bucket\+\_\+page.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_a58740775ce68a85cbe956d27ca4d7c1f}\label{classbustub_1_1HashTableBucketPage_a58740775ce68a85cbe956d27ca4d7c1f}} 
+auto {\bfseries Get\+Value} (Key\+Type key, Key\+Comparator cmp, std\+::vector$<$ Value\+Type $>$ $\ast$result) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_af0c12b1b41092c7b48539ea2b1289e66}\label{classbustub_1_1HashTableBucketPage_af0c12b1b41092c7b48539ea2b1289e66}} 
+auto {\bfseries Insert} (Key\+Type key, Value\+Type value, Key\+Comparator cmp) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_a3f5c4b758ee0ffa141c4e27896266292}\label{classbustub_1_1HashTableBucketPage_a3f5c4b758ee0ffa141c4e27896266292}} 
+auto {\bfseries Remove} (Key\+Type key, Value\+Type value, Key\+Comparator cmp) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_aef065d0825121f78a556397649ecf8f6}\label{classbustub_1_1HashTableBucketPage_aef065d0825121f78a556397649ecf8f6}} 
+auto {\bfseries Key\+At} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ Key\+Type
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_a97fdb035ea0c76d2b785e454eb79760a}\label{classbustub_1_1HashTableBucketPage_a97fdb035ea0c76d2b785e454eb79760a}} 
+auto {\bfseries Value\+At} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ Value\+Type
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_aa84685c50c65907b1ecb0a627149b347}\label{classbustub_1_1HashTableBucketPage_aa84685c50c65907b1ecb0a627149b347}} 
+void {\bfseries Remove\+At} (uint32\+\_\+t bucket\+\_\+idx)
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_ad4d89a3a89f2a51c1520ea0ad0e9e75b}\label{classbustub_1_1HashTableBucketPage_ad4d89a3a89f2a51c1520ea0ad0e9e75b}} 
+auto {\bfseries Is\+Occupied} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_a4207fa9f15422fe24c97bf36e708172a}\label{classbustub_1_1HashTableBucketPage_a4207fa9f15422fe24c97bf36e708172a}} 
+void {\bfseries Set\+Occupied} (uint32\+\_\+t bucket\+\_\+idx)
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_a3fc57e1d8e9ab8c9d8a98926bcb668ff}\label{classbustub_1_1HashTableBucketPage_a3fc57e1d8e9ab8c9d8a98926bcb668ff}} 
+auto {\bfseries Is\+Readable} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_ade46b57720d5cc3b41924434b9cff910}\label{classbustub_1_1HashTableBucketPage_ade46b57720d5cc3b41924434b9cff910}} 
+void {\bfseries Set\+Readable} (uint32\+\_\+t bucket\+\_\+idx)
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_a632e4deaa8a8a56bcd5320382686b24c}\label{classbustub_1_1HashTableBucketPage_a632e4deaa8a8a56bcd5320382686b24c}} 
+auto {\bfseries Num\+Readable} () -\/$>$ uint32\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_a2012e2d5665383b7528ce8618747a81f}\label{classbustub_1_1HashTableBucketPage_a2012e2d5665383b7528ce8618747a81f}} 
+auto {\bfseries Is\+Full} () -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_a9129f24305558c41a1618fd0ec256341}\label{classbustub_1_1HashTableBucketPage_a9129f24305558c41a1618fd0ec256341}} 
+auto {\bfseries Is\+Empty} () -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBucketPage_a8aa61d6ccb313bf5d7de0cb68b813d01}\label{classbustub_1_1HashTableBucketPage_a8aa61d6ccb313bf5d7de0cb68b813d01}} 
+void {\bfseries Print\+Bucket} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key\+Type, typename Value\+Type, typename Key\+Comparator$>$\newline
+class bustub\+::\+Hash\+Table\+Bucket\+Page$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}
+
+Store indexed key and and value together within bucket page. Supports non-\/unique keys.\hypertarget{classbustub_1_1HashTableBucketPage_autotoc_md44}{}\doxysubsubsection{Bucket page format (keys are stored in order)\+:}\label{classbustub_1_1HashTableBucketPage_autotoc_md44}
+\hypertarget{classbustub_1_1HashTableBucketPage_autotoc_md45}{}\doxysubsubsection{$\vert$ KEY(1) + VALUE(1) $\vert$ KEY(2) + VALUE(2) $\vert$ ... $\vert$ KEY(n) + VALUE(n)}\label{classbustub_1_1HashTableBucketPage_autotoc_md45}
+Here \textquotesingle{}+\textquotesingle{} means concatenation. The above format omits the space required for the occupied\+\_\+ and readable\+\_\+ arrays. More information is in \mbox{\hyperlink{hash__table__page__defs_8h_source}{storage/page/hash\+\_\+table\+\_\+page\+\_\+defs.\+h}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/hash\+\_\+table\+\_\+bucket\+\_\+page.\+h\end{DoxyCompactItemize}

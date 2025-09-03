@@ -1,0 +1,169 @@
+\hypertarget{classbustub_1_1Transaction}{}\doxysection{bustub\+::Transaction Class Reference}
+\label{classbustub_1_1Transaction}\index{bustub::Transaction@{bustub::Transaction}}
+
+
+{\ttfamily \#include $<$transaction.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_a0edaa5d6451d8f95d4d6c7d7c20f9644}\label{classbustub_1_1Transaction_a0edaa5d6451d8f95d4d6c7d7c20f9644}} 
+{\bfseries Transaction} (txn\+\_\+id\+\_\+t txn\+\_\+id, \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{Isolation\+Level}} isolation\+\_\+level=Isolation\+Level\+::\+SNAPSHOT\+\_\+\+ISOLATION)
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_a4bdedef75c39b7574b50291c7524ca11}\label{classbustub_1_1Transaction_a4bdedef75c39b7574b50291c7524ca11}} 
+{\bfseries DISALLOW\+\_\+\+COPY} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}})
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_a7c60c7441fedd73af2eb8634cca1a3b5}{Get\+Thread\+Id}} () const -\/$>$ std\+::thread\+::id
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_a0cff1804d9a30080ec97cc0c2e4c16f1}{Get\+Transaction\+Id}} () const -\/$>$ txn\+\_\+id\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_a5be31ea6e513abaa781b0c4b91affcfd}{Get\+Transaction\+Id\+Human\+Readable}} () const -\/$>$ txn\+\_\+id\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_a30aa3f592f018ee7943ffc417b600edd}{Get\+Transaction\+Temp\+Ts}} () const -\/$>$ timestamp\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_a2b46ab2b6e37d0559e53db5e7a2fae8b}{Get\+Isolation\+Level}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{Isolation\+Level}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_a14ee844d68c5926b2b333cfe65ada5aa}{Get\+Transaction\+State}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20}{Transaction\+State}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_a2e2cb4bc3c4cd7ca12edfee6c5f719ca}{Get\+Read\+Ts}} () const -\/$>$ timestamp\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_ac41b22b1ee193001a6d626919d55eb9c}{Get\+Commit\+Ts}} () const -\/$>$ timestamp\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_a1ff4db80821c56dbdd41f6f4829a1ad1}{Modify\+Undo\+Log}} (int log\+\_\+idx, \mbox{\hyperlink{structbustub_1_1UndoLog}{Undo\+Log}} new\+\_\+log)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_ab57d40edecbf7040820e9a674072252b}{Append\+Undo\+Log}} (\mbox{\hyperlink{structbustub_1_1UndoLog}{Undo\+Log}} log) -\/$>$ \mbox{\hyperlink{structbustub_1_1UndoLink}{Undo\+Link}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_abeb7e8293bb06abd6d236083c2db83f8}\label{classbustub_1_1Transaction_abeb7e8293bb06abd6d236083c2db83f8}} 
+auto {\bfseries Append\+Write\+Set} (\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} t, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid)
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_ab13c5ad8203b0c8dafab8c510ae1bbaf}\label{classbustub_1_1Transaction_ab13c5ad8203b0c8dafab8c510ae1bbaf}} 
+auto {\bfseries Get\+Write\+Sets} () -\/$>$ const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} $>$$>$ \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_ae1889cc4379b2e16e8291de9ea892414}\label{classbustub_1_1Transaction_ae1889cc4379b2e16e8291de9ea892414}} 
+auto {\bfseries Append\+Scan\+Predicate} (\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} t, const Abstract\+Expression\+Ref \&predicate)
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_a82ed25e7223fe0ab37af31a3cc8dbe4b}\label{classbustub_1_1Transaction_a82ed25e7223fe0ab37af31a3cc8dbe4b}} 
+auto {\bfseries Get\+Scan\+Predicates} () -\/$>$ const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}, std\+::vector$<$ Abstract\+Expression\+Ref $>$$>$ \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_aed9cdd45ccd59cbeafe80e3d7c5c7a04}\label{classbustub_1_1Transaction_aed9cdd45ccd59cbeafe80e3d7c5c7a04}} 
+auto {\bfseries Get\+Undo\+Log} (size\+\_\+t log\+\_\+id) -\/$>$ \mbox{\hyperlink{structbustub_1_1UndoLog}{Undo\+Log}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_aa4235adff075b66f4832c282b5ae93ee}\label{classbustub_1_1Transaction_aa4235adff075b66f4832c282b5ae93ee}} 
+auto {\bfseries Get\+Undo\+Log\+Num} () -\/$>$ size\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Transaction_ac7019e1b478693a94ebe5fe4a808708e}{Clear\+Undo\+Log}} () -\/$>$ void
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_afbf7dfc30c0167c606092c1d4e98aed8}\label{classbustub_1_1Transaction_afbf7dfc30c0167c606092c1d4e98aed8}} 
+void {\bfseries Set\+Tainted} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Transaction_adb936c8577cc481f904aee636498cfc0}\label{classbustub_1_1Transaction_adb936c8577cc481f904aee636498cfc0}} 
+class {\bfseries Transaction\+Manager}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} tracks information related to a transaction. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Transaction_ab57d40edecbf7040820e9a674072252b}\label{classbustub_1_1Transaction_ab57d40edecbf7040820e9a674072252b}} 
+\index{bustub::Transaction@{bustub::Transaction}!AppendUndoLog@{AppendUndoLog}}
+\index{AppendUndoLog@{AppendUndoLog}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{AppendUndoLog()}{AppendUndoLog()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Append\+Undo\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbustub_1_1UndoLog}{Undo\+Log}}}]{log }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{structbustub_1_1UndoLink}{Undo\+Link}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the index of the undo log in this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_ac7019e1b478693a94ebe5fe4a808708e}\label{classbustub_1_1Transaction_ac7019e1b478693a94ebe5fe4a808708e}} 
+\index{bustub::Transaction@{bustub::Transaction}!ClearUndoLog@{ClearUndoLog}}
+\index{ClearUndoLog@{ClearUndoLog}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{ClearUndoLog()}{ClearUndoLog()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Clear\+Undo\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ void \hspace{0.3cm}{\ttfamily [inline]}}
+
+Use this function in leaderboard benchmarks for online garbage collection. For stop-\/the-\/world GC, simply remove the txn from the txn\+\_\+map. \mbox{\Hypertarget{classbustub_1_1Transaction_ac41b22b1ee193001a6d626919d55eb9c}\label{classbustub_1_1Transaction_ac41b22b1ee193001a6d626919d55eb9c}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetCommitTs@{GetCommitTs}}
+\index{GetCommitTs@{GetCommitTs}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetCommitTs()}{GetCommitTs()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Get\+Commit\+Ts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ timestamp\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the commit ts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a2b46ab2b6e37d0559e53db5e7a2fae8b}\label{classbustub_1_1Transaction_a2b46ab2b6e37d0559e53db5e7a2fae8b}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetIsolationLevel@{GetIsolationLevel}}
+\index{GetIsolationLevel@{GetIsolationLevel}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetIsolationLevel()}{GetIsolationLevel()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Get\+Isolation\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{Isolation\+Level}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the isolation level of this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a2e2cb4bc3c4cd7ca12edfee6c5f719ca}\label{classbustub_1_1Transaction_a2e2cb4bc3c4cd7ca12edfee6c5f719ca}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetReadTs@{GetReadTs}}
+\index{GetReadTs@{GetReadTs}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetReadTs()}{GetReadTs()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Get\+Read\+Ts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ timestamp\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the read ts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a7c60c7441fedd73af2eb8634cca1a3b5}\label{classbustub_1_1Transaction_a7c60c7441fedd73af2eb8634cca1a3b5}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetThreadId@{GetThreadId}}
+\index{GetThreadId@{GetThreadId}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetThreadId()}{GetThreadId()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Get\+Thread\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::thread\+::id \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the id of the thread running the transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a0cff1804d9a30080ec97cc0c2e4c16f1}\label{classbustub_1_1Transaction_a0cff1804d9a30080ec97cc0c2e4c16f1}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetTransactionId@{GetTransactionId}}
+\index{GetTransactionId@{GetTransactionId}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetTransactionId()}{GetTransactionId()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Get\+Transaction\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ txn\+\_\+id\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the id of this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a5be31ea6e513abaa781b0c4b91affcfd}\label{classbustub_1_1Transaction_a5be31ea6e513abaa781b0c4b91affcfd}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetTransactionIdHumanReadable@{GetTransactionIdHumanReadable}}
+\index{GetTransactionIdHumanReadable@{GetTransactionIdHumanReadable}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetTransactionIdHumanReadable()}{GetTransactionIdHumanReadable()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Get\+Transaction\+Id\+Human\+Readable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ txn\+\_\+id\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the id of this transaction, stripping the highest bit. NEVER use/store this value unless for debugging. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a14ee844d68c5926b2b333cfe65ada5aa}\label{classbustub_1_1Transaction_a14ee844d68c5926b2b333cfe65ada5aa}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetTransactionState@{GetTransactionState}}
+\index{GetTransactionState@{GetTransactionState}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetTransactionState()}{GetTransactionState()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Get\+Transaction\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20}{Transaction\+State}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the transaction state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a30aa3f592f018ee7943ffc417b600edd}\label{classbustub_1_1Transaction_a30aa3f592f018ee7943ffc417b600edd}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetTransactionTempTs@{GetTransactionTempTs}}
+\index{GetTransactionTempTs@{GetTransactionTempTs}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetTransactionTempTs()}{GetTransactionTempTs()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Get\+Transaction\+Temp\+Ts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ timestamp\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the temporary timestamp of this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a1ff4db80821c56dbdd41f6f4829a1ad1}\label{classbustub_1_1Transaction_a1ff4db80821c56dbdd41f6f4829a1ad1}} 
+\index{bustub::Transaction@{bustub::Transaction}!ModifyUndoLog@{ModifyUndoLog}}
+\index{ModifyUndoLog@{ModifyUndoLog}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{ModifyUndoLog()}{ModifyUndoLog()}}
+{\footnotesize\ttfamily auto bustub\+::\+Transaction\+::\+Modify\+Undo\+Log (\begin{DoxyParamCaption}\item[{int}]{log\+\_\+idx,  }\item[{\mbox{\hyperlink{structbustub_1_1UndoLog}{Undo\+Log}}}]{new\+\_\+log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Modify an existing undo log. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/transaction.\+h\item 
+src/concurrency/transaction\+\_\+manager\+\_\+impl.\+cpp\end{DoxyCompactItemize}

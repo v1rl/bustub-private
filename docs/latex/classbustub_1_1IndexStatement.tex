@@ -1,0 +1,93 @@
+\hypertarget{classbustub_1_1IndexStatement}{}\doxysection{bustub\+::Index\+Statement Class Reference}
+\label{classbustub_1_1IndexStatement}\index{bustub::IndexStatement@{bustub::IndexStatement}}
+
+
+Inheritance diagram for bustub\+::Index\+Statement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classbustub_1_1IndexStatement__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Index\+Statement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classbustub_1_1IndexStatement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1IndexStatement_a9f3f5dba0825928dacbb5cb6f9f2df38}\label{classbustub_1_1IndexStatement_a9f3f5dba0825928dacbb5cb6f9f2df38}} 
+{\bfseries Index\+Statement} (std\+::string index\+\_\+name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef}{Bound\+Base\+Table\+Ref}} $>$ table, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundColumnRef}{Bound\+Column\+Ref}} $>$$>$ cols, std\+::string index\+\_\+type, std\+::vector$<$ std\+::string $>$ col\+\_\+options, std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$$>$ options)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexStatement_afaecb3ea8b462572d2f63eeab9022d47}{To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1IndexStatement_a1193fe802e4f190bd0610cb839322597}{index\+\_\+name\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef}{Bound\+Base\+Table\+Ref}} $>$ \mbox{\hyperlink{classbustub_1_1IndexStatement_a52f6b2926c2fc03e95e6c310fafb512d}{table\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundColumnRef}{Bound\+Column\+Ref}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1IndexStatement_ae062bb7bb96423a13f5572cfcd464bbe}{cols\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1IndexStatement_a5bfe8700ba0fbfae6a36885af4c900fb}{index\+\_\+type\+\_\+}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1IndexStatement_a977d7f4536416cf39ae4d87263299dcf}\label{classbustub_1_1IndexStatement_a977d7f4536416cf39ae4d87263299dcf}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries col\+\_\+options\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1IndexStatement_a0967acf67e0e5488a69498c5a503919e}\label{classbustub_1_1IndexStatement_a0967acf67e0e5488a69498c5a503919e}} 
+std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ {\bfseries options\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexStatement_afaecb3ea8b462572d2f63eeab9022d47}\label{classbustub_1_1IndexStatement_afaecb3ea8b462572d2f63eeab9022d47}} 
+\index{bustub::IndexStatement@{bustub::IndexStatement}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::IndexStatement@{bustub::IndexStatement}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Statement\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render this statement as a string. 
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1BoundStatement_aec43c00d8ab208b2cfb0e26fb5bb4c32}{bustub\+::\+Bound\+Statement}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexStatement_ae062bb7bb96423a13f5572cfcd464bbe}\label{classbustub_1_1IndexStatement_ae062bb7bb96423a13f5572cfcd464bbe}} 
+\index{bustub::IndexStatement@{bustub::IndexStatement}!cols\_@{cols\_}}
+\index{cols\_@{cols\_}!bustub::IndexStatement@{bustub::IndexStatement}}
+\doxysubsubsection{\texorpdfstring{cols\_}{cols\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundColumnRef}{Bound\+Column\+Ref}}$>$ $>$ bustub\+::\+Index\+Statement\+::cols\+\_\+}
+
+Name of the columns \mbox{\Hypertarget{classbustub_1_1IndexStatement_a1193fe802e4f190bd0610cb839322597}\label{classbustub_1_1IndexStatement_a1193fe802e4f190bd0610cb839322597}} 
+\index{bustub::IndexStatement@{bustub::IndexStatement}!index\_name\_@{index\_name\_}}
+\index{index\_name\_@{index\_name\_}!bustub::IndexStatement@{bustub::IndexStatement}}
+\doxysubsubsection{\texorpdfstring{index\_name\_}{index\_name\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Index\+Statement\+::index\+\_\+name\+\_\+}
+
+Name of the index \mbox{\Hypertarget{classbustub_1_1IndexStatement_a5bfe8700ba0fbfae6a36885af4c900fb}\label{classbustub_1_1IndexStatement_a5bfe8700ba0fbfae6a36885af4c900fb}} 
+\index{bustub::IndexStatement@{bustub::IndexStatement}!index\_type\_@{index\_type\_}}
+\index{index\_type\_@{index\_type\_}!bustub::IndexStatement@{bustub::IndexStatement}}
+\doxysubsubsection{\texorpdfstring{index\_type\_}{index\_type\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Index\+Statement\+::index\+\_\+type\+\_\+}
+
+Using \mbox{\Hypertarget{classbustub_1_1IndexStatement_a52f6b2926c2fc03e95e6c310fafb512d}\label{classbustub_1_1IndexStatement_a52f6b2926c2fc03e95e6c310fafb512d}} 
+\index{bustub::IndexStatement@{bustub::IndexStatement}!table\_@{table\_}}
+\index{table\_@{table\_}!bustub::IndexStatement@{bustub::IndexStatement}}
+\doxysubsubsection{\texorpdfstring{table\_}{table\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundBaseTableRef}{Bound\+Base\+Table\+Ref}}$>$ bustub\+::\+Index\+Statement\+::table\+\_\+}
+
+Create on which table 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/statement/index\+\_\+statement.\+h\item 
+src/binder/statement/index\+\_\+statement.\+cpp\end{DoxyCompactItemize}

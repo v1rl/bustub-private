@@ -1,0 +1,77 @@
+\hypertarget{classbustub_1_1BoundAggCall}{}\doxysection{bustub\+::Bound\+Agg\+Call Class Reference}
+\label{classbustub_1_1BoundAggCall}\index{bustub::BoundAggCall@{bustub::BoundAggCall}}
+
+
+{\ttfamily \#include $<$bound\+\_\+agg\+\_\+call.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Agg\+Call\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundAggCall__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Agg\+Call\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundAggCall__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundAggCall_a6209450171715f065bc746d5ff20769a}\label{classbustub_1_1BoundAggCall_a6209450171715f065bc746d5ff20769a}} 
+{\bfseries Bound\+Agg\+Call} (std\+::string func\+\_\+name, bool is\+\_\+distinct, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$ args)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundAggCall_a79095be5c57c4e0a0f236705968af2b7}\label{classbustub_1_1BoundAggCall_a79095be5c57c4e0a0f236705968af2b7}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundAggCall_a2a470e200d62b172e9adf7bfbf7d4868}\label{classbustub_1_1BoundAggCall_a2a470e200d62b172e9adf7bfbf7d4868}} 
+auto {\bfseries Has\+Aggregation} () const -\/$>$ bool override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundAggCall_a495a9442c2f209fd03034549e0f88c19}{func\+\_\+name\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BoundAggCall_a4573f178540377005e726d28c4113068}{is\+\_\+distinct\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1BoundAggCall_a1aa7ee179671b1771c77c75b2bf6df4e}{args\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A bound aggregate call, e.\+g., {\ttfamily sum(x)}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundAggCall_a1aa7ee179671b1771c77c75b2bf6df4e}\label{classbustub_1_1BoundAggCall_a1aa7ee179671b1771c77c75b2bf6df4e}} 
+\index{bustub::BoundAggCall@{bustub::BoundAggCall}!args\_@{args\_}}
+\index{args\_@{args\_}!bustub::BoundAggCall@{bustub::BoundAggCall}}
+\doxysubsubsection{\texorpdfstring{args\_}{args\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ $>$ bustub\+::\+Bound\+Agg\+Call\+::args\+\_\+}
+
+Arguments of the agg call. \mbox{\Hypertarget{classbustub_1_1BoundAggCall_a495a9442c2f209fd03034549e0f88c19}\label{classbustub_1_1BoundAggCall_a495a9442c2f209fd03034549e0f88c19}} 
+\index{bustub::BoundAggCall@{bustub::BoundAggCall}!func\_name\_@{func\_name\_}}
+\index{func\_name\_@{func\_name\_}!bustub::BoundAggCall@{bustub::BoundAggCall}}
+\doxysubsubsection{\texorpdfstring{func\_name\_}{func\_name\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+Agg\+Call\+::func\+\_\+name\+\_\+}
+
+Function name. \mbox{\Hypertarget{classbustub_1_1BoundAggCall_a4573f178540377005e726d28c4113068}\label{classbustub_1_1BoundAggCall_a4573f178540377005e726d28c4113068}} 
+\index{bustub::BoundAggCall@{bustub::BoundAggCall}!is\_distinct\_@{is\_distinct\_}}
+\index{is\_distinct\_@{is\_distinct\_}!bustub::BoundAggCall@{bustub::BoundAggCall}}
+\doxysubsubsection{\texorpdfstring{is\_distinct\_}{is\_distinct\_}}
+{\footnotesize\ttfamily bool bustub\+::\+Bound\+Agg\+Call\+::is\+\_\+distinct\+\_\+}
+
+Is distinct aggregation 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/expressions/bound\+\_\+agg\+\_\+call.\+h\item 
+src/binder/fmt\+\_\+impl.\+cpp\end{DoxyCompactItemize}

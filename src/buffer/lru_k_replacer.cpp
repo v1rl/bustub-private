@@ -39,7 +39,46 @@ LRUKReplacer::LRUKReplacer(size_t num_frames, size_t k) : replacer_size_(num_fra
  *
  * @return the frame ID if a frame is successfully evicted, or `std::nullopt` if no frames can be evicted.
  */
-auto LRUKReplacer::Evict() -> std::optional<frame_id_t> { return std::nullopt; }
+auto LRUKReplacer::Evict() -> std::optional<frame_id_t> {
+  std::lock_guard<std::mutex> latch(latch_);
+  if (!cold_frames_.empty()) {
+    frame_id_t fid = -1;
+    for (const auto &cold_fid : cold_frames_) {
+      auto it = node_store_.find(cold_fid);
+      if (it != node_store_.end() && it->second.is_evictable_) {
+        fid = cold_fid;
+        break;
+      }
+    }
+    if (fid != -1) {
+      cold_frames_.remove(fid);
+      node_store_.erase(fid);
+      curr_size_--;
+      return fid;
+    }
+  }
+  if (!hot_frames_.empty()) {
+    int mx = 0;
+    int max_fid = -1;
+    for (const auto &fid : hot_frames_) {
+      auto it = node_store_.find(fid);
+      if (it != node_store_.end() && it->second.is_evictable_) {
+        int backward_k_distance = current_timestamp_ - it->second.history_.front();
+        if (backward_k_distance > mx) {
+          mx = backward_k_distance;
+          max_fid = fid;
+        }
+      }
+    }
+    if (max_fid != -1) {
+      hot_frames_.remove(max_fid);
+      node_store_.erase(max_fid);
+      curr_size_--;
+      return max_fid;
+    }
+  }
+  return std::nullopt;
+}
 
 /**
  * TODO(P1): Add implementation
@@ -54,7 +93,24 @@ auto LRUKReplacer::Evict() -> std::optional<frame_id_t> { return std::nullopt; }
  * @param access_type type of access that was received. This parameter is only needed for
  * leaderboard tests.
  */
-void LRUKReplacer::RecordAccess(frame_id_t frame_id, [[maybe_unused]] AccessType access_type) {}
+void LRUKReplacer::RecordAccess(frame_id_t frame_id, [[maybe_unused]] AccessType access_type) {
+  std::lock_guard<std::mutex> latch(latch_);
+  BUSTUB_ENSURE(frame_id >= 0 && static_cast<size_t>(frame_id) < replacer_size_,
+                "Frame ID is out of bounds for the replacer size.");
+  if (node_store_.count(frame_id) == 0) {
+    // node_store_.emplace(frame_id, LRUKNode(k_, frame_id));
+    node_store_.emplace(frame_id, LRUKNode());
+    cold_frames_.push_back(frame_id);
+  }
+  node_store_[frame_id].history_.push_back(current_timestamp_++);
+  if (node_store_[frame_id].history_.size() == k_) {
+    cold_frames_.remove(frame_id);
+    hot_frames_.push_back(frame_id);
+  }
+  if (node_store_[frame_id].history_.size() > k_) {
+    node_store_[frame_id].history_.pop_front();
+  }
+}
 
 /**
  * TODO(P1): Add implementation
@@ -73,7 +129,25 @@ void LRUKReplacer::RecordAccess(frame_id_t frame_id, [[maybe_unused]] AccessType
  * @param frame_id id of frame whose 'evictable' status will be modified
  * @param set_evictable whether the given frame is evictable or not
  */
-void LRUKReplacer::SetEvictable(frame_id_t frame_id, bool set_evictable) {}
+void LRUKReplacer::SetEvictable(frame_id_t frame_id, bool set_evictable) {
+  std::lock_guard<std::mutex> latch(latch_);
+  BUSTUB_ENSURE(frame_id >= 0 && static_cast<size_t>(frame_id) < replacer_size_,
+                "Frame ID is out of bounds for the replacer size.");
+  if (node_store_.count(frame_id) == 0) {
+    return;  // Frame ID not found, nothing to do.
+  }
+  if (set_evictable) {
+    if (!node_store_[frame_id].is_evictable_) {
+      node_store_[frame_id].is_evictable_ = true;
+      curr_size_++;
+    }
+  } else {
+    if (node_store_[frame_id].is_evictable_) {
+      node_store_[frame_id].is_evictable_ = false;
+      curr_size_--;
+    }
+  }
+}
 
 /**
  * TODO(P1): Add implementation
@@ -92,7 +166,22 @@ void LRUKReplacer::SetEvictable(frame_id_t frame_id, bool set_evictable) {}
  *
  * @param frame_id id of frame to be removed
  */
-void LRUKReplacer::Remove(frame_id_t frame_id) {}
+void LRUKReplacer::Remove(frame_id_t frame_id) {
+  std::lock_guard<std::mutex> latch(latch_);
+  if (node_store_.count(frame_id) == 0) {
+    return;
+  }
+  BUSTUB_ENSURE(node_store_[frame_id].is_evictable_, "Cannot remove a non-evictable frame.");
+
+  if (node_store_[frame_id].history_.size() < k_) {
+    cold_frames_.remove(frame_id);
+  } else {
+    hot_frames_.remove(frame_id);
+  }
+
+  node_store_.erase(frame_id);
+  curr_size_--;
+}
 
 /**
  * TODO(P1): Add implementation
@@ -101,6 +190,9 @@ void LRUKReplacer::Remove(frame_id_t frame_id) {}
  *
  * @return size_t
  */
-auto LRUKReplacer::Size() -> size_t { return 0; }
+auto LRUKReplacer::Size() -> size_t {
+  std::lock_guard<std::mutex> latch(latch_);
+  return curr_size_;
+}
 
 }  // namespace bustub

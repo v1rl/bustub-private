@@ -1,0 +1,116 @@
+\hypertarget{classbustub_1_1ConstantValueExpression}{}\doxysection{bustub\+::Constant\+Value\+Expression Class Reference}
+\label{classbustub_1_1ConstantValueExpression}\index{bustub::ConstantValueExpression@{bustub::ConstantValueExpression}}
+
+
+{\ttfamily \#include $<$constant\+\_\+value\+\_\+expression.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Constant\+Value\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classbustub_1_1ConstantValueExpression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Constant\+Value\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classbustub_1_1ConstantValueExpression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ConstantValueExpression_a7dd26ea9ae1674acb2d5908183fea41e}{Constant\+Value\+Expression}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ConstantValueExpression_a0401f89d97322c0e01160ff5d670593e}{Evaluate}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ConstantValueExpression_a298ff64b7ed7c22e8768c17fcd2e5697}{Evaluate\+Join}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$left\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&left\+\_\+schema, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$right\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&right\+\_\+schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ConstantValueExpression_acea38a8128fcf2cb41362675ff0a2e23}{To\+String}} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1ConstantValueExpression_a3f456edaa80f0df850721cc5fc075392}\label{classbustub_1_1ConstantValueExpression_a3f456edaa80f0df850721cc5fc075392}} 
+{\bfseries BUSTUB\+\_\+\+EXPR\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1ConstantValueExpression}{Constant\+Value\+Expression}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ConstantValueExpression_a566848f7424e02a8577eda4597f0c1b1}\label{classbustub_1_1ConstantValueExpression_a566848f7424e02a8577eda4597f0c1b1}} 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} {\bfseries val\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1ConstantValueExpression}{Constant\+Value\+Expression}} represents constants. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ConstantValueExpression_a7dd26ea9ae1674acb2d5908183fea41e}\label{classbustub_1_1ConstantValueExpression_a7dd26ea9ae1674acb2d5908183fea41e}} 
+\index{bustub::ConstantValueExpression@{bustub::ConstantValueExpression}!ConstantValueExpression@{ConstantValueExpression}}
+\index{ConstantValueExpression@{ConstantValueExpression}!bustub::ConstantValueExpression@{bustub::ConstantValueExpression}}
+\doxysubsubsection{\texorpdfstring{ConstantValueExpression()}{ConstantValueExpression()}}
+{\footnotesize\ttfamily bustub\+::\+Constant\+Value\+Expression\+::\+Constant\+Value\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Creates a new constant value expression wrapping the given value. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ConstantValueExpression_a0401f89d97322c0e01160ff5d670593e}\label{classbustub_1_1ConstantValueExpression_a0401f89d97322c0e01160ff5d670593e}} 
+\index{bustub::ConstantValueExpression@{bustub::ConstantValueExpression}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!bustub::ConstantValueExpression@{bustub::ConstantValueExpression}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily auto bustub\+::\+Constant\+Value\+Expression\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating the tuple with the given schema 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a366d870041b1283ed90f66be269372a0}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ConstantValueExpression_a298ff64b7ed7c22e8768c17fcd2e5697}\label{classbustub_1_1ConstantValueExpression_a298ff64b7ed7c22e8768c17fcd2e5697}} 
+\index{bustub::ConstantValueExpression@{bustub::ConstantValueExpression}!EvaluateJoin@{EvaluateJoin}}
+\index{EvaluateJoin@{EvaluateJoin}!bustub::ConstantValueExpression@{bustub::ConstantValueExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateJoin()}{EvaluateJoin()}}
+{\footnotesize\ttfamily auto bustub\+::\+Constant\+Value\+Expression\+::\+Evaluate\+Join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{left\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{left\+\_\+schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{right\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{right\+\_\+schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the value obtained by evaluating a JOIN. 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+tuple} & The left tuple \\
+\hline
+{\em left\+\_\+schema} & The left tuple\textquotesingle{}s schema \\
+\hline
+{\em right\+\_\+tuple} & The right tuple \\
+\hline
+{\em right\+\_\+schema} & The right tuple\textquotesingle{}s schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating a JOIN on the left and right 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_ad9c06936d8acfb8cbb260d887c9f6e94}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ConstantValueExpression_acea38a8128fcf2cb41362675ff0a2e23}\label{classbustub_1_1ConstantValueExpression_acea38a8128fcf2cb41362675ff0a2e23}} 
+\index{bustub::ConstantValueExpression@{bustub::ConstantValueExpression}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::ConstantValueExpression@{bustub::ConstantValueExpression}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Constant\+Value\+Expression\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node and its children 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractExpression_af19014e7cce7d2c94e5ddc557e0088e8}{bustub\+::\+Abstract\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/expressions/constant\+\_\+value\+\_\+expression.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\hypertarget{classbustub_1_1ProjectionExecutor}{}\doxysection{bustub\+::Projection\+Executor Class Reference}
+\label{classbustub_1_1ProjectionExecutor}\index{bustub::ProjectionExecutor@{bustub::ProjectionExecutor}}
+
+
+{\ttfamily \#include $<$projection\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Projection\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classbustub_1_1ProjectionExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Projection\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classbustub_1_1ProjectionExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ProjectionExecutor_af01b76af67d81d80024ec93d56ac3a48}{Projection\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode}{Projection\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1ProjectionExecutor_aff1725340144a362f745d4535f117bd2}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ProjectionExecutor_a5d4585ca1085a090480803d836377fd7}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ProjectionExecutor_a77ca193acb76382f9af6da0dab1b78d2}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1ProjectionExecutor}{Projection\+Executor}} executor executes a projection. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ProjectionExecutor_af01b76af67d81d80024ec93d56ac3a48}\label{classbustub_1_1ProjectionExecutor_af01b76af67d81d80024ec93d56ac3a48}} 
+\index{bustub::ProjectionExecutor@{bustub::ProjectionExecutor}!ProjectionExecutor@{ProjectionExecutor}}
+\index{ProjectionExecutor@{ProjectionExecutor}!bustub::ProjectionExecutor@{bustub::ProjectionExecutor}}
+\doxysubsubsection{\texorpdfstring{ProjectionExecutor()}{ProjectionExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Projection\+Executor\+::\+Projection\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1ProjectionPlanNode}{Projection\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1ProjectionExecutor}{Projection\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The projection plan to be executed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ProjectionExecutor_a77ca193acb76382f9af6da0dab1b78d2}\label{classbustub_1_1ProjectionExecutor_a77ca193acb76382f9af6da0dab1b78d2}} 
+\index{bustub::ProjectionExecutor@{bustub::ProjectionExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::ProjectionExecutor@{bustub::ProjectionExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Projection\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the projection plan 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1ProjectionExecutor_aff1725340144a362f745d4535f117bd2}\label{classbustub_1_1ProjectionExecutor_aff1725340144a362f745d4535f117bd2}} 
+\index{bustub::ProjectionExecutor@{bustub::ProjectionExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::ProjectionExecutor@{bustub::ProjectionExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Projection\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the projection 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1ProjectionExecutor_a5d4585ca1085a090480803d836377fd7}\label{classbustub_1_1ProjectionExecutor_a5d4585ca1085a090480803d836377fd7}} 
+\index{bustub::ProjectionExecutor@{bustub::ProjectionExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::ProjectionExecutor@{bustub::ProjectionExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Projection\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the projection. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the projection \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the projection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/projection\+\_\+executor.\+h\item 
+src/execution/projection\+\_\+executor.\+cpp\end{DoxyCompactItemize}

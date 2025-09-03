@@ -1,0 +1,58 @@
+\hypertarget{classbustub_1_1MergeSortRun_1_1Iterator}{}\doxysection{bustub\+::Merge\+Sort\+Run\+::Iterator Class Reference}
+\label{classbustub_1_1MergeSortRun_1_1Iterator}\index{bustub::MergeSortRun::Iterator@{bustub::MergeSortRun::Iterator}}
+
+
+{\ttfamily \#include $<$external\+\_\+merge\+\_\+sort\+\_\+executor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator_a4a30ba6ac5eedf238ce8235365d08ad3}{operator++}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}} \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator_a50a102eb51a2ecde3e8da10a80de8a2d}{operator$\ast$}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator_ad9c84573558bccdd43291925bb5cfaf8}{operator==}} (const \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}} \&other) const -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator_ab1d3b24a50c7b45f06caf1557c56a588}{operator!=}} (const \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}} \&other) const -\/$>$ bool
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1MergeSortRun_1_1Iterator_a5826937d5cbbe2bc46635dff439ce002}\label{classbustub_1_1MergeSortRun_1_1Iterator_a5826937d5cbbe2bc46635dff439ce002}} 
+class {\bfseries Merge\+Sort\+Run}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}} for iterating on the sorted tuples in one run. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1MergeSortRun_1_1Iterator_ab1d3b24a50c7b45f06caf1557c56a588}\label{classbustub_1_1MergeSortRun_1_1Iterator_ab1d3b24a50c7b45f06caf1557c56a588}} 
+\index{bustub::MergeSortRun::Iterator@{bustub::MergeSortRun::Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!bustub::MergeSortRun::Iterator@{bustub::MergeSortRun::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily auto bustub\+::\+Merge\+Sort\+Run\+::\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks whether two iterators are pointing to different tuples in a sorted run or iterating on different sorted runs. \mbox{\Hypertarget{classbustub_1_1MergeSortRun_1_1Iterator_a50a102eb51a2ecde3e8da10a80de8a2d}\label{classbustub_1_1MergeSortRun_1_1Iterator_a50a102eb51a2ecde3e8da10a80de8a2d}} 
+\index{bustub::MergeSortRun::Iterator@{bustub::MergeSortRun::Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!bustub::MergeSortRun::Iterator@{bustub::MergeSortRun::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily auto bustub\+::\+Merge\+Sort\+Run\+::\+Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+Dereference the iterator to get the current tuple in the sorted run that the iterator is pointing to. \mbox{\Hypertarget{classbustub_1_1MergeSortRun_1_1Iterator_a4a30ba6ac5eedf238ce8235365d08ad3}\label{classbustub_1_1MergeSortRun_1_1Iterator_a4a30ba6ac5eedf238ce8235365d08ad3}} 
+\index{bustub::MergeSortRun::Iterator@{bustub::MergeSortRun::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!bustub::MergeSortRun::Iterator@{bustub::MergeSortRun::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily auto bustub\+::\+Merge\+Sort\+Run\+::\+Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}} \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+Advance the iterator to the next tuple. If the current sort page is exhausted, move to the next sort page. \mbox{\Hypertarget{classbustub_1_1MergeSortRun_1_1Iterator_ad9c84573558bccdd43291925bb5cfaf8}\label{classbustub_1_1MergeSortRun_1_1Iterator_ad9c84573558bccdd43291925bb5cfaf8}} 
+\index{bustub::MergeSortRun::Iterator@{bustub::MergeSortRun::Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!bustub::MergeSortRun::Iterator@{bustub::MergeSortRun::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily auto bustub\+::\+Merge\+Sort\+Run\+::\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks whether two iterators are pointing to the same tuple in the same sorted run. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/external\+\_\+merge\+\_\+sort\+\_\+executor.\+h\end{DoxyCompactItemize}

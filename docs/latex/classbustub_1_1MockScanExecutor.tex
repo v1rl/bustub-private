@@ -1,0 +1,109 @@
+\hypertarget{classbustub_1_1MockScanExecutor}{}\doxysection{bustub\+::Mock\+Scan\+Executor Class Reference}
+\label{classbustub_1_1MockScanExecutor}\index{bustub::MockScanExecutor@{bustub::MockScanExecutor}}
+
+
+{\ttfamily \#include $<$mock\+\_\+scan\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Mock\+Scan\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classbustub_1_1MockScanExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Mock\+Scan\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classbustub_1_1MockScanExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1MockScanExecutor_a7dec2c73f6adfcddef1fd232d36a8ad0}{Mock\+Scan\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1MockScanPlanNode}{Mock\+Scan\+Plan\+Node}} $\ast$plan)
+\item 
+void \mbox{\hyperlink{classbustub_1_1MockScanExecutor_a4dd127319da6df55d0be22c529088599}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MockScanExecutor_aeec664bc81f1dc4e375329a382b22526}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MockScanExecutor_a0e2cd0d073ba55b02d843c71d38b7b0f}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1MockScanExecutor}{Mock\+Scan\+Executor}} executor executes a sequential table scan for tests. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1MockScanExecutor_a7dec2c73f6adfcddef1fd232d36a8ad0}\label{classbustub_1_1MockScanExecutor_a7dec2c73f6adfcddef1fd232d36a8ad0}} 
+\index{bustub::MockScanExecutor@{bustub::MockScanExecutor}!MockScanExecutor@{MockScanExecutor}}
+\index{MockScanExecutor@{MockScanExecutor}!bustub::MockScanExecutor@{bustub::MockScanExecutor}}
+\doxysubsubsection{\texorpdfstring{MockScanExecutor()}{MockScanExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Mock\+Scan\+Executor\+::\+Mock\+Scan\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1MockScanPlanNode}{Mock\+Scan\+Plan\+Node}} $\ast$}]{plan }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1MockScanExecutor}{Mock\+Scan\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The mock scan plan to be executed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1MockScanExecutor_a0e2cd0d073ba55b02d843c71d38b7b0f}\label{classbustub_1_1MockScanExecutor_a0e2cd0d073ba55b02d843c71d38b7b0f}} 
+\index{bustub::MockScanExecutor@{bustub::MockScanExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::MockScanExecutor@{bustub::MockScanExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Mock\+Scan\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the sequential scan 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1MockScanExecutor_a4dd127319da6df55d0be22c529088599}\label{classbustub_1_1MockScanExecutor_a4dd127319da6df55d0be22c529088599}} 
+\index{bustub::MockScanExecutor@{bustub::MockScanExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::MockScanExecutor@{bustub::MockScanExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Mock\+Scan\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the mock scan. 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1MockScanExecutor_aeec664bc81f1dc4e375329a382b22526}\label{classbustub_1_1MockScanExecutor_aeec664bc81f1dc4e375329a382b22526}} 
+\index{bustub::MockScanExecutor@{bustub::MockScanExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::MockScanExecutor@{bustub::MockScanExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Mock\+Scan\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the sequential scan. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the scan \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the scan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/mock\+\_\+scan\+\_\+executor.\+h\item 
+src/execution/mock\+\_\+scan\+\_\+executor.\+cpp\end{DoxyCompactItemize}

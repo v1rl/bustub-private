@@ -1,0 +1,290 @@
+\hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage}{}\doxysection{bustub\+::Extendible\+HTable\+Directory\+Page Class Reference}
+\label{classbustub_1_1ExtendibleHTableDirectoryPage}\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+
+
+{\ttfamily \#include $<$extendible\+\_\+htable\+\_\+directory\+\_\+page.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_aad647e85071481006f2ffcb151c3d810}\label{classbustub_1_1ExtendibleHTableDirectoryPage_aad647e85071481006f2ffcb151c3d810}} 
+{\bfseries DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+MOVE} (\mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage}{Extendible\+HTable\+Directory\+Page}})
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_abe0fb42560630061d2323ddee2ed6885}{Init}} (uint32\+\_\+t max\+\_\+depth=HTABLE\+\_\+\+DIRECTORY\+\_\+\+MAX\+\_\+\+DEPTH)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a50180cdcd0db2f1137ad94511a714d3e}{Hash\+To\+Bucket\+Index}} (uint32\+\_\+t hash) const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a4cecc38d33f326010a84f7b93b72791b}{Get\+Bucket\+Page\+Id}} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ page\+\_\+id\+\_\+t
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a61e05082098fa4f76a66b7f421f993be}{Set\+Bucket\+Page\+Id}} (uint32\+\_\+t bucket\+\_\+idx, page\+\_\+id\+\_\+t bucket\+\_\+page\+\_\+id)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_afddd75c17d9b16463ef6e5a54ce32535}{Get\+Split\+Image\+Index}} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a93cea74b7c8a115e14d271ff8b577cca}{Get\+Global\+Depth\+Mask}} () const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a091e35cbfeda592eefbb7d9bd45c648b}{Get\+Local\+Depth\+Mask}} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_ac35bd6c9cbf9e10c645d3158134628c7}{Get\+Global\+Depth}} () const -\/$>$ uint32\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_adc4254fe482a2e3e4f55a799a4e5a30b}\label{classbustub_1_1ExtendibleHTableDirectoryPage_adc4254fe482a2e3e4f55a799a4e5a30b}} 
+auto {\bfseries Get\+Max\+Depth} () const -\/$>$ uint32\+\_\+t
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_abe1aad5d4cc90abc83bc33066c08e897}{Incr\+Global\+Depth}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a30837b877ad4d8f554a187fc0664beaf}{Decr\+Global\+Depth}} ()
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_abd26e655e2d4ab0c4c0a8ebf2d2822ef}{Can\+Shrink}} () -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a590b3765ba69658b0c25fcbab15a0ae8}{Size}} () const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a3071d9d8fd3ec98491250e1f178a83f2}{Max\+Size}} () const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_ad044c2115cc286ee4d864d9f0ab21460}{Get\+Local\+Depth}} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ uint32\+\_\+t
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_ae48267a4a1e4f10b0196b8fd2e394fc0}{Set\+Local\+Depth}} (uint32\+\_\+t bucket\+\_\+idx, uint8\+\_\+t local\+\_\+depth)
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a5de8638158d5b4d7255ac3a5455f48e9}{Incr\+Local\+Depth}} (uint32\+\_\+t bucket\+\_\+idx)
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a9c6c4177f757f773c2cc102dc82dc44d}{Decr\+Local\+Depth}} (uint32\+\_\+t bucket\+\_\+idx)
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_aa7f00dfce64c64c789b0aa005e85fe64}{Verify\+Integrity}} () const
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableDirectoryPage_a68b4574c1a8c9880d7cc317d0180c644}{Print\+Directory}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Directory \mbox{\hyperlink{classbustub_1_1Page}{Page}} for extendible hash table. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_abd26e655e2d4ab0c4c0a8ebf2d2822ef}\label{classbustub_1_1ExtendibleHTableDirectoryPage_abd26e655e2d4ab0c4c0a8ebf2d2822ef}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!CanShrink@{CanShrink}}
+\index{CanShrink@{CanShrink}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{CanShrink()}{CanShrink()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Can\+Shrink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ bool}
+
+\begin{DoxyReturn}{Returns}
+true if the directory can be shrunk 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a30837b877ad4d8f554a187fc0664beaf}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a30837b877ad4d8f554a187fc0664beaf}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!DecrGlobalDepth@{DecrGlobalDepth}}
+\index{DecrGlobalDepth@{DecrGlobalDepth}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{DecrGlobalDepth()}{DecrGlobalDepth()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Decr\+Global\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Decrement the global depth of the directory \mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a9c6c4177f757f773c2cc102dc82dc44d}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a9c6c4177f757f773c2cc102dc82dc44d}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!DecrLocalDepth@{DecrLocalDepth}}
+\index{DecrLocalDepth@{DecrLocalDepth}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{DecrLocalDepth()}{DecrLocalDepth()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Decr\+Local\+Depth (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx }\end{DoxyParamCaption})}
+
+Decrement the local depth of the bucket at bucket\+\_\+idx 
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & bucket index to decrement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a4cecc38d33f326010a84f7b93b72791b}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a4cecc38d33f326010a84f7b93b72791b}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!GetBucketPageId@{GetBucketPageId}}
+\index{GetBucketPageId@{GetBucketPageId}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{GetBucketPageId()}{GetBucketPageId()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Get\+Bucket\+Page\+Id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ page\+\_\+id\+\_\+t}
+
+Lookup a bucket page using a directory index
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & the index in the directory to lookup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bucket page\+\_\+id corresponding to bucket\+\_\+idx 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_ac35bd6c9cbf9e10c645d3158134628c7}\label{classbustub_1_1ExtendibleHTableDirectoryPage_ac35bd6c9cbf9e10c645d3158134628c7}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!GetGlobalDepth@{GetGlobalDepth}}
+\index{GetGlobalDepth@{GetGlobalDepth}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{GetGlobalDepth()}{GetGlobalDepth()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Get\+Global\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t}
+
+Get the global depth of the hash table directory
+
+\begin{DoxyReturn}{Returns}
+the global depth of the directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a93cea74b7c8a115e14d271ff8b577cca}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a93cea74b7c8a115e14d271ff8b577cca}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!GetGlobalDepthMask@{GetGlobalDepthMask}}
+\index{GetGlobalDepthMask@{GetGlobalDepthMask}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{GetGlobalDepthMask()}{GetGlobalDepthMask()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Get\+Global\+Depth\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  uint32\+\_\+t}
+
+Get\+Global\+Depth\+Mask -\/ returns a mask of global\+\_\+depth 1\textquotesingle{}s and the rest 0\textquotesingle{}s.
+
+In Extendible Hashing we map a key to a directory index using the following hash + mask function.
+
+Directory\+Index = Hash(key) \& GLOBAL\+\_\+\+DEPTH\+\_\+\+MASK
+
+where GLOBAL\+\_\+\+DEPTH\+\_\+\+MASK is a mask with exactly GLOBAL\+\_\+\+DEPTH 1\textquotesingle{}s from LSB upwards. For example, global depth 3 corresponds to 0x00000007 in a 32-\/bit representation.
+
+\begin{DoxyReturn}{Returns}
+mask of global\+\_\+depth 1\textquotesingle{}s and the rest 0\textquotesingle{}s (with 1\textquotesingle{}s from LSB upwards) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_ad044c2115cc286ee4d864d9f0ab21460}\label{classbustub_1_1ExtendibleHTableDirectoryPage_ad044c2115cc286ee4d864d9f0ab21460}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!GetLocalDepth@{GetLocalDepth}}
+\index{GetLocalDepth@{GetLocalDepth}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{GetLocalDepth()}{GetLocalDepth()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Get\+Local\+Depth (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t}
+
+Gets the local depth of the bucket at bucket\+\_\+idx
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & the bucket index to lookup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the local depth of the bucket at bucket\+\_\+idx 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a091e35cbfeda592eefbb7d9bd45c648b}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a091e35cbfeda592eefbb7d9bd45c648b}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!GetLocalDepthMask@{GetLocalDepthMask}}
+\index{GetLocalDepthMask@{GetLocalDepthMask}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{GetLocalDepthMask()}{GetLocalDepthMask()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Get\+Local\+Depth\+Mask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$  uint32\+\_\+t}
+
+Get\+Local\+Depth\+Mask -\/ same as global depth mask, except it uses the local depth of the bucket located at bucket\+\_\+idx
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & the index to use for looking up local depth \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mask of local 1\textquotesingle{}s and the rest 0\textquotesingle{}s (with 1\textquotesingle{}s from LSB upwards) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_afddd75c17d9b16463ef6e5a54ce32535}\label{classbustub_1_1ExtendibleHTableDirectoryPage_afddd75c17d9b16463ef6e5a54ce32535}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!GetSplitImageIndex@{GetSplitImageIndex}}
+\index{GetSplitImageIndex@{GetSplitImageIndex}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{GetSplitImageIndex()}{GetSplitImageIndex()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Get\+Split\+Image\+Index (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t}
+
+Gets the split image of an index
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & the directory index for which to find the split image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the directory index of the split image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a50180cdcd0db2f1137ad94511a714d3e}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a50180cdcd0db2f1137ad94511a714d3e}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!HashToBucketIndex@{HashToBucketIndex}}
+\index{HashToBucketIndex@{HashToBucketIndex}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{HashToBucketIndex()}{HashToBucketIndex()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Hash\+To\+Bucket\+Index (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{hash }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t}
+
+Get the bucket index that the key is hashed to
+
+
+\begin{DoxyParams}{Parameters}
+{\em hash} & the hash of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bucket index current key is hashed to 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_abe1aad5d4cc90abc83bc33066c08e897}\label{classbustub_1_1ExtendibleHTableDirectoryPage_abe1aad5d4cc90abc83bc33066c08e897}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!IncrGlobalDepth@{IncrGlobalDepth}}
+\index{IncrGlobalDepth@{IncrGlobalDepth}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{IncrGlobalDepth()}{IncrGlobalDepth()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Incr\+Global\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Increment the global depth of the directory \mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a5de8638158d5b4d7255ac3a5455f48e9}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a5de8638158d5b4d7255ac3a5455f48e9}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!IncrLocalDepth@{IncrLocalDepth}}
+\index{IncrLocalDepth@{IncrLocalDepth}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{IncrLocalDepth()}{IncrLocalDepth()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Incr\+Local\+Depth (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx }\end{DoxyParamCaption})}
+
+Increment the local depth of the bucket at bucket\+\_\+idx 
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & bucket index to increment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_abe0fb42560630061d2323ddee2ed6885}\label{classbustub_1_1ExtendibleHTableDirectoryPage_abe0fb42560630061d2323ddee2ed6885}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!Init@{Init}}
+\index{Init@{Init}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+\_\+depth = {\ttfamily HTABLE\+\_\+DIRECTORY\+\_\+MAX\+\_\+DEPTH} }\end{DoxyParamCaption})}
+
+After creating a new directory page from buffer pool, must call initialize method to set default values 
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+depth} & Max depth in the directory page \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a3071d9d8fd3ec98491250e1f178a83f2}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a3071d9d8fd3ec98491250e1f178a83f2}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!MaxSize@{MaxSize}}
+\index{MaxSize@{MaxSize}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{MaxSize()}{MaxSize()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Max\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  uint32\+\_\+t}
+
+\begin{DoxyReturn}{Returns}
+the max directory size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a68b4574c1a8c9880d7cc317d0180c644}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a68b4574c1a8c9880d7cc317d0180c644}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!PrintDirectory@{PrintDirectory}}
+\index{PrintDirectory@{PrintDirectory}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{PrintDirectory()}{PrintDirectory()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Print\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Prints the current directory \mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a61e05082098fa4f76a66b7f421f993be}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a61e05082098fa4f76a66b7f421f993be}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!SetBucketPageId@{SetBucketPageId}}
+\index{SetBucketPageId@{SetBucketPageId}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{SetBucketPageId()}{SetBucketPageId()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Set\+Bucket\+Page\+Id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx,  }\item[{page\+\_\+id\+\_\+t}]{bucket\+\_\+page\+\_\+id }\end{DoxyParamCaption})}
+
+Updates the directory index using a bucket index and page\+\_\+id
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & directory index at which to insert page\+\_\+id \\
+\hline
+{\em bucket\+\_\+page\+\_\+id} & page\+\_\+id to insert \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_ae48267a4a1e4f10b0196b8fd2e394fc0}\label{classbustub_1_1ExtendibleHTableDirectoryPage_ae48267a4a1e4f10b0196b8fd2e394fc0}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!SetLocalDepth@{SetLocalDepth}}
+\index{SetLocalDepth@{SetLocalDepth}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{SetLocalDepth()}{SetLocalDepth()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Set\+Local\+Depth (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx,  }\item[{uint8\+\_\+t}]{local\+\_\+depth }\end{DoxyParamCaption})}
+
+Set the local depth of the bucket at bucket\+\_\+idx to local\+\_\+depth
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & bucket index to update \\
+\hline
+{\em local\+\_\+depth} & new local depth \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_a590b3765ba69658b0c25fcbab15a0ae8}\label{classbustub_1_1ExtendibleHTableDirectoryPage_a590b3765ba69658b0c25fcbab15a0ae8}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!Size@{Size}}
+\index{Size@{Size}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily auto bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t}
+
+\begin{DoxyReturn}{Returns}
+the current directory size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableDirectoryPage_aa7f00dfce64c64c789b0aa005e85fe64}\label{classbustub_1_1ExtendibleHTableDirectoryPage_aa7f00dfce64c64c789b0aa005e85fe64}} 
+\index{bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}!VerifyIntegrity@{VerifyIntegrity}}
+\index{VerifyIntegrity@{VerifyIntegrity}!bustub::ExtendibleHTableDirectoryPage@{bustub::ExtendibleHTableDirectoryPage}}
+\doxysubsubsection{\texorpdfstring{VerifyIntegrity()}{VerifyIntegrity()}}
+{\footnotesize\ttfamily void bustub\+::\+Extendible\+HTable\+Directory\+Page\+::\+Verify\+Integrity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Verify\+Integrity
+
+Verify the following invariants\+: (1) All LD $<$= GD. (2) Each bucket has precisely 2$^\wedge$(GD -\/ LD) pointers pointing to it. (3) The LD is the same at each index with the same bucket\+\_\+page\+\_\+id 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/extendible\+\_\+htable\+\_\+directory\+\_\+page.\+h\item 
+src/storage/page/extendible\+\_\+htable\+\_\+directory\+\_\+page.\+cpp\item 
+src/storage/page/extendible\+\_\+htable\+\_\+page\+\_\+utils.\+cpp\end{DoxyCompactItemize}

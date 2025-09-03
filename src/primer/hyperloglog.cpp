@@ -11,12 +11,23 @@
 //===----------------------------------------------------------------------===//
 
 #include "primer/hyperloglog.h"
+#include <bitset>
+#include "common/config.h"
+#include "primer/hyperloglog_presto.h"
 
 namespace bustub {
 
 /** @brief Parameterized constructor. */
 template <typename KeyType>
-HyperLogLog<KeyType>::HyperLogLog(int16_t n_bits) : cardinality_(0) {}
+HyperLogLog<KeyType>::HyperLogLog(int16_t n_bits) {
+  cardinality_ = 0;
+  if (n_bits < 0) {
+    valid_ = false;
+    return;
+  }
+  n_bits_ = n_bits;
+  bucket_ = std::vector<uint8_t>(1 << n_bits);
+}
 
 /**
  * @brief Function that computes binary.
@@ -27,7 +38,8 @@ HyperLogLog<KeyType>::HyperLogLog(int16_t n_bits) : cardinality_(0) {}
 template <typename KeyType>
 auto HyperLogLog<KeyType>::ComputeBinary(const hash_t &hash) const -> std::bitset<BITSET_CAPACITY> {
   /** @TODO(student) Implement this function! */
-  return {0};
+  auto turn = std::bitset<BITSET_CAPACITY>(hash);
+  return turn;
 }
 
 /**
@@ -39,7 +51,23 @@ auto HyperLogLog<KeyType>::ComputeBinary(const hash_t &hash) const -> std::bitse
 template <typename KeyType>
 auto HyperLogLog<KeyType>::PositionOfLeftmostOne(const std::bitset<BITSET_CAPACITY> &bset) const -> uint64_t {
   /** @TODO(student) Implement this function! */
-  return 0;
+  for (int i = BITSET_CAPACITY - n_bits_ - 1; i >= 0; i--) {
+    if (bset[i]) {
+      return BITSET_CAPACITY - n_bits_ - i;
+    }
+  }
+  return BITSET_CAPACITY - n_bits_;
+}
+
+template <typename KeyType>
+auto HyperLogLog<KeyType>::GetBucketValue(const std::bitset<BITSET_CAPACITY> &bset) const -> uint64_t {
+  /** @TODO(student) Implement this function! */
+  uint64_t value = 0;
+  for (int i = 0; i < n_bits_; i++) {
+    value <<= 1;
+    value |= static_cast<uint64_t>(bset[BITSET_CAPACITY - 1 - i]);
+  }
+  return value;
 }
 
 /**
@@ -50,6 +78,14 @@ auto HyperLogLog<KeyType>::PositionOfLeftmostOne(const std::bitset<BITSET_CAPACI
 template <typename KeyType>
 auto HyperLogLog<KeyType>::AddElem(KeyType val) -> void {
   /** @TODO(student) Implement this function! */
+  if (!valid_) {
+    return;
+  }
+  hash_t hash = CalculateHash(val);
+  auto bset = ComputeBinary(hash);
+  auto p = PositionOfLeftmostOne(bset);
+  auto bucket_num = GetBucketValue(bset);
+  bucket_[bucket_num] = std::max<uint8_t>(bucket_[bucket_num], p);
 }
 
 /**
@@ -58,6 +94,16 @@ auto HyperLogLog<KeyType>::AddElem(KeyType val) -> void {
 template <typename KeyType>
 auto HyperLogLog<KeyType>::ComputeCardinality() -> void {
   /** @TODO(student) Implement this function! */
+  if (!valid_) {
+    return;
+  }
+  std::lock_guard<std::mutex> lock(mtx_);
+  int m = 1 << n_bits_;
+  double res = 0.0;
+  for (int i = 0; i < m; i++) {
+    res += 1.0 / static_cast<double>(1ULL << bucket_[i]);
+  }
+  cardinality_ = CONSTANT * m * m * (1.0 / res);
 }
 
 template class HyperLogLog<int64_t>;

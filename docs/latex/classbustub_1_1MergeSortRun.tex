@@ -1,0 +1,47 @@
+\hypertarget{classbustub_1_1MergeSortRun}{}\doxysection{bustub\+::Merge\+Sort\+Run Class Reference}
+\label{classbustub_1_1MergeSortRun}\index{bustub::MergeSortRun@{bustub::MergeSortRun}}
+
+
+{\ttfamily \#include $<$external\+\_\+merge\+\_\+sort\+\_\+executor.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1MergeSortRun_ada113e3a95b8d4c2f769954194acdb73}\label{classbustub_1_1MergeSortRun_ada113e3a95b8d4c2f769954194acdb73}} 
+{\bfseries Merge\+Sort\+Run} (std\+::vector$<$ page\+\_\+id\+\_\+t $>$ pages, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$bpm)
+\item 
+\mbox{\Hypertarget{classbustub_1_1MergeSortRun_a0a9682df5755fdf001b4e62305920367}\label{classbustub_1_1MergeSortRun_a0a9682df5755fdf001b4e62305920367}} 
+auto {\bfseries Get\+Page\+Count} () -\/$>$ size\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MergeSortRun_a9583de200cc9839ca3cf39dc292c113e}{Begin}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1MergeSortRun_a1aee7106629fe0a62e50ae3dc4d06c0d}{End}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A data structure that holds the sorted tuples as a run during external merge sort. Tuples might be stored in multiple pages, and tuples are ordered both within one page and across pages. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1MergeSortRun_a9583de200cc9839ca3cf39dc292c113e}\label{classbustub_1_1MergeSortRun_a9583de200cc9839ca3cf39dc292c113e}} 
+\index{bustub::MergeSortRun@{bustub::MergeSortRun}!Begin@{Begin}}
+\index{Begin@{Begin}!bustub::MergeSortRun@{bustub::MergeSortRun}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily auto bustub\+::\+Merge\+Sort\+Run\+::\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+Get an iterator pointing to the beginning of the sorted run, i.\+e. the first tuple. \mbox{\Hypertarget{classbustub_1_1MergeSortRun_a1aee7106629fe0a62e50ae3dc4d06c0d}\label{classbustub_1_1MergeSortRun_a1aee7106629fe0a62e50ae3dc4d06c0d}} 
+\index{bustub::MergeSortRun@{bustub::MergeSortRun}!End@{End}}
+\index{End@{End}!bustub::MergeSortRun@{bustub::MergeSortRun}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily auto bustub\+::\+Merge\+Sort\+Run\+::\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1MergeSortRun_1_1Iterator}{Iterator}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+Get an iterator pointing to the end of the sorted run, i.\+e. the position after the last tuple. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/external\+\_\+merge\+\_\+sort\+\_\+executor.\+h\end{DoxyCompactItemize}

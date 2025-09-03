@@ -1,0 +1,144 @@
+\hypertarget{classbustub_1_1WindowFunctionPlanNode}{}\doxysection{bustub\+::Window\+Function\+Plan\+Node Class Reference}
+\label{classbustub_1_1WindowFunctionPlanNode}\index{bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}}
+
+
+Inheritance diagram for bustub\+::Window\+Function\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classbustub_1_1WindowFunctionPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Window\+Function\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classbustub_1_1WindowFunctionPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbustub_1_1WindowFunctionPlanNode_1_1WindowFunction}{Window\+Function}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode_aac3ac679a26abc8903a3138ab7d880a0}{Window\+Function\+Plan\+Node}} (Schema\+Ref output\+\_\+schema, Abstract\+Plan\+Node\+Ref child, std\+::vector$<$ uint32\+\_\+t $>$ window\+\_\+func\+\_\+indexes, std\+::vector$<$ Abstract\+Expression\+Ref $>$ columns, std\+::vector$<$ std\+::vector$<$ Abstract\+Expression\+Ref $>$$>$ partition\+\_\+bys, std\+::vector$<$ std\+::vector$<$ Order\+By $>$$>$ order\+\_\+bys, std\+::vector$<$ Abstract\+Expression\+Ref $>$ functions, std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a9ae3921998c2e878c715a3fc8d5b33df}{Window\+Function\+Type}} $>$ window\+\_\+func\+\_\+types)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode_a7a9cf533e6012dc9b7380e6c679bb1a9}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode_a365174b2fff8ffd153562487234332c2}{Get\+Child\+Plan}} () const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionPlanNode_a67d457477659dfa57de178a5fc51f6e1}\label{classbustub_1_1WindowFunctionPlanNode_a67d457477659dfa57de178a5fc51f6e1}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode}{Window\+Function\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionPlanNode_a9fda51aa573b28439114040ce317ce77}\label{classbustub_1_1WindowFunctionPlanNode_a9fda51aa573b28439114040ce317ce77}} 
+static auto {\bfseries Infer\+Window\+Schema} (const std\+::vector$<$ Abstract\+Expression\+Ref $>$ \&columns) -\/$>$ \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Abstract\+Expression\+Ref $>$ \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode_ad87b008cc3eb1bf33d21dd5a91aa418b}{columns\+\_\+}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionPlanNode_a05eda9614903f687ab6bb82570200cad}\label{classbustub_1_1WindowFunctionPlanNode_a05eda9614903f687ab6bb82570200cad}} 
+std\+::unordered\+\_\+map$<$ uint32\+\_\+t, \mbox{\hyperlink{structbustub_1_1WindowFunctionPlanNode_1_1WindowFunction}{Window\+Function}} $>$ {\bfseries window\+\_\+functions\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode_a1843f8008ae3a0881fcbd974009e2980}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionPlanNode_aac3ac679a26abc8903a3138ab7d880a0}\label{classbustub_1_1WindowFunctionPlanNode_aac3ac679a26abc8903a3138ab7d880a0}} 
+\index{bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}!WindowFunctionPlanNode@{WindowFunctionPlanNode}}
+\index{WindowFunctionPlanNode@{WindowFunctionPlanNode}!bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}}
+\doxysubsubsection{\texorpdfstring{WindowFunctionPlanNode()}{WindowFunctionPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Window\+Function\+Plan\+Node\+::\+Window\+Function\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output\+\_\+schema,  }\item[{Abstract\+Plan\+Node\+Ref}]{child,  }\item[{std\+::vector$<$ uint32\+\_\+t $>$}]{window\+\_\+func\+\_\+indexes,  }\item[{std\+::vector$<$ Abstract\+Expression\+Ref $>$}]{columns,  }\item[{std\+::vector$<$ std\+::vector$<$ Abstract\+Expression\+Ref $>$$>$}]{partition\+\_\+bys,  }\item[{std\+::vector$<$ std\+::vector$<$ Order\+By $>$$>$}]{order\+\_\+bys,  }\item[{std\+::vector$<$ Abstract\+Expression\+Ref $>$}]{functions,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a9ae3921998c2e878c715a3fc8d5b33df}{Window\+Function\+Type}} $>$}]{window\+\_\+func\+\_\+types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode}{Window\+Function\+Plan\+Node}}. 
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+schema} & The output format of this plan node \\
+\hline
+{\em child} & The child plan to aggregate data over \\
+\hline
+{\em window\+\_\+func\+\_\+indexes} & The indexes of the window functions \\
+\hline
+{\em columns} & All columns include the placeholder for window functions \\
+\hline
+{\em partition\+\_\+bys} & The partition by clause of the window functions \\
+\hline
+{\em order\+\_\+bys} & The order by clause of the window functions \\
+\hline
+{\em funcions} & The expressions that we are aggregating \\
+\hline
+{\em window\+\_\+func\+\_\+types} & The types that we are aggregating\\
+\hline
+\end{DoxyParams}
+Window Aggregation is different from normal aggregation as it outputs one row for each inputing rows, and can be combined with normal selected columns. The columns in \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode}{Window\+Function\+Plan\+Node}} contains both normal selected columns and placeholder columns for window aggregations.
+
+For example, if we have a query like\+: SELECT 0.\+1, 0.\+2, SUM(0.\+3) OVER (PARTITION BY 0.\+2 ORDER BY 0.\+3), SUM(0.\+4) OVER (PARTITION BY 0.\+1 ORDER BY 0.\+2,0.\+3) FROM table;
+
+The \mbox{\hyperlink{classbustub_1_1WindowFunctionPlanNode}{Window\+Function\+Plan\+Node}} should contains following structure\+: columns\+: std\+::vector$<$\+Abstract\+Expression\+Ref$>$\{0.\+1, 0.\+2, 0.-\/1(placeholder), 0.-\/1(placeholder)\} partition\+\_\+bys\+: std\+::vector$<$std\+::vector$<$\+Abstract\+Expression\+Ref$>$$>$\{\{0.\+2\}, \{0.\+1\}\} order\+\_\+bys\+: std\+::vector$<$std\+::vector$<$\+Abstract\+Expression\+Ref$>$$>$\{\{0.\+3\}, \{0.\+2,0.\+3\}\} functions\+: std\+::vector$<$\+Abstract\+Expression\+Ref$>$\{0.\+3, 0.\+4\} window\+\_\+func\+\_\+types\+: std\+::vector$<$\+Window\+Function\+Type$>$\{Sum\+Aggregate, Sum\+Aggregate\} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionPlanNode_a365174b2fff8ffd153562487234332c2}\label{classbustub_1_1WindowFunctionPlanNode_a365174b2fff8ffd153562487234332c2}} 
+\index{bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily auto bustub\+::\+Window\+Function\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the child of this aggregation plan node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionPlanNode_a7a9cf533e6012dc9b7380e6c679bb1a9}\label{classbustub_1_1WindowFunctionPlanNode_a7a9cf533e6012dc9b7380e6c679bb1a9}} 
+\index{bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Window\+Function\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionPlanNode_a1843f8008ae3a0881fcbd974009e2980}\label{classbustub_1_1WindowFunctionPlanNode_a1843f8008ae3a0881fcbd974009e2980}} 
+\index{bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Window\+Function\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1WindowFunctionPlanNode_ad87b008cc3eb1bf33d21dd5a91aa418b}\label{classbustub_1_1WindowFunctionPlanNode_ad87b008cc3eb1bf33d21dd5a91aa418b}} 
+\index{bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}!columns\_@{columns\_}}
+\index{columns\_@{columns\_}!bustub::WindowFunctionPlanNode@{bustub::WindowFunctionPlanNode}}
+\doxysubsubsection{\texorpdfstring{columns\_}{columns\_}}
+{\footnotesize\ttfamily std\+::vector$<$Abstract\+Expression\+Ref$>$ bustub\+::\+Window\+Function\+Plan\+Node\+::columns\+\_\+}
+
+all columns expressions 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/window\+\_\+plan.\+h\item 
+src/execution/fmt\+\_\+impl.\+cpp\item 
+src/execution/plan\+\_\+node.\+cpp\end{DoxyCompactItemize}

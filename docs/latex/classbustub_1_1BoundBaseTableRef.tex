@@ -1,0 +1,84 @@
+\hypertarget{classbustub_1_1BoundBaseTableRef}{}\doxysection{bustub\+::Bound\+Base\+Table\+Ref Class Reference}
+\label{classbustub_1_1BoundBaseTableRef}\index{bustub::BoundBaseTableRef@{bustub::BoundBaseTableRef}}
+
+
+{\ttfamily \#include $<$bound\+\_\+base\+\_\+table\+\_\+ref.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Base\+Table\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classbustub_1_1BoundBaseTableRef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Base\+Table\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classbustub_1_1BoundBaseTableRef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundBaseTableRef_afe2b7ffb32c4652ebacf48e1b589728f}\label{classbustub_1_1BoundBaseTableRef_afe2b7ffb32c4652ebacf48e1b589728f}} 
+{\bfseries Bound\+Base\+Table\+Ref} (std\+::string table, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} oid, std\+::optional$<$ std\+::string $>$ alias, \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} schema)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundBaseTableRef_abe382e5a16e606a14b3e54db88605de5}\label{classbustub_1_1BoundBaseTableRef_abe382e5a16e606a14b3e54db88605de5}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundBaseTableRef_a0217ef0d8455db580422c9622cb1743c}\label{classbustub_1_1BoundBaseTableRef_a0217ef0d8455db580422c9622cb1743c}} 
+auto {\bfseries Get\+Bound\+Table\+Name} () const -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef_a0ef3acb7f163861726ad37a80537e7a8}{table\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef_af7839e5dd83f37bf5fe3b1f3ced20bde}{oid\+\_\+}}
+\item 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef_a46670994f06c5579d2c7979dd44c5f8d}{alias\+\_\+}}
+\item 
+\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef_a9d967119db5d58ff71ad0942476ed520}{schema\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A bound table ref type for single table. e.\+g., {\ttfamily SELECT x FROM y}, where {\ttfamily y} is {\ttfamily \mbox{\hyperlink{classbustub_1_1BoundBaseTableRef}{Bound\+Base\+Table\+Ref}}}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundBaseTableRef_a46670994f06c5579d2c7979dd44c5f8d}\label{classbustub_1_1BoundBaseTableRef_a46670994f06c5579d2c7979dd44c5f8d}} 
+\index{bustub::BoundBaseTableRef@{bustub::BoundBaseTableRef}!alias\_@{alias\_}}
+\index{alias\_@{alias\_}!bustub::BoundBaseTableRef@{bustub::BoundBaseTableRef}}
+\doxysubsubsection{\texorpdfstring{alias\_}{alias\_}}
+{\footnotesize\ttfamily std\+::optional$<$std\+::string$>$ bustub\+::\+Bound\+Base\+Table\+Ref\+::alias\+\_\+}
+
+The alias of the table \mbox{\Hypertarget{classbustub_1_1BoundBaseTableRef_af7839e5dd83f37bf5fe3b1f3ced20bde}\label{classbustub_1_1BoundBaseTableRef_af7839e5dd83f37bf5fe3b1f3ced20bde}} 
+\index{bustub::BoundBaseTableRef@{bustub::BoundBaseTableRef}!oid\_@{oid\_}}
+\index{oid\_@{oid\_}!bustub::BoundBaseTableRef@{bustub::BoundBaseTableRef}}
+\doxysubsubsection{\texorpdfstring{oid\_}{oid\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} bustub\+::\+Bound\+Base\+Table\+Ref\+::oid\+\_\+}
+
+The oid of the table. \mbox{\Hypertarget{classbustub_1_1BoundBaseTableRef_a9d967119db5d58ff71ad0942476ed520}\label{classbustub_1_1BoundBaseTableRef_a9d967119db5d58ff71ad0942476ed520}} 
+\index{bustub::BoundBaseTableRef@{bustub::BoundBaseTableRef}!schema\_@{schema\_}}
+\index{schema\_@{schema\_}!bustub::BoundBaseTableRef@{bustub::BoundBaseTableRef}}
+\doxysubsubsection{\texorpdfstring{schema\_}{schema\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} bustub\+::\+Bound\+Base\+Table\+Ref\+::schema\+\_\+}
+
+The schema of the table. \mbox{\Hypertarget{classbustub_1_1BoundBaseTableRef_a0ef3acb7f163861726ad37a80537e7a8}\label{classbustub_1_1BoundBaseTableRef_a0ef3acb7f163861726ad37a80537e7a8}} 
+\index{bustub::BoundBaseTableRef@{bustub::BoundBaseTableRef}!table\_@{table\_}}
+\index{table\_@{table\_}!bustub::BoundBaseTableRef@{bustub::BoundBaseTableRef}}
+\doxysubsubsection{\texorpdfstring{table\_}{table\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+Base\+Table\+Ref\+::table\+\_\+}
+
+The name of the table. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/table\+\_\+ref/bound\+\_\+base\+\_\+table\+\_\+ref.\+h\end{DoxyCompactItemize}

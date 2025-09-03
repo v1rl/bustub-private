@@ -1,0 +1,66 @@
+\hypertarget{classbustub_1_1BoundCTERef}{}\doxysection{bustub\+::Bound\+CTERef Class Reference}
+\label{classbustub_1_1BoundCTERef}\index{bustub::BoundCTERef@{bustub::BoundCTERef}}
+
+
+{\ttfamily \#include $<$bound\+\_\+cte\+\_\+ref.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+CTERef\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classbustub_1_1BoundCTERef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+CTERef\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classbustub_1_1BoundCTERef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundCTERef_a4bca6b3b904185194a70806cf3e1e216}\label{classbustub_1_1BoundCTERef_a4bca6b3b904185194a70806cf3e1e216}} 
+{\bfseries Bound\+CTERef} (std\+::string cte\+\_\+name, std\+::string alias)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundCTERef_a9c7c007b2dc22642927a6fcbb1ed9b0b}\label{classbustub_1_1BoundCTERef_a9c7c007b2dc22642927a6fcbb1ed9b0b}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundCTERef_a14fb3b1f5fb9bf1a16b9cceebeb26cc4}{cte\+\_\+name\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundCTERef_acd072b5e7fcf62aade8d3f897a74bfd6}{alias\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A CTE. e.\+g., {\ttfamily WITH (select 1) x SELECT $\ast$ FROM x}, where {\ttfamily x} is {\ttfamily \mbox{\hyperlink{classbustub_1_1BoundCTERef}{Bound\+CTERef}}}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundCTERef_acd072b5e7fcf62aade8d3f897a74bfd6}\label{classbustub_1_1BoundCTERef_acd072b5e7fcf62aade8d3f897a74bfd6}} 
+\index{bustub::BoundCTERef@{bustub::BoundCTERef}!alias\_@{alias\_}}
+\index{alias\_@{alias\_}!bustub::BoundCTERef@{bustub::BoundCTERef}}
+\doxysubsubsection{\texorpdfstring{alias\_}{alias\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+CTERef\+::alias\+\_\+}
+
+Alias. \mbox{\Hypertarget{classbustub_1_1BoundCTERef_a14fb3b1f5fb9bf1a16b9cceebeb26cc4}\label{classbustub_1_1BoundCTERef_a14fb3b1f5fb9bf1a16b9cceebeb26cc4}} 
+\index{bustub::BoundCTERef@{bustub::BoundCTERef}!cte\_name\_@{cte\_name\_}}
+\index{cte\_name\_@{cte\_name\_}!bustub::BoundCTERef@{bustub::BoundCTERef}}
+\doxysubsubsection{\texorpdfstring{cte\_name\_}{cte\_name\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+CTERef\+::cte\+\_\+name\+\_\+}
+
+CTE name. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/table\+\_\+ref/bound\+\_\+cte\+\_\+ref.\+h\item 
+src/binder/fmt\+\_\+impl.\+cpp\end{DoxyCompactItemize}

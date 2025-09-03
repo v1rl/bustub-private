@@ -1,0 +1,355 @@
+\hypertarget{classbustub_1_1BufferPoolManager}{}\doxysection{bustub\+::Buffer\+Pool\+Manager Class Reference}
+\label{classbustub_1_1BufferPoolManager}\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+
+
+The declaration of the {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} class.  
+
+
+
+
+{\ttfamily \#include $<$buffer\+\_\+pool\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager_a57bba71e14d3c0eb6d73f517a2c6bb05}{Buffer\+Pool\+Manager}} (size\+\_\+t num\+\_\+frames, \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager, size\+\_\+t k\+\_\+dist=LRUK\+\_\+\+REPLACER\+\_\+K, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager=nullptr)
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} instance and initializes all fields. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_ab15a4623a5a510f9765e80b6277abb63}\label{classbustub_1_1BufferPoolManager_ab15a4623a5a510f9765e80b6277abb63}} 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager_ab15a4623a5a510f9765e80b6277abb63}{$\sim$\+Buffer\+Pool\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}}, freeing up all memory that the buffer pool was using. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a08f8029d466e51f4db7499f20d4a9bc4}\label{classbustub_1_1BufferPoolManager_a08f8029d466e51f4db7499f20d4a9bc4}} 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a08f8029d466e51f4db7499f20d4a9bc4}{Size}} () const -\/$>$ size\+\_\+t
+\begin{DoxyCompactList}\small\item\em Returns the number of frames that this buffer pool manages. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_ab4b07e6ba34964dc7142d491ea5584db}{New\+Page}} () -\/$>$ page\+\_\+id\+\_\+t
+\begin{DoxyCompactList}\small\item\em Allocates a new page on disk. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a886bf55926262a90d978a8a300c95acb}{Delete\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Removes a page from the database, both on disk and in memory. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_ae864655193eb16bd8de42a6b5f5593d4}{Checked\+Write\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id, Access\+Type access\+\_\+type=Access\+Type\+::\+Unknown) -\/$>$ std\+::optional$<$ \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} $>$
+\begin{DoxyCompactList}\small\item\em Acquires an optional write-\/locked guard over a page of data. The user can specify an {\ttfamily Access\+Type} if needed. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aaba342e73ade1e84456bcc718c4342d4}{Checked\+Read\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id, Access\+Type access\+\_\+type=Access\+Type\+::\+Unknown) -\/$>$ std\+::optional$<$ \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} $>$
+\begin{DoxyCompactList}\small\item\em Acquires an optional read-\/locked guard over a page of data. The user can specify an {\ttfamily Access\+Type} if needed. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a96d2cb1bf882a89e880ef9fde40a3ab7}{Write\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id, Access\+Type access\+\_\+type=Access\+Type\+::\+Unknown) -\/$>$ \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}
+\begin{DoxyCompactList}\small\item\em A wrapper around {\ttfamily Checked\+Write\+Page} that unwraps the inner value if it exists. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a3406341d9b86e00d08a9244b9cde1962}{Read\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id, Access\+Type access\+\_\+type=Access\+Type\+::\+Unknown) -\/$>$ \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}
+\begin{DoxyCompactList}\small\item\em A wrapper around {\ttfamily Checked\+Read\+Page} that unwraps the inner value if it exists. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_ac1c0a538f36cb3f008e96e1d08c0a246}{Flush\+Page\+Unsafe}} (page\+\_\+id\+\_\+t page\+\_\+id) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Flushes a page\textquotesingle{}s data out to disk unsafely. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_adbf53d6a03897fd02b0bb9f4a34de5b5}{Flush\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Flushes a page\textquotesingle{}s data out to disk safely. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a51ddc170b34dc9562dd56e481bcd47d3}{Flush\+All\+Pages\+Unsafe}} ()
+\begin{DoxyCompactList}\small\item\em Flushes all page data that is in memory to disk unsafely. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a2b3526a4b3e7aa8469cb595a2a241ffa}{Flush\+All\+Pages}} ()
+\begin{DoxyCompactList}\small\item\em Flushes all page data that is in memory to disk safely. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a348dc976906a575ce1ec8ab228e8d9a0}{Get\+Pin\+Count}} (page\+\_\+id\+\_\+t page\+\_\+id) -\/$>$ std\+::optional$<$ size\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Retrieves the pin count of a page. If the page does not exist in memory, return {\ttfamily std\+::nullopt}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The declaration of the {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} class. 
+
+As stated in the writeup, the buffer pool is responsible for moving physical pages of data back and forth from buffers in main memory to persistent storage. It also behaves as a cache, keeping frequently used pages in memory for faster access, and evicting unused or cold pages back out to storage.
+
+Make sure you read the writeup in its entirety before attempting to implement the buffer pool manager. You also need to have completed the implementation of both the {\ttfamily \mbox{\hyperlink{classbustub_1_1LRUKReplacer}{LRUKReplacer}}} and {\ttfamily \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}}} classes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a57bba71e14d3c0eb6d73f517a2c6bb05}\label{classbustub_1_1BufferPoolManager_a57bba71e14d3c0eb6d73f517a2c6bb05}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!BufferPoolManager@{BufferPoolManager}}
+\index{BufferPoolManager@{BufferPoolManager}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{BufferPoolManager()}{BufferPoolManager()}}
+{\footnotesize\ttfamily bustub\+::\+Buffer\+Pool\+Manager\+::\+Buffer\+Pool\+Manager (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num\+\_\+frames,  }\item[{\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$}]{disk\+\_\+manager,  }\item[{size\+\_\+t}]{k\+\_\+dist = {\ttfamily LRUK\+\_\+REPLACER\+\_\+K},  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Creates a new {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} instance and initializes all fields. 
+
+See the documentation for {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} in \char`\"{}buffer/buffer\+\_\+pool\+\_\+manager.\+h\char`\"{} for more information.\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md0}{}\doxyparagraph{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md0}
+We have implemented the constructor for you in a way that makes sense with our reference solution. You are free to change anything you would like here if it doesn\textquotesingle{}t fit with you implementation.
+
+Be warned, though! If you stray too far away from our guidance, it will be much harder for us to help you. Our recommendation would be to first implement the buffer pool manager using the stepping stones we have provided.
+
+Once you have a fully working solution (all Gradescope test cases pass), then you can try more interesting things!
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+frames} & The size of the buffer pool. \\
+\hline
+{\em disk\+\_\+manager} & The disk manager. \\
+\hline
+{\em k\+\_\+dist} & The backward k-\/distance for the LRU-\/K replacer. \\
+\hline
+{\em log\+\_\+manager} & The log manager. Please ignore this for P1. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_aaba342e73ade1e84456bcc718c4342d4}\label{classbustub_1_1BufferPoolManager_aaba342e73ade1e84456bcc718c4342d4}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!CheckedReadPage@{CheckedReadPage}}
+\index{CheckedReadPage@{CheckedReadPage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{CheckedReadPage()}{CheckedReadPage()}}
+{\footnotesize\ttfamily auto bustub\+::\+Buffer\+Pool\+Manager\+::\+Checked\+Read\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id,  }\item[{Access\+Type}]{access\+\_\+type = {\ttfamily AccessType\+:\+:Unknown} }\end{DoxyParamCaption}) -\/$>$ std\+::optional$<$\mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}$>$}
+
+
+
+Acquires an optional read-\/locked guard over a page of data. The user can specify an {\ttfamily Access\+Type} if needed. 
+
+If it is not possible to bring the page of data into memory, this function will return a {\ttfamily std\+::nullopt}.
+
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} data can {\itshape only} be accessed via page guards. Users of this {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} are expected to acquire either a {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}} or a {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} depending on the mode in which they would like to access the data, which ensures that any access of data is thread-\/safe.
+
+There can be any number of {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}s reading the same page of data at a time across different threads. However, all data access must be immutable. If a user wants to mutate the page\textquotesingle{}s data, they must acquire a {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} with {\ttfamily Checked\+Write\+Page} instead.\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md4}{}\doxyparagraph{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md4}
+See the implementation details of {\ttfamily Checked\+Write\+Page}.
+
+TODO(\+P1)\+: Add implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & The ID of the page we want to read. \\
+\hline
+{\em access\+\_\+type} & The type of page access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$\+Read\+Page\+Guard$>$ An optional latch guard where if there are no more free frames (out of memory) returns {\ttfamily std\+::nullopt}, otherwise returns a {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}} ensuring shared and read-\/only access to a page\textquotesingle{}s data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_ae864655193eb16bd8de42a6b5f5593d4}\label{classbustub_1_1BufferPoolManager_ae864655193eb16bd8de42a6b5f5593d4}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!CheckedWritePage@{CheckedWritePage}}
+\index{CheckedWritePage@{CheckedWritePage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{CheckedWritePage()}{CheckedWritePage()}}
+{\footnotesize\ttfamily auto bustub\+::\+Buffer\+Pool\+Manager\+::\+Checked\+Write\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id,  }\item[{Access\+Type}]{access\+\_\+type = {\ttfamily AccessType\+:\+:Unknown} }\end{DoxyParamCaption}) -\/$>$ std\+::optional$<$\mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}$>$}
+
+
+
+Acquires an optional write-\/locked guard over a page of data. The user can specify an {\ttfamily Access\+Type} if needed. 
+
+If it is not possible to bring the page of data into memory, this function will return a {\ttfamily std\+::nullopt}.
+
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} data can {\itshape only} be accessed via page guards. Users of this {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} are expected to acquire either a {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}} or a {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} depending on the mode in which they would like to access the data, which ensures that any access of data is thread-\/safe.
+
+There can only be 1 {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} reading/writing a page at a time. This allows data access to be both immutable and mutable, meaning the thread that owns the {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} is allowed to manipulate the page\textquotesingle{}s data however they want. If a user wants to have multiple threads reading the page at the same time, they must acquire a {\ttfamily \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}} with {\ttfamily Checked\+Read\+Page} instead.\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md3}{}\doxyparagraph{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md3}
+There are 3 main cases that you will have to implement. The first two are relatively simple\+: one is when there is plenty of available memory, and the other is when we don\textquotesingle{}t actually need to perform any additional I/O. Think about what exactly these two cases entail.
+
+The third case is the trickiest, and it is when we do not have any {\itshape easily} available memory at our disposal. The buffer pool is tasked with finding memory that it can use to bring in a page of memory, using the replacement algorithm you implemented previously to find candidate frames for eviction.
+
+Once the buffer pool has identified a frame for eviction, several I/O operations may be necessary to bring in the page of data we want into the frame.
+
+There is likely going to be a lot of shared code with {\ttfamily Checked\+Read\+Page}, so you may find creating helper functions useful.
+
+These two functions are the crux of this project, so we won\textquotesingle{}t give you more hints than this. Good luck!
+
+TODO(\+P1)\+: Add implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & The ID of the page we want to write to. \\
+\hline
+{\em access\+\_\+type} & The type of page access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$\+Write\+Page\+Guard$>$ An optional latch guard where if there are no more free frames (out of memory) returns {\ttfamily std\+::nullopt}, otherwise returns a {\ttfamily \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}} ensuring exclusive and mutable access to a page\textquotesingle{}s data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a886bf55926262a90d978a8a300c95acb}\label{classbustub_1_1BufferPoolManager_a886bf55926262a90d978a8a300c95acb}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!DeletePage@{DeletePage}}
+\index{DeletePage@{DeletePage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{DeletePage()}{DeletePage()}}
+{\footnotesize\ttfamily auto bustub\+::\+Buffer\+Pool\+Manager\+::\+Delete\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id }\end{DoxyParamCaption}) -\/$>$ bool}
+
+
+
+Removes a page from the database, both on disk and in memory. 
+
+If the page is pinned in the buffer pool, this function does nothing and returns {\ttfamily false}. Otherwise, this function removes the page from both disk and memory (if it is still in the buffer pool), returning {\ttfamily true}.\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md2}{}\doxyparagraph{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md2}
+Think about all of the places a page or a page\textquotesingle{}s metadata could be, and use that to guide you on implementing this function. You will probably want to implement this function {\itshape after} you have implemented {\ttfamily Checked\+Read\+Page} and {\ttfamily Checked\+Write\+Page}.
+
+You should call {\ttfamily Deallocate\+Page} in the disk scheduler to make the space available for new pages.
+
+TODO(\+P1)\+: Add implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & The page ID of the page we want to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} if the page exists but could not be deleted, {\ttfamily true} if the page didn\textquotesingle{}t exist or deletion succeeded. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a2b3526a4b3e7aa8469cb595a2a241ffa}\label{classbustub_1_1BufferPoolManager_a2b3526a4b3e7aa8469cb595a2a241ffa}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FlushAllPages@{FlushAllPages}}
+\index{FlushAllPages@{FlushAllPages}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushAllPages()}{FlushAllPages()}}
+{\footnotesize\ttfamily void bustub\+::\+Buffer\+Pool\+Manager\+::\+Flush\+All\+Pages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Flushes all page data that is in memory to disk safely. 
+
+You should take locks on the pages in this function to ensure that a consistent state is flushed to disk.\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md8}{}\doxyparagraph{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md8}
+You should probably leave implementing this function until after you have completed {\ttfamily Checked\+Read\+Page}, {\ttfamily Checked\+Write\+Page}, and {\ttfamily Flush\+Page}, as it will likely be much easier to understand what to do.
+
+TODO(\+P1)\+: Add implementation \mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a51ddc170b34dc9562dd56e481bcd47d3}\label{classbustub_1_1BufferPoolManager_a51ddc170b34dc9562dd56e481bcd47d3}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FlushAllPagesUnsafe@{FlushAllPagesUnsafe}}
+\index{FlushAllPagesUnsafe@{FlushAllPagesUnsafe}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushAllPagesUnsafe()}{FlushAllPagesUnsafe()}}
+{\footnotesize\ttfamily void bustub\+::\+Buffer\+Pool\+Manager\+::\+Flush\+All\+Pages\+Unsafe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Flushes all page data that is in memory to disk unsafely. 
+
+You should not take locks on the pages in this function. This means that you should carefully consider when to toggle the {\ttfamily is\+\_\+dirty\+\_\+} bit.\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md7}{}\doxyparagraph{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md7}
+You should probably leave implementing this function until after you have completed {\ttfamily Checked\+Read\+Page}, {\ttfamily Checked\+Write\+Page}, and {\ttfamily Flush\+Page}, as it will likely be much easier to understand what to do.
+
+TODO(\+P1)\+: Add implementation \mbox{\Hypertarget{classbustub_1_1BufferPoolManager_adbf53d6a03897fd02b0bb9f4a34de5b5}\label{classbustub_1_1BufferPoolManager_adbf53d6a03897fd02b0bb9f4a34de5b5}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FlushPage@{FlushPage}}
+\index{FlushPage@{FlushPage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushPage()}{FlushPage()}}
+{\footnotesize\ttfamily auto bustub\+::\+Buffer\+Pool\+Manager\+::\+Flush\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id }\end{DoxyParamCaption}) -\/$>$ bool}
+
+
+
+Flushes a page\textquotesingle{}s data out to disk safely. 
+
+This function will write out a page\textquotesingle{}s data to disk if it has been modified. If the given page is not in memory, this function will return {\ttfamily false}.
+
+You should take a lock on the page in this function to ensure that a consistent state is flushed to disk.\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md6}{}\doxyparagraph{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md6}
+You should probably leave implementing this function until after you have completed {\ttfamily Checked\+Read\+Page}, {\ttfamily Checked\+Write\+Page}, and {\ttfamily Flush} in the page guards, as it will likely be much easier to understand what to do.
+
+TODO(\+P1)\+: Add implementation
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & The page ID of the page to be flushed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} if the page could not be found in the page table, otherwise {\ttfamily true}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_ac1c0a538f36cb3f008e96e1d08c0a246}\label{classbustub_1_1BufferPoolManager_ac1c0a538f36cb3f008e96e1d08c0a246}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FlushPageUnsafe@{FlushPageUnsafe}}
+\index{FlushPageUnsafe@{FlushPageUnsafe}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushPageUnsafe()}{FlushPageUnsafe()}}
+{\footnotesize\ttfamily auto bustub\+::\+Buffer\+Pool\+Manager\+::\+Flush\+Page\+Unsafe (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id }\end{DoxyParamCaption}) -\/$>$ bool}
+
+
+
+Flushes a page\textquotesingle{}s data out to disk unsafely. 
+
+This function will write out a page\textquotesingle{}s data to disk if it has been modified. If the given page is not in memory, this function will return {\ttfamily false}.
+
+You should not take a lock on the page in this function. This means that you should carefully consider when to toggle the {\ttfamily is\+\_\+dirty\+\_\+} bit.\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md5}{}\doxyparagraph{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md5}
+You should probably leave implementing this function until after you have completed {\ttfamily Checked\+Read\+Page} and {\ttfamily Checked\+Write\+Page}, as it will likely be much easier to understand what to do.
+
+TODO(\+P1)\+: Add implementation
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & The page ID of the page to be flushed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} if the page could not be found in the page table, otherwise {\ttfamily true}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a348dc976906a575ce1ec8ab228e8d9a0}\label{classbustub_1_1BufferPoolManager_a348dc976906a575ce1ec8ab228e8d9a0}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!GetPinCount@{GetPinCount}}
+\index{GetPinCount@{GetPinCount}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{GetPinCount()}{GetPinCount()}}
+{\footnotesize\ttfamily auto bustub\+::\+Buffer\+Pool\+Manager\+::\+Get\+Pin\+Count (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id }\end{DoxyParamCaption}) -\/$>$ std\+::optional$<$size\+\_\+t$>$}
+
+
+
+Retrieves the pin count of a page. If the page does not exist in memory, return {\ttfamily std\+::nullopt}. 
+
+This function is thread safe. Callers may invoke this function in a multi-\/threaded environment where multiple threads access the same page.
+
+This function is intended for testing purposes. If this function is implemented incorrectly, it will definitely cause problems with the test suite and autograder.\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md9}{}\doxysubsection{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md9}
+We will use this function to test if your buffer pool manager is managing pin counts correctly. Since the {\ttfamily pin\+\_\+count\+\_\+} field in {\ttfamily \mbox{\hyperlink{classbustub_1_1FrameHeader}{Frame\+Header}}} is an atomic type, you do not need to take the latch on the frame that holds the page we want to look at. Instead, you can simply use an atomic {\ttfamily load} to safely load the value stored. You will still need to take the buffer pool latch, however.
+
+Again, if you are unfamiliar with atomic types, see the official C++ docs \href{https://en.cppreference.com/w/cpp/atomic/atomic}{\texttt{ here}}.
+
+TODO(\+P1)\+: Add implementation
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & The page ID of the page we want to get the pin count of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$size\+\_\+t$>$ The pin count if the page exists, otherwise {\ttfamily std\+::nullopt}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_ab4b07e6ba34964dc7142d491ea5584db}\label{classbustub_1_1BufferPoolManager_ab4b07e6ba34964dc7142d491ea5584db}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!NewPage@{NewPage}}
+\index{NewPage@{NewPage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{NewPage()}{NewPage()}}
+{\footnotesize\ttfamily auto bustub\+::\+Buffer\+Pool\+Manager\+::\+New\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ page\+\_\+id\+\_\+t}
+
+
+
+Allocates a new page on disk. 
+
+\hypertarget{classbustub_1_1BufferPoolManager_autotoc_md1}{}\doxyparagraph{Implementation}\label{classbustub_1_1BufferPoolManager_autotoc_md1}
+You will maintain a thread-\/safe, monotonically increasing counter in the form of a {\ttfamily std\+::atomic$<$page\+\_\+id\+\_\+t$>$}. See the documentation on \href{https://en.cppreference.com/w/cpp/atomic/atomic}{\texttt{ atomics}} for more information.
+
+TODO(\+P1)\+: Add implementation.
+
+\begin{DoxyReturn}{Returns}
+The page ID of the newly allocated page. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a3406341d9b86e00d08a9244b9cde1962}\label{classbustub_1_1BufferPoolManager_a3406341d9b86e00d08a9244b9cde1962}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!ReadPage@{ReadPage}}
+\index{ReadPage@{ReadPage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{ReadPage()}{ReadPage()}}
+{\footnotesize\ttfamily auto bustub\+::\+Buffer\+Pool\+Manager\+::\+Read\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id,  }\item[{Access\+Type}]{access\+\_\+type = {\ttfamily AccessType\+:\+:Unknown} }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}}}
+
+
+
+A wrapper around {\ttfamily Checked\+Read\+Page} that unwraps the inner value if it exists. 
+
+If {\ttfamily Checked\+Read\+Page} returns a {\ttfamily std\+::nullopt}, {\bfseries{this function aborts the entire process.}}
+
+This function should {\bfseries{only}} be used for testing and ergonomic\textquotesingle{}s sake. If it is at all possible that the buffer pool manager might run out of memory, then use {\ttfamily Checked\+Page\+Write} to allow you to handle that case.
+
+See the documentation for {\ttfamily Checked\+Page\+Read} for more information about implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & The ID of the page we want to read. \\
+\hline
+{\em access\+\_\+type} & The type of page access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} A page guard ensuring shared and read-\/only access to a page\textquotesingle{}s data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a96d2cb1bf882a89e880ef9fde40a3ab7}\label{classbustub_1_1BufferPoolManager_a96d2cb1bf882a89e880ef9fde40a3ab7}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!WritePage@{WritePage}}
+\index{WritePage@{WritePage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{WritePage()}{WritePage()}}
+{\footnotesize\ttfamily auto bustub\+::\+Buffer\+Pool\+Manager\+::\+Write\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id,  }\item[{Access\+Type}]{access\+\_\+type = {\ttfamily AccessType\+:\+:Unknown} }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}}}
+
+
+
+A wrapper around {\ttfamily Checked\+Write\+Page} that unwraps the inner value if it exists. 
+
+If {\ttfamily Checked\+Write\+Page} returns a {\ttfamily std\+::nullopt}, {\bfseries{this function aborts the entire process.}}
+
+This function should {\bfseries{only}} be used for testing and ergonomic\textquotesingle{}s sake. If it is at all possible that the buffer pool manager might run out of memory, then use {\ttfamily Checked\+Page\+Write} to allow you to handle that case.
+
+See the documentation for {\ttfamily Checked\+Page\+Write} for more information about implementation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & The ID of the page we want to read. \\
+\hline
+{\em access\+\_\+type} & The type of page access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} A page guard ensuring exclusive and mutable access to a page\textquotesingle{}s data. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/buffer/buffer\+\_\+pool\+\_\+manager.\+h\item 
+src/buffer/buffer\+\_\+pool\+\_\+manager.\+cpp\end{DoxyCompactItemize}

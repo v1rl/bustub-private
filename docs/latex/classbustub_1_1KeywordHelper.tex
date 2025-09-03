@@ -1,0 +1,38 @@
+\hypertarget{classbustub_1_1KeywordHelper}{}\doxysection{bustub\+::Keyword\+Helper Class Reference}
+\label{classbustub_1_1KeywordHelper}\index{bustub::KeywordHelper@{bustub::KeywordHelper}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{classbustub_1_1KeywordHelper_a05f064098a7652243f5134bac646724d}{Is\+Keyword}} (const std\+::string \&text) -\/$>$ bool
+\item 
+static auto \mbox{\hyperlink{classbustub_1_1KeywordHelper_a3b8f4bd5f1cf0649d2fc2d85d45e43da}{Requires\+Quotes}} (const std\+::string \&text) -\/$>$ bool
+\item 
+static auto \mbox{\hyperlink{classbustub_1_1KeywordHelper_ad974644f745a2ef69f763c4cbad6292c}{Write\+Optionally\+Quoted}} (const std\+::string \&text, char quote=\textquotesingle{}\char`\"{}\textquotesingle{}) -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1KeywordHelper_a05f064098a7652243f5134bac646724d}\label{classbustub_1_1KeywordHelper_a05f064098a7652243f5134bac646724d}} 
+\index{bustub::KeywordHelper@{bustub::KeywordHelper}!IsKeyword@{IsKeyword}}
+\index{IsKeyword@{IsKeyword}!bustub::KeywordHelper@{bustub::KeywordHelper}}
+\doxysubsubsection{\texorpdfstring{IsKeyword()}{IsKeyword()}}
+{\footnotesize\ttfamily auto bustub\+::\+Keyword\+Helper\+::\+Is\+Keyword (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [static]}}
+
+Return true if the given text matches a keyword of the parser. \mbox{\Hypertarget{classbustub_1_1KeywordHelper_a3b8f4bd5f1cf0649d2fc2d85d45e43da}\label{classbustub_1_1KeywordHelper_a3b8f4bd5f1cf0649d2fc2d85d45e43da}} 
+\index{bustub::KeywordHelper@{bustub::KeywordHelper}!RequiresQuotes@{RequiresQuotes}}
+\index{RequiresQuotes@{RequiresQuotes}!bustub::KeywordHelper@{bustub::KeywordHelper}}
+\doxysubsubsection{\texorpdfstring{RequiresQuotes()}{RequiresQuotes()}}
+{\footnotesize\ttfamily auto bustub\+::\+Keyword\+Helper\+::\+Requires\+Quotes (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [static]}}
+
+Return true if the given std\+::string needs to be quoted when written as an identifier. \mbox{\Hypertarget{classbustub_1_1KeywordHelper_ad974644f745a2ef69f763c4cbad6292c}\label{classbustub_1_1KeywordHelper_ad974644f745a2ef69f763c4cbad6292c}} 
+\index{bustub::KeywordHelper@{bustub::KeywordHelper}!WriteOptionallyQuoted@{WriteOptionallyQuoted}}
+\index{WriteOptionallyQuoted@{WriteOptionallyQuoted}!bustub::KeywordHelper@{bustub::KeywordHelper}}
+\doxysubsubsection{\texorpdfstring{WriteOptionallyQuoted()}{WriteOptionallyQuoted()}}
+{\footnotesize\ttfamily auto bustub\+::\+Keyword\+Helper\+::\+Write\+Optionally\+Quoted (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{char}]{quote = {\ttfamily \textquotesingle{}\char`\"{}\textquotesingle{}} }\end{DoxyParamCaption}) -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [static]}}
+
+Writes a std\+::string that is optionally quoted + escaped so it can be used as an identifier 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/keyword\+\_\+helper.\+h\item 
+src/binder/keyword\+\_\+helper.\+cpp\end{DoxyCompactItemize}

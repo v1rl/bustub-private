@@ -1,0 +1,66 @@
+\hypertarget{classbustub_1_1BoundExpressionListRef}{}\doxysection{bustub\+::Bound\+Expression\+List\+Ref Class Reference}
+\label{classbustub_1_1BoundExpressionListRef}\index{bustub::BoundExpressionListRef@{bustub::BoundExpressionListRef}}
+
+
+{\ttfamily \#include $<$bound\+\_\+expression\+\_\+list\+\_\+ref.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Expression\+List\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classbustub_1_1BoundExpressionListRef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Expression\+List\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classbustub_1_1BoundExpressionListRef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundExpressionListRef_af37df97a0cf1c90fddf5a90467ccf218}\label{classbustub_1_1BoundExpressionListRef_af37df97a0cf1c90fddf5a90467ccf218}} 
+{\bfseries Bound\+Expression\+List\+Ref} (std\+::vector$<$ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$$>$ values, std\+::string identifier)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundExpressionListRef_a41c40d268e5b6505a980dc178ea90446}\label{classbustub_1_1BoundExpressionListRef_a41c40d268e5b6505a980dc178ea90446}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ $>$ $>$ \mbox{\hyperlink{classbustub_1_1BoundExpressionListRef_abe12398581bd89ccd90b6853efda9738}{values\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundExpressionListRef_a14674ba57272e1dada98977c802461b5}{identifier\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A bound table ref type for {\ttfamily values} clause. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundExpressionListRef_a14674ba57272e1dada98977c802461b5}\label{classbustub_1_1BoundExpressionListRef_a14674ba57272e1dada98977c802461b5}} 
+\index{bustub::BoundExpressionListRef@{bustub::BoundExpressionListRef}!identifier\_@{identifier\_}}
+\index{identifier\_@{identifier\_}!bustub::BoundExpressionListRef@{bustub::BoundExpressionListRef}}
+\doxysubsubsection{\texorpdfstring{identifier\_}{identifier\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+Expression\+List\+Ref\+::identifier\+\_\+}
+
+A unique identifier for this values list, so that planner / binder can work correctly. \mbox{\Hypertarget{classbustub_1_1BoundExpressionListRef_abe12398581bd89ccd90b6853efda9738}\label{classbustub_1_1BoundExpressionListRef_abe12398581bd89ccd90b6853efda9738}} 
+\index{bustub::BoundExpressionListRef@{bustub::BoundExpressionListRef}!values\_@{values\_}}
+\index{values\_@{values\_}!bustub::BoundExpressionListRef@{bustub::BoundExpressionListRef}}
+\doxysubsubsection{\texorpdfstring{values\_}{values\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ $>$ $>$ bustub\+::\+Bound\+Expression\+List\+Ref\+::values\+\_\+}
+
+The value list 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/table\+\_\+ref/bound\+\_\+expression\+\_\+list\+\_\+ref.\+h\item 
+src/binder/fmt\+\_\+impl.\+cpp\end{DoxyCompactItemize}

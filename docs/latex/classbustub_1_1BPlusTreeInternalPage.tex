@@ -1,0 +1,92 @@
+\hypertarget{classbustub_1_1BPlusTreeInternalPage}{}\doxysection{bustub\+::BPlus\+Tree\+Internal\+Page Class Reference}
+\label{classbustub_1_1BPlusTreeInternalPage}\index{bustub::BPlusTreeInternalPage@{bustub::BPlusTreeInternalPage}}
+
+
+{\ttfamily \#include $<$b\+\_\+plus\+\_\+tree\+\_\+internal\+\_\+page.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::BPlus\+Tree\+Internal\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classbustub_1_1BPlusTreeInternalPage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::BPlus\+Tree\+Internal\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classbustub_1_1BPlusTreeInternalPage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeInternalPage_a7e658918d2a9471357b356e05ad421ec}\label{classbustub_1_1BPlusTreeInternalPage_a7e658918d2a9471357b356e05ad421ec}} 
+{\bfseries BPlus\+Tree\+Internal\+Page} (const \mbox{\hyperlink{classbustub_1_1BPlusTreeInternalPage}{BPlus\+Tree\+Internal\+Page}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeInternalPage_afd9412300fbfe3a2d5dc796d1a31a471}\label{classbustub_1_1BPlusTreeInternalPage_afd9412300fbfe3a2d5dc796d1a31a471}} 
+void {\bfseries Init} (int max\+\_\+size=INTERNAL\+\_\+\+PAGE\+\_\+\+SLOT\+\_\+\+CNT)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeInternalPage_aaf628ab8d4d22f9d2eff78af408cb894}\label{classbustub_1_1BPlusTreeInternalPage_aaf628ab8d4d22f9d2eff78af408cb894}} 
+auto {\bfseries Key\+At} (int index) const -\/$>$ Key\+Type
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeInternalPage_ae62354e05741a3ba82a12e26e65cf480}\label{classbustub_1_1BPlusTreeInternalPage_ae62354e05741a3ba82a12e26e65cf480}} 
+void {\bfseries Set\+Key\+At} (int index, const Key\+Type \&key)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1BPlusTreeInternalPage_a73d81a9e2a6084d87f034f2ed4af2d75}{Value\+Index}} (const Value\+Type \&value) const -\/$>$ int
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeInternalPage_a9ed2e8d698204a7f0d9b6e92a9103bc0}\label{classbustub_1_1BPlusTreeInternalPage_a9ed2e8d698204a7f0d9b6e92a9103bc0}} 
+auto {\bfseries Value\+At} (int index) const -\/$>$ Value\+Type
+\item 
+auto \mbox{\hyperlink{classbustub_1_1BPlusTreeInternalPage_a99e4c23404a6e075dc152f8fc104dbbf}{To\+String}} () const -\/$>$ std\+::string
+\begin{DoxyCompactList}\small\item\em For test only, return a string representing all keys in this internal page, formatted as \char`\"{}(key1,key2,key3,...)\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Store {\ttfamily n} indexed keys and {\ttfamily n + 1} child pointers (page\+\_\+id) within internal page. Pointer PAGE\+\_\+\+ID(i) points to a subtree in which all keys K satisfy\+: K(i) $<$= K $<$ K(i+1). NOTE\+: Since the number of keys does not equal to number of child pointers, the first key in key\+\_\+array\+\_\+ always remains invalid. That is to say, any search / lookup should ignore the first key.\hypertarget{classbustub_1_1BPlusTreeInternalPage_autotoc_md21}{}\doxysubsubsection{Internal page format (keys are stored in increasing order)\+:}\label{classbustub_1_1BPlusTreeInternalPage_autotoc_md21}
+\hypertarget{classbustub_1_1BPlusTreeInternalPage_autotoc_md22}{}\doxysubsubsection{$\vert$ HEADER $\vert$}\label{classbustub_1_1BPlusTreeInternalPage_autotoc_md22}
+\DoxyHorRuler{0}
+ \hypertarget{classbustub_1_1BPlusTreeInternalPage_autotoc_md23}{}\doxysubsubsection{$\vert$ KEY(1)(\+INVALID) $\vert$ KEY(2) $\vert$ ... $\vert$ KEY(n) $\vert$}\label{classbustub_1_1BPlusTreeInternalPage_autotoc_md23}
+\DoxyHorRuler{0}
+ \hypertarget{classbustub_1_1BPlusTreeInternalPage_autotoc_md24}{}\doxysubsubsection{$\vert$ PAGE\+\_\+\+ID(1) $\vert$ PAGE\+\_\+\+ID(2) $\vert$ ... $\vert$ PAGE\+\_\+\+ID(n) $\vert$}\label{classbustub_1_1BPlusTreeInternalPage_autotoc_md24}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeInternalPage_a99e4c23404a6e075dc152f8fc104dbbf}\label{classbustub_1_1BPlusTreeInternalPage_a99e4c23404a6e075dc152f8fc104dbbf}} 
+\index{bustub::BPlusTreeInternalPage@{bustub::BPlusTreeInternalPage}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::BPlusTreeInternalPage@{bustub::BPlusTreeInternalPage}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+BPlus\+Tree\+Internal\+Page\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+For test only, return a string representing all keys in this internal page, formatted as \char`\"{}(key1,key2,key3,...)\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of all keys in the current internal page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeInternalPage_a73d81a9e2a6084d87f034f2ed4af2d75}\label{classbustub_1_1BPlusTreeInternalPage_a73d81a9e2a6084d87f034f2ed4af2d75}} 
+\index{bustub::BPlusTreeInternalPage@{bustub::BPlusTreeInternalPage}!ValueIndex@{ValueIndex}}
+\index{ValueIndex@{ValueIndex}!bustub::BPlusTreeInternalPage@{bustub::BPlusTreeInternalPage}}
+\doxysubsubsection{\texorpdfstring{ValueIndex()}{ValueIndex()}}
+{\footnotesize\ttfamily auto bustub\+::\+BPlus\+Tree\+Internal\+Page\+::\+Value\+Index (\begin{DoxyParamCaption}\item[{const Value\+Type \&}]{value }\end{DoxyParamCaption}) const -\/$>$  int}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index that corresponds to the specified value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/b\+\_\+plus\+\_\+tree\+\_\+internal\+\_\+page.\+h\end{DoxyCompactItemize}

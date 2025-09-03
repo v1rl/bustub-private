@@ -1,0 +1,4 @@
+<map id="fmt::formatter&lt; std::unique_ptr&lt; T &gt;, std::enable_if_t&lt; std::is_base_of&lt; bustub::AbstractPlanNode, T &gt;::value, char &gt; &gt;" name="fmt::formatter&lt; std::unique_ptr&lt; T &gt;, std::enable_if_t&lt; std::is_base_of&lt; bustub::AbstractPlanNode, T &gt;::value, char &gt; &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,235,180"/>
+<area shape="rect" id="node2" title=" " alt="" coords="45,5,195,47"/>
+</map>

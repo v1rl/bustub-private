@@ -1,0 +1,44 @@
+\hypertarget{classbustub_1_1Channel}{}\doxysection{bustub\+::Channel$<$ T $>$ Class Template Reference}
+\label{classbustub_1_1Channel}\index{bustub::Channel$<$ T $>$@{bustub::Channel$<$ T $>$}}
+
+
+{\ttfamily \#include $<$channel.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbustub_1_1Channel_aad5017779221455367666e2e95532c09}{Put}} (T element)
+\begin{DoxyCompactList}\small\item\em Inserts an element into a shared queue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1Channel_a2a350156efdb2e306b2baa506667cd0d}\label{classbustub_1_1Channel_a2a350156efdb2e306b2baa506667cd0d}} 
+auto \mbox{\hyperlink{classbustub_1_1Channel_a2a350156efdb2e306b2baa506667cd0d}{Get}} () -\/$>$ T
+\begin{DoxyCompactList}\small\item\em Gets an element from the shared queue. If the queue is empty, blocks until an element is available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class bustub\+::\+Channel$<$ T $>$}
+
+Channels allow for safe sharing of data between threads. This is a multi-\/producer multi-\/consumer channel. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Channel_aad5017779221455367666e2e95532c09}\label{classbustub_1_1Channel_aad5017779221455367666e2e95532c09}} 
+\index{bustub::Channel$<$ T $>$@{bustub::Channel$<$ T $>$}!Put@{Put}}
+\index{Put@{Put}!bustub::Channel$<$ T $>$@{bustub::Channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classbustub_1_1Channel}{bustub\+::\+Channel}}$<$ T $>$\+::Put (\begin{DoxyParamCaption}\item[{T}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts an element into a shared queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & The element to be inserted. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/common/channel.\+h\end{DoxyCompactItemize}

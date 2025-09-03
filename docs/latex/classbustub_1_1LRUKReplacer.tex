@@ -1,0 +1,175 @@
+\hypertarget{classbustub_1_1LRUKReplacer}{}\doxysection{bustub\+::LRUKReplacer Class Reference}
+\label{classbustub_1_1LRUKReplacer}\index{bustub::LRUKReplacer@{bustub::LRUKReplacer}}
+
+
+{\ttfamily \#include $<$lru\+\_\+k\+\_\+replacer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LRUKReplacer_a73980c6b3de2380e664afe2f68d8e1d4}{LRUKReplacer}} (size\+\_\+t num\+\_\+frames, size\+\_\+t k)
+\begin{DoxyCompactList}\small\item\em a new \mbox{\hyperlink{classbustub_1_1LRUKReplacer}{LRUKReplacer}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbustub_1_1LRUKReplacer_a96b681d4de93fbe16da8109d8342eed2}\label{classbustub_1_1LRUKReplacer_a96b681d4de93fbe16da8109d8342eed2}} 
+{\bfseries DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+MOVE} (\mbox{\hyperlink{classbustub_1_1LRUKReplacer}{LRUKReplacer}})
+\item 
+\mbox{\hyperlink{classbustub_1_1LRUKReplacer_a5e7acd0c926c02fb46f7f9a0d434d227}{$\sim$\+LRUKReplacer}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classbustub_1_1LRUReplacer}{LRUReplacer}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1LRUKReplacer_a093e8ac5b233df2cd70cfb29d0b04091}{Evict}} () -\/$>$ std\+::optional$<$ frame\+\_\+id\+\_\+t $>$
+\begin{DoxyCompactList}\small\item\em Find the frame with largest backward k-\/distance and evict that frame. Only frames that are marked as \textquotesingle{}evictable\textquotesingle{} are candidates for eviction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1LRUKReplacer_afa7d452c1e3257ac7ab2d1b3d1eb9537}{Record\+Access}} (frame\+\_\+id\+\_\+t frame\+\_\+id, Access\+Type access\+\_\+type=Access\+Type\+::\+Unknown)
+\begin{DoxyCompactList}\small\item\em Record the event that the given frame id is accessed at current timestamp. Create a new entry for access history if frame id has not been seen before. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1LRUKReplacer_a24d5442656e935f8a52922bb101826e2}{Set\+Evictable}} (frame\+\_\+id\+\_\+t frame\+\_\+id, bool set\+\_\+evictable)
+\begin{DoxyCompactList}\small\item\em Toggle whether a frame is evictable or non-\/evictable. This function also controls replacer\textquotesingle{}s size. Note that size is equal to number of evictable entries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1LRUKReplacer_a01758e4d1bf24c7ae3fb297c1c5d28ec}{Remove}} (frame\+\_\+id\+\_\+t frame\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Remove an evictable frame from replacer, along with its access history. This function should also decrement replacer\textquotesingle{}s size if removal is successful. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1LRUKReplacer_a9f271aab1ca802bde41f1683221bca2f}{Size}} () -\/$>$ size\+\_\+t
+\begin{DoxyCompactList}\small\item\em Return replacer\textquotesingle{}s size, which tracks the number of evictable frames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1LRUKReplacer}{LRUKReplacer}} implements the LRU-\/k replacement policy.
+
+The LRU-\/k algorithm evicts a frame whose backward k-\/distance is maximum of all frames. Backward k-\/distance is computed as the difference in time between current timestamp and the timestamp of kth previous access.
+
+A frame with less than k historical references is given +inf as its backward k-\/distance. When multiple frames have +inf backward k-\/distance, classical LRU algorithm is used to choose victim. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LRUKReplacer_a73980c6b3de2380e664afe2f68d8e1d4}\label{classbustub_1_1LRUKReplacer_a73980c6b3de2380e664afe2f68d8e1d4}} 
+\index{bustub::LRUKReplacer@{bustub::LRUKReplacer}!LRUKReplacer@{LRUKReplacer}}
+\index{LRUKReplacer@{LRUKReplacer}!bustub::LRUKReplacer@{bustub::LRUKReplacer}}
+\doxysubsubsection{\texorpdfstring{LRUKReplacer()}{LRUKReplacer()}}
+{\footnotesize\ttfamily bustub\+::\+LRUKReplacer\+::\+LRUKReplacer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num\+\_\+frames,  }\item[{size\+\_\+t}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+a new \mbox{\hyperlink{classbustub_1_1LRUKReplacer}{LRUKReplacer}}. 
+
+TODO(\+P1)\+: Add implementation
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+frames} & the maximum number of frames the \mbox{\hyperlink{classbustub_1_1LRUReplacer}{LRUReplacer}} will be required to store \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1LRUKReplacer_a5e7acd0c926c02fb46f7f9a0d434d227}\label{classbustub_1_1LRUKReplacer_a5e7acd0c926c02fb46f7f9a0d434d227}} 
+\index{bustub::LRUKReplacer@{bustub::LRUKReplacer}!````~LRUKReplacer@{$\sim$LRUKReplacer}}
+\index{````~LRUKReplacer@{$\sim$LRUKReplacer}!bustub::LRUKReplacer@{bustub::LRUKReplacer}}
+\doxysubsubsection{\texorpdfstring{$\sim$LRUKReplacer()}{~LRUKReplacer()}}
+{\footnotesize\ttfamily bustub\+::\+LRUKReplacer\+::$\sim$\+LRUKReplacer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroys the \mbox{\hyperlink{classbustub_1_1LRUReplacer}{LRUReplacer}}. 
+
+TODO(\+P1)\+: Add implementation 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LRUKReplacer_a093e8ac5b233df2cd70cfb29d0b04091}\label{classbustub_1_1LRUKReplacer_a093e8ac5b233df2cd70cfb29d0b04091}} 
+\index{bustub::LRUKReplacer@{bustub::LRUKReplacer}!Evict@{Evict}}
+\index{Evict@{Evict}!bustub::LRUKReplacer@{bustub::LRUKReplacer}}
+\doxysubsubsection{\texorpdfstring{Evict()}{Evict()}}
+{\footnotesize\ttfamily auto bustub\+::\+LRUKReplacer\+::\+Evict (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::optional$<$frame\+\_\+id\+\_\+t$>$}
+
+
+
+Find the frame with largest backward k-\/distance and evict that frame. Only frames that are marked as \textquotesingle{}evictable\textquotesingle{} are candidates for eviction. 
+
+TODO(\+P1)\+: Add implementation
+
+A frame with less than k historical references is given +inf as its backward k-\/distance. If multiple frames have inf backward k-\/distance, then evict frame whose oldest timestamp is furthest in the past.
+
+Successful eviction of a frame should decrement the size of replacer and remove the frame\textquotesingle{}s access history.
+
+\begin{DoxyReturn}{Returns}
+the frame ID if a frame is successfully evicted, or {\ttfamily std\+::nullopt} if no frames can be evicted. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1LRUKReplacer_afa7d452c1e3257ac7ab2d1b3d1eb9537}\label{classbustub_1_1LRUKReplacer_afa7d452c1e3257ac7ab2d1b3d1eb9537}} 
+\index{bustub::LRUKReplacer@{bustub::LRUKReplacer}!RecordAccess@{RecordAccess}}
+\index{RecordAccess@{RecordAccess}!bustub::LRUKReplacer@{bustub::LRUKReplacer}}
+\doxysubsubsection{\texorpdfstring{RecordAccess()}{RecordAccess()}}
+{\footnotesize\ttfamily void bustub\+::\+LRUKReplacer\+::\+Record\+Access (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t}]{frame\+\_\+id,  }\item[{Access\+Type}]{access\+\_\+type = {\ttfamily AccessType\+:\+:Unknown} }\end{DoxyParamCaption})}
+
+
+
+Record the event that the given frame id is accessed at current timestamp. Create a new entry for access history if frame id has not been seen before. 
+
+TODO(\+P1)\+: Add implementation
+
+If frame id is invalid (ie. larger than replacer\+\_\+size\+\_\+), throw an exception. You can also use BUSTUB\+\_\+\+ASSERT to abort the process if frame id is invalid.
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+id} & id of frame that received a new access. \\
+\hline
+{\em access\+\_\+type} & type of access that was received. This parameter is only needed for leaderboard tests. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1LRUKReplacer_a01758e4d1bf24c7ae3fb297c1c5d28ec}\label{classbustub_1_1LRUKReplacer_a01758e4d1bf24c7ae3fb297c1c5d28ec}} 
+\index{bustub::LRUKReplacer@{bustub::LRUKReplacer}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::LRUKReplacer@{bustub::LRUKReplacer}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void bustub\+::\+LRUKReplacer\+::\+Remove (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t}]{frame\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Remove an evictable frame from replacer, along with its access history. This function should also decrement replacer\textquotesingle{}s size if removal is successful. 
+
+TODO(\+P1)\+: Add implementation
+
+Note that this is different from evicting a frame, which always remove the frame with largest backward k-\/distance. This function removes specified frame id, no matter what its backward k-\/distance is.
+
+If Remove is called on a non-\/evictable frame, throw an exception or abort the process.
+
+If specified frame is not found, directly return from this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+id} & id of frame to be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1LRUKReplacer_a24d5442656e935f8a52922bb101826e2}\label{classbustub_1_1LRUKReplacer_a24d5442656e935f8a52922bb101826e2}} 
+\index{bustub::LRUKReplacer@{bustub::LRUKReplacer}!SetEvictable@{SetEvictable}}
+\index{SetEvictable@{SetEvictable}!bustub::LRUKReplacer@{bustub::LRUKReplacer}}
+\doxysubsubsection{\texorpdfstring{SetEvictable()}{SetEvictable()}}
+{\footnotesize\ttfamily void bustub\+::\+LRUKReplacer\+::\+Set\+Evictable (\begin{DoxyParamCaption}\item[{frame\+\_\+id\+\_\+t}]{frame\+\_\+id,  }\item[{bool}]{set\+\_\+evictable }\end{DoxyParamCaption})}
+
+
+
+Toggle whether a frame is evictable or non-\/evictable. This function also controls replacer\textquotesingle{}s size. Note that size is equal to number of evictable entries. 
+
+TODO(\+P1)\+: Add implementation
+
+If a frame was previously evictable and is to be set to non-\/evictable, then size should decrement. If a frame was previously non-\/evictable and is to be set to evictable, then size should increment.
+
+If frame id is invalid, throw an exception or abort the process.
+
+For other scenarios, this function should terminate without modifying anything.
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+id} & id of frame whose \textquotesingle{}evictable\textquotesingle{} status will be modified \\
+\hline
+{\em set\+\_\+evictable} & whether the given frame is evictable or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1LRUKReplacer_a9f271aab1ca802bde41f1683221bca2f}\label{classbustub_1_1LRUKReplacer_a9f271aab1ca802bde41f1683221bca2f}} 
+\index{bustub::LRUKReplacer@{bustub::LRUKReplacer}!Size@{Size}}
+\index{Size@{Size}!bustub::LRUKReplacer@{bustub::LRUKReplacer}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily auto bustub\+::\+LRUKReplacer\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ size\+\_\+t}
+
+
+
+Return replacer\textquotesingle{}s size, which tracks the number of evictable frames. 
+
+TODO(\+P1)\+: Add implementation
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/buffer/lru\+\_\+k\+\_\+replacer.\+h\item 
+src/buffer/lru\+\_\+k\+\_\+replacer.\+cpp\end{DoxyCompactItemize}

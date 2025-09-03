@@ -1,0 +1,121 @@
+\hypertarget{classbustub_1_1IndexMetadata}{}\doxysection{bustub\+::Index\+Metadata Class Reference}
+\label{classbustub_1_1IndexMetadata}\index{bustub::IndexMetadata@{bustub::IndexMetadata}}
+
+
+{\ttfamily \#include $<$index.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1IndexMetadata_ae48eb0543a529ba7165de26891408b97}{Index\+Metadata}} (std\+::string index\+\_\+name, std\+::string table\+\_\+name, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$tuple\+\_\+schema, std\+::vector$<$ uint32\+\_\+t $>$ key\+\_\+attrs, bool is\+\_\+primary\+\_\+key)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexMetadata_aa474d4c7601a4dc910e155998855391e}{Get\+Name}} () const -\/$>$ const std\+::string \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexMetadata_a344ed0a3a7e66f7e97ddb0f961299547}{Get\+Table\+Name}} () -\/$>$ const std\+::string \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexMetadata_a250cc84708d9ed379d3ed46b7e35938b}{Get\+Key\+Schema}} () const -\/$>$ \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexMetadata_aa786f183e60c9412e4575d0af2f1373e}{Get\+Index\+Column\+Count}} () const -\/$>$ std\+::uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexMetadata_a06141bf09d2cdf6b244dcce7a3630629}{Get\+Key\+Attrs}} () const -\/$>$ const std\+::vector$<$ uint32\+\_\+t $>$ \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexMetadata_afebf2f5f0cdfc8ab5014ed5c9677dd0a}{Is\+Primary\+Key}} () const -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1IndexMetadata_a3457b44a0e089356f0e45f8ede083e33}{To\+String}} () const -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{classbustub_1_1IndexMetadata}{Index\+Metadata}} -\/ Holds metadata of an index object.
+
+The metadata object maintains the tuple schema and key attribute of an index, since the external callers does not know the actual structure of the index key, so it is the index\textquotesingle{}s responsibility to maintain such a mapping relation and does the conversion between tuple key and index key 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexMetadata_ae48eb0543a529ba7165de26891408b97}\label{classbustub_1_1IndexMetadata_ae48eb0543a529ba7165de26891408b97}} 
+\index{bustub::IndexMetadata@{bustub::IndexMetadata}!IndexMetadata@{IndexMetadata}}
+\index{IndexMetadata@{IndexMetadata}!bustub::IndexMetadata@{bustub::IndexMetadata}}
+\doxysubsubsection{\texorpdfstring{IndexMetadata()}{IndexMetadata()}}
+{\footnotesize\ttfamily bustub\+::\+Index\+Metadata\+::\+Index\+Metadata (\begin{DoxyParamCaption}\item[{std\+::string}]{index\+\_\+name,  }\item[{std\+::string}]{table\+\_\+name,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{tuple\+\_\+schema,  }\item[{std\+::vector$<$ uint32\+\_\+t $>$}]{key\+\_\+attrs,  }\item[{bool}]{is\+\_\+primary\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1IndexMetadata}{Index\+Metadata}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em index\+\_\+name} & The name of the index \\
+\hline
+{\em table\+\_\+name} & The name of the table on which the index is created \\
+\hline
+{\em tuple\+\_\+schema} & The schema of the indexed key \\
+\hline
+{\em key\+\_\+attrs} & The mapping from indexed columns to base table columns \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexMetadata_aa786f183e60c9412e4575d0af2f1373e}\label{classbustub_1_1IndexMetadata_aa786f183e60c9412e4575d0af2f1373e}} 
+\index{bustub::IndexMetadata@{bustub::IndexMetadata}!GetIndexColumnCount@{GetIndexColumnCount}}
+\index{GetIndexColumnCount@{GetIndexColumnCount}!bustub::IndexMetadata@{bustub::IndexMetadata}}
+\doxysubsubsection{\texorpdfstring{GetIndexColumnCount()}{GetIndexColumnCount()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Metadata\+::\+Get\+Index\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::uint32\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The number of columns inside index key (not in tuple key)
+\end{DoxyReturn}
+NOTE\+: this must be defined inside the cpp source file because it uses the member of catalog\+::\+Schema which is not known here. \mbox{\Hypertarget{classbustub_1_1IndexMetadata_a06141bf09d2cdf6b244dcce7a3630629}\label{classbustub_1_1IndexMetadata_a06141bf09d2cdf6b244dcce7a3630629}} 
+\index{bustub::IndexMetadata@{bustub::IndexMetadata}!GetKeyAttrs@{GetKeyAttrs}}
+\index{GetKeyAttrs@{GetKeyAttrs}!bustub::IndexMetadata@{bustub::IndexMetadata}}
+\doxysubsubsection{\texorpdfstring{GetKeyAttrs()}{GetKeyAttrs()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Metadata\+::\+Get\+Key\+Attrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::vector$<$uint32\+\_\+t$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The mapping relation between indexed columns and base table columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1IndexMetadata_a250cc84708d9ed379d3ed46b7e35938b}\label{classbustub_1_1IndexMetadata_a250cc84708d9ed379d3ed46b7e35938b}} 
+\index{bustub::IndexMetadata@{bustub::IndexMetadata}!GetKeySchema@{GetKeySchema}}
+\index{GetKeySchema@{GetKeySchema}!bustub::IndexMetadata@{bustub::IndexMetadata}}
+\doxysubsubsection{\texorpdfstring{GetKeySchema()}{GetKeySchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Metadata\+::\+Get\+Key\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+A schema object pointer that represents the indexed key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1IndexMetadata_aa474d4c7601a4dc910e155998855391e}\label{classbustub_1_1IndexMetadata_aa474d4c7601a4dc910e155998855391e}} 
+\index{bustub::IndexMetadata@{bustub::IndexMetadata}!GetName@{GetName}}
+\index{GetName@{GetName}!bustub::IndexMetadata@{bustub::IndexMetadata}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Metadata\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::string \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The name of the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1IndexMetadata_a344ed0a3a7e66f7e97ddb0f961299547}\label{classbustub_1_1IndexMetadata_a344ed0a3a7e66f7e97ddb0f961299547}} 
+\index{bustub::IndexMetadata@{bustub::IndexMetadata}!GetTableName@{GetTableName}}
+\index{GetTableName@{GetTableName}!bustub::IndexMetadata@{bustub::IndexMetadata}}
+\doxysubsubsection{\texorpdfstring{GetTableName()}{GetTableName()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Metadata\+::\+Get\+Table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ const std\+::string \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The name of the table on which the index is created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1IndexMetadata_afebf2f5f0cdfc8ab5014ed5c9677dd0a}\label{classbustub_1_1IndexMetadata_afebf2f5f0cdfc8ab5014ed5c9677dd0a}} 
+\index{bustub::IndexMetadata@{bustub::IndexMetadata}!IsPrimaryKey@{IsPrimaryKey}}
+\index{IsPrimaryKey@{IsPrimaryKey}!bustub::IndexMetadata@{bustub::IndexMetadata}}
+\doxysubsubsection{\texorpdfstring{IsPrimaryKey()}{IsPrimaryKey()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Metadata\+::\+Is\+Primary\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+is primary key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1IndexMetadata_a3457b44a0e089356f0e45f8ede083e33}\label{classbustub_1_1IndexMetadata_a3457b44a0e089356f0e45f8ede083e33}} 
+\index{bustub::IndexMetadata@{bustub::IndexMetadata}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::IndexMetadata@{bustub::IndexMetadata}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Index\+Metadata\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+A string representation for debugging 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/index.\+h\end{DoxyCompactItemize}

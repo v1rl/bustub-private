@@ -1,0 +1,209 @@
+\hypertarget{classbustub_1_1ExtendibleHTableBucketPage}{}\doxysection{bustub\+::Extendible\+HTable\+Bucket\+Page$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ Class Template Reference}
+\label{classbustub_1_1ExtendibleHTableBucketPage}\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+
+
+{\ttfamily \#include $<$extendible\+\_\+htable\+\_\+bucket\+\_\+page.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_aec25eaa5a479de575a35458a4dc44f43}\label{classbustub_1_1ExtendibleHTableBucketPage_aec25eaa5a479de575a35458a4dc44f43}} 
+{\bfseries DISALLOW\+\_\+\+COPY\+\_\+\+AND\+\_\+\+MOVE} (\mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{Extendible\+HTable\+Bucket\+Page}})
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_ac207da5e4df9eab32969ffb544a3d7aa}{Init}} (uint32\+\_\+t max\+\_\+size=HTable\+Bucket\+Array\+Size(sizeof(Mapping\+Type)))
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_a1f24fecbcc1e7b5f09f2d0915975ce8c}{Lookup}} (const Key\+Type \&key, Value\+Type \&value, const Key\+Comparator \&cmp) const -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_a1e2eb640488d789bd21df3e9b337baa9}{Insert}} (const Key\+Type \&key, const Value\+Type \&value, const Key\+Comparator \&cmp) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_aab90c97d0f87d4a71fbd45f5582daf81}{Remove}} (const Key\+Type \&key, const Key\+Comparator \&cmp) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_a9dfe14180a2483d17c1b1b2663232dd2}\label{classbustub_1_1ExtendibleHTableBucketPage_a9dfe14180a2483d17c1b1b2663232dd2}} 
+void {\bfseries Remove\+At} (uint32\+\_\+t bucket\+\_\+idx)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_a928c4df8da3b13c360da848c3482835b}{Key\+At}} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ Key\+Type
+\begin{DoxyCompactList}\small\item\em Gets the key at an index in the bucket. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_a89d931c215069be73481d77b6846a457}{Value\+At}} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ Value\+Type
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_a1467fc0ee46bf67fc62545daeadad7ac}{Entry\+At}} (uint32\+\_\+t bucket\+\_\+idx) const -\/$>$ const std\+::pair$<$ Key\+Type, Value\+Type $>$ \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_a9cb7109e1362516eae0983ef176a9023}{Size}} () const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_a0dd9275bc1a878c7663ecd6cb72a5938}{Is\+Full}} () const -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_a03ad3299bcf12e8a81353eb24e727685}{Is\+Empty}} () const -\/$>$ bool
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage_ad910f24a219b47c87747cb5a092661bf}{Print\+Bucket}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key\+Type, typename Value\+Type, typename Key\+Comparator$>$\newline
+class bustub\+::\+Extendible\+HTable\+Bucket\+Page$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}
+
+Bucket page for extendible hash table. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_a1467fc0ee46bf67fc62545daeadad7ac}\label{classbustub_1_1ExtendibleHTableBucketPage_a1467fc0ee46bf67fc62545daeadad7ac}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!EntryAt@{EntryAt}}
+\index{EntryAt@{EntryAt}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{EntryAt()}{EntryAt()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Entry\+At (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ const std\+::pair$<$Key\+Type, Value\+Type$>$ \&}
+
+Gets the entry at an index in the bucket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & the index in the bucket to get the entry at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+entry at index bucket\+\_\+idx of the bucket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_ac207da5e4df9eab32969ffb544a3d7aa}\label{classbustub_1_1ExtendibleHTableBucketPage_ac207da5e4df9eab32969ffb544a3d7aa}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!Init@{Init}}
+\index{Init@{Init}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Init (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+\_\+size = {\ttfamily HTableBucketArraySize(sizeof(MappingType))} }\end{DoxyParamCaption})}
+
+After creating a new bucket page from buffer pool, must call initialize method to set default values 
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+size} & Max size of the bucket array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_a1e2eb640488d789bd21df3e9b337baa9}\label{classbustub_1_1ExtendibleHTableBucketPage_a1e2eb640488d789bd21df3e9b337baa9}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Insert (\begin{DoxyParamCaption}\item[{const Key\+Type \&}]{key,  }\item[{const Value\+Type \&}]{value,  }\item[{const Key\+Comparator \&}]{cmp }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Attempts to insert a key and value in the bucket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & key to insert \\
+\hline
+{\em value} & value to insert \\
+\hline
+{\em cmp} & the comparator to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if inserted, false if bucket is full or the same key is already present 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_a03ad3299bcf12e8a81353eb24e727685}\label{classbustub_1_1ExtendibleHTableBucketPage_a03ad3299bcf12e8a81353eb24e727685}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Is\+Empty}
+
+\begin{DoxyReturn}{Returns}
+whether the bucket is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_a0dd9275bc1a878c7663ecd6cb72a5938}\label{classbustub_1_1ExtendibleHTableBucketPage_a0dd9275bc1a878c7663ecd6cb72a5938}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!IsFull@{IsFull}}
+\index{IsFull@{IsFull}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{IsFull()}{IsFull()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Is\+Full}
+
+\begin{DoxyReturn}{Returns}
+whether the bucket is full 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_a928c4df8da3b13c360da848c3482835b}\label{classbustub_1_1ExtendibleHTableBucketPage_a928c4df8da3b13c360da848c3482835b}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!KeyAt@{KeyAt}}
+\index{KeyAt@{KeyAt}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{KeyAt()}{KeyAt()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Key\+At (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ Key\+Type}
+
+
+
+Gets the key at an index in the bucket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & the index in the bucket to get the key at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+key at index bucket\+\_\+idx of the bucket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_a1f24fecbcc1e7b5f09f2d0915975ce8c}\label{classbustub_1_1ExtendibleHTableBucketPage_a1f24fecbcc1e7b5f09f2d0915975ce8c}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!Lookup@{Lookup}}
+\index{Lookup@{Lookup}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Lookup()}{Lookup()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Lookup (\begin{DoxyParamCaption}\item[{const Key\+Type \&}]{key,  }\item[{Value\+Type \&}]{value,  }\item[{const Key\+Comparator \&}]{cmp }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+Lookup a key
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em key} & key to lookup \\
+\hline
+\mbox{\texttt{ out}}  & {\em value} & value to set \\
+\hline
+ & {\em cmp} & the comparator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key and value are present, false if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_ad910f24a219b47c87747cb5a092661bf}\label{classbustub_1_1ExtendibleHTableBucketPage_ad910f24a219b47c87747cb5a092661bf}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!PrintBucket@{PrintBucket}}
+\index{PrintBucket@{PrintBucket}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{PrintBucket()}{PrintBucket()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Print\+Bucket}
+
+Prints the bucket\textquotesingle{}s occupancy information \mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_aab90c97d0f87d4a71fbd45f5582daf81}\label{classbustub_1_1ExtendibleHTableBucketPage_aab90c97d0f87d4a71fbd45f5582daf81}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Remove (\begin{DoxyParamCaption}\item[{const Key\+Type \&}]{key,  }\item[{const Key\+Comparator \&}]{cmp }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Removes a key and value.
+
+\begin{DoxyReturn}{Returns}
+true if removed, false if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_a9cb7109e1362516eae0983ef176a9023}\label{classbustub_1_1ExtendibleHTableBucketPage_a9cb7109e1362516eae0983ef176a9023}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!Size@{Size}}
+\index{Size@{Size}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Size}
+
+\begin{DoxyReturn}{Returns}
+number of entries in the bucket 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHTableBucketPage_a89d931c215069be73481d77b6846a457}\label{classbustub_1_1ExtendibleHTableBucketPage_a89d931c215069be73481d77b6846a457}} 
+\index{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}!ValueAt@{ValueAt}}
+\index{ValueAt@{ValueAt}!bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHTableBucketPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{ValueAt()}{ValueAt()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , typename KC $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1ExtendibleHTableBucketPage}{bustub\+::\+Extendible\+HTable\+Bucket\+Page}}$<$ K, V, KC $>$\+::Value\+At (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{bucket\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ Value\+Type}
+
+Gets the value at an index in the bucket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+idx} & the index in the bucket to get the value at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value at index bucket\+\_\+idx of the bucket 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/extendible\+\_\+htable\+\_\+bucket\+\_\+page.\+h\item 
+src/storage/page/extendible\+\_\+htable\+\_\+bucket\+\_\+page.\+cpp\item 
+src/storage/page/extendible\+\_\+htable\+\_\+page\+\_\+utils.\+cpp\end{DoxyCompactItemize}

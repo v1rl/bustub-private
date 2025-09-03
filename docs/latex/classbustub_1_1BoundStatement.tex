@@ -1,0 +1,60 @@
+\hypertarget{classbustub_1_1BoundStatement}{}\doxysection{bustub\+::Bound\+Statement Class Reference}
+\label{classbustub_1_1BoundStatement}\index{bustub::BoundStatement@{bustub::BoundStatement}}
+
+
+{\ttfamily \#include $<$bound\+\_\+statement.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Statement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1BoundStatement__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundStatement_a01536be6d03b1854904c4d61f6863614}\label{classbustub_1_1BoundStatement_a01536be6d03b1854904c4d61f6863614}} 
+{\bfseries Bound\+Statement} (Statement\+Type type)
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1BoundStatement_aec43c00d8ab208b2cfb0e26fb5bb4c32}{To\+String}} () const -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Statement\+Type \mbox{\hyperlink{classbustub_1_1BoundStatement_adba7bb130df4e009207fc963fecb5ff7}{type\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1BoundStatement}{Bound\+Statement}} is the base class of any type of bound SQL statement. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundStatement_aec43c00d8ab208b2cfb0e26fb5bb4c32}\label{classbustub_1_1BoundStatement_aec43c00d8ab208b2cfb0e26fb5bb4c32}} 
+\index{bustub::BoundStatement@{bustub::BoundStatement}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::BoundStatement@{bustub::BoundStatement}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Bound\+Statement\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Render this statement as a string. 
+
+Reimplemented in \mbox{\hyperlink{classbustub_1_1UpdateStatement_a700a2432474b730983244283fae5fb47}{bustub\+::\+Update\+Statement}}, \mbox{\hyperlink{classbustub_1_1TransactionStatement_a360f8f13af18fea870f340a0e1497171}{bustub\+::\+Transaction\+Statement}}, \mbox{\hyperlink{classbustub_1_1VariableShowStatement_aeca88828e9c58a97abb9605b868ee1f2}{bustub\+::\+Variable\+Show\+Statement}}, \mbox{\hyperlink{classbustub_1_1VariableSetStatement_aa0ec87719292fcb962d77febfc7c01ad}{bustub\+::\+Variable\+Set\+Statement}}, \mbox{\hyperlink{classbustub_1_1SelectStatement_a55316086d6aa942363971562a9f41668}{bustub\+::\+Select\+Statement}}, \mbox{\hyperlink{classbustub_1_1InsertStatement_a0d4fab588535ada17d739ffb2efcc835}{bustub\+::\+Insert\+Statement}}, \mbox{\hyperlink{classbustub_1_1IndexStatement_afaecb3ea8b462572d2f63eeab9022d47}{bustub\+::\+Index\+Statement}}, \mbox{\hyperlink{classbustub_1_1ExplainStatement_a19d513876fd74e0342cd4dd49c616621}{bustub\+::\+Explain\+Statement}}, \mbox{\hyperlink{classbustub_1_1DeleteStatement_ab93c6e44524e68a324fabd28b4c11d15}{bustub\+::\+Delete\+Statement}}, and \mbox{\hyperlink{classbustub_1_1CreateStatement_a0708e31603a3a096e3bba2b1d0f10ca5}{bustub\+::\+Create\+Statement}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundStatement_adba7bb130df4e009207fc963fecb5ff7}\label{classbustub_1_1BoundStatement_adba7bb130df4e009207fc963fecb5ff7}} 
+\index{bustub::BoundStatement@{bustub::BoundStatement}!type\_@{type\_}}
+\index{type\_@{type\_}!bustub::BoundStatement@{bustub::BoundStatement}}
+\doxysubsubsection{\texorpdfstring{type\_}{type\_}}
+{\footnotesize\ttfamily Statement\+Type bustub\+::\+Bound\+Statement\+::type\+\_\+}
+
+The statement type. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/bound\+\_\+statement.\+h\item 
+src/binder/bound\+\_\+statement.\+cpp\end{DoxyCompactItemize}

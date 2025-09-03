@@ -1,0 +1,58 @@
+\hypertarget{classbustub_1_1Watermark}{}\doxysection{bustub\+::Watermark Class Reference}
+\label{classbustub_1_1Watermark}\index{bustub::Watermark@{bustub::Watermark}}
+
+
+tracks all the read timestamps.  
+
+
+
+
+{\ttfamily \#include $<$watermark.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Watermark_a903b62a5b0a4bfa5accfe10c032065b8}\label{classbustub_1_1Watermark_a903b62a5b0a4bfa5accfe10c032065b8}} 
+{\bfseries Watermark} (timestamp\+\_\+t commit\+\_\+ts)
+\item 
+\mbox{\Hypertarget{classbustub_1_1Watermark_a39c156f108bf1088f79de90c723477c2}\label{classbustub_1_1Watermark_a39c156f108bf1088f79de90c723477c2}} 
+auto {\bfseries Add\+Txn} (timestamp\+\_\+t read\+\_\+ts) -\/$>$ void
+\item 
+\mbox{\Hypertarget{classbustub_1_1Watermark_a375394d4ad8f0c06d8dc9d4850a430a8}\label{classbustub_1_1Watermark_a375394d4ad8f0c06d8dc9d4850a430a8}} 
+auto {\bfseries Remove\+Txn} (timestamp\+\_\+t read\+\_\+ts) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Watermark_aae9f3671de718d542829438e819f4345}{Update\+Commit\+Ts}} (timestamp\+\_\+t commit\+\_\+ts)
+\item 
+\mbox{\Hypertarget{classbustub_1_1Watermark_a7200319ba0e8189032a460928c60a440}\label{classbustub_1_1Watermark_a7200319ba0e8189032a460928c60a440}} 
+auto {\bfseries Get\+Watermark} () -\/$>$ timestamp\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Watermark_a229a4fa2e3da170ed37a9d33fedda1de}\label{classbustub_1_1Watermark_a229a4fa2e3da170ed37a9d33fedda1de}} 
+timestamp\+\_\+t {\bfseries commit\+\_\+ts\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Watermark_a849dcc41ef236bcdc1fcede8da54809c}\label{classbustub_1_1Watermark_a849dcc41ef236bcdc1fcede8da54809c}} 
+timestamp\+\_\+t {\bfseries watermark\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Watermark_a4c83f8157feb2628d0b57cf0c166fa5a}\label{classbustub_1_1Watermark_a4c83f8157feb2628d0b57cf0c166fa5a}} 
+std\+::unordered\+\_\+map$<$ timestamp\+\_\+t, int $>$ {\bfseries current\+\_\+reads\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+tracks all the read timestamps. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Watermark_aae9f3671de718d542829438e819f4345}\label{classbustub_1_1Watermark_aae9f3671de718d542829438e819f4345}} 
+\index{bustub::Watermark@{bustub::Watermark}!UpdateCommitTs@{UpdateCommitTs}}
+\index{UpdateCommitTs@{UpdateCommitTs}!bustub::Watermark@{bustub::Watermark}}
+\doxysubsubsection{\texorpdfstring{UpdateCommitTs()}{UpdateCommitTs()}}
+{\footnotesize\ttfamily auto bustub\+::\+Watermark\+::\+Update\+Commit\+Ts (\begin{DoxyParamCaption}\item[{timestamp\+\_\+t}]{commit\+\_\+ts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The caller should update commit ts before removing the txn from the watermark so that we can track watermark correctly. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/watermark.\+h\item 
+src/concurrency/watermark.\+cpp\end{DoxyCompactItemize}

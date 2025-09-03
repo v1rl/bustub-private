@@ -1,0 +1,90 @@
+\hypertarget{classbustub_1_1LogRecord}{}\doxysection{bustub\+::Log\+Record Class Reference}
+\label{classbustub_1_1LogRecord}\index{bustub::LogRecord@{bustub::LogRecord}}
+
+
+{\ttfamily \#include $<$log\+\_\+record.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ad8571e9de7b2180e5b6a499e1734e14f}\label{classbustub_1_1LogRecord_ad8571e9de7b2180e5b6a499e1734e14f}} 
+{\bfseries Log\+Record} (txn\+\_\+id\+\_\+t txn\+\_\+id, lsn\+\_\+t prev\+\_\+lsn, \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} log\+\_\+record\+\_\+type)
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a0928587b6dae9e6336e6ebd4534416a6}\label{classbustub_1_1LogRecord_a0928587b6dae9e6336e6ebd4534416a6}} 
+{\bfseries Log\+Record} (txn\+\_\+id\+\_\+t txn\+\_\+id, lsn\+\_\+t prev\+\_\+lsn, \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} log\+\_\+record\+\_\+type, const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&rid, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple)
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ae0a6385db4601054c2a9f688cc49010c}\label{classbustub_1_1LogRecord_ae0a6385db4601054c2a9f688cc49010c}} 
+{\bfseries Log\+Record} (txn\+\_\+id\+\_\+t txn\+\_\+id, lsn\+\_\+t prev\+\_\+lsn, \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} log\+\_\+record\+\_\+type, const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&update\+\_\+rid, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&old\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&new\+\_\+tuple)
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a48c7b48c6c51d38516e205aa38b8b5a9}\label{classbustub_1_1LogRecord_a48c7b48c6c51d38516e205aa38b8b5a9}} 
+{\bfseries Log\+Record} (txn\+\_\+id\+\_\+t txn\+\_\+id, lsn\+\_\+t prev\+\_\+lsn, \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} log\+\_\+record\+\_\+type, page\+\_\+id\+\_\+t prev\+\_\+page\+\_\+id, page\+\_\+id\+\_\+t page\+\_\+id)
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a9674f470888fcc3257623424e7da7c28}\label{classbustub_1_1LogRecord_a9674f470888fcc3257623424e7da7c28}} 
+auto {\bfseries Get\+Delete\+Tuple} () -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a05fd82680082b07d64f6d280b57a3230}\label{classbustub_1_1LogRecord_a05fd82680082b07d64f6d280b57a3230}} 
+auto {\bfseries Get\+Delete\+RID} () -\/$>$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ad5f8e7b5cb99dfb1efda0b646d5e5c3f}\label{classbustub_1_1LogRecord_ad5f8e7b5cb99dfb1efda0b646d5e5c3f}} 
+auto {\bfseries Get\+Insert\+Tuple} () -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a629b36d2119d93bc15c52515291a2193}\label{classbustub_1_1LogRecord_a629b36d2119d93bc15c52515291a2193}} 
+auto {\bfseries Get\+Insert\+RID} () -\/$>$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a78da33e50728029c99aa561ddfa93000}\label{classbustub_1_1LogRecord_a78da33e50728029c99aa561ddfa93000}} 
+auto {\bfseries Get\+Original\+Tuple} () -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ac808a7f6922f9aef6533c28935c7ef1c}\label{classbustub_1_1LogRecord_ac808a7f6922f9aef6533c28935c7ef1c}} 
+auto {\bfseries Get\+Update\+Tuple} () -\/$>$ \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a529ed69b29aa941435f6bf96fb06d22f}\label{classbustub_1_1LogRecord_a529ed69b29aa941435f6bf96fb06d22f}} 
+auto {\bfseries Get\+Update\+RID} () -\/$>$ \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_aeea00fef352692a5f2c58519f9616b0d}\label{classbustub_1_1LogRecord_aeea00fef352692a5f2c58519f9616b0d}} 
+auto {\bfseries Get\+New\+Page\+Record} () -\/$>$ page\+\_\+id\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a44f86cf0e98c6562932a130677a909f9}\label{classbustub_1_1LogRecord_a44f86cf0e98c6562932a130677a909f9}} 
+auto {\bfseries Get\+Size} () -\/$>$ int32\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ad4c3cd64a35ef22ce2e4684a60e954d3}\label{classbustub_1_1LogRecord_ad4c3cd64a35ef22ce2e4684a60e954d3}} 
+auto {\bfseries Get\+LSN} () -\/$>$ lsn\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a34c2efe77473eab7624583d2cb9307f2}\label{classbustub_1_1LogRecord_a34c2efe77473eab7624583d2cb9307f2}} 
+auto {\bfseries Get\+Txn\+Id} () -\/$>$ txn\+\_\+id\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_acbda02dd2f56b895e0d53c06ce4fdb50}\label{classbustub_1_1LogRecord_acbda02dd2f56b895e0d53c06ce4fdb50}} 
+auto {\bfseries Get\+Prev\+LSN} () -\/$>$ lsn\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ab3546f49c885d6882901ddf95e43bab1}\label{classbustub_1_1LogRecord_ab3546f49c885d6882901ddf95e43bab1}} 
+auto {\bfseries Get\+Log\+Record\+Type} () -\/$>$ \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ad6eab990f353f8e1c6a8bb476abb3512}\label{classbustub_1_1LogRecord_ad6eab990f353f8e1c6a8bb476abb3512}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a42122844816425e371e961638cdaf796}\label{classbustub_1_1LogRecord_a42122844816425e371e961638cdaf796}} 
+class {\bfseries Log\+Manager}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a0a38999bad446d23993955f77e0acce0}\label{classbustub_1_1LogRecord_a0a38999bad446d23993955f77e0acce0}} 
+class {\bfseries Log\+Recovery}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For every write operation on the table page, you should write ahead a corresponding log record.\hypertarget{classbustub_1_1LogRecord_autotoc_md11}{}\doxysubsubsection{For EACH log record, HEADER is like (5 fields in common, 20 bytes in total).}\label{classbustub_1_1LogRecord_autotoc_md11}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md12}{}\doxysubsubsection{$\vert$ size $\vert$ LSN $\vert$ trans\+ID $\vert$ prev\+LSN $\vert$ Log\+Type $\vert$}\label{classbustub_1_1LogRecord_autotoc_md12}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md13}{}\doxysubsubsection{For insert type log record}\label{classbustub_1_1LogRecord_autotoc_md13}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md14}{}\doxysubsubsection{$\vert$ HEADER $\vert$ tuple\+\_\+rid $\vert$ tuple\+\_\+size $\vert$ tuple\+\_\+data(char\mbox{[}$\,$\mbox{]} array) $\vert$}\label{classbustub_1_1LogRecord_autotoc_md14}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md15}{}\doxysubsubsection{For delete type (including markdelete, rollbackdelete, applydelete)}\label{classbustub_1_1LogRecord_autotoc_md15}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md16}{}\doxysubsubsection{$\vert$ HEADER $\vert$ tuple\+\_\+rid $\vert$ tuple\+\_\+size $\vert$ tuple\+\_\+data(char\mbox{[}$\,$\mbox{]} array) $\vert$}\label{classbustub_1_1LogRecord_autotoc_md16}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md17}{}\doxysubsubsection{For update type log record}\label{classbustub_1_1LogRecord_autotoc_md17}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md18}{}\doxysubsubsection{$\vert$ HEADER $\vert$ tuple\+\_\+rid $\vert$ tuple\+\_\+size $\vert$ old\+\_\+tuple\+\_\+data $\vert$ tuple\+\_\+size $\vert$ new\+\_\+tuple\+\_\+data $\vert$}\label{classbustub_1_1LogRecord_autotoc_md18}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md19}{}\doxysubsubsection{For new page type log record}\label{classbustub_1_1LogRecord_autotoc_md19}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md20}{}\doxysubsubsection{$\vert$ HEADER $\vert$ prev\+\_\+page\+\_\+id $\vert$}\label{classbustub_1_1LogRecord_autotoc_md20}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/recovery/log\+\_\+record.\+h\end{DoxyCompactItemize}

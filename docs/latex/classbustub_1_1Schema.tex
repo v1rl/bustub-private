@@ -1,0 +1,161 @@
+\hypertarget{classbustub_1_1Schema}{}\doxysection{bustub\+::Schema Class Reference}
+\label{classbustub_1_1Schema}\index{bustub::Schema@{bustub::Schema}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Schema_a19f218ba430d407d31665c2f2e60e621}{Schema}} (const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Column}{Column}} $>$ \&columns)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_a6d0bde8fda3135aa4206845a1817578a}{Get\+Columns}} () const -\/$>$ const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Column}{Column}} $>$ \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_a323376fa5c13c0d2aab1e80079da7bd8}{Get\+Column}} (const uint32\+\_\+t col\+\_\+idx) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Column}{Column}} \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_aee899d889d48109814fe56cfac94f71e}{Get\+Col\+Idx}} (const std\+::string \&col\+\_\+name) const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_a709fb72a33fa2aad977b5362e84a8e59}{Try\+Get\+Col\+Idx}} (const std\+::string \&col\+\_\+name) const -\/$>$ std\+::optional$<$ uint32\+\_\+t $>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_ad6a14eca89f654fb047ed90bb3059097}{Get\+Unlined\+Columns}} () const -\/$>$ const std\+::vector$<$ uint32\+\_\+t $>$ \&
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_a8efc3d3d9c8076ddf31fbdb25a1f9746}{Get\+Column\+Count}} () const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_a17da479c72408cff5fc74f482c78aac1}{Get\+Unlined\+Column\+Count}} () const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_a641d6c2e93d64ebcf9994b97d36175e1}{Get\+Inlined\+Storage\+Size}} () const -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_a63e0a5d7447ed20426d4f74c865893b9}{Is\+Inlined}} () const -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1Schema_a500c5cd930c2b87c99dfe16fbf136bec}{To\+String}} (bool simplified=true) const -\/$>$ std\+::string
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Schema_a6046d5871da1d03a3f6dd505180863d0}\label{classbustub_1_1Schema_a6046d5871da1d03a3f6dd505180863d0}} 
+static auto {\bfseries Copy\+Schema} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$from, const std\+::vector$<$ uint32\+\_\+t $>$ \&attrs) -\/$>$ \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Schema_a19f218ba430d407d31665c2f2e60e621}\label{classbustub_1_1Schema_a19f218ba430d407d31665c2f2e60e621}} 
+\index{bustub::Schema@{bustub::Schema}!Schema@{Schema}}
+\index{Schema@{Schema}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{Schema()}{Schema()}}
+{\footnotesize\ttfamily bustub\+::\+Schema\+::\+Schema (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Column}{Column}} $>$ \&}]{columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructs the schema corresponding to the vector of columns, read left-\/to-\/right. 
+\begin{DoxyParams}{Parameters}
+{\em columns} & columns that describe the schema\textquotesingle{}s individual columns \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Schema_aee899d889d48109814fe56cfac94f71e}\label{classbustub_1_1Schema_aee899d889d48109814fe56cfac94f71e}} 
+\index{bustub::Schema@{bustub::Schema}!GetColIdx@{GetColIdx}}
+\index{GetColIdx@{GetColIdx}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetColIdx()}{GetColIdx()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+Get\+Col\+Idx (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{col\+\_\+name }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+Looks up and returns the index of the first column in the schema with the specified name. If multiple columns have the same name, the first such index is returned. 
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+name} & name of column to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the index of a column with the given name, throws an exception if it does not exist 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a323376fa5c13c0d2aab1e80079da7bd8}\label{classbustub_1_1Schema_a323376fa5c13c0d2aab1e80079da7bd8}} 
+\index{bustub::Schema@{bustub::Schema}!GetColumn@{GetColumn}}
+\index{GetColumn@{GetColumn}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetColumn()}{GetColumn()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+Get\+Column (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{col\+\_\+idx }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Column}{Column}} \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a specific column from the schema. 
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+idx} & index of requested column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+requested column 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a8efc3d3d9c8076ddf31fbdb25a1f9746}\label{classbustub_1_1Schema_a8efc3d3d9c8076ddf31fbdb25a1f9746}} 
+\index{bustub::Schema@{bustub::Schema}!GetColumnCount@{GetColumnCount}}
+\index{GetColumnCount@{GetColumnCount}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetColumnCount()}{GetColumnCount()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+Get\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of columns in the schema for the tuple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a6d0bde8fda3135aa4206845a1817578a}\label{classbustub_1_1Schema_a6d0bde8fda3135aa4206845a1817578a}} 
+\index{bustub::Schema@{bustub::Schema}!GetColumns@{GetColumns}}
+\index{GetColumns@{GetColumns}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetColumns()}{GetColumns()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+Get\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::vector$<$\mbox{\hyperlink{classbustub_1_1Column}{Column}}$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+all the columns in the schema 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a641d6c2e93d64ebcf9994b97d36175e1}\label{classbustub_1_1Schema_a641d6c2e93d64ebcf9994b97d36175e1}} 
+\index{bustub::Schema@{bustub::Schema}!GetInlinedStorageSize@{GetInlinedStorageSize}}
+\index{GetInlinedStorageSize@{GetInlinedStorageSize}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetInlinedStorageSize()}{GetInlinedStorageSize()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+Get\+Inlined\+Storage\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of bytes used by one tuple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a17da479c72408cff5fc74f482c78aac1}\label{classbustub_1_1Schema_a17da479c72408cff5fc74f482c78aac1}} 
+\index{bustub::Schema@{bustub::Schema}!GetUnlinedColumnCount@{GetUnlinedColumnCount}}
+\index{GetUnlinedColumnCount@{GetUnlinedColumnCount}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetUnlinedColumnCount()}{GetUnlinedColumnCount()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+Get\+Unlined\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ uint32\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of non-\/inlined columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_ad6a14eca89f654fb047ed90bb3059097}\label{classbustub_1_1Schema_ad6a14eca89f654fb047ed90bb3059097}} 
+\index{bustub::Schema@{bustub::Schema}!GetUnlinedColumns@{GetUnlinedColumns}}
+\index{GetUnlinedColumns@{GetUnlinedColumns}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetUnlinedColumns()}{GetUnlinedColumns()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+Get\+Unlined\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const std\+::vector$<$uint32\+\_\+t$>$ \& \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the indices of non-\/inlined columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a63e0a5d7447ed20426d4f74c865893b9}\label{classbustub_1_1Schema_a63e0a5d7447ed20426d4f74c865893b9}} 
+\index{bustub::Schema@{bustub::Schema}!IsInlined@{IsInlined}}
+\index{IsInlined@{IsInlined}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{IsInlined()}{IsInlined()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+Is\+Inlined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if all columns are inlined, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a500c5cd930c2b87c99dfe16fbf136bec}\label{classbustub_1_1Schema_a500c5cd930c2b87c99dfe16fbf136bec}} 
+\index{bustub::Schema@{bustub::Schema}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+To\+String (\begin{DoxyParamCaption}\item[{bool}]{simplified = {\ttfamily true} }\end{DoxyParamCaption}) const -\/$>$ std\+::string}
+
+\begin{DoxyReturn}{Returns}
+string representation of this schema 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a709fb72a33fa2aad977b5362e84a8e59}\label{classbustub_1_1Schema_a709fb72a33fa2aad977b5362e84a8e59}} 
+\index{bustub::Schema@{bustub::Schema}!TryGetColIdx@{TryGetColIdx}}
+\index{TryGetColIdx@{TryGetColIdx}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{TryGetColIdx()}{TryGetColIdx()}}
+{\footnotesize\ttfamily auto bustub\+::\+Schema\+::\+Try\+Get\+Col\+Idx (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{col\+\_\+name }\end{DoxyParamCaption}) const -\/$>$ std\+::optional$<$uint32\+\_\+t$>$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+Looks up and returns the index of the first column in the schema with the specified name. If multiple columns have the same name, the first such index is returned. 
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+name} & name of column to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the index of a column with the given name, {\ttfamily std\+::nullopt} if it does not exist 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/catalog/schema.\+h\item 
+src/catalog/schema.\+cpp\end{DoxyCompactItemize}

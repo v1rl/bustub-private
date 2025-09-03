@@ -1,0 +1,65 @@
+\hypertarget{classbustub_1_1BoundCrossProductRef}{}\doxysection{bustub\+::Bound\+Cross\+Product\+Ref Class Reference}
+\label{classbustub_1_1BoundCrossProductRef}\index{bustub::BoundCrossProductRef@{bustub::BoundCrossProductRef}}
+
+
+{\ttfamily \#include $<$bound\+\_\+cross\+\_\+product\+\_\+ref.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Cross\+Product\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classbustub_1_1BoundCrossProductRef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Cross\+Product\+Ref\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classbustub_1_1BoundCrossProductRef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundCrossProductRef_a30661be9827964078f3ca2f308c5c0e1}\label{classbustub_1_1BoundCrossProductRef_a30661be9827964078f3ca2f308c5c0e1}} 
+{\bfseries Bound\+Cross\+Product\+Ref} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ left, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ right)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundCrossProductRef_ade3751558529a16c133792676665b404}\label{classbustub_1_1BoundCrossProductRef_ade3751558529a16c133792676665b404}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ \mbox{\hyperlink{classbustub_1_1BoundCrossProductRef_a370f7f8afd6a85596047a3bcbfb2950f}{left\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ \mbox{\hyperlink{classbustub_1_1BoundCrossProductRef_a6e55c49ec13e7ddb8a56cc0630305c30}{right\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A cross product. e.\+g., {\ttfamily SELECT $\ast$ FROM x, y}, where {\ttfamily x, y} is {\ttfamily Cross\+Product}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundCrossProductRef_a370f7f8afd6a85596047a3bcbfb2950f}\label{classbustub_1_1BoundCrossProductRef_a370f7f8afd6a85596047a3bcbfb2950f}} 
+\index{bustub::BoundCrossProductRef@{bustub::BoundCrossProductRef}!left\_@{left\_}}
+\index{left\_@{left\_}!bustub::BoundCrossProductRef@{bustub::BoundCrossProductRef}}
+\doxysubsubsection{\texorpdfstring{left\_}{left\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}}$>$ bustub\+::\+Bound\+Cross\+Product\+Ref\+::left\+\_\+}
+
+The left side of the cross product. \mbox{\Hypertarget{classbustub_1_1BoundCrossProductRef_a6e55c49ec13e7ddb8a56cc0630305c30}\label{classbustub_1_1BoundCrossProductRef_a6e55c49ec13e7ddb8a56cc0630305c30}} 
+\index{bustub::BoundCrossProductRef@{bustub::BoundCrossProductRef}!right\_@{right\_}}
+\index{right\_@{right\_}!bustub::BoundCrossProductRef@{bustub::BoundCrossProductRef}}
+\doxysubsubsection{\texorpdfstring{right\_}{right\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}}$>$ bustub\+::\+Bound\+Cross\+Product\+Ref\+::right\+\_\+}
+
+The right side of the cross product. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/table\+\_\+ref/bound\+\_\+cross\+\_\+product\+\_\+ref.\+h\end{DoxyCompactItemize}

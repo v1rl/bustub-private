@@ -1,0 +1,129 @@
+\hypertarget{classbustub_1_1HashTableBlockPage}{}\doxysection{bustub\+::Hash\+Table\+Block\+Page$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ Class Template Reference}
+\label{classbustub_1_1HashTableBlockPage}\index{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}}
+
+
+{\ttfamily \#include $<$hash\+\_\+table\+\_\+block\+\_\+page.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_afc17eb091d01b0f5fb9d1104803e217a}\label{classbustub_1_1HashTableBlockPage_afc17eb091d01b0f5fb9d1104803e217a}} 
+auto {\bfseries Key\+At} (slot\+\_\+offset\+\_\+t bucket\+\_\+ind) const -\/$>$ Key\+Type
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_a06a2176fdb218bb46ae850233f33d8fb}\label{classbustub_1_1HashTableBlockPage_a06a2176fdb218bb46ae850233f33d8fb}} 
+auto {\bfseries Value\+At} (slot\+\_\+offset\+\_\+t bucket\+\_\+ind) const -\/$>$ Value\+Type
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_a99b2f04e1b8dc12a8776c16ff2a9e560}\label{classbustub_1_1HashTableBlockPage_a99b2f04e1b8dc12a8776c16ff2a9e560}} 
+auto {\bfseries Insert} (slot\+\_\+offset\+\_\+t bucket\+\_\+ind, const Key\+Type \&key, const Value\+Type \&value) -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_aed18afda3bfffcb51dfdb98854cea353}\label{classbustub_1_1HashTableBlockPage_aed18afda3bfffcb51dfdb98854cea353}} 
+void {\bfseries Remove} (slot\+\_\+offset\+\_\+t bucket\+\_\+ind)
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_adcd9949d2e9a572e8bb3c7298431bcc7}\label{classbustub_1_1HashTableBlockPage_adcd9949d2e9a572e8bb3c7298431bcc7}} 
+auto {\bfseries Is\+Occupied} (slot\+\_\+offset\+\_\+t bucket\+\_\+ind) const -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_ae9e856013c5b3d2c6691c55dea321cc9}\label{classbustub_1_1HashTableBlockPage_ae9e856013c5b3d2c6691c55dea321cc9}} 
+auto {\bfseries Is\+Readable} (slot\+\_\+offset\+\_\+t bucket\+\_\+ind) const -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage_a39e7df86376ca46b9124d2c08d64cc1c}{Get\+Value}} (Key\+Type key, Key\+Comparator cmp, std\+::vector$<$ Value\+Type $>$ $\ast$result) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage_a817f73895500a1556533ad67c93abd92}{Insert}} (Key\+Type key, Value\+Type value, Key\+Comparator cmp) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage_a98e184334f5f3c3d05b88b09c680a070}{Remove}} (Key\+Type key, Value\+Type value, Key\+Comparator cmp) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage_ad7b715c7981caa6b6a3272d7f96185c9}{Num\+Readable}} () -\/$>$ uint32\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage_a3b3bd99dee0cc8b17854e7c3c2bf6ab6}{Is\+Full}} () -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage_aa0cc2c9468904a32f317c771e2877413}{Is\+Empty}} () -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_a3a0d146d53148dc87205de890028b2bb}\label{classbustub_1_1HashTableBlockPage_a3a0d146d53148dc87205de890028b2bb}} 
+void {\bfseries Print\+Bucket} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key\+Type, typename Value\+Type, typename Key\+Comparator$>$\newline
+class bustub\+::\+Hash\+Table\+Block\+Page$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}
+
+Store indexed key and and value together within block page. Supports non-\/unique keys.\hypertarget{classbustub_1_1HashTableBlockPage_autotoc_md42}{}\doxysubsubsection{Block page format (keys are stored in order)\+:}\label{classbustub_1_1HashTableBlockPage_autotoc_md42}
+\hypertarget{classbustub_1_1HashTableBlockPage_autotoc_md43}{}\doxysubsubsection{$\vert$ KEY(1) + VALUE(1) $\vert$ KEY(2) + VALUE(2) $\vert$ ... $\vert$ KEY(n) + VALUE(n)}\label{classbustub_1_1HashTableBlockPage_autotoc_md43}
+Here \textquotesingle{}+\textquotesingle{} means concatenation. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_a39e7df86376ca46b9124d2c08d64cc1c}\label{classbustub_1_1HashTableBlockPage_a39e7df86376ca46b9124d2c08d64cc1c}} 
+\index{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage}{bustub\+::\+Hash\+Table\+Block\+Page}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Get\+Value (\begin{DoxyParamCaption}\item[{Key\+Type}]{key,  }\item[{Key\+Comparator}]{cmp,  }\item[{std\+::vector$<$ Value\+Type $>$ $\ast$}]{result }\end{DoxyParamCaption}) -\/$>$  bool}
+
+Scan the bucket and collect values that have the matching key
+
+\begin{DoxyReturn}{Returns}
+true if at least one key matched 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_a817f73895500a1556533ad67c93abd92}\label{classbustub_1_1HashTableBlockPage_a817f73895500a1556533ad67c93abd92}} 
+\index{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage}{bustub\+::\+Hash\+Table\+Block\+Page}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Insert (\begin{DoxyParamCaption}\item[{Key\+Type}]{key,  }\item[{Value\+Type}]{value,  }\item[{Key\+Comparator}]{cmp }\end{DoxyParamCaption}) -\/$>$  bool}
+
+Attempts to insert a key and value in the bucket. The insert is thread safe. It uses compare and swap to claim the index, and then writes the key and value into the index, and then marks the index as readable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & key to insert \\
+\hline
+{\em value} & value to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if inserted, false if duplicate KV pair or bucket is full 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_aa0cc2c9468904a32f317c771e2877413}\label{classbustub_1_1HashTableBlockPage_aa0cc2c9468904a32f317c771e2877413}} 
+\index{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage}{bustub\+::\+Hash\+Table\+Block\+Page}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$  bool}
+
+\begin{DoxyReturn}{Returns}
+whether the bucket is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_a3b3bd99dee0cc8b17854e7c3c2bf6ab6}\label{classbustub_1_1HashTableBlockPage_a3b3bd99dee0cc8b17854e7c3c2bf6ab6}} 
+\index{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}!IsFull@{IsFull}}
+\index{IsFull@{IsFull}!bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{IsFull()}{IsFull()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage}{bustub\+::\+Hash\+Table\+Block\+Page}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$  bool}
+
+\begin{DoxyReturn}{Returns}
+whether the bucket is full 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_ad7b715c7981caa6b6a3272d7f96185c9}\label{classbustub_1_1HashTableBlockPage_ad7b715c7981caa6b6a3272d7f96185c9}} 
+\index{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}!NumReadable@{NumReadable}}
+\index{NumReadable@{NumReadable}!bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{NumReadable()}{NumReadable()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage}{bustub\+::\+Hash\+Table\+Block\+Page}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Num\+Readable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$  uint32\+\_\+t}
+
+\begin{DoxyReturn}{Returns}
+the number of readable elements, i.\+e. current size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashTableBlockPage_a98e184334f5f3c3d05b88b09c680a070}\label{classbustub_1_1HashTableBlockPage_a98e184334f5f3c3d05b88b09c680a070}} 
+\index{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTableBlockPage$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+auto \mbox{\hyperlink{classbustub_1_1HashTableBlockPage}{bustub\+::\+Hash\+Table\+Block\+Page}}$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+::Remove (\begin{DoxyParamCaption}\item[{Key\+Type}]{key,  }\item[{Value\+Type}]{value,  }\item[{Key\+Comparator}]{cmp }\end{DoxyParamCaption}) -\/$>$  bool}
+
+Removes a key and value. \begin{DoxyReturn}{Returns}
+true if removed, false if not found 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/hash\+\_\+table\+\_\+block\+\_\+page.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+\hypertarget{structbustub_1_1UndoLink}{}\doxysection{bustub\+::Undo\+Link Struct Reference}
+\label{structbustub_1_1UndoLink}\index{bustub::UndoLink@{bustub::UndoLink}}
+
+
+{\ttfamily \#include $<$transaction.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structbustub_1_1UndoLink_a499b600458d7e9d408ca9bd0954cf501}\label{structbustub_1_1UndoLink_a499b600458d7e9d408ca9bd0954cf501}} 
+auto {\bfseries Is\+Valid} () const -\/$>$ bool
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structbustub_1_1UndoLink_a635fc963258b5e68053936f8a822717e}\label{structbustub_1_1UndoLink_a635fc963258b5e68053936f8a822717e}} 
+txn\+\_\+id\+\_\+t {\bfseries prev\+\_\+txn\+\_\+} \{INVALID\+\_\+\+TXN\+\_\+\+ID\}
+\item 
+\mbox{\Hypertarget{structbustub_1_1UndoLink_a753fc687982e0b88c7516f39d8c11ece}\label{structbustub_1_1UndoLink_a753fc687982e0b88c7516f39d8c11ece}} 
+int {\bfseries prev\+\_\+log\+\_\+idx\+\_\+} \{0\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structbustub_1_1UndoLink_a137ffc71f9bff3a36d440fab8a2f9648}\label{structbustub_1_1UndoLink_a137ffc71f9bff3a36d440fab8a2f9648}} 
+auto {\bfseries operator==} (const \mbox{\hyperlink{structbustub_1_1UndoLink}{Undo\+Link}} \&a, const \mbox{\hyperlink{structbustub_1_1UndoLink}{Undo\+Link}} \&b)
+\item 
+\mbox{\Hypertarget{structbustub_1_1UndoLink_abc4024a1c7ff1c8a57facd6fc29f3c67}\label{structbustub_1_1UndoLink_abc4024a1c7ff1c8a57facd6fc29f3c67}} 
+auto {\bfseries operator!=} (const \mbox{\hyperlink{structbustub_1_1UndoLink}{Undo\+Link}} \&a, const \mbox{\hyperlink{structbustub_1_1UndoLink}{Undo\+Link}} \&b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a link to a previous version of this tuple 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/transaction.\+h\end{DoxyCompactItemize}

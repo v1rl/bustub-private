@@ -1,0 +1,46 @@
+\hypertarget{classbustub_1_1GenericKey}{}\doxysection{bustub\+::Generic\+Key$<$ Key\+Size $>$ Class Template Reference}
+\label{classbustub_1_1GenericKey}\index{bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}}
+
+
+{\ttfamily \#include $<$generic\+\_\+key.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a1673f86b5bce161d3dd556c09e7cd572}\label{classbustub_1_1GenericKey_a1673f86b5bce161d3dd556c09e7cd572}} 
+void {\bfseries Set\+From\+Key} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple)
+\item 
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a3cdd6f68405050a6059ad62232d3ecee}\label{classbustub_1_1GenericKey_a3cdd6f68405050a6059ad62232d3ecee}} 
+void {\bfseries Set\+From\+Integer} (int64\+\_\+t key)
+\item 
+\mbox{\Hypertarget{classbustub_1_1GenericKey_afc791d18fddc487140f43d7ec635fdcf}\label{classbustub_1_1GenericKey_afc791d18fddc487140f43d7ec635fdcf}} 
+auto {\bfseries To\+Value} (\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$schema, uint32\+\_\+t column\+\_\+idx) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a1d0c9eb4a8bca07961263ef5e01b1116}\label{classbustub_1_1GenericKey_a1d0c9eb4a8bca07961263ef5e01b1116}} 
+auto {\bfseries To\+String} () const -\/$>$ int64\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a0c55198d7686c3b411a549455f9a8b6d}\label{classbustub_1_1GenericKey_a0c55198d7686c3b411a549455f9a8b6d}} 
+char {\bfseries data\+\_\+} \mbox{[}Key\+Size\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a30c12ee3b4eb55607ec71f16fa63dbe5}\label{classbustub_1_1GenericKey_a30c12ee3b4eb55607ec71f16fa63dbe5}} 
+auto {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classbustub_1_1GenericKey}{Generic\+Key}} \&key) -\/$>$ std\+::ostream \&
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t Key\+Size$>$\newline
+class bustub\+::\+Generic\+Key$<$ Key\+Size $>$}
+
+Generic key is used for indexing with opaque data.
+
+This key type uses an fixed length array to hold data for indexing purposes, the actual size of which is specified and instantiated with a template argument. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/generic\+\_\+key.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,116 @@
+\hypertarget{classbustub_1_1LogicExpression}{}\doxysection{bustub\+::Logic\+Expression Class Reference}
+\label{classbustub_1_1LogicExpression}\index{bustub::LogicExpression@{bustub::LogicExpression}}
+
+
+{\ttfamily \#include $<$logic\+\_\+expression.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Logic\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classbustub_1_1LogicExpression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Logic\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classbustub_1_1LogicExpression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LogicExpression_a7408f08d258e742d91f7f3b4a2f1aa92}{Logic\+Expression}} (Abstract\+Expression\+Ref left, Abstract\+Expression\+Ref right, \mbox{\hyperlink{namespacebustub_ab0aafa03618bd145828f0fa216732343}{Logic\+Type}} logic\+\_\+type)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LogicExpression_add099f4101e66db7a5a0dcde608046c4}{Evaluate}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LogicExpression_aeda6aed86873a2bd9291db140601f514}{Evaluate\+Join}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$left\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&left\+\_\+schema, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$right\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&right\+\_\+schema) const -\/$>$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LogicExpression_a2bbbb2ed494237d5188b7aff9f2f5ed3}{To\+String}} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogicExpression_ab25d4f676e43123251299585eb9b33a9}\label{classbustub_1_1LogicExpression_ab25d4f676e43123251299585eb9b33a9}} 
+{\bfseries BUSTUB\+\_\+\+EXPR\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1LogicExpression}{Logic\+Expression}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogicExpression_a87afb8cea5f2ca634af588060a728503}\label{classbustub_1_1LogicExpression_a87afb8cea5f2ca634af588060a728503}} 
+\mbox{\hyperlink{namespacebustub_ab0aafa03618bd145828f0fa216732343}{Logic\+Type}} {\bfseries logic\+\_\+type\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1LogicExpression}{Logic\+Expression}} represents two expressions being computed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LogicExpression_a7408f08d258e742d91f7f3b4a2f1aa92}\label{classbustub_1_1LogicExpression_a7408f08d258e742d91f7f3b4a2f1aa92}} 
+\index{bustub::LogicExpression@{bustub::LogicExpression}!LogicExpression@{LogicExpression}}
+\index{LogicExpression@{LogicExpression}!bustub::LogicExpression@{bustub::LogicExpression}}
+\doxysubsubsection{\texorpdfstring{LogicExpression()}{LogicExpression()}}
+{\footnotesize\ttfamily bustub\+::\+Logic\+Expression\+::\+Logic\+Expression (\begin{DoxyParamCaption}\item[{Abstract\+Expression\+Ref}]{left,  }\item[{Abstract\+Expression\+Ref}]{right,  }\item[{\mbox{\hyperlink{namespacebustub_ab0aafa03618bd145828f0fa216732343}{Logic\+Type}}}]{logic\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new comparison expression representing (left comp\+\_\+type right). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LogicExpression_add099f4101e66db7a5a0dcde608046c4}\label{classbustub_1_1LogicExpression_add099f4101e66db7a5a0dcde608046c4}} 
+\index{bustub::LogicExpression@{bustub::LogicExpression}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!bustub::LogicExpression@{bustub::LogicExpression}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily auto bustub\+::\+Logic\+Expression\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating the tuple with the given schema 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a366d870041b1283ed90f66be269372a0}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1LogicExpression_aeda6aed86873a2bd9291db140601f514}\label{classbustub_1_1LogicExpression_aeda6aed86873a2bd9291db140601f514}} 
+\index{bustub::LogicExpression@{bustub::LogicExpression}!EvaluateJoin@{EvaluateJoin}}
+\index{EvaluateJoin@{EvaluateJoin}!bustub::LogicExpression@{bustub::LogicExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateJoin()}{EvaluateJoin()}}
+{\footnotesize\ttfamily auto bustub\+::\+Logic\+Expression\+::\+Evaluate\+Join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{left\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{left\+\_\+schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{right\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{right\+\_\+schema }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classbustub_1_1Value}{Value}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the value obtained by evaluating a JOIN. 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+tuple} & The left tuple \\
+\hline
+{\em left\+\_\+schema} & The left tuple\textquotesingle{}s schema \\
+\hline
+{\em right\+\_\+tuple} & The right tuple \\
+\hline
+{\em right\+\_\+schema} & The right tuple\textquotesingle{}s schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating a JOIN on the left and right 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_ad9c06936d8acfb8cbb260d887c9f6e94}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1LogicExpression_a2bbbb2ed494237d5188b7aff9f2f5ed3}\label{classbustub_1_1LogicExpression_a2bbbb2ed494237d5188b7aff9f2f5ed3}} 
+\index{bustub::LogicExpression@{bustub::LogicExpression}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::LogicExpression@{bustub::LogicExpression}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Logic\+Expression\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the expression node and its children 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractExpression_af19014e7cce7d2c94e5ddc557e0088e8}{bustub\+::\+Abstract\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/expressions/logic\+\_\+expression.\+h\end{DoxyCompactItemize}

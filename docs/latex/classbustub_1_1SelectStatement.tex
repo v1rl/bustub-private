@@ -1,0 +1,135 @@
+\hypertarget{classbustub_1_1SelectStatement}{}\doxysection{bustub\+::Select\+Statement Class Reference}
+\label{classbustub_1_1SelectStatement}\index{bustub::SelectStatement@{bustub::SelectStatement}}
+
+
+Inheritance diagram for bustub\+::Select\+Statement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classbustub_1_1SelectStatement__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Select\+Statement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classbustub_1_1SelectStatement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1SelectStatement_a53c2cbcff2b096118e10ac5361ea68e5}\label{classbustub_1_1SelectStatement_a53c2cbcff2b096118e10ac5361ea68e5}} 
+{\bfseries Select\+Statement} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ table, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$ select\+\_\+list, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ where, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$ group\+\_\+by, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ having, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ limit\+\_\+count, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ limit\+\_\+offset, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundOrderBy}{Bound\+Order\+By}} $>$$>$ sort, CTEList ctes, bool is\+\_\+distinct)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1SelectStatement_a55316086d6aa942363971562a9f41668}{To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}} $>$ \mbox{\hyperlink{classbustub_1_1SelectStatement_a66055d9bda824f9da94e3150a3f3a663}{table\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1SelectStatement_a2a9081c3ffcf18b9a7e19d516eea51a8}{select\+\_\+list\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1SelectStatement_ab35ee68e13cbefb02ad18bc00b3e431c}{where\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1SelectStatement_a1d8f195893c7bf34b8f5d12b99d29fb3}{group\+\_\+by\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1SelectStatement_a5e77031d1bb0923f638fd07edb2f47c3}{having\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1SelectStatement_a09a93d39a80da9f5cd3ee69ad20ef39b}{limit\+\_\+count\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1SelectStatement_a60ed243b7452ed51794feafb82bbdb38}{limit\+\_\+offset\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundOrderBy}{Bound\+Order\+By}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1SelectStatement_a2e6c919d127af1b55c5584809da5a54a}{sort\+\_\+}}
+\item 
+CTEList \mbox{\hyperlink{classbustub_1_1SelectStatement_a046a6e4a94ae0bd9c51b7bab4a061b0f}{ctes\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbustub_1_1SelectStatement_ac66edd1ed7d8c914f64472df3f50148c}{is\+\_\+distinct\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1SelectStatement_a55316086d6aa942363971562a9f41668}\label{classbustub_1_1SelectStatement_a55316086d6aa942363971562a9f41668}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Select\+Statement\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render this statement as a string. 
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1BoundStatement_aec43c00d8ab208b2cfb0e26fb5bb4c32}{bustub\+::\+Bound\+Statement}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1SelectStatement_a046a6e4a94ae0bd9c51b7bab4a061b0f}\label{classbustub_1_1SelectStatement_a046a6e4a94ae0bd9c51b7bab4a061b0f}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!ctes\_@{ctes\_}}
+\index{ctes\_@{ctes\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{ctes\_}{ctes\_}}
+{\footnotesize\ttfamily CTEList bustub\+::\+Select\+Statement\+::ctes\+\_\+}
+
+Bound CTE. \mbox{\Hypertarget{classbustub_1_1SelectStatement_a1d8f195893c7bf34b8f5d12b99d29fb3}\label{classbustub_1_1SelectStatement_a1d8f195893c7bf34b8f5d12b99d29fb3}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!group\_by\_@{group\_by\_}}
+\index{group\_by\_@{group\_by\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{group\_by\_}{group\_by\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ $>$ bustub\+::\+Select\+Statement\+::group\+\_\+by\+\_\+}
+
+Bound GROUP BY clause. \mbox{\Hypertarget{classbustub_1_1SelectStatement_a5e77031d1bb0923f638fd07edb2f47c3}\label{classbustub_1_1SelectStatement_a5e77031d1bb0923f638fd07edb2f47c3}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!having\_@{having\_}}
+\index{having\_@{having\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{having\_}{having\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ bustub\+::\+Select\+Statement\+::having\+\_\+}
+
+Bound HAVING clause. \mbox{\Hypertarget{classbustub_1_1SelectStatement_ac66edd1ed7d8c914f64472df3f50148c}\label{classbustub_1_1SelectStatement_ac66edd1ed7d8c914f64472df3f50148c}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!is\_distinct\_@{is\_distinct\_}}
+\index{is\_distinct\_@{is\_distinct\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{is\_distinct\_}{is\_distinct\_}}
+{\footnotesize\ttfamily bool bustub\+::\+Select\+Statement\+::is\+\_\+distinct\+\_\+}
+
+Is SELECT DISTINCT \mbox{\Hypertarget{classbustub_1_1SelectStatement_a09a93d39a80da9f5cd3ee69ad20ef39b}\label{classbustub_1_1SelectStatement_a09a93d39a80da9f5cd3ee69ad20ef39b}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!limit\_count\_@{limit\_count\_}}
+\index{limit\_count\_@{limit\_count\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{limit\_count\_}{limit\_count\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ bustub\+::\+Select\+Statement\+::limit\+\_\+count\+\_\+}
+
+Bound LIMIT clause. \mbox{\Hypertarget{classbustub_1_1SelectStatement_a60ed243b7452ed51794feafb82bbdb38}\label{classbustub_1_1SelectStatement_a60ed243b7452ed51794feafb82bbdb38}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!limit\_offset\_@{limit\_offset\_}}
+\index{limit\_offset\_@{limit\_offset\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{limit\_offset\_}{limit\_offset\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ bustub\+::\+Select\+Statement\+::limit\+\_\+offset\+\_\+}
+
+Bound OFFSET clause. \mbox{\Hypertarget{classbustub_1_1SelectStatement_a2a9081c3ffcf18b9a7e19d516eea51a8}\label{classbustub_1_1SelectStatement_a2a9081c3ffcf18b9a7e19d516eea51a8}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!select\_list\_@{select\_list\_}}
+\index{select\_list\_@{select\_list\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{select\_list\_}{select\_list\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ $>$ bustub\+::\+Select\+Statement\+::select\+\_\+list\+\_\+}
+
+Bound SELECT list. \mbox{\Hypertarget{classbustub_1_1SelectStatement_a2e6c919d127af1b55c5584809da5a54a}\label{classbustub_1_1SelectStatement_a2e6c919d127af1b55c5584809da5a54a}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!sort\_@{sort\_}}
+\index{sort\_@{sort\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{sort\_}{sort\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundOrderBy}{Bound\+Order\+By}}$>$ $>$ bustub\+::\+Select\+Statement\+::sort\+\_\+}
+
+Bound ORDER BY clause. \mbox{\Hypertarget{classbustub_1_1SelectStatement_a66055d9bda824f9da94e3150a3f3a663}\label{classbustub_1_1SelectStatement_a66055d9bda824f9da94e3150a3f3a663}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!table\_@{table\_}}
+\index{table\_@{table\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{table\_}{table\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundTableRef}{Bound\+Table\+Ref}}$>$ bustub\+::\+Select\+Statement\+::table\+\_\+}
+
+Bound FROM clause. \mbox{\Hypertarget{classbustub_1_1SelectStatement_ab35ee68e13cbefb02ad18bc00b3e431c}\label{classbustub_1_1SelectStatement_ab35ee68e13cbefb02ad18bc00b3e431c}} 
+\index{bustub::SelectStatement@{bustub::SelectStatement}!where\_@{where\_}}
+\index{where\_@{where\_}!bustub::SelectStatement@{bustub::SelectStatement}}
+\doxysubsubsection{\texorpdfstring{where\_}{where\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ bustub\+::\+Select\+Statement\+::where\+\_\+}
+
+Bound WHERE clause. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/statement/select\+\_\+statement.\+h\item 
+src/binder/statement/select\+\_\+statement.\+cpp\end{DoxyCompactItemize}

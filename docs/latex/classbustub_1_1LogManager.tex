@@ -1,0 +1,42 @@
+\hypertarget{classbustub_1_1LogManager}{}\doxysection{bustub\+::Log\+Manager Class Reference}
+\label{classbustub_1_1LogManager}\index{bustub::LogManager@{bustub::LogManager}}
+
+
+{\ttfamily \#include $<$log\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogManager_a977736471c8af225c05910c73c406d1a}\label{classbustub_1_1LogManager_a977736471c8af225c05910c73c406d1a}} 
+{\bfseries Log\+Manager} (\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager)
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogManager_aed5cfe542a06ac552fa9af09df523456}\label{classbustub_1_1LogManager_aed5cfe542a06ac552fa9af09df523456}} 
+void {\bfseries Run\+Flush\+Thread} ()
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogManager_a8662153d94b4c02b5993c5966cd5b8be}\label{classbustub_1_1LogManager_a8662153d94b4c02b5993c5966cd5b8be}} 
+void {\bfseries Stop\+Flush\+Thread} ()
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogManager_a545e09c960cd9c2b29a771da1428e527}\label{classbustub_1_1LogManager_a545e09c960cd9c2b29a771da1428e527}} 
+auto {\bfseries Append\+Log\+Record} (\mbox{\hyperlink{classbustub_1_1LogRecord}{Log\+Record}} $\ast$log\+\_\+record) -\/$>$ lsn\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogManager_a8b026c8d3aac1544f91f6a86ad1114b0}\label{classbustub_1_1LogManager_a8b026c8d3aac1544f91f6a86ad1114b0}} 
+auto {\bfseries Get\+Next\+LSN} () -\/$>$ lsn\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogManager_a1791dc98b2a3a867727d45ef3993d131}\label{classbustub_1_1LogManager_a1791dc98b2a3a867727d45ef3993d131}} 
+auto {\bfseries Get\+Persistent\+LSN} () -\/$>$ lsn\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogManager_a2895715933995bb794729404e4d60ac0}\label{classbustub_1_1LogManager_a2895715933995bb794729404e4d60ac0}} 
+void {\bfseries Set\+Persistent\+LSN} (lsn\+\_\+t lsn)
+\item 
+\mbox{\Hypertarget{classbustub_1_1LogManager_a7d3cad673419b2ef3f0edb645c79782a}\label{classbustub_1_1LogManager_a7d3cad673419b2ef3f0edb645c79782a}} 
+auto {\bfseries Get\+Log\+Buffer} () -\/$>$ char $\ast$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} maintains a separate thread that is awakened whenever the log buffer is full or whenever a timeout happens. When the thread is awakened, the log buffer\textquotesingle{}s content is written into the disk log file. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/recovery/log\+\_\+manager.\+h\item 
+src/recovery/log\+\_\+manager.\+cpp\end{DoxyCompactItemize}

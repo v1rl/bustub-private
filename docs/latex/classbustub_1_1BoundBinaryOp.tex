@@ -1,0 +1,76 @@
+\hypertarget{classbustub_1_1BoundBinaryOp}{}\doxysection{bustub\+::Bound\+Binary\+Op Class Reference}
+\label{classbustub_1_1BoundBinaryOp}\index{bustub::BoundBinaryOp@{bustub::BoundBinaryOp}}
+
+
+{\ttfamily \#include $<$bound\+\_\+binary\+\_\+op.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Binary\+Op\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundBinaryOp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Binary\+Op\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundBinaryOp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundBinaryOp_a311bb9e3129e7e5cf72339d6376086fe}\label{classbustub_1_1BoundBinaryOp_a311bb9e3129e7e5cf72339d6376086fe}} 
+{\bfseries Bound\+Binary\+Op} (std\+::string op\+\_\+name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ larg, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ rarg)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundBinaryOp_a8153d81f3de9195400b427e26322df19}\label{classbustub_1_1BoundBinaryOp_a8153d81f3de9195400b427e26322df19}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundBinaryOp_aac0e0d302253a584153a6c2512f74814}\label{classbustub_1_1BoundBinaryOp_aac0e0d302253a584153a6c2512f74814}} 
+auto {\bfseries Has\+Aggregation} () const -\/$>$ bool override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundBinaryOp_a01037b47da8ee3b7c44a6451bf163c8a}{op\+\_\+name\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1BoundBinaryOp_a83f319ba48a174ad3adffae585471eba}{larg\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1BoundBinaryOp_ac8a414492b93ae78a070975a969ddde7}{rarg\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A bound binary operator, e.\+g., {\ttfamily a+b}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundBinaryOp_a83f319ba48a174ad3adffae585471eba}\label{classbustub_1_1BoundBinaryOp_a83f319ba48a174ad3adffae585471eba}} 
+\index{bustub::BoundBinaryOp@{bustub::BoundBinaryOp}!larg\_@{larg\_}}
+\index{larg\_@{larg\_}!bustub::BoundBinaryOp@{bustub::BoundBinaryOp}}
+\doxysubsubsection{\texorpdfstring{larg\_}{larg\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ bustub\+::\+Bound\+Binary\+Op\+::larg\+\_\+}
+
+Left argument of the op. \mbox{\Hypertarget{classbustub_1_1BoundBinaryOp_a01037b47da8ee3b7c44a6451bf163c8a}\label{classbustub_1_1BoundBinaryOp_a01037b47da8ee3b7c44a6451bf163c8a}} 
+\index{bustub::BoundBinaryOp@{bustub::BoundBinaryOp}!op\_name\_@{op\_name\_}}
+\index{op\_name\_@{op\_name\_}!bustub::BoundBinaryOp@{bustub::BoundBinaryOp}}
+\doxysubsubsection{\texorpdfstring{op\_name\_}{op\_name\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+Binary\+Op\+::op\+\_\+name\+\_\+}
+
+Operator name. \mbox{\Hypertarget{classbustub_1_1BoundBinaryOp_ac8a414492b93ae78a070975a969ddde7}\label{classbustub_1_1BoundBinaryOp_ac8a414492b93ae78a070975a969ddde7}} 
+\index{bustub::BoundBinaryOp@{bustub::BoundBinaryOp}!rarg\_@{rarg\_}}
+\index{rarg\_@{rarg\_}!bustub::BoundBinaryOp@{bustub::BoundBinaryOp}}
+\doxysubsubsection{\texorpdfstring{rarg\_}{rarg\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ bustub\+::\+Bound\+Binary\+Op\+::rarg\+\_\+}
+
+Right argument of the op. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/expressions/bound\+\_\+binary\+\_\+op.\+h\end{DoxyCompactItemize}

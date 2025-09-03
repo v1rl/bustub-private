@@ -1,0 +1,51 @@
+\hypertarget{classbustub_1_1TmpTuplePage}{}\doxysection{bustub\+::Tmp\+Tuple\+Page Class Reference}
+\label{classbustub_1_1TmpTuplePage}\index{bustub::TmpTuplePage@{bustub::TmpTuplePage}}
+
+
+{\ttfamily \#include $<$tmp\+\_\+tuple\+\_\+page.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Tmp\+Tuple\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classbustub_1_1TmpTuplePage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Tmp\+Tuple\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classbustub_1_1TmpTuplePage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TmpTuplePage_af60711b753ceadf4c12b6a31b0981b75}\label{classbustub_1_1TmpTuplePage_af60711b753ceadf4c12b6a31b0981b75}} 
+void {\bfseries Init} (page\+\_\+id\+\_\+t page\+\_\+id, uint32\+\_\+t page\+\_\+size)
+\item 
+\mbox{\Hypertarget{classbustub_1_1TmpTuplePage_a1e7f21f373f5d80fe99f561cdd2daac2}\label{classbustub_1_1TmpTuplePage_a1e7f21f373f5d80fe99f561cdd2daac2}} 
+auto {\bfseries Get\+Table\+Page\+Id} () -\/$>$ page\+\_\+id\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1TmpTuplePage_a59237ef46793090740df69009902fbed}\label{classbustub_1_1TmpTuplePage_a59237ef46793090740df69009902fbed}} 
+auto {\bfseries Insert} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, \mbox{\hyperlink{classbustub_1_1TmpTuple}{Tmp\+Tuple}} $\ast$out) -\/$>$ bool
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1TmpTuplePage}{Tmp\+Tuple\+Page}} format\+:
+
+Sizes are in bytes. $\vert$ Page\+Id (4) $\vert$ LSN (4) $\vert$ Free\+Space (4) $\vert$ (free space) $\vert$ Tuple\+Size2 $\vert$ Tuple\+Data2 $\vert$ Tuple\+Size1 $\vert$ Tuple\+Data1 $\vert$
+
+We choose this format because Deserialize\+Expression expects to read Size followed by Data. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/tmp\+\_\+tuple\+\_\+page.\+h\end{DoxyCompactItemize}

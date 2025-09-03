@@ -1,0 +1,300 @@
+\hypertarget{classbustub_1_1LockManager}{}\doxysection{bustub\+::Lock\+Manager Class Reference}
+\label{classbustub_1_1LockManager}\index{bustub::LockManager@{bustub::LockManager}}
+
+
+{\ttfamily \#include $<$lock\+\_\+manager.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Lock\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classbustub_1_1LockManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest}{Lock\+Request}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequestQueue}{Lock\+Request\+Queue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LockManager_ae9072590d90b9b3861d415052c4872d3}\label{classbustub_1_1LockManager_ae9072590d90b9b3861d415052c4872d3}} 
+enum class {\bfseries Lock\+Mode} \{ \newline
+{\bfseries SHARED}
+, {\bfseries EXCLUSIVE}
+, {\bfseries INTENTION\+\_\+\+SHARED}
+, {\bfseries INTENTION\+\_\+\+EXCLUSIVE}
+, \newline
+{\bfseries SHARED\+\_\+\+INTENTION\+\_\+\+EXCLUSIVE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LockManager_a9a6999ff8d30e8f121741d074cb88775}{Lock\+Manager}} ()=default
+\item 
+\mbox{\Hypertarget{classbustub_1_1LockManager_af8d98acacc57c96f93d2a0a2c5361a99}\label{classbustub_1_1LockManager_af8d98acacc57c96f93d2a0a2c5361a99}} 
+void {\bfseries Start\+Deadlock\+Detection} ()
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LockManager_a2fb7aa117f151b0033d96c247292d375}{Lock\+Table}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, Lock\+Mode lock\+\_\+mode, const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \&oid) noexcept(false) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LockManager_a89c917de275498c22f53138355787447}{Unlock\+Table}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \&oid) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LockManager_a988be485d32619bd5165855c9cdaf0cf}{Lock\+Row}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, Lock\+Mode lock\+\_\+mode, const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \&oid, const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&rid) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LockManager_acd25bf2d1fd916e5d0900fdcee196aa2}{Unlock\+Row}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \&oid, const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&rid, bool force=false) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LockManager_a5df679feece998f685f834d98044e289}{Add\+Edge}} (txn\+\_\+id\+\_\+t t1, txn\+\_\+id\+\_\+t t2) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LockManager_af84ac003c1fda4f5a32fc3ecfc98bc80}{Remove\+Edge}} (txn\+\_\+id\+\_\+t t1, txn\+\_\+id\+\_\+t t2) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LockManager_ab3f9957ef501be56f430ab93457dd17f}{Has\+Cycle}} (txn\+\_\+id\+\_\+t $\ast$txn\+\_\+id) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LockManager_abe347095eb5d3210b710834fe962378c}{Get\+Edge\+List}} () -\/$>$ std\+::vector$<$ std\+::pair$<$ txn\+\_\+id\+\_\+t, txn\+\_\+id\+\_\+t $>$$>$
+\item 
+auto \mbox{\hyperlink{classbustub_1_1LockManager_ac46d2abc2ed8ffa17934036d87e50d08}{Run\+Cycle\+Detection}} () -\/$>$ void
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1LockManager_a4a17fdd331a495258d1bde87b1e39635}\label{classbustub_1_1LockManager_a4a17fdd331a495258d1bde87b1e39635}} 
+\mbox{\hyperlink{classbustub_1_1TransactionManager}{Transaction\+Manager}} $\ast$ {\bfseries txn\+\_\+manager\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} handles transactions asking for locks on records. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LockManager_a9a6999ff8d30e8f121741d074cb88775}\label{classbustub_1_1LockManager_a9a6999ff8d30e8f121741d074cb88775}} 
+\index{bustub::LockManager@{bustub::LockManager}!LockManager@{LockManager}}
+\index{LockManager@{LockManager}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{LockManager()}{LockManager()}}
+{\footnotesize\ttfamily bustub\+::\+Lock\+Manager\+::\+Lock\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Creates a new lock manager configured for the deadlock detection policy. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LockManager_a5df679feece998f685f834d98044e289}\label{classbustub_1_1LockManager_a5df679feece998f685f834d98044e289}} 
+\index{bustub::LockManager@{bustub::LockManager}!AddEdge@{AddEdge}}
+\index{AddEdge@{AddEdge}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{AddEdge()}{AddEdge()}}
+{\footnotesize\ttfamily void bustub\+::\+Lock\+Manager\+::\+Add\+Edge (\begin{DoxyParamCaption}\item[{txn\+\_\+id\+\_\+t}]{t1,  }\item[{txn\+\_\+id\+\_\+t}]{t2 }\end{DoxyParamCaption}) -\/$>$ void}
+
+Adds an edge from t1 -\/$>$ t2 from waits for graph. 
+\begin{DoxyParams}{Parameters}
+{\em t1} & transaction waiting for a lock \\
+\hline
+{\em t2} & transaction being waited for \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1LockManager_abe347095eb5d3210b710834fe962378c}\label{classbustub_1_1LockManager_abe347095eb5d3210b710834fe962378c}} 
+\index{bustub::LockManager@{bustub::LockManager}!GetEdgeList@{GetEdgeList}}
+\index{GetEdgeList@{GetEdgeList}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{GetEdgeList()}{GetEdgeList()}}
+{\footnotesize\ttfamily auto bustub\+::\+Lock\+Manager\+::\+Get\+Edge\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::vector$<$std\+::pair$<$txn\+\_\+id\+\_\+t, txn\+\_\+id\+\_\+t$>$$>$}
+
+\begin{DoxyReturn}{Returns}
+all edges in current waits\+\_\+for graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1LockManager_ab3f9957ef501be56f430ab93457dd17f}\label{classbustub_1_1LockManager_ab3f9957ef501be56f430ab93457dd17f}} 
+\index{bustub::LockManager@{bustub::LockManager}!HasCycle@{HasCycle}}
+\index{HasCycle@{HasCycle}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{HasCycle()}{HasCycle()}}
+{\footnotesize\ttfamily auto bustub\+::\+Lock\+Manager\+::\+Has\+Cycle (\begin{DoxyParamCaption}\item[{txn\+\_\+id\+\_\+t $\ast$}]{txn\+\_\+id }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Checks if the graph has a cycle, returning the newest transaction ID in the cycle if so. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em txn\+\_\+id} & if the graph has a cycle, will contain the newest transaction ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the graph has no cycle, otherwise stores the newest transaction ID in the cycle to txn\+\_\+id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1LockManager_a988be485d32619bd5165855c9cdaf0cf}\label{classbustub_1_1LockManager_a988be485d32619bd5165855c9cdaf0cf}} 
+\index{bustub::LockManager@{bustub::LockManager}!LockRow@{LockRow}}
+\index{LockRow@{LockRow}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{LockRow()}{LockRow()}}
+{\footnotesize\ttfamily auto bustub\+::\+Lock\+Manager\+::\+Lock\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{Lock\+Mode}]{lock\+\_\+mode,  }\item[{const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \&}]{oid,  }\item[{const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&}]{rid }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Acquire a lock on rid in the given lock\+\_\+mode. If the transaction already holds a lock on the row, upgrade the lock to the specified lock\+\_\+mode (if possible).
+
+This method should abort the transaction and throw a Transaction\+Abort\+Exception under certain circumstances. See \mbox{[}LOCK\+\_\+\+NOTE\mbox{]} in header file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em txn} & the transaction requesting the lock upgrade \\
+\hline
+{\em lock\+\_\+mode} & the lock mode for the requested lock \\
+\hline
+{\em oid} & the table\+\_\+oid\+\_\+t of the table the row belongs to \\
+\hline
+{\em rid} & the \mbox{\hyperlink{classbustub_1_1RID}{RID}} of the row to be locked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the upgrade is successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1LockManager_a2fb7aa117f151b0033d96c247292d375}\label{classbustub_1_1LockManager_a2fb7aa117f151b0033d96c247292d375}} 
+\index{bustub::LockManager@{bustub::LockManager}!LockTable@{LockTable}}
+\index{LockTable@{LockTable}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{LockTable()}{LockTable()}}
+{\footnotesize\ttfamily auto bustub\+::\+Lock\+Manager\+::\+Lock\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{Lock\+Mode}]{lock\+\_\+mode,  }\item[{const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \&}]{oid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{[}LOCK\+\_\+\+NOTE\mbox{]}
+
+GENERAL BEHAVIOUR\+: Both \mbox{\hyperlink{classbustub_1_1LockManager_a2fb7aa117f151b0033d96c247292d375}{Lock\+Table()}} and \mbox{\hyperlink{classbustub_1_1LockManager_a988be485d32619bd5165855c9cdaf0cf}{Lock\+Row()}} are blocking methods; they should wait till the lock is granted and then return. If the transaction was aborted in the meantime, do not grant the lock and return false.
+
+MULTIPLE TRANSACTIONS\+: \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} should maintain a queue for each resource; locks should be granted to transactions in a FIFO manner. If there are multiple compatible lock requests, all should be granted at the same time as long as FIFO is honoured.
+
+SUPPORTED LOCK MODES\+: Table locking should support all lock modes. Row locking should not support Intention locks. Attempting this should set the Transaction\+State as ABORTED and throw a Transaction\+Abort\+Exception (ATTEMPTED\+\_\+\+INTENTION\+\_\+\+LOCK\+\_\+\+ON\+\_\+\+ROW)
+
+ISOLATION LEVEL\+: Depending on the ISOLATION LEVEL, a transaction should attempt to take locks\+:
+\begin{DoxyItemize}
+\item Only if required, AND
+\item Only if allowed
+\end{DoxyItemize}
+
+For instance S/\+IS/\+SIX locks are not required under READ\+\_\+\+UNCOMMITTED, and any such attempt should set the Transaction\+State as ABORTED and throw a Transaction\+Abort\+Exception (LOCK\+\_\+\+SHARED\+\_\+\+ON\+\_\+\+READ\+\_\+\+UNCOMMITTED).
+
+Similarly, X/\+IX locks on rows are not allowed if the the \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} State is SHRINKING, and any such attempt should set the Transaction\+State as ABORTED and throw a Transaction\+Abort\+Exception (LOCK\+\_\+\+ON\+\_\+\+SHRINKING).
+
+REPEATABLE\+\_\+\+READ\+: The transaction is required to take all locks. All locks are allowed in the GROWING state No locks are allowed in the SHRINKING state
+
+READ\+\_\+\+COMMITTED\+: The transaction is required to take all locks. All locks are allowed in the GROWING state Only IS, S locks are allowed in the SHRINKING state
+
+READ\+\_\+\+UNCOMMITTED\+: The transaction is required to take only IX, X locks. X, IX locks are allowed in the GROWING state. S, IS, SIX locks are never allowed
+
+MULTILEVEL LOCKING\+: While locking rows, Lock() should ensure that the transaction has an appropriate lock on the table which the row belongs to. For instance, if an exclusive lock is attempted on a row, the transaction must hold either X, IX, or SIX on the table. If such a lock does not exist on the table, Lock() should set the Transaction\+State as ABORTED and throw a Transaction\+Abort\+Exception (TABLE\+\_\+\+LOCK\+\_\+\+NOT\+\_\+\+PRESENT)
+
+LOCK UPGRADE\+: Calling Lock() on a resource that is already locked should have the following behaviour\+:
+\begin{DoxyItemize}
+\item If requested lock mode is the same as that of the lock presently held, Lock() should return true since it already has the lock.
+\item If requested lock mode is different, Lock() should upgrade the lock held by the transaction.
+\item Basically there should be three steps to perform a lock upgrade in general
+\begin{DoxyItemize}
+\item 1. Check the precondition of upgrade
+\item 2. Drop the current lock, reserve the upgrade position
+\item 3. Wait to get the new lock granted
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+A lock request being upgraded should be prioritized over other waiting lock requests on the same resource.
+
+While upgrading, only the following transitions should be allowed\+: IS -\/$>$ \mbox{[}S, X, IX, SIX\mbox{]} S -\/$>$ \mbox{[}X, SIX\mbox{]} IX -\/$>$ \mbox{[}X, SIX\mbox{]} SIX -\/$>$ \mbox{[}X\mbox{]} Any other upgrade is considered incompatible, and such an attempt should set the Transaction\+State as ABORTED and throw a Transaction\+Abort\+Exception (INCOMPATIBLE\+\_\+\+UPGRADE)
+
+Furthermore, only one transaction should be allowed to upgrade its lock on a given resource. Multiple concurrent lock upgrades on the same resource should set the Transaction\+State as ABORTED and throw a Transaction\+Abort\+Exception (UPGRADE\+\_\+\+CONFLICT).
+
+BOOK KEEPING\+: If a lock is granted to a transaction, lock manager should update its lock sets appropriately (check \mbox{\hyperlink{transaction_8h_source}{transaction.\+h}})
+
+You probably want to consider which type of lock to directly apply on table when implementing executor later \mbox{[}UNLOCK\+\_\+\+NOTE\mbox{]}
+
+GENERAL BEHAVIOUR\+: Both \mbox{\hyperlink{classbustub_1_1LockManager_a89c917de275498c22f53138355787447}{Unlock\+Table()}} and \mbox{\hyperlink{classbustub_1_1LockManager_acd25bf2d1fd916e5d0900fdcee196aa2}{Unlock\+Row()}} should release the lock on the resource and return. Both should ensure that the transaction currently holds a lock on the resource it is attempting to unlock. If not, \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} should set the Transaction\+State as ABORTED and throw a Transaction\+Abort\+Exception (ATTEMPTED\+\_\+\+UNLOCK\+\_\+\+BUT\+\_\+\+NO\+\_\+\+LOCK\+\_\+\+HELD)
+
+Additionally, unlocking a table should only be allowed if the transaction does not hold locks on any row on that table. If the transaction holds locks on rows of the table, Unlock should set the \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} State as ABORTED and throw a Transaction\+Abort\+Exception (TABLE\+\_\+\+UNLOCKED\+\_\+\+BEFORE\+\_\+\+UNLOCKING\+\_\+\+ROWS).
+
+Finally, unlocking a resource should also grant any new lock requests for the resource (if possible).
+
+TRANSACTION STATE UPDATE Unlock should update the transaction state appropriately (depending upon the ISOLATION LEVEL) Only unlocking S or X locks changes transaction state.
+
+REPEATABLE\+\_\+\+READ\+: Unlocking S/X locks should set the transaction state to SHRINKING
+
+READ\+\_\+\+COMMITTED\+: Unlocking X locks should set the transaction state to SHRINKING. Unlocking S locks does not affect transaction state.
+
+READ\+\_\+\+UNCOMMITTED\+: Unlocking X locks should set the transaction state to SHRINKING. S locks are not permitted under READ\+\_\+\+UNCOMMITTED. The behaviour upon unlocking an S lock under this isolation level is undefined.
+
+BOOK KEEPING\+: After a resource is unlocked, lock manager should update the transaction\textquotesingle{}s lock sets appropriately (check \mbox{\hyperlink{transaction_8h_source}{transaction.\+h}})
+
+Acquire a lock on table\+\_\+oid\+\_\+t in the given lock\+\_\+mode. If the transaction already holds a lock on the table, upgrade the lock to the specified lock\+\_\+mode (if possible).
+
+This method should abort the transaction and throw a Transaction\+Abort\+Exception under certain circumstances. See \mbox{[}LOCK\+\_\+\+NOTE\mbox{]} in header file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em txn} & the transaction requesting the lock upgrade \\
+\hline
+{\em lock\+\_\+mode} & the lock mode for the requested lock \\
+\hline
+{\em oid} & the table\+\_\+oid\+\_\+t of the table to be locked in lock\+\_\+mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the upgrade is successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1LockManager_af84ac003c1fda4f5a32fc3ecfc98bc80}\label{classbustub_1_1LockManager_af84ac003c1fda4f5a32fc3ecfc98bc80}} 
+\index{bustub::LockManager@{bustub::LockManager}!RemoveEdge@{RemoveEdge}}
+\index{RemoveEdge@{RemoveEdge}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{RemoveEdge()}{RemoveEdge()}}
+{\footnotesize\ttfamily void bustub\+::\+Lock\+Manager\+::\+Remove\+Edge (\begin{DoxyParamCaption}\item[{txn\+\_\+id\+\_\+t}]{t1,  }\item[{txn\+\_\+id\+\_\+t}]{t2 }\end{DoxyParamCaption}) -\/$>$ void}
+
+Removes an edge from t1 -\/$>$ t2 from waits for graph. 
+\begin{DoxyParams}{Parameters}
+{\em t1} & transaction waiting for a lock \\
+\hline
+{\em t2} & transaction being waited for \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1LockManager_ac46d2abc2ed8ffa17934036d87e50d08}\label{classbustub_1_1LockManager_ac46d2abc2ed8ffa17934036d87e50d08}} 
+\index{bustub::LockManager@{bustub::LockManager}!RunCycleDetection@{RunCycleDetection}}
+\index{RunCycleDetection@{RunCycleDetection}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{RunCycleDetection()}{RunCycleDetection()}}
+{\footnotesize\ttfamily void bustub\+::\+Lock\+Manager\+::\+Run\+Cycle\+Detection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ void}
+
+Runs cycle detection in the background. \mbox{\Hypertarget{classbustub_1_1LockManager_acd25bf2d1fd916e5d0900fdcee196aa2}\label{classbustub_1_1LockManager_acd25bf2d1fd916e5d0900fdcee196aa2}} 
+\index{bustub::LockManager@{bustub::LockManager}!UnlockRow@{UnlockRow}}
+\index{UnlockRow@{UnlockRow}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{UnlockRow()}{UnlockRow()}}
+{\footnotesize\ttfamily auto bustub\+::\+Lock\+Manager\+::\+Unlock\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \&}]{oid,  }\item[{const \mbox{\hyperlink{classbustub_1_1RID}{RID}} \&}]{rid,  }\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Release the lock held on a row by the transaction.
+
+This method should abort the transaction and throw a Transaction\+Abort\+Exception under certain circumstances. See \mbox{[}UNLOCK\+\_\+\+NOTE\mbox{]} in header file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em txn} & the transaction releasing the lock \\
+\hline
+{\em rid} & the \mbox{\hyperlink{classbustub_1_1RID}{RID}} that is locked by the transaction \\
+\hline
+{\em oid} & the table\+\_\+oid\+\_\+t of the table the row belongs to \\
+\hline
+{\em rid} & the \mbox{\hyperlink{classbustub_1_1RID}{RID}} of the row to be unlocked \\
+\hline
+{\em force} & unlock the tuple regardless of isolation level, not changing the transaction state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the unlock is successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1LockManager_a89c917de275498c22f53138355787447}\label{classbustub_1_1LockManager_a89c917de275498c22f53138355787447}} 
+\index{bustub::LockManager@{bustub::LockManager}!UnlockTable@{UnlockTable}}
+\index{UnlockTable@{UnlockTable}!bustub::LockManager@{bustub::LockManager}}
+\doxysubsubsection{\texorpdfstring{UnlockTable()}{UnlockTable()}}
+{\footnotesize\ttfamily auto bustub\+::\+Lock\+Manager\+::\+Unlock\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{const \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \&}]{oid }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Release the lock held on a table by the transaction.
+
+This method should abort the transaction and throw a Transaction\+Abort\+Exception under certain circumstances. See \mbox{[}UNLOCK\+\_\+\+NOTE\mbox{]} in header file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em txn} & the transaction releasing the lock \\
+\hline
+{\em oid} & the table\+\_\+oid\+\_\+t of the table to be unlocked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the unlock is successful, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/lock\+\_\+manager.\+h\item 
+src/concurrency/lock\+\_\+manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{classbustub_1_1BoundFuncCall}{}\doxysection{bustub\+::Bound\+Func\+Call Class Reference}
+\label{classbustub_1_1BoundFuncCall}\index{bustub::BoundFuncCall@{bustub::BoundFuncCall}}
+
+
+{\ttfamily \#include $<$bound\+\_\+func\+\_\+call.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Bound\+Func\+Call\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundFuncCall__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Bound\+Func\+Call\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1BoundFuncCall__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundFuncCall_a76abbfa6bf283aae4deae843e920c1fc}\label{classbustub_1_1BoundFuncCall_a76abbfa6bf283aae4deae843e920c1fc}} 
+{\bfseries Bound\+Func\+Call} (std\+::string func\+\_\+name, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$$>$ args)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundFuncCall_a33159fdba0e64f5da6ecec0adaf75529}\label{classbustub_1_1BoundFuncCall_a33159fdba0e64f5da6ecec0adaf75529}} 
+auto {\bfseries To\+String} () const -\/$>$ std\+::string override
+\item 
+\mbox{\Hypertarget{classbustub_1_1BoundFuncCall_aa239e7260436917b4a9dd005e678aa96}\label{classbustub_1_1BoundFuncCall_aa239e7260436917b4a9dd005e678aa96}} 
+auto {\bfseries Has\+Aggregation} () const -\/$>$ bool override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1BoundFuncCall_abeec466b201fca357843974d10fa348a}{func\+\_\+name\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1BoundFuncCall_a2ea44f8281028390019e5cb5b1ad92a8}{args\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A bound func call, e.\+g., {\ttfamily lower(x)}. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BoundFuncCall_a2ea44f8281028390019e5cb5b1ad92a8}\label{classbustub_1_1BoundFuncCall_a2ea44f8281028390019e5cb5b1ad92a8}} 
+\index{bustub::BoundFuncCall@{bustub::BoundFuncCall}!args\_@{args\_}}
+\index{args\_@{args\_}!bustub::BoundFuncCall@{bustub::BoundFuncCall}}
+\doxysubsubsection{\texorpdfstring{args\_}{args\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1BoundExpression}{Bound\+Expression}}$>$ $>$ bustub\+::\+Bound\+Func\+Call\+::args\+\_\+}
+
+Arguments of the func call. \mbox{\Hypertarget{classbustub_1_1BoundFuncCall_abeec466b201fca357843974d10fa348a}\label{classbustub_1_1BoundFuncCall_abeec466b201fca357843974d10fa348a}} 
+\index{bustub::BoundFuncCall@{bustub::BoundFuncCall}!func\_name\_@{func\_name\_}}
+\index{func\_name\_@{func\_name\_}!bustub::BoundFuncCall@{bustub::BoundFuncCall}}
+\doxysubsubsection{\texorpdfstring{func\_name\_}{func\_name\_}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Bound\+Func\+Call\+::func\+\_\+name\+\_\+}
+
+Function name. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/binder/expressions/bound\+\_\+func\+\_\+call.\+h\item 
+src/binder/fmt\+\_\+impl.\+cpp\end{DoxyCompactItemize}

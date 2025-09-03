@@ -1,0 +1,141 @@
+\hypertarget{classbustub_1_1AbstractExecutor}{}\doxysection{bustub\+::Abstract\+Executor Class Reference}
+\label{classbustub_1_1AbstractExecutor}\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+
+
+{\ttfamily \#include $<$abstract\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Abstract\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classbustub_1_1AbstractExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Abstract\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1AbstractExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1AbstractExecutor_a77aac90325e53499c7dc96fea4a0f6c9}{Abstract\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx)
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab28201d3024a7b09e8c41af42a8def68}{$\sim$\+Abstract\+Executor}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{Init}} ()=0
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool=0
+\item 
+virtual auto \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&=0
+\item 
+auto \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab9895b6c56048bdd668aebd506c7d444}{Get\+Executor\+Context}} () -\/$>$ \mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a5591a244cd884bbae01ebbc58b3b2769}{exec\+\_\+ctx\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} implements the Volcano tuple-\/at-\/a-\/time iterator model. This is the base class from which all executors in the Bust\+Tub execution engine inherit, and defines the minimal interface that all executors support. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_a77aac90325e53499c7dc96fea4a0f6c9}\label{classbustub_1_1AbstractExecutor_a77aac90325e53499c7dc96fea4a0f6c9}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!AbstractExecutor@{AbstractExecutor}}
+\index{AbstractExecutor@{AbstractExecutor}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{AbstractExecutor()}{AbstractExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Abstract\+Executor\+::\+Abstract\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & the executor context that the executor runs with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_ab28201d3024a7b09e8c41af42a8def68}\label{classbustub_1_1AbstractExecutor_ab28201d3024a7b09e8c41af42a8def68}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!````~AbstractExecutor@{$\sim$AbstractExecutor}}
+\index{````~AbstractExecutor@{$\sim$AbstractExecutor}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbstractExecutor()}{~AbstractExecutor()}}
+{\footnotesize\ttfamily virtual bustub\+::\+Abstract\+Executor\+::$\sim$\+Abstract\+Executor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Virtual destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_ab9895b6c56048bdd668aebd506c7d444}\label{classbustub_1_1AbstractExecutor_ab9895b6c56048bdd668aebd506c7d444}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!GetExecutorContext@{GetExecutorContext}}
+\index{GetExecutorContext@{GetExecutorContext}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{GetExecutorContext()}{GetExecutorContext()}}
+{\footnotesize\ttfamily auto bustub\+::\+Abstract\+Executor\+::\+Get\+Executor\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$ \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The executor context in which this executor runs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}\label{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The schema of the tuples that this executor produces 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor_a87c80a0fb2288d0d2ce5698e00b85b04}{bustub\+::\+Window\+Function\+Executor}}, \mbox{\hyperlink{classbustub_1_1ValuesExecutor_a626e99b673d4a35bef68173092964362}{bustub\+::\+Values\+Executor}}, \mbox{\hyperlink{classbustub_1_1UpdateExecutor_a7228d66af32f26b2fb8704a367e6fa5e}{bustub\+::\+Update\+Executor}}, \mbox{\hyperlink{classbustub_1_1TopNPerGroupExecutor_a60eae83ec000a6c5b35dd963f36aba5a}{bustub\+::\+Top\+NPer\+Group\+Executor}}, \mbox{\hyperlink{classbustub_1_1TopNExecutor_a3799e17fd3f24a9caa7a6502f7a0e0c5}{bustub\+::\+Top\+NExecutor}}, \mbox{\hyperlink{classbustub_1_1TopNCheckExecutor_a6a985aa7b0d1a2505ea5a29d02af6112}{bustub\+::\+Top\+NCheck\+Executor}}, \mbox{\hyperlink{classbustub_1_1SortExecutor_a196ccd7b43004c406d1231bc4c0e1657}{bustub\+::\+Sort\+Executor}}, \mbox{\hyperlink{classbustub_1_1SeqScanExecutor_a359f6289f36c01d8452426ae32b080a2}{bustub\+::\+Seq\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1ProjectionExecutor_a77ca193acb76382f9af6da0dab1b78d2}{bustub\+::\+Projection\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_add36539e5bda928afcb92ad943eb6143}{bustub\+::\+Nested\+Loop\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestedIndexJoinExecutor_a0e125f278b459f5340ff758de46f631c}{bustub\+::\+Nested\+Index\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1MockScanExecutor_a0e2cd0d073ba55b02d843c71d38b7b0f}{bustub\+::\+Mock\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1LimitExecutor_a2b8c715ad4bb2d901ea8e7b11d457a1c}{bustub\+::\+Limit\+Executor}}, \mbox{\hyperlink{classbustub_1_1InsertExecutor_ae169cdfae48bbbf3f6fc621d8f9b2f88}{bustub\+::\+Insert\+Executor}}, \mbox{\hyperlink{classbustub_1_1InitCheckExecutor_a65e0b96d2b9bbd77773d3c807bd06109}{bustub\+::\+Init\+Check\+Executor}}, \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_a080a5f07a36ffbb46dcf0d93c27fe8c7}{bustub\+::\+Index\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1HashJoinExecutor_a4e8d115e81e2727a9b730370973fd8aa}{bustub\+::\+Hash\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1FilterExecutor_acfab016e87eb7cc67a61fa1b4709ebba}{bustub\+::\+Filter\+Executor}}, \mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor_a314986cfaa690278b9430770b1e443d5}{bustub\+::\+External\+Merge\+Sort\+Executor$<$ K $>$}}, \mbox{\hyperlink{classbustub_1_1DeleteExecutor_a21a63f0b786e11d99b21a64954598b43}{bustub\+::\+Delete\+Executor}}, and \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a1b430873ae36666e131fa76209b25c3e}{bustub\+::\+Aggregation\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}\label{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void bustub\+::\+Abstract\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Initialize the executor. \begin{DoxyWarning}{Warning}
+This function must be called before \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{Next()}} is called! 
+\end{DoxyWarning}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor_a9e10aa19f60cdeace1a63979bb7b1d82}{bustub\+::\+Window\+Function\+Executor}}, \mbox{\hyperlink{classbustub_1_1ValuesExecutor_ac4c6c0c67dd24f2c7685ac3fb55b2c67}{bustub\+::\+Values\+Executor}}, \mbox{\hyperlink{classbustub_1_1UpdateExecutor_a1657b8c95163dd8f8803bb5d4faa38e7}{bustub\+::\+Update\+Executor}}, \mbox{\hyperlink{classbustub_1_1TopNPerGroupExecutor_a00fe4b22b84a2eac15175bf582ebabe3}{bustub\+::\+Top\+NPer\+Group\+Executor}}, \mbox{\hyperlink{classbustub_1_1TopNExecutor_a52830dccb676a42e3551b921f7f77b9c}{bustub\+::\+Top\+NExecutor}}, \mbox{\hyperlink{classbustub_1_1TopNCheckExecutor_ad9bd7a7479d9845eb3045303671325f0}{bustub\+::\+Top\+NCheck\+Executor}}, \mbox{\hyperlink{classbustub_1_1SortExecutor_aa41b54ff324f778f3007ba984c83ace6}{bustub\+::\+Sort\+Executor}}, \mbox{\hyperlink{classbustub_1_1SeqScanExecutor_ac24b874b7d6679bfe5bcf7b32700c468}{bustub\+::\+Seq\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1ProjectionExecutor_aff1725340144a362f745d4535f117bd2}{bustub\+::\+Projection\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_a66ff12e840ec50fe3d3dfef770f839d5}{bustub\+::\+Nested\+Loop\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestedIndexJoinExecutor_a2028ff25d4c5c98811ea4e85642f0f58}{bustub\+::\+Nested\+Index\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1MockScanExecutor_a4dd127319da6df55d0be22c529088599}{bustub\+::\+Mock\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1LimitExecutor_a7d44cb9ffec09e0bc897be5cc051370b}{bustub\+::\+Limit\+Executor}}, \mbox{\hyperlink{classbustub_1_1InsertExecutor_a61e8a5d3523537775914475ed527f6ca}{bustub\+::\+Insert\+Executor}}, \mbox{\hyperlink{classbustub_1_1InitCheckExecutor_a3f52f45cd712edd035ca061bcba568d1}{bustub\+::\+Init\+Check\+Executor}}, \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_a286511d06856e7f38b2dc62794004a5f}{bustub\+::\+Index\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1HashJoinExecutor_a2132bb9fbf68beca485f739186e7a738}{bustub\+::\+Hash\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1FilterExecutor_a1364fb0143014a800e69e0c3c25abedc}{bustub\+::\+Filter\+Executor}}, \mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor_a92c865d00c094342ccdca0abce538f41}{bustub\+::\+External\+Merge\+Sort\+Executor$<$ K $>$}}, \mbox{\hyperlink{classbustub_1_1DeleteExecutor_a7fb4b4300c1e51a59884c90ce31bd411}{bustub\+::\+Delete\+Executor}}, and \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a6a78d10b7c70db1dba1965e53e9c6d2f}{bustub\+::\+Aggregation\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}\label{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily virtual auto bustub\+::\+Abstract\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$  bool\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Yield the next tuple from this executor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by this executor \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by this executor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1WindowFunctionExecutor_a3809c4ee264ff6d679e535467ee8bf7e}{bustub\+::\+Window\+Function\+Executor}}, \mbox{\hyperlink{classbustub_1_1ValuesExecutor_ab59e338f66c258a8ad0fd6ada746e1d1}{bustub\+::\+Values\+Executor}}, \mbox{\hyperlink{classbustub_1_1TopNPerGroupExecutor_a9ec7c1fa20a7cb67396c55650d36e855}{bustub\+::\+Top\+NPer\+Group\+Executor}}, \mbox{\hyperlink{classbustub_1_1TopNExecutor_abe02a4666bddc8cb7469ce5e3866c920}{bustub\+::\+Top\+NExecutor}}, \mbox{\hyperlink{classbustub_1_1TopNCheckExecutor_a96789914401ec4595232d71b3119d9af}{bustub\+::\+Top\+NCheck\+Executor}}, \mbox{\hyperlink{classbustub_1_1SortExecutor_a25e4466bbee829a5dd9a872e7b33cfb1}{bustub\+::\+Sort\+Executor}}, \mbox{\hyperlink{classbustub_1_1SeqScanExecutor_a67b92efa9796c9b985596bf428bab139}{bustub\+::\+Seq\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1ProjectionExecutor_a5d4585ca1085a090480803d836377fd7}{bustub\+::\+Projection\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_a01dc8dfef9832d225f5d66e16938e4b1}{bustub\+::\+Nested\+Loop\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestedIndexJoinExecutor_ae60cefc412fb6facfa1ac12a77b08db9}{bustub\+::\+Nested\+Index\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1MockScanExecutor_aeec664bc81f1dc4e375329a382b22526}{bustub\+::\+Mock\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1LimitExecutor_aa04749304f766bc03cbe9880af045ca2}{bustub\+::\+Limit\+Executor}}, \mbox{\hyperlink{classbustub_1_1InitCheckExecutor_a41c99123d7cedd473c122d03df0a4943}{bustub\+::\+Init\+Check\+Executor}}, \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_a5278c5a2a6e25b9bacb85a80862c05e3}{bustub\+::\+Index\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1HashJoinExecutor_ae1716c17bd5957c6b902da8d76c9ab6c}{bustub\+::\+Hash\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1FilterExecutor_a9a10222e8c132806f85d55ad8bde00e7}{bustub\+::\+Filter\+Executor}}, \mbox{\hyperlink{classbustub_1_1ExternalMergeSortExecutor_a77f2d0d08f36d57511f7e2f3d3a8c051}{bustub\+::\+External\+Merge\+Sort\+Executor$<$ K $>$}}, and \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a09de0f4be12d598e972ee6b51722fb3d}{bustub\+::\+Aggregation\+Executor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_a5591a244cd884bbae01ebbc58b3b2769}\label{classbustub_1_1AbstractExecutor_a5591a244cd884bbae01ebbc58b3b2769}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!exec\_ctx\_@{exec\_ctx\_}}
+\index{exec\_ctx\_@{exec\_ctx\_}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{exec\_ctx\_}{exec\_ctx\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}}$\ast$ bustub\+::\+Abstract\+Executor\+::exec\+\_\+ctx\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The executor context in which the executor runs 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/abstract\+\_\+executor.\+h\end{DoxyCompactItemize}

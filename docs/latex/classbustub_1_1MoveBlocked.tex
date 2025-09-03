@@ -1,0 +1,46 @@
+\hypertarget{classbustub_1_1MoveBlocked}{}\doxysection{bustub\+::Move\+Blocked Class Reference}
+\label{classbustub_1_1MoveBlocked}\index{bustub::MoveBlocked@{bustub::MoveBlocked}}
+
+
+A special type that will block the move constructor and move assignment operator. Used in \mbox{\hyperlink{classbustub_1_1TrieStore}{Trie\+Store}} tests.  
+
+
+
+
+{\ttfamily \#include $<$trie.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1MoveBlocked_ac971bdd815f4ae2f8c716396c21edfbb}\label{classbustub_1_1MoveBlocked_ac971bdd815f4ae2f8c716396c21edfbb}} 
+{\bfseries Move\+Blocked} (std\+::future$<$ int $>$ wait)
+\item 
+\mbox{\Hypertarget{classbustub_1_1MoveBlocked_a4f61cb4dd5724a70c9bb20a6ff009af2}\label{classbustub_1_1MoveBlocked_a4f61cb4dd5724a70c9bb20a6ff009af2}} 
+{\bfseries Move\+Blocked} (const \mbox{\hyperlink{classbustub_1_1MoveBlocked}{Move\+Blocked}} \&)=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1MoveBlocked_ab41839c02f10490f6ee2352f2c55789f}\label{classbustub_1_1MoveBlocked_ab41839c02f10490f6ee2352f2c55789f}} 
+{\bfseries Move\+Blocked} (\mbox{\hyperlink{classbustub_1_1MoveBlocked}{Move\+Blocked}} \&\&that) noexcept
+\item 
+\mbox{\Hypertarget{classbustub_1_1MoveBlocked_a72b52bc047d259af99fee90f1db470dd}\label{classbustub_1_1MoveBlocked_a72b52bc047d259af99fee90f1db470dd}} 
+auto {\bfseries operator=} (const \mbox{\hyperlink{classbustub_1_1MoveBlocked}{Move\+Blocked}} \&) -\/$>$ \mbox{\hyperlink{classbustub_1_1MoveBlocked}{Move\+Blocked}} \&=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1MoveBlocked_ae5282a3650cd298db26c9daac65a1b3c}\label{classbustub_1_1MoveBlocked_ae5282a3650cd298db26c9daac65a1b3c}} 
+auto {\bfseries operator=} (\mbox{\hyperlink{classbustub_1_1MoveBlocked}{Move\+Blocked}} \&\&that) noexcept -\/$>$ \mbox{\hyperlink{classbustub_1_1MoveBlocked}{Move\+Blocked}} \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1MoveBlocked_a5a7babc58b5526d06e0f3c93cdaa58ec}\label{classbustub_1_1MoveBlocked_a5a7babc58b5526d06e0f3c93cdaa58ec}} 
+bool {\bfseries waited\+\_\+} \{false\}
+\item 
+\mbox{\Hypertarget{classbustub_1_1MoveBlocked_a7492c417841ef3b56876665a9ec4e591}\label{classbustub_1_1MoveBlocked_a7492c417841ef3b56876665a9ec4e591}} 
+std\+::future$<$ int $>$ {\bfseries wait\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A special type that will block the move constructor and move assignment operator. Used in \mbox{\hyperlink{classbustub_1_1TrieStore}{Trie\+Store}} tests. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/trie.\+h\end{DoxyCompactItemize}

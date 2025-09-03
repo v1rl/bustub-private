@@ -1,0 +1,133 @@
+\hypertarget{classbustub_1_1InitCheckExecutor}{}\doxysection{bustub\+::Init\+Check\+Executor Class Reference}
+\label{classbustub_1_1InitCheckExecutor}\index{bustub::InitCheckExecutor@{bustub::InitCheckExecutor}}
+
+
+{\ttfamily \#include $<$init\+\_\+check\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Init\+Check\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1InitCheckExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Init\+Check\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1InitCheckExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1InitCheckExecutor_a8ae58f019788e6c0214a5f2a05119b0a}{Init\+Check\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, Abstract\+Plan\+Node\+Ref plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1InitCheckExecutor_a3f52f45cd712edd035ca061bcba568d1}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1InitCheckExecutor_a41c99123d7cedd473c122d03df0a4943}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1InitCheckExecutor_a65e0b96d2b9bbd77773d3c807bd06109}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1InitCheckExecutor_a1ed47d2cec2d4b82122b9c8bb6e14ee8}{Get\+Init\+Count}} () const -\/$>$ std\+::size\+\_\+t
+\item 
+auto \mbox{\hyperlink{classbustub_1_1InitCheckExecutor_acae8f416ca0d785a5aed5ab9a936f7ce}{Get\+Next\+Count}} () const -\/$>$ std\+::size\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1InitCheckExecutor}{Init\+Check\+Executor}} counts the number of times the child operator calls init. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1InitCheckExecutor_a8ae58f019788e6c0214a5f2a05119b0a}\label{classbustub_1_1InitCheckExecutor_a8ae58f019788e6c0214a5f2a05119b0a}} 
+\index{bustub::InitCheckExecutor@{bustub::InitCheckExecutor}!InitCheckExecutor@{InitCheckExecutor}}
+\index{InitCheckExecutor@{InitCheckExecutor}!bustub::InitCheckExecutor@{bustub::InitCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{InitCheckExecutor()}{InitCheckExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Init\+Check\+Executor\+::\+Init\+Check\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{Abstract\+Plan\+Node\+Ref}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1InitCheckExecutor}{Init\+Check\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The init check plan to be executed \\
+\hline
+{\em child\+\_\+executor} & The child executor from which init calls are counted \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1InitCheckExecutor_a1ed47d2cec2d4b82122b9c8bb6e14ee8}\label{classbustub_1_1InitCheckExecutor_a1ed47d2cec2d4b82122b9c8bb6e14ee8}} 
+\index{bustub::InitCheckExecutor@{bustub::InitCheckExecutor}!GetInitCount@{GetInitCount}}
+\index{GetInitCount@{GetInitCount}!bustub::InitCheckExecutor@{bustub::InitCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{GetInitCount()}{GetInitCount()}}
+{\footnotesize\ttfamily auto bustub\+::\+Init\+Check\+Executor\+::\+Get\+Init\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::size\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The number of inits 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1InitCheckExecutor_acae8f416ca0d785a5aed5ab9a936f7ce}\label{classbustub_1_1InitCheckExecutor_acae8f416ca0d785a5aed5ab9a936f7ce}} 
+\index{bustub::InitCheckExecutor@{bustub::InitCheckExecutor}!GetNextCount@{GetNextCount}}
+\index{GetNextCount@{GetNextCount}!bustub::InitCheckExecutor@{bustub::InitCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{GetNextCount()}{GetNextCount()}}
+{\footnotesize\ttfamily auto bustub\+::\+Init\+Check\+Executor\+::\+Get\+Next\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::size\+\_\+t \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The number of nexts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1InitCheckExecutor_a65e0b96d2b9bbd77773d3c807bd06109}\label{classbustub_1_1InitCheckExecutor_a65e0b96d2b9bbd77773d3c807bd06109}} 
+\index{bustub::InitCheckExecutor@{bustub::InitCheckExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::InitCheckExecutor@{bustub::InitCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Init\+Check\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the child executor 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1InitCheckExecutor_a3f52f45cd712edd035ca061bcba568d1}\label{classbustub_1_1InitCheckExecutor_a3f52f45cd712edd035ca061bcba568d1}} 
+\index{bustub::InitCheckExecutor@{bustub::InitCheckExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::InitCheckExecutor@{bustub::InitCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Init\+Check\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the Init\+Check 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1InitCheckExecutor_a41c99123d7cedd473c122d03df0a4943}\label{classbustub_1_1InitCheckExecutor_a41c99123d7cedd473c122d03df0a4943}} 
+\index{bustub::InitCheckExecutor@{bustub::InitCheckExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::InitCheckExecutor@{bustub::InitCheckExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Init\+Check\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the child executor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the child executor \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the child executor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/init\+\_\+check\+\_\+executor.\+h\item 
+src/execution/init\+\_\+check\+\_\+executor.\+cpp\end{DoxyCompactItemize}

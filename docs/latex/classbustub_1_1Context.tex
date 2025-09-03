@@ -1,0 +1,42 @@
+\hypertarget{classbustub_1_1Context}{}\doxysection{bustub\+::Context Class Reference}
+\label{classbustub_1_1Context}\index{bustub::Context@{bustub::Context}}
+
+
+Definition of the \mbox{\hyperlink{classbustub_1_1Context}{Context}} class.  
+
+
+
+
+{\ttfamily \#include $<$b\+\_\+plus\+\_\+tree.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Context_ac684d0a45d9eb114571a7cc75b665471}\label{classbustub_1_1Context_ac684d0a45d9eb114571a7cc75b665471}} 
+auto {\bfseries Is\+Root\+Page} (page\+\_\+id\+\_\+t page\+\_\+id) -\/$>$ bool
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Context_a879835d73e1db08c7b0bf75e4e055388}\label{classbustub_1_1Context_a879835d73e1db08c7b0bf75e4e055388}} 
+std\+::optional$<$ \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} $>$ {\bfseries header\+\_\+page\+\_\+} \{std\+::nullopt\}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Context_aeace64a3329de9151dadb29416b65ceb}\label{classbustub_1_1Context_aeace64a3329de9151dadb29416b65ceb}} 
+page\+\_\+id\+\_\+t {\bfseries root\+\_\+page\+\_\+id\+\_\+} \{INVALID\+\_\+\+PAGE\+\_\+\+ID\}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Context_a5558ddb2e414aecb9b4e583f0a2a7aba}\label{classbustub_1_1Context_a5558ddb2e414aecb9b4e583f0a2a7aba}} 
+std\+::deque$<$ \mbox{\hyperlink{classbustub_1_1WritePageGuard}{Write\+Page\+Guard}} $>$ {\bfseries write\+\_\+set\+\_\+}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Context_a30665c45016d4bf6ddeab35c3e424b65}\label{classbustub_1_1Context_a30665c45016d4bf6ddeab35c3e424b65}} 
+std\+::deque$<$ \mbox{\hyperlink{classbustub_1_1ReadPageGuard}{Read\+Page\+Guard}} $>$ {\bfseries read\+\_\+set\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of the \mbox{\hyperlink{classbustub_1_1Context}{Context}} class. 
+
+Hint\+: This class is designed to help you keep track of the pages that you\textquotesingle{}re modifying or accessing. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/b\+\_\+plus\+\_\+tree.\+h\end{DoxyCompactItemize}

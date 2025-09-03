@@ -1,0 +1,80 @@
+\hypertarget{classbustub_1_1BPlusTreeLeafPage}{}\doxysection{bustub\+::BPlus\+Tree\+Leaf\+Page Class Reference}
+\label{classbustub_1_1BPlusTreeLeafPage}\index{bustub::BPlusTreeLeafPage@{bustub::BPlusTreeLeafPage}}
+
+
+{\ttfamily \#include $<$b\+\_\+plus\+\_\+tree\+\_\+leaf\+\_\+page.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::BPlus\+Tree\+Leaf\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classbustub_1_1BPlusTreeLeafPage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::BPlus\+Tree\+Leaf\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classbustub_1_1BPlusTreeLeafPage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeLeafPage_a01859fde7432531101f9ad31d25c4fe7}\label{classbustub_1_1BPlusTreeLeafPage_a01859fde7432531101f9ad31d25c4fe7}} 
+{\bfseries BPlus\+Tree\+Leaf\+Page} (const \mbox{\hyperlink{classbustub_1_1BPlusTreeLeafPage}{BPlus\+Tree\+Leaf\+Page}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeLeafPage_a2735542f29bf8ac2875cde3f4f8bb3fd}\label{classbustub_1_1BPlusTreeLeafPage_a2735542f29bf8ac2875cde3f4f8bb3fd}} 
+void {\bfseries Init} (int max\+\_\+size=LEAF\+\_\+\+PAGE\+\_\+\+SLOT\+\_\+\+CNT)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeLeafPage_ad0bf5ff7acd31a2e923a27e23a71bd45}\label{classbustub_1_1BPlusTreeLeafPage_ad0bf5ff7acd31a2e923a27e23a71bd45}} 
+auto {\bfseries Get\+Next\+Page\+Id} () const -\/$>$ page\+\_\+id\+\_\+t
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeLeafPage_a2b305b5f6e5a846537ed72c33836597c}\label{classbustub_1_1BPlusTreeLeafPage_a2b305b5f6e5a846537ed72c33836597c}} 
+void {\bfseries Set\+Next\+Page\+Id} (page\+\_\+id\+\_\+t next\+\_\+page\+\_\+id)
+\item 
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeLeafPage_aaf9d976e52a9fc32815be79c308ca3fb}\label{classbustub_1_1BPlusTreeLeafPage_aaf9d976e52a9fc32815be79c308ca3fb}} 
+auto {\bfseries Key\+At} (int index) const -\/$>$ Key\+Type
+\item 
+auto \mbox{\hyperlink{classbustub_1_1BPlusTreeLeafPage_aa67589b44cc38a08a48ece8d2b619943}{To\+String}} () const -\/$>$ std\+::string
+\begin{DoxyCompactList}\small\item\em For test only return a string representing all keys in this leaf page formatted as \char`\"{}(key1,key2,key3,...)\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Store indexed key and record id (record id = page id combined with slot id, see {\ttfamily \mbox{\hyperlink{rid_8h_source}{include/common/rid.\+h}}} for detailed implementation) together within leaf page. Only support unique key.\hypertarget{classbustub_1_1BPlusTreeLeafPage_autotoc_md25}{}\doxysubsubsection{Leaf page format (keys are stored in order)\+:}\label{classbustub_1_1BPlusTreeLeafPage_autotoc_md25}
+\hypertarget{classbustub_1_1BPlusTreeLeafPage_autotoc_md26}{}\doxysubsubsection{$\vert$ HEADER $\vert$}\label{classbustub_1_1BPlusTreeLeafPage_autotoc_md26}
+\DoxyHorRuler{0}
+ \hypertarget{classbustub_1_1BPlusTreeLeafPage_autotoc_md27}{}\doxysubsubsection{$\vert$ KEY(1) $\vert$ KEY(2) $\vert$ ... $\vert$ KEY(n) $\vert$}\label{classbustub_1_1BPlusTreeLeafPage_autotoc_md27}
+\DoxyHorRuler{0}
+ \hypertarget{classbustub_1_1BPlusTreeLeafPage_autotoc_md28}{}\doxysubsubsection{$\vert$ RID(1) $\vert$ RID(2) $\vert$ ... $\vert$ RID(n) $\vert$}\label{classbustub_1_1BPlusTreeLeafPage_autotoc_md28}
+\hypertarget{classbustub_1_1BPlusTreeLeafPage_autotoc_md29}{}\doxysubsubsection{Header format (size in byte, 16 bytes in total)\+:}\label{classbustub_1_1BPlusTreeLeafPage_autotoc_md29}
+\hypertarget{classbustub_1_1BPlusTreeLeafPage_autotoc_md30}{}\doxysubsubsection{$\vert$ Page\+Type (4) $\vert$ Current\+Size (4) $\vert$ Max\+Size (4) $\vert$}\label{classbustub_1_1BPlusTreeLeafPage_autotoc_md30}
+\DoxyHorRuler{0}
+ \hypertarget{classbustub_1_1BPlusTreeLeafPage_autotoc_md31}{}\doxysubsubsection{$\vert$ Next\+Page\+Id (4) $\vert$}\label{classbustub_1_1BPlusTreeLeafPage_autotoc_md31}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BPlusTreeLeafPage_aa67589b44cc38a08a48ece8d2b619943}\label{classbustub_1_1BPlusTreeLeafPage_aa67589b44cc38a08a48ece8d2b619943}} 
+\index{bustub::BPlusTreeLeafPage@{bustub::BPlusTreeLeafPage}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::BPlusTreeLeafPage@{bustub::BPlusTreeLeafPage}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+BPlus\+Tree\+Leaf\+Page\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+For test only return a string representing all keys in this leaf page formatted as \char`\"{}(key1,key2,key3,...)\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of all keys in the current internal page 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/b\+\_\+plus\+\_\+tree\+\_\+leaf\+\_\+page.\+h\end{DoxyCompactItemize}

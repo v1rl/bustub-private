@@ -1,0 +1,45 @@
+\hypertarget{classbustub_1_1TableIterator}{}\doxysection{bustub\+::Table\+Iterator Class Reference}
+\label{classbustub_1_1TableIterator}\index{bustub::TableIterator@{bustub::TableIterator}}
+
+
+{\ttfamily \#include $<$table\+\_\+iterator.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a7f3d82f476274d85e4eb4e15822f3ce2}\label{classbustub_1_1TableIterator_a7f3d82f476274d85e4eb4e15822f3ce2}} 
+{\bfseries DISALLOW\+\_\+\+COPY} (\mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}})
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a6aa6e194bd26c2c586a9f27d2bb89ef7}\label{classbustub_1_1TableIterator_a6aa6e194bd26c2c586a9f27d2bb89ef7}} 
+{\bfseries Table\+Iterator} (\mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $\ast$table\+\_\+heap, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid, \mbox{\hyperlink{classbustub_1_1RID}{RID}} stop\+\_\+at\+\_\+rid)
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableIterator_af7c562444280827a75ef687c9dd8999e}\label{classbustub_1_1TableIterator_af7c562444280827a75ef687c9dd8999e}} 
+{\bfseries Table\+Iterator} (\mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&\&)=default
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableIterator_aad002a31df5a70f05b4b38ff278057cd}\label{classbustub_1_1TableIterator_aad002a31df5a70f05b4b38ff278057cd}} 
+auto {\bfseries Get\+Tuple} () -\/$>$ std\+::pair$<$ \mbox{\hyperlink{structbustub_1_1TupleMeta}{Tuple\+Meta}}, \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $>$
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a32148a5921e01b92a6b194a9de9ba787}\label{classbustub_1_1TableIterator_a32148a5921e01b92a6b194a9de9ba787}} 
+auto {\bfseries Get\+RID} () -\/$>$ \mbox{\hyperlink{classbustub_1_1RID}{RID}}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a5ee8327399cc2a1b720ff03652694267}\label{classbustub_1_1TableIterator_a5ee8327399cc2a1b720ff03652694267}} 
+auto {\bfseries Is\+End} () -\/$>$ bool
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a3d0ebfb32fa79b595756cb04e1d22b88}\label{classbustub_1_1TableIterator_a3d0ebfb32fa79b595756cb04e1d22b88}} 
+auto {\bfseries operator++} () -\/$>$ \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a9591eb6f6543f40292912e27b74f4d27}\label{classbustub_1_1TableIterator_a9591eb6f6543f40292912e27b74f4d27}} 
+class {\bfseries Cursor}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} enables the sequential scan of a \mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/table/table\+\_\+iterator.\+h\item 
+src/storage/table/table\+\_\+iterator.\+cpp\end{DoxyCompactItemize}

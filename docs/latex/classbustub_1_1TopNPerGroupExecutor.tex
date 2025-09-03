@@ -1,0 +1,109 @@
+\hypertarget{classbustub_1_1TopNPerGroupExecutor}{}\doxysection{bustub\+::Top\+NPer\+Group\+Executor Class Reference}
+\label{classbustub_1_1TopNPerGroupExecutor}\index{bustub::TopNPerGroupExecutor@{bustub::TopNPerGroupExecutor}}
+
+
+{\ttfamily \#include $<$topn\+\_\+per\+\_\+group\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Top\+NPer\+Group\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classbustub_1_1TopNPerGroupExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Top\+NPer\+Group\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classbustub_1_1TopNPerGroupExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TopNPerGroupExecutor_a1cba5a698dcd42545a08a48d39c8cbf1}{Top\+NPer\+Group\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode}{Top\+NPer\+Group\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TopNPerGroupExecutor_a00fe4b22b84a2eac15175bf582ebabe3}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNPerGroupExecutor_a9ec7c1fa20a7cb67396c55650d36e855}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1TopNPerGroupExecutor_a60eae83ec000a6c5b35dd963f36aba5a}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1TopNPerGroupExecutor}{Top\+NPer\+Group\+Executor}} executor executes a topn. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupExecutor_a1cba5a698dcd42545a08a48d39c8cbf1}\label{classbustub_1_1TopNPerGroupExecutor_a1cba5a698dcd42545a08a48d39c8cbf1}} 
+\index{bustub::TopNPerGroupExecutor@{bustub::TopNPerGroupExecutor}!TopNPerGroupExecutor@{TopNPerGroupExecutor}}
+\index{TopNPerGroupExecutor@{TopNPerGroupExecutor}!bustub::TopNPerGroupExecutor@{bustub::TopNPerGroupExecutor}}
+\doxysubsubsection{\texorpdfstring{TopNPerGroupExecutor()}{TopNPerGroupExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Top\+NPer\+Group\+Executor\+::\+Top\+NPer\+Group\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1TopNPerGroupPlanNode}{Top\+NPer\+Group\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1TopNPerGroupExecutor}{Top\+NPer\+Group\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The Top\+NPer\+Group plan to be executed \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupExecutor_a60eae83ec000a6c5b35dd963f36aba5a}\label{classbustub_1_1TopNPerGroupExecutor_a60eae83ec000a6c5b35dd963f36aba5a}} 
+\index{bustub::TopNPerGroupExecutor@{bustub::TopNPerGroupExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::TopNPerGroupExecutor@{bustub::TopNPerGroupExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NPer\+Group\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The schema of the tuples that this executor produces 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupExecutor_a00fe4b22b84a2eac15175bf582ebabe3}\label{classbustub_1_1TopNPerGroupExecutor_a00fe4b22b84a2eac15175bf582ebabe3}} 
+\index{bustub::TopNPerGroupExecutor@{bustub::TopNPerGroupExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::TopNPerGroupExecutor@{bustub::TopNPerGroupExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Top\+NPer\+Group\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the Top\+NPer\+Group 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1TopNPerGroupExecutor_a9ec7c1fa20a7cb67396c55650d36e855}\label{classbustub_1_1TopNPerGroupExecutor_a9ec7c1fa20a7cb67396c55650d36e855}} 
+\index{bustub::TopNPerGroupExecutor@{bustub::TopNPerGroupExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::TopNPerGroupExecutor@{bustub::TopNPerGroupExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Top\+NPer\+Group\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the Top\+NPer\+Group. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the Top\+NPer\+Group \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}} produced by the Top\+NPer\+Group \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/topn\+\_\+per\+\_\+group\+\_\+executor.\+h\item 
+src/execution/topn\+\_\+per\+\_\+group\+\_\+executor.\+cpp\end{DoxyCompactItemize}

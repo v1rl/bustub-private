@@ -1,0 +1,38 @@
+\hypertarget{classbustub_1_1Optimizer}{}\doxysection{bustub\+::Optimizer Class Reference}
+\label{classbustub_1_1Optimizer}\index{bustub::Optimizer@{bustub::Optimizer}}
+
+
+{\ttfamily \#include $<$optimizer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1Optimizer_a083001d3abb8147941903087bc8bdb86}\label{classbustub_1_1Optimizer_a083001d3abb8147941903087bc8bdb86}} 
+{\bfseries Optimizer} (const \mbox{\hyperlink{classbustub_1_1Catalog}{Catalog}} \&catalog, bool force\+\_\+starter\+\_\+rule)
+\item 
+\mbox{\Hypertarget{classbustub_1_1Optimizer_a6888acafdf53f67e64da8e9bdf17ce4a}\label{classbustub_1_1Optimizer_a6888acafdf53f67e64da8e9bdf17ce4a}} 
+auto {\bfseries Optimize} (const Abstract\+Plan\+Node\+Ref \&plan) -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+\mbox{\Hypertarget{classbustub_1_1Optimizer_a7b1129f8c9486cff221df72d1ddb63d0}\label{classbustub_1_1Optimizer_a7b1129f8c9486cff221df72d1ddb63d0}} 
+auto {\bfseries Optimize\+Custom} (const Abstract\+Plan\+Node\+Ref \&plan) -\/$>$ Abstract\+Plan\+Node\+Ref
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The optimizer takes an {\ttfamily \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}}} and outputs an optimized {\ttfamily \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}}}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/optimizer/optimizer.\+h\item 
+src/optimizer/column\+\_\+pruning.\+cpp\item 
+src/optimizer/eliminate\+\_\+true\+\_\+filter.\+cpp\item 
+src/optimizer/merge\+\_\+filter\+\_\+nlj.\+cpp\item 
+src/optimizer/merge\+\_\+filter\+\_\+scan.\+cpp\item 
+src/optimizer/merge\+\_\+projection.\+cpp\item 
+src/optimizer/nlj\+\_\+as\+\_\+hash\+\_\+join.\+cpp\item 
+src/optimizer/nlj\+\_\+as\+\_\+index\+\_\+join.\+cpp\item 
+src/optimizer/optimizer.\+cpp\item 
+src/optimizer/optimizer\+\_\+custom\+\_\+rules.\+cpp\item 
+src/optimizer/order\+\_\+by\+\_\+index\+\_\+scan.\+cpp\item 
+src/optimizer/seqscan\+\_\+as\+\_\+indexscan.\+cpp\item 
+src/optimizer/sort\+\_\+limit\+\_\+as\+\_\+topn.\+cpp\end{DoxyCompactItemize}

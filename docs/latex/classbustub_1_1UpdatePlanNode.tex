@@ -1,0 +1,141 @@
+\hypertarget{classbustub_1_1UpdatePlanNode}{}\doxysection{bustub\+::Update\+Plan\+Node Class Reference}
+\label{classbustub_1_1UpdatePlanNode}\index{bustub::UpdatePlanNode@{bustub::UpdatePlanNode}}
+
+
+{\ttfamily \#include $<$update\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Update\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1UpdatePlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Update\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1UpdatePlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1UpdatePlanNode_a2426759bc2586562011ebd61aa8f1e6b}{Update\+Plan\+Node}} (Schema\+Ref output, Abstract\+Plan\+Node\+Ref child, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} table\+\_\+oid, std\+::vector$<$ Abstract\+Expression\+Ref $>$ target\+\_\+expressions)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1UpdatePlanNode_a8a64c45966b37a97aebbc60caecd6d0c}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1UpdatePlanNode_a5e354605dfe485f3a01ed4a7e80b5e6e}{Get\+Table\+Oid}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1UpdatePlanNode_af9d684964f154be2e018c3a35a790536}{Get\+Child\+Plan}} () const -\/$>$ Abstract\+Plan\+Node\+Ref
+\item 
+\mbox{\Hypertarget{classbustub_1_1UpdatePlanNode_ae0117d560f428a574382e7f2c4293cde}\label{classbustub_1_1UpdatePlanNode_ae0117d560f428a574382e7f2c4293cde}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1UpdatePlanNode}{Update\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \mbox{\hyperlink{classbustub_1_1UpdatePlanNode_afb4321f260ff77b320874ab481751c9d}{table\+\_\+oid\+\_\+}}
+\item 
+std\+::vector$<$ Abstract\+Expression\+Ref $>$ \mbox{\hyperlink{classbustub_1_1UpdatePlanNode_ac9c2e31979516cd2d50c04ee7e5ddefb}{target\+\_\+expressions\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1UpdatePlanNode_a8897f137e6856193937d9a6068d1a307}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1UpdatePlanNode}{Update\+Plan\+Node}} identifies a table that should be updated. The tuple(s) to be updated come from the child of the \mbox{\hyperlink{classbustub_1_1UpdateExecutor}{Update\+Executor}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1UpdatePlanNode_a2426759bc2586562011ebd61aa8f1e6b}\label{classbustub_1_1UpdatePlanNode_a2426759bc2586562011ebd61aa8f1e6b}} 
+\index{bustub::UpdatePlanNode@{bustub::UpdatePlanNode}!UpdatePlanNode@{UpdatePlanNode}}
+\index{UpdatePlanNode@{UpdatePlanNode}!bustub::UpdatePlanNode@{bustub::UpdatePlanNode}}
+\doxysubsubsection{\texorpdfstring{UpdatePlanNode()}{UpdatePlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Update\+Plan\+Node\+::\+Update\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{Abstract\+Plan\+Node\+Ref}]{child,  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{table\+\_\+oid,  }\item[{std\+::vector$<$ Abstract\+Expression\+Ref $>$}]{target\+\_\+expressions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1UpdatePlanNode}{Update\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em child} & The child plan to obtain tuple from \\
+\hline
+{\em table\+\_\+oid} & The identifier of the table that should be updated \\
+\hline
+{\em target\+\_\+expressions} & The target expressions for new tuples \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1UpdatePlanNode_af9d684964f154be2e018c3a35a790536}\label{classbustub_1_1UpdatePlanNode_af9d684964f154be2e018c3a35a790536}} 
+\index{bustub::UpdatePlanNode@{bustub::UpdatePlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::UpdatePlanNode@{bustub::UpdatePlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily auto bustub\+::\+Update\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ Abstract\+Plan\+Node\+Ref \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The child plan providing tuples to be inserted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1UpdatePlanNode_a5e354605dfe485f3a01ed4a7e80b5e6e}\label{classbustub_1_1UpdatePlanNode_a5e354605dfe485f3a01ed4a7e80b5e6e}} 
+\index{bustub::UpdatePlanNode@{bustub::UpdatePlanNode}!GetTableOid@{GetTableOid}}
+\index{GetTableOid@{GetTableOid}!bustub::UpdatePlanNode@{bustub::UpdatePlanNode}}
+\doxysubsubsection{\texorpdfstring{GetTableOid()}{GetTableOid()}}
+{\footnotesize\ttfamily auto bustub\+::\+Update\+Plan\+Node\+::\+Get\+Table\+Oid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The identifier of the table that should be updated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1UpdatePlanNode_a8a64c45966b37a97aebbc60caecd6d0c}\label{classbustub_1_1UpdatePlanNode_a8a64c45966b37a97aebbc60caecd6d0c}} 
+\index{bustub::UpdatePlanNode@{bustub::UpdatePlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::UpdatePlanNode@{bustub::UpdatePlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Update\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1UpdatePlanNode_a8897f137e6856193937d9a6068d1a307}\label{classbustub_1_1UpdatePlanNode_a8897f137e6856193937d9a6068d1a307}} 
+\index{bustub::UpdatePlanNode@{bustub::UpdatePlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::UpdatePlanNode@{bustub::UpdatePlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Update\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1UpdatePlanNode_afb4321f260ff77b320874ab481751c9d}\label{classbustub_1_1UpdatePlanNode_afb4321f260ff77b320874ab481751c9d}} 
+\index{bustub::UpdatePlanNode@{bustub::UpdatePlanNode}!table\_oid\_@{table\_oid\_}}
+\index{table\_oid\_@{table\_oid\_}!bustub::UpdatePlanNode@{bustub::UpdatePlanNode}}
+\doxysubsubsection{\texorpdfstring{table\_oid\_}{table\_oid\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} bustub\+::\+Update\+Plan\+Node\+::table\+\_\+oid\+\_\+}
+
+The table to be updated. \mbox{\Hypertarget{classbustub_1_1UpdatePlanNode_ac9c2e31979516cd2d50c04ee7e5ddefb}\label{classbustub_1_1UpdatePlanNode_ac9c2e31979516cd2d50c04ee7e5ddefb}} 
+\index{bustub::UpdatePlanNode@{bustub::UpdatePlanNode}!target\_expressions\_@{target\_expressions\_}}
+\index{target\_expressions\_@{target\_expressions\_}!bustub::UpdatePlanNode@{bustub::UpdatePlanNode}}
+\doxysubsubsection{\texorpdfstring{target\_expressions\_}{target\_expressions\_}}
+{\footnotesize\ttfamily std\+::vector$<$Abstract\+Expression\+Ref$>$ bustub\+::\+Update\+Plan\+Node\+::target\+\_\+expressions\+\_\+}
+
+The new expression at each column 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/update\+\_\+plan.\+h\item 
+src/execution/fmt\+\_\+impl.\+cpp\end{DoxyCompactItemize}

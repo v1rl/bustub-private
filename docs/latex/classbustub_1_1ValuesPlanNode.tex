@@ -1,0 +1,103 @@
+\hypertarget{classbustub_1_1ValuesPlanNode}{}\doxysection{bustub\+::Values\+Plan\+Node Class Reference}
+\label{classbustub_1_1ValuesPlanNode}\index{bustub::ValuesPlanNode@{bustub::ValuesPlanNode}}
+
+
+{\ttfamily \#include $<$values\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Values\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1ValuesPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Values\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1ValuesPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ValuesPlanNode_a4edb359b60d916228fb6ae0c18bbdb33}{Values\+Plan\+Node}} (Schema\+Ref output, std\+::vector$<$ std\+::vector$<$ Abstract\+Expression\+Ref $>$$>$ values)
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ValuesPlanNode_af1bce73b0f8e51ae0ff941b418479204}{Get\+Type}} () const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} override
+\item 
+\mbox{\Hypertarget{classbustub_1_1ValuesPlanNode_aa0b1a86d4d1184969ef43b6ae563baf2}\label{classbustub_1_1ValuesPlanNode_aa0b1a86d4d1184969ef43b6ae563baf2}} 
+auto {\bfseries Get\+Values} () const -\/$>$ const std\+::vector$<$ std\+::vector$<$ Abstract\+Expression\+Ref $>$$>$ \&
+\item 
+\mbox{\Hypertarget{classbustub_1_1ValuesPlanNode_a312eb3d09927d09264c1c033b70ffef7}\label{classbustub_1_1ValuesPlanNode_a312eb3d09927d09264c1c033b70ffef7}} 
+{\bfseries BUSTUB\+\_\+\+PLAN\+\_\+\+NODE\+\_\+\+CLONE\+\_\+\+WITH\+\_\+\+CHILDREN} (\mbox{\hyperlink{classbustub_1_1ValuesPlanNode}{Values\+Plan\+Node}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1ValuesPlanNode_a99f37315c74b9359e88d6b905486d36c}\label{classbustub_1_1ValuesPlanNode_a99f37315c74b9359e88d6b905486d36c}} 
+std\+::vector$<$ std\+::vector$<$ Abstract\+Expression\+Ref $>$ $>$ {\bfseries values\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classbustub_1_1ValuesPlanNode_af0248bc536d004de92b59085c41f7b62}{Plan\+Node\+To\+String}} () const -\/$>$ std\+::string override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1ValuesPlanNode}{Values\+Plan\+Node}} represents rows of values. For example, {\ttfamily INSERT INTO table VALUES ((0, 1), (1, 2))}, where we will have {\ttfamily (0, 1)} and {\ttfamily (1, 2)} as the output of this executor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ValuesPlanNode_a4edb359b60d916228fb6ae0c18bbdb33}\label{classbustub_1_1ValuesPlanNode_a4edb359b60d916228fb6ae0c18bbdb33}} 
+\index{bustub::ValuesPlanNode@{bustub::ValuesPlanNode}!ValuesPlanNode@{ValuesPlanNode}}
+\index{ValuesPlanNode@{ValuesPlanNode}!bustub::ValuesPlanNode@{bustub::ValuesPlanNode}}
+\doxysubsubsection{\texorpdfstring{ValuesPlanNode()}{ValuesPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Values\+Plan\+Node\+::\+Values\+Plan\+Node (\begin{DoxyParamCaption}\item[{Schema\+Ref}]{output,  }\item[{std\+::vector$<$ std\+::vector$<$ Abstract\+Expression\+Ref $>$$>$}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1ValuesPlanNode}{Values\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em output} & The output schema of this values plan node \\
+\hline
+{\em values} & The values produced by this plan node \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ValuesPlanNode_af1bce73b0f8e51ae0ff941b418479204}\label{classbustub_1_1ValuesPlanNode_af1bce73b0f8e51ae0ff941b418479204}} 
+\index{bustub::ValuesPlanNode@{bustub::ValuesPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::ValuesPlanNode@{bustub::ValuesPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily auto bustub\+::\+Values\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a39a11937cdd41a4f5ccf534d39307e5d}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1ValuesPlanNode_af0248bc536d004de92b59085c41f7b62}\label{classbustub_1_1ValuesPlanNode_af0248bc536d004de92b59085c41f7b62}} 
+\index{bustub::ValuesPlanNode@{bustub::ValuesPlanNode}!PlanNodeToString@{PlanNodeToString}}
+\index{PlanNodeToString@{PlanNodeToString}!bustub::ValuesPlanNode@{bustub::ValuesPlanNode}}
+\doxysubsubsection{\texorpdfstring{PlanNodeToString()}{PlanNodeToString()}}
+{\footnotesize\ttfamily auto bustub\+::\+Values\+Plan\+Node\+::\+Plan\+Node\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ std\+::string\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the string representation of the plan node itself 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a580ea82a2a025985ced878f1d1b9fa1f}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/values\+\_\+plan.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\hypertarget{classbustub_1_1LockManager_1_1LockRequest}{}\doxysection{bustub\+::Lock\+Manager\+::Lock\+Request Class Reference}
+\label{classbustub_1_1LockManager_1_1LockRequest}\index{bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}}
+
+
+{\ttfamily \#include $<$lock\+\_\+manager.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Lock\+Manager\+::Lock\+Request\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classbustub_1_1LockManager_1_1LockRequest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest_afe172226f6345ab72fd3c66458fc48c7}{Lock\+Request}} (txn\+\_\+id\+\_\+t txn\+\_\+id, Lock\+Mode lock\+\_\+mode, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} oid)
+\item 
+\mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest_a44d00877bdd4c845d50f6240a505b916}{Lock\+Request}} (txn\+\_\+id\+\_\+t txn\+\_\+id, Lock\+Mode lock\+\_\+mode, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} oid, \mbox{\hyperlink{classbustub_1_1RID}{RID}} rid)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+txn\+\_\+id\+\_\+t \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest_a334d0a233482291b853d73db66785555}{txn\+\_\+id\+\_\+}}
+\item 
+Lock\+Mode \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest_af67cd964cced173ff640cf324ea61d3e}{lock\+\_\+mode\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest_aa99341e860af6dafb1f45e427036a348}{oid\+\_\+}}
+\item 
+\mbox{\hyperlink{classbustub_1_1RID}{RID}} \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest_a1ec5ff4faaf81287a35d7c673cc3ff22}{rid\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbustub_1_1LockManager_1_1LockRequest_ae5805a0b37b4d574ff431600d5983b6e}{granted\+\_\+}} \{false\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure to hold a lock request. This could be a lock request on a table OR a row. For table lock requests, the rid\+\_\+ attribute would be unused. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequest_afe172226f6345ab72fd3c66458fc48c7}\label{classbustub_1_1LockManager_1_1LockRequest_afe172226f6345ab72fd3c66458fc48c7}} 
+\index{bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}!LockRequest@{LockRequest}}
+\index{LockRequest@{LockRequest}!bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}}
+\doxysubsubsection{\texorpdfstring{LockRequest()}{LockRequest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+::\+Lock\+Request (\begin{DoxyParamCaption}\item[{txn\+\_\+id\+\_\+t}]{txn\+\_\+id,  }\item[{Lock\+Mode}]{lock\+\_\+mode,  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{oid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Table lock request \mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequest_a44d00877bdd4c845d50f6240a505b916}\label{classbustub_1_1LockManager_1_1LockRequest_a44d00877bdd4c845d50f6240a505b916}} 
+\index{bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}!LockRequest@{LockRequest}}
+\index{LockRequest@{LockRequest}!bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}}
+\doxysubsubsection{\texorpdfstring{LockRequest()}{LockRequest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+::\+Lock\+Request (\begin{DoxyParamCaption}\item[{txn\+\_\+id\+\_\+t}]{txn\+\_\+id,  }\item[{Lock\+Mode}]{lock\+\_\+mode,  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{oid,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}}}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Row lock request 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequest_ae5805a0b37b4d574ff431600d5983b6e}\label{classbustub_1_1LockManager_1_1LockRequest_ae5805a0b37b4d574ff431600d5983b6e}} 
+\index{bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}!granted\_@{granted\_}}
+\index{granted\_@{granted\_}!bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}}
+\doxysubsubsection{\texorpdfstring{granted\_}{granted\_}}
+{\footnotesize\ttfamily bool bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+::granted\+\_\+ \{false\}}
+
+Whether the lock has been granted or not \mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequest_af67cd964cced173ff640cf324ea61d3e}\label{classbustub_1_1LockManager_1_1LockRequest_af67cd964cced173ff640cf324ea61d3e}} 
+\index{bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}!lock\_mode\_@{lock\_mode\_}}
+\index{lock\_mode\_@{lock\_mode\_}!bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}}
+\doxysubsubsection{\texorpdfstring{lock\_mode\_}{lock\_mode\_}}
+{\footnotesize\ttfamily Lock\+Mode bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+::lock\+\_\+mode\+\_\+}
+
+Locking mode of the requested lock \mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequest_aa99341e860af6dafb1f45e427036a348}\label{classbustub_1_1LockManager_1_1LockRequest_aa99341e860af6dafb1f45e427036a348}} 
+\index{bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}!oid\_@{oid\_}}
+\index{oid\_@{oid\_}!bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}}
+\doxysubsubsection{\texorpdfstring{oid\_}{oid\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+::oid\+\_\+}
+
+Oid of the table for a table lock; oid of the table the row belong to for a row lock \mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequest_a1ec5ff4faaf81287a35d7c673cc3ff22}\label{classbustub_1_1LockManager_1_1LockRequest_a1ec5ff4faaf81287a35d7c673cc3ff22}} 
+\index{bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}!rid\_@{rid\_}}
+\index{rid\_@{rid\_}!bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}}
+\doxysubsubsection{\texorpdfstring{rid\_}{rid\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1RID}{RID}} bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+::rid\+\_\+}
+
+Rid of the row for a row lock; unused for table locks \mbox{\Hypertarget{classbustub_1_1LockManager_1_1LockRequest_a334d0a233482291b853d73db66785555}\label{classbustub_1_1LockManager_1_1LockRequest_a334d0a233482291b853d73db66785555}} 
+\index{bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}!txn\_id\_@{txn\_id\_}}
+\index{txn\_id\_@{txn\_id\_}!bustub::LockManager::LockRequest@{bustub::LockManager::LockRequest}}
+\doxysubsubsection{\texorpdfstring{txn\_id\_}{txn\_id\_}}
+{\footnotesize\ttfamily txn\+\_\+id\+\_\+t bustub\+::\+Lock\+Manager\+::\+Lock\+Request\+::txn\+\_\+id\+\_\+}
+
+Txn\+\_\+id of the txn requesting the lock 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/lock\+\_\+manager.\+h\end{DoxyCompactItemize}

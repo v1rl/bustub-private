@@ -12,6 +12,7 @@
 
 #pragma once
 
+#include <cstddef>
 #include <list>
 #include <memory>
 #include <shared_mutex>
@@ -72,6 +73,8 @@ class FrameHeader {
   /** @brief The frame ID / index of the frame this header represents. */
   const frame_id_t frame_id_;
 
+  // page_id_t page_id_;
+
   /** @brief The readers / writer latch for this frame. */
   std::shared_mutex rwlatch_;
 
@@ -87,6 +90,40 @@ class FrameHeader {
    * If the frame does not hold any page data, the frame contains all null bytes.
    */
   std::vector<char> data_;
+
+  /** 共享加锁（读） */
+  void LatchShared() { rwlatch_.lock_shared(); }
+
+  /** 释放共享锁 */
+  void UnlatchShared() { rwlatch_.unlock_shared(); }
+
+  /** 独占加锁（写） */
+  void LatchExclusive() { rwlatch_.lock(); }
+
+  /** 释放独占锁 */
+  void UnlatchExclusive() { rwlatch_.unlock(); }
+
+  /** 增加 Pin 计数（表明该页正在被使用） */
+  void Pin() { pin_count_.fetch_add(1, std::memory_order_relaxed); }
+
+  /** 减少 Pin 计数 */
+  void Unpin() {
+    size_t old = pin_count_.load(std::memory_order_relaxed);
+    if (old > 0) {
+      pin_count_.fetch_sub(1, std::memory_order_relaxed);
+    }
+  }
+
+  /** 获取当前 Pin 数 */
+  auto GetPinCount() const -> size_t { return pin_count_.load(std::memory_order_relaxed); }
+
+  /** 设置/获取 Dirty 状态 */
+  void SetDirty(bool is_dirty) { is_dirty_ = is_dirty; }
+
+  auto IsDirty() const -> bool { return is_dirty_; }
+
+  /** 获取 frame ID */
+  auto GetFrameId() const -> frame_id_t { return frame_id_; }
 
   /**
    * TODO(P1): You may add any fields or helper functions under here that you think are necessary.
@@ -126,6 +163,8 @@ class BufferPoolManager {
   void FlushAllPagesUnsafe();
   void FlushAllPages();
   auto GetPinCount(page_id_t page_id) -> std::optional<size_t>;
+  auto FindPage(frame_id_t evicted_frame_id) -> std::optional<page_id_t>;
+  auto AcquireRWLock(frame_id_t frame_id) -> bool;
 
  private:
   /** @brief The number of frames in the buffer pool. */

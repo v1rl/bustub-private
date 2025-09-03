@@ -1,0 +1,10 @@
+<map id="bustub::NumericType" name="bustub::NumericType">
+<area shape="rect" id="node1" title=" " alt="" coords="157,80,316,107"/>
+<area shape="rect" id="node3" href="$classbustub_1_1DecimalType.html" title=" " alt="" coords="59,155,217,181"/>
+<area shape="rect" id="node4" href="$classbustub_1_1IntegerParentType.html" title=" " alt="" coords="241,155,432,181"/>
+<area shape="rect" id="node2" href="$classbustub_1_1Type.html" title=" " alt="" coords="185,5,289,32"/>
+<area shape="rect" id="node5" href="$classbustub_1_1BigintType.html" title=" " alt="" coords="5,229,148,256"/>
+<area shape="rect" id="node6" href="$classbustub_1_1IntegerType.html" title=" " alt="" coords="172,229,323,256"/>
+<area shape="rect" id="node7" href="$classbustub_1_1SmallintType.html" title=" " alt="" coords="347,229,505,256"/>
+<area shape="rect" id="node8" href="$classbustub_1_1TinyintType.html" title=" " alt="" coords="530,229,679,256"/>
+</map>

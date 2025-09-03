@@ -1,0 +1,113 @@
+\hypertarget{classbustub_1_1HashJoinExecutor}{}\doxysection{bustub\+::Hash\+Join\+Executor Class Reference}
+\label{classbustub_1_1HashJoinExecutor}\index{bustub::HashJoinExecutor@{bustub::HashJoinExecutor}}
+
+
+{\ttfamily \#include $<$hash\+\_\+join\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Hash\+Join\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1HashJoinExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Hash\+Join\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classbustub_1_1HashJoinExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1HashJoinExecutor_a5f1e98cde95d03f78fc03c99bb1f6283}{Hash\+Join\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode}{Hash\+Join\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&left\+\_\+child, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&right\+\_\+child)
+\item 
+void \mbox{\hyperlink{classbustub_1_1HashJoinExecutor_a2132bb9fbf68beca485f739186e7a738}{Init}} () override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashJoinExecutor_ae1716c17bd5957c6b902da8d76c9ab6c}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$rid) -\/$>$ bool override
+\item 
+auto \mbox{\hyperlink{classbustub_1_1HashJoinExecutor_a4e8d115e81e2727a9b730370973fd8aa}{Get\+Output\+Schema}} () const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1HashJoinExecutor}{Hash\+Join\+Executor}} executes a nested-\/loop JOIN on two tables. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1HashJoinExecutor_a5f1e98cde95d03f78fc03c99bb1f6283}\label{classbustub_1_1HashJoinExecutor_a5f1e98cde95d03f78fc03c99bb1f6283}} 
+\index{bustub::HashJoinExecutor@{bustub::HashJoinExecutor}!HashJoinExecutor@{HashJoinExecutor}}
+\index{HashJoinExecutor@{HashJoinExecutor}!bustub::HashJoinExecutor@{bustub::HashJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{HashJoinExecutor()}{HashJoinExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Hash\+Join\+Executor\+::\+Hash\+Join\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode}{Hash\+Join\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{left\+\_\+child,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{right\+\_\+child }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1HashJoinExecutor}{Hash\+Join\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The Hash\+Join join plan to be executed \\
+\hline
+{\em left\+\_\+child} & The child executor that produces tuples for the left side of join \\
+\hline
+{\em right\+\_\+child} & The child executor that produces tuples for the right side of join \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1HashJoinExecutor_a4e8d115e81e2727a9b730370973fd8aa}\label{classbustub_1_1HashJoinExecutor_a4e8d115e81e2727a9b730370973fd8aa}} 
+\index{bustub::HashJoinExecutor@{bustub::HashJoinExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::HashJoinExecutor@{bustub::HashJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily auto bustub\+::\+Hash\+Join\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the join 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab72f75f9f8f5728a727609bd70070888}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1HashJoinExecutor_a2132bb9fbf68beca485f739186e7a738}\label{classbustub_1_1HashJoinExecutor_a2132bb9fbf68beca485f739186e7a738}} 
+\index{bustub::HashJoinExecutor@{bustub::HashJoinExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::HashJoinExecutor@{bustub::HashJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Hash\+Join\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the join 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1HashJoinExecutor_ae1716c17bd5957c6b902da8d76c9ab6c}\label{classbustub_1_1HashJoinExecutor_ae1716c17bd5957c6b902da8d76c9ab6c}} 
+\index{bustub::HashJoinExecutor@{bustub::HashJoinExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::HashJoinExecutor@{bustub::HashJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily auto bustub\+::\+Hash\+Join\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{RID}} $\ast$}]{rid }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the join. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the join. \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{RID}}, not used by hash join. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_aa0eeb57bf174ccd25466e2b137024b4d}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/hash\+\_\+join\+\_\+executor.\+h\item 
+src/execution/hash\+\_\+join\+\_\+executor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{classbustub_1_1DiskScheduler}{}\doxysection{bustub\+::Disk\+Scheduler Class Reference}
+\label{classbustub_1_1DiskScheduler}\index{bustub::DiskScheduler@{bustub::DiskScheduler}}
+
+
+The \mbox{\hyperlink{classbustub_1_1DiskScheduler}{Disk\+Scheduler}} schedules disk read and write operations.  
+
+
+
+
+{\ttfamily \#include $<$disk\+\_\+scheduler.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1DiskScheduler_aad3dabf3f95a28de4a3b05f3f6e382db}\label{classbustub_1_1DiskScheduler_aad3dabf3f95a28de4a3b05f3f6e382db}} 
+using {\bfseries Disk\+Scheduler\+Promise} = std\+::promise$<$ bool $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbustub_1_1DiskScheduler_acff2e20c8bd110b5c87aa1252ee5c78e}\label{classbustub_1_1DiskScheduler_acff2e20c8bd110b5c87aa1252ee5c78e}} 
+{\bfseries Disk\+Scheduler} (\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager)
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskScheduler_a692f2463d8000ad5da9e1ce12ac0652c}{Schedule}} (\mbox{\hyperlink{structbustub_1_1DiskRequest}{Disk\+Request}} r)
+\begin{DoxyCompactList}\small\item\em Schedules a request for the \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} to execute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1DiskScheduler_a472176a12275509784b6db278b12000a}{Start\+Worker\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Background worker thread function that processes scheduled requests. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classbustub_1_1DiskScheduler_ac15d698b6876b5b37723a924959b254d}{Create\+Promise}} () -\/$>$ Disk\+Scheduler\+Promise
+\begin{DoxyCompactList}\small\item\em Create a Promise object. If you want to implement your own version of promise, you can change this function so that our test cases can use your promise implementation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbustub_1_1DiskScheduler_acdfe8afd8c8a65a2b38b3a4e77fe5e7d}{Deallocate\+Page}} (page\+\_\+id\+\_\+t page\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Deallocates a page on disk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1DiskScheduler}{Disk\+Scheduler}} schedules disk read and write operations. 
+
+A request is scheduled by calling \mbox{\hyperlink{classbustub_1_1DiskScheduler_a692f2463d8000ad5da9e1ce12ac0652c}{Disk\+Scheduler\+::\+Schedule()}} with an appropriate \mbox{\hyperlink{structbustub_1_1DiskRequest}{Disk\+Request}} object. The scheduler maintains a background worker thread that processes the scheduled requests using the disk manager. The background thread is created in the \mbox{\hyperlink{classbustub_1_1DiskScheduler}{Disk\+Scheduler}} constructor and joined in its destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1DiskScheduler_ac15d698b6876b5b37723a924959b254d}\label{classbustub_1_1DiskScheduler_ac15d698b6876b5b37723a924959b254d}} 
+\index{bustub::DiskScheduler@{bustub::DiskScheduler}!CreatePromise@{CreatePromise}}
+\index{CreatePromise@{CreatePromise}!bustub::DiskScheduler@{bustub::DiskScheduler}}
+\doxysubsubsection{\texorpdfstring{CreatePromise()}{CreatePromise()}}
+{\footnotesize\ttfamily auto bustub\+::\+Disk\+Scheduler\+::\+Create\+Promise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ Disk\+Scheduler\+Promise \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a Promise object. If you want to implement your own version of promise, you can change this function so that our test cases can use your promise implementation. 
+
+\begin{DoxyReturn}{Returns}
+std\+::promise$<$bool$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1DiskScheduler_acdfe8afd8c8a65a2b38b3a4e77fe5e7d}\label{classbustub_1_1DiskScheduler_acdfe8afd8c8a65a2b38b3a4e77fe5e7d}} 
+\index{bustub::DiskScheduler@{bustub::DiskScheduler}!DeallocatePage@{DeallocatePage}}
+\index{DeallocatePage@{DeallocatePage}!bustub::DiskScheduler@{bustub::DiskScheduler}}
+\doxysubsubsection{\texorpdfstring{DeallocatePage()}{DeallocatePage()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Scheduler\+::\+Deallocate\+Page (\begin{DoxyParamCaption}\item[{page\+\_\+id\+\_\+t}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deallocates a page on disk. 
+
+Note\+: You should look at the documentation for {\ttfamily Delete\+Page} in {\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}} before using this method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & The page ID of the page to deallocate from disk. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1DiskScheduler_a692f2463d8000ad5da9e1ce12ac0652c}\label{classbustub_1_1DiskScheduler_a692f2463d8000ad5da9e1ce12ac0652c}} 
+\index{bustub::DiskScheduler@{bustub::DiskScheduler}!Schedule@{Schedule}}
+\index{Schedule@{Schedule}!bustub::DiskScheduler@{bustub::DiskScheduler}}
+\doxysubsubsection{\texorpdfstring{Schedule()}{Schedule()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Scheduler\+::\+Schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbustub_1_1DiskRequest}{Disk\+Request}}}]{r }\end{DoxyParamCaption})}
+
+
+
+Schedules a request for the \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} to execute. 
+
+TODO(\+P1)\+: Add implementation
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The request to be scheduled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1DiskScheduler_a472176a12275509784b6db278b12000a}\label{classbustub_1_1DiskScheduler_a472176a12275509784b6db278b12000a}} 
+\index{bustub::DiskScheduler@{bustub::DiskScheduler}!StartWorkerThread@{StartWorkerThread}}
+\index{StartWorkerThread@{StartWorkerThread}!bustub::DiskScheduler@{bustub::DiskScheduler}}
+\doxysubsubsection{\texorpdfstring{StartWorkerThread()}{StartWorkerThread()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Scheduler\+::\+Start\+Worker\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Background worker thread function that processes scheduled requests. 
+
+TODO(\+P1)\+: Add implementation
+
+The background thread needs to process requests while the \mbox{\hyperlink{classbustub_1_1DiskScheduler}{Disk\+Scheduler}} exists, i.\+e., this function should not return until $\sim$\+Disk\+Scheduler() is called. At that point you need to make sure that the function does return. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/disk/disk\+\_\+scheduler.\+h\item 
+src/storage/disk/disk\+\_\+scheduler.\+cpp\end{DoxyCompactItemize}
