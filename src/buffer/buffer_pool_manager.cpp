@@ -146,6 +146,7 @@ auto BufferPoolManager::NewPage() -> page_id_t {
     }
   }
 
+//无论如何都执行写回 ？
   if (old_page_id != -1) {
     auto promise = disk_scheduler_->CreatePromise();
     auto future = promise.get_future();
@@ -163,6 +164,7 @@ auto BufferPoolManager::NewPage() -> page_id_t {
 
   page_table_[new_page_id] = frame_id;
 
+// 执行从磁盘读入，但为什么要读入 ？
   if (new_page_id <= 16) {
     auto promise = disk_scheduler_->CreatePromise();
     auto future = promise.get_future();
@@ -273,7 +275,7 @@ auto BufferPoolManager::DeletePage(page_id_t page_id) -> bool {
 auto BufferPoolManager::CheckedWritePage(page_id_t page_id, AccessType access_type) -> std::optional<WritePageGuard> {
   // 要确保进入PageGuard前释放全局锁
   // 使用大括号限定std::unique_lock latch(*bpm_latch_);的方式似乎会导致一些问题，具体错在哪还有待调试
-  // 为避免使用scoped_lock时导致的问题(或许是重复解锁?),这里直接使用lock和unlock
+  // 为避免使用scoped_lock时导致的问题(或许是未能在执行函数前解锁),这里直接使用lock和unlock
   bpm_latch_->lock();
   auto it = page_table_.find(page_id);
   frame_id_t w_frame_id;
@@ -283,13 +285,9 @@ auto BufferPoolManager::CheckedWritePage(page_id_t page_id, AccessType access_ty
     // 先Pin和SetEvictable, 再执行RW锁
     frames_[w_frame_id]->Pin();
     replacer_->SetEvictable(w_frame_id, false);
-    // 若当前页的读写锁还未锁定, 在调用WritePageGuard时保持bpm锁是锁定状态, 并记住在最后解锁, 否则提前解锁bpm
-    // bool f = AcquireRWLock(w_frame_id);
+		//在进入guard函数前释放bpm锁
     bpm_latch_->unlock();
     auto t = std::make_optional(WritePageGuard(page_id, frames_[w_frame_id], replacer_, bpm_latch_, disk_scheduler_));
-    // if (f) {
-    //   bpm_latch_->unlock();
-    // }
     return t;
   }
 
@@ -299,10 +297,9 @@ auto BufferPoolManager::CheckedWritePage(page_id_t page_id, AccessType access_ty
     free_frames_.pop_front();
     frames_[w_frame_id]->Pin();
     replacer_->SetEvictable(w_frame_id, false);
-
     page_table_[page_id] = w_frame_id;
 
-    // 如果这个page还有数据，要把数据一起从磁盘读回来
+		//从磁盘读入页面数据到帧
     auto promise1 = disk_scheduler_->CreatePromise();
     auto future1 = promise1.get_future();
     disk_scheduler_->Schedule(DiskRequest{false, frames_[w_frame_id]->data_.data(), page_id, std::move(promise1)});
@@ -311,12 +308,8 @@ auto BufferPoolManager::CheckedWritePage(page_id_t page_id, AccessType access_ty
                 << "成功" << std::endl;
     }
 
-    // bool f = AcquireRWLock(w_frame_id);
     bpm_latch_->unlock();
     auto t = std::make_optional(WritePageGuard(page_id, frames_[w_frame_id], replacer_, bpm_latch_, disk_scheduler_));
-    // if (f) {
-    //   bpm_latch_->unlock();
-    // }
     return t;
   }
 
@@ -324,27 +317,25 @@ auto BufferPoolManager::CheckedWritePage(page_id_t page_id, AccessType access_ty
   auto evicted_frame = replacer_->Evict();
   if (evicted_frame.has_value()) {
     w_frame_id = evicted_frame.value();
-
     auto evicted_page_id = FindPage(w_frame_id).value();
 
     if (frames_[w_frame_id]->is_dirty_) {
       auto promise = disk_scheduler_->CreatePromise();
       auto future = promise.get_future();
       // auto data = frames_[frame_id]->data_.data();
-      disk_scheduler_->Schedule(
-          DiskRequest(true, frames_[w_frame_id]->data_.data(), evicted_page_id, std::move(promise)));
+      disk_scheduler_->Schedule(DiskRequest(true, frames_[w_frame_id]->data_.data(), evicted_page_id, std::move(promise)));
       future.get();
       frames_[w_frame_id]->is_dirty_ = false;
     }
-    // FlushPage(evicted_page_id);  // 将页面数据写回磁盘
 
+		//pin和setevictable在里面的顺序大概没有影响，但放在所有操作之前或许会更好 ？
     frames_[w_frame_id]->Reset();
     frames_[w_frame_id]->Pin();
     replacer_->SetEvictable(w_frame_id, false);
-    // 在PGTBL中，先清空这个entry，再插入新的
     page_table_.erase(evicted_page_id);
     page_table_[page_id] = w_frame_id;
-    // 如果这个page还有数据，要把数据一起从磁盘读回来
+
+		//从磁盘读入页面数据到帧
     auto promise1 = disk_scheduler_->CreatePromise();
     auto future1 = promise1.get_future();
     disk_scheduler_->Schedule(DiskRequest{false, frames_[w_frame_id]->data_.data(), page_id, std::move(promise1)});
@@ -352,12 +343,8 @@ auto BufferPoolManager::CheckedWritePage(page_id_t page_id, AccessType access_ty
       std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
                 << "成功" << std::endl;
     }
-    // bool f = AcquireRWLock(w_frame_id);
     bpm_latch_->unlock();
     auto t = std::make_optional(WritePageGuard(page_id, frames_[w_frame_id], replacer_, bpm_latch_, disk_scheduler_));
-    // if (f) {
-    //   bpm_latch_->unlock();
-    // }
     return t;
   }
 
@@ -400,12 +387,9 @@ auto BufferPoolManager::CheckedReadPage(page_id_t page_id, AccessType access_typ
     w_frame_id = it->second;
     frames_[w_frame_id]->Pin();
     replacer_->SetEvictable(w_frame_id, false);
-    // bool f = AcquireRWLock(w_frame_id);
+
     bpm_latch_->unlock();
     auto t = std::make_optional(ReadPageGuard(page_id, frames_[w_frame_id], replacer_, bpm_latch_, disk_scheduler_));
-    // if (f) {
-    //   bpm_latch_->unlock();
-    // }
     return t;
   }
 
@@ -418,7 +402,7 @@ auto BufferPoolManager::CheckedReadPage(page_id_t page_id, AccessType access_typ
 
     page_table_[page_id] = w_frame_id;
 
-    // 如果这个page还有数据，要把数据一起从磁盘读回来
+		//从磁盘读入页面数据到帧
     auto promise1 = disk_scheduler_->CreatePromise();
     auto future1 = promise1.get_future();
     disk_scheduler_->Schedule(DiskRequest{false, frames_[w_frame_id]->data_.data(), page_id, std::move(promise1)});
@@ -426,12 +410,8 @@ auto BufferPoolManager::CheckedReadPage(page_id_t page_id, AccessType access_typ
       std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
                 << "成功" << std::endl;
     }
-    // bool f = AcquireRWLock(w_frame_id);
     bpm_latch_->unlock();
     auto t = std::make_optional(ReadPageGuard(page_id, frames_[w_frame_id], replacer_, bpm_latch_, disk_scheduler_));
-    // if (f) {
-    //   bpm_latch_->unlock();
-    // }
     return t;
   }
 
@@ -445,21 +425,19 @@ auto BufferPoolManager::CheckedReadPage(page_id_t page_id, AccessType access_typ
     if (frames_[w_frame_id]->is_dirty_) {
       auto promise = disk_scheduler_->CreatePromise();
       auto future = promise.get_future();
-      // auto data = frames_[frame_id]->data_.data();
       disk_scheduler_->Schedule(
           DiskRequest(true, frames_[w_frame_id]->data_.data(), evicted_page_id, std::move(promise)));
       future.get();
       frames_[w_frame_id]->is_dirty_ = false;
     }
-    // FlushPage(evicted_page_id);  // 将页面数据写回磁盘
 
     frames_[w_frame_id]->Reset();
     frames_[w_frame_id]->Pin();
     replacer_->SetEvictable(w_frame_id, false);
-    // 在PGTBL中，先清空这个entry，再插入新的
     page_table_.erase(evicted_page_id);
     page_table_[page_id] = w_frame_id;
-    // 如果这个page还有数据，要把数据一起从磁盘读回来
+
+		//从磁盘读入页面数据到帧
     auto promise1 = disk_scheduler_->CreatePromise();
     auto future1 = promise1.get_future();
     disk_scheduler_->Schedule(DiskRequest{false, frames_[w_frame_id]->data_.data(), page_id, std::move(promise1)});
@@ -467,12 +445,8 @@ auto BufferPoolManager::CheckedReadPage(page_id_t page_id, AccessType access_typ
       std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
                 << "成功" << std::endl;
     }
-    // bool f = AcquireRWLock(w_frame_id);
     bpm_latch_->unlock();
     auto t = std::make_optional(ReadPageGuard(page_id, frames_[w_frame_id], replacer_, bpm_latch_, disk_scheduler_));
-    // if (f) {
-    //   bpm_latch_->unlock();
-    // }
     return t;
   }
 
@@ -591,6 +565,7 @@ auto BufferPoolManager::FlushPageUnsafe(page_id_t page_id) -> bool {
  * @return `false` if the page could not be found in the page table, otherwise `true`.
  */
 auto BufferPoolManager::FlushPage(page_id_t page_id) -> bool {
+	// 需要bpm锁，但写回时不需要加rw锁
   std::scoped_lock latch(*bpm_latch_);
   auto it = page_table_.find(page_id);
   if (it == page_table_.end()) {
@@ -598,16 +573,14 @@ auto BufferPoolManager::FlushPage(page_id_t page_id) -> bool {
   }
   frame_id_t frame_id = it->second;
   if (!frames_[frame_id]->is_dirty_) {
-    // true?
+    // true是否正确 ?
     return false;
   }
 
   auto promise = disk_scheduler_->CreatePromise();
   auto future = promise.get_future();
-  // auto data = frames_[frame_id]->data_.data();
   disk_scheduler_->Schedule(DiskRequest(true, frames_[frame_id]->data_.data(), page_id, std::move(promise)));
   future.get();
-
   frames_[frame_id]->is_dirty_ = false;
   return true;
 }
