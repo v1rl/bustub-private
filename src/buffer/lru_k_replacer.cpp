@@ -45,6 +45,7 @@ auto LRUKReplacer::Evict() -> std::optional<frame_id_t> {
     frame_id_t fid = -1;
     for (const auto &cold_fid : cold_frames_) {
       auto it = node_store_.find(cold_fid);
+			// 判断是否存在于哈希表中是必要的吗 ？
       if (it != node_store_.end() && it->second.is_evictable_) {
         fid = cold_fid;
         break;
@@ -98,7 +99,7 @@ void LRUKReplacer::RecordAccess(frame_id_t frame_id, [[maybe_unused]] AccessType
   BUSTUB_ENSURE(frame_id >= 0 && static_cast<size_t>(frame_id) < replacer_size_,
                 "Frame ID is out of bounds for the replacer size.");
   if (node_store_.count(frame_id) == 0) {
-    // node_store_.emplace(frame_id, LRUKNode(k_, frame_id));
+    // 直接用等于号赋值是否可行 ？
     node_store_.emplace(frame_id, LRUKNode());
     cold_frames_.push_back(frame_id);
   }
