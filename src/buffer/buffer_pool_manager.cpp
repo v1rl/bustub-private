@@ -307,8 +307,8 @@ auto BufferPoolManager::CheckedWritePage(page_id_t page_id, AccessType access_ty
     auto future1 = promise1.get_future();
     disk_scheduler_->Schedule(DiskRequest{false, frames_[w_frame_id]->data_.data(), page_id, std::move(promise1)});
     if (future1.get()) {
-      std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
-                << "成功" << std::endl;
+      // std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
+      //           << "成功" << std::endl;
     }
 
     // bool f = AcquireRWLock(w_frame_id);
@@ -349,8 +349,8 @@ auto BufferPoolManager::CheckedWritePage(page_id_t page_id, AccessType access_ty
     auto future1 = promise1.get_future();
     disk_scheduler_->Schedule(DiskRequest{false, frames_[w_frame_id]->data_.data(), page_id, std::move(promise1)});
     if (future1.get()) {
-      std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
-                << "成功" << std::endl;
+      // std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
+      //           << "成功" << std::endl;
     }
     // bool f = AcquireRWLock(w_frame_id);
     bpm_latch_->unlock();
@@ -423,8 +423,8 @@ auto BufferPoolManager::CheckedReadPage(page_id_t page_id, AccessType access_typ
     auto future1 = promise1.get_future();
     disk_scheduler_->Schedule(DiskRequest{false, frames_[w_frame_id]->data_.data(), page_id, std::move(promise1)});
     if (future1.get()) {
-      std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
-                << "成功" << std::endl;
+      // std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
+      //           << "成功" << std::endl;
     }
     // bool f = AcquireRWLock(w_frame_id);
     bpm_latch_->unlock();
@@ -464,8 +464,8 @@ auto BufferPoolManager::CheckedReadPage(page_id_t page_id, AccessType access_typ
     auto future1 = promise1.get_future();
     disk_scheduler_->Schedule(DiskRequest{false, frames_[w_frame_id]->data_.data(), page_id, std::move(promise1)});
     if (future1.get()) {
-      std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
-                << "成功" << std::endl;
+      // std::cout << "checkWritePage中, 从磁盘读入page: " << page_id << "的数据: " << frames_[w_frame_id]->data_.data()
+      //           << "成功" << std::endl;
     }
     // bool f = AcquireRWLock(w_frame_id);
     bpm_latch_->unlock();

@@ -62,6 +62,9 @@ class Context {
   // Store the write guards of the pages that you're modifying here.
   std::deque<WritePageGuard> write_set_;
 
+  // 记录tree搜索过程中各个结点中的经过的键的index
+  std::deque<int> indexes_;
+
   // You may want to use this when getting value, but not necessary.
   std::deque<ReadPageGuard> read_set_;
 
@@ -124,6 +127,36 @@ class BPlusTree {
 
   auto ToPrintableBPlusTree(page_id_t root_id) -> PrintableBPlusTree;
 
+  /**
+   * 使用二分查找进行键查找的函数
+   */
+  auto KeyBinarySearch(const BPlusTreePage *page, const KeyType &key) -> int;
+
+  /**
+   * insert时查找叶子结点中插入位置的函数
+   */
+  auto IndexBinarySearchLeaf(LeafPage *page, const KeyType &key) -> int;
+
+  /**
+   * 向左sibling结点借用键值的函数
+   */
+  void BorrowFromLeft(BPlusTreePage *page, BPlusTreePage *left_page, BPlusTreePage *parent_page, int index);
+
+  /**
+   * 向右sibling结点借用键值的函数
+   */
+  void BorrowFromRight(BPlusTreePage *page, BPlusTreePage *right_page, BPlusTreePage *parent_page, int index);
+
+  /**
+   * 与左sibling结点合并的函数
+   */
+  void MergeWithLeft(BPlusTreePage *page, BPlusTreePage *left_page, BPlusTreePage *parent_page, int index);
+
+  /**
+   * 与右sibling结点合并的函数
+   */
+  void MergeWithRight(BPlusTreePage *page, BPlusTreePage *right_page, BPlusTreePage *parent_page, int index);
+
   // member variable
   std::string index_name_;
   BufferPoolManager *bpm_;
@@ -131,6 +164,8 @@ class BPlusTree {
   std::vector<std::string> log;  // NOLINT
   int leaf_max_size_;
   int internal_max_size_;
+
+  // The page id of the BPlusTreeHeaderPage.
   page_id_t header_page_id_;
 };
 

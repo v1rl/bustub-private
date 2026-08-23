@@ -56,6 +56,7 @@ class ReadPageGuard {
   auto operator=(ReadPageGuard &&that) noexcept -> ReadPageGuard &;
   auto GetPageId() const -> page_id_t;
   auto GetData() const -> const char *;
+  // 很关键的一个函数，将原始数据的char*指针根据具体使用情景转换为特定类型的指针
   template <class T>
   auto As() const -> const T * {
     return reinterpret_cast<const T *>(GetData());
@@ -168,6 +169,7 @@ class WritePageGuard {
     return reinterpret_cast<T *>(GetDataMut());
   }
   auto IsDirty() const -> bool;
+  auto IsValid() const -> bool { return is_valid_; }
   void Flush();
   void Drop();
   ~WritePageGuard();

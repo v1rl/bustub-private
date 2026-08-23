@@ -64,6 +64,8 @@ class BPlusTreeInternalPage : public BPlusTreePage {
 
   auto ValueAt(int index) const -> ValueType;
 
+  auto SetValueAt(int index, const ValueType &value) -> void;
+
   /**
    * @brief For test only, return a string representing all keys in
    * this internal page, formatted as "(key1,key2,key3,...)"
@@ -92,7 +94,9 @@ class BPlusTreeInternalPage : public BPlusTreePage {
 
  private:
   // Array members for page data.
+  // 内部节点的 key = 分割区间的关键字（决定往哪个子节点走）
   KeyType key_array_[INTERNAL_PAGE_SLOT_CNT];
+  // 内部节点的 value = 子节点所在的 page_id
   ValueType page_id_array_[INTERNAL_PAGE_SLOT_CNT];
   // (Spring 2025) Feel free to add more fields and helper functions below if needed
 };
